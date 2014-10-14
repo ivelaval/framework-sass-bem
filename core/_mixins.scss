@@ -1,0 +1,9 @@
+
+@mixin text($size, $line, $margin-bottom: 0, $family: $base__font-family, $color: $font__color--base, $weight: normal){
+	font-size: em($size);
+	line-height: ($line/$size);
+	font-family: $family;
+	margin-bottom: em($margin-bottom, $size);
+	color: $color;
+}
+

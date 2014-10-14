@@ -1,0 +1,117 @@
+@if $module__layout == true{
+
+  *,
+  *:after,
+  *:before {
+
+    margin: 0;
+    padding: 0;
+    /* Removes padding behavior on widths */
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+  }
+
+  /* Targets all elements */
+  [class*='col-'] {
+    float: left;
+    padding: 10px;
+  }
+
+  /* Floats last ".bit-" to the right */
+  [class*='col-']:last-of-type {
+    padding-right: 3px;
+    float: right;
+  }
+
+  /* Clearfix */
+  .grid:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Main Widths */
+  .col-1  {width: 100%;}
+  .col-2  {width: 50%;}
+  .col-3  {width: 33.33%;}
+  .col-4  {width: 25%;}
+  .col-5  {width: 20%;}
+  .col-6  {width: 16.6666666667%;}
+  .col-7  {width: 14.2857142857%;}
+  .col-8  {width: 12.5%;}
+  .col-9  {width: 11.1111111111%;}
+  .col-10 {width: 10%;}
+  .col-11 {width: 9.09090909091%;}
+  .col-12 {width: 8.33%;}
+
+  /* Landscape mobile & down */
+  @media (max-width: 480px) {
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+      width: 100%;
+    }
+
+    .grid .col-4:nth-child(2) {
+      float: right;
+    }
+
+    .grid .col-4:nth-child(3) {
+      clear: both;
+      float: left;
+    }
+
+    .grid .col-4:nth-child(4) {
+      float: right;
+    }
+  }
+
+  /* Mobile to Tablet Portrait */
+  @media (min-width: 480px) and (max-width: 800px) {
+    .col-4,
+    .col-6,
+    .col-8,
+    .col-10,
+    .col-12 {
+      width: 50%;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-5,
+    .col-7,
+    .col-9,
+    .col-11 {
+      width: 100%;
+    }
+  }
+
+  /* Landscape Tablet to Desktop */
+  @media (min-width: 800px) and (max-width: 1100px) {
+    .col-2,
+    .col-7 {
+      width: 100%;
+    }
+
+    .col-4,
+    .col-8,
+    .col-10,
+    .col-12 {
+      width: 50%;
+    }
+  }
+
+}//endif

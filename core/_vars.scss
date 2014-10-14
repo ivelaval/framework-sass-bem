@@ -1,0 +1,33 @@
+//---------------------------------------------
+//  FONT                            
+//---------------------------------------------
+$font__size--96:             	em(96) !default;
+$font__size--72:               	em(72) !default;
+$font__size--48:              	em(48) !default;
+$font__size--36:              	em(36) !default; 
+$font__size--30:              	em(30) !default; 
+$font__size--24:              	em(24) !default; 
+$font__size--20:              	em(20) !default; 
+$font__size--16:              	em(16) !default; 
+$font__size--14:               	em(14) !default;
+$font__size--12:             	em(12) !default;
+$font__size--10:              	em(10) !default;
+
+$font__family--sans: 			sans-serif !default;
+$font__family--helvetica: 		'Helvetica Neue' !default;
+$font__color--base: 			#000 !default;
+
+//---------------------------------------------
+//  COLOR                            
+//---------------------------------------------
+$color__primary: 				#CCC !default;
+$color__primary--light: 		#FFF !default;
+$color__primary--dark: 			#000 !default;
+
+//---------------------------------------------
+//  BASE                            
+//---------------------------------------------
+$base__font-family:  			$font__family--sans !default;
+$base__font-size: 				16 !default; //Base font-size px to em 
+$base__line-height: 			20 !default;
+$base__ui-color:     			#ccc !default;
