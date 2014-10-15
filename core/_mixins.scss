@@ -1,3 +1,6 @@
+//------------------------------------------------
+//	Used in Module _text.scss
+//------------------------------------------------
 
 @mixin text($size, $line, $margin-bottom: 0, $family: $base__font-family, $color: $font__color--base, $weight: normal){
 	font-size: em($size);
@@ -7,3 +10,148 @@
 	color: $color;
 }
 
+//------------------------------------------------
+//	Used in Module _layout.scss
+//------------------------------------------------
+
+@mixin renderGrid($key, $settings) {
+
+	$i: 1;
+	@while $i <= map-get($settings, "columns") {
+	  .col-#{$key}-#{$i} {
+	    float: left;
+	    width: 100% * $i / map-get($settings,"columns");
+	  }
+	  $i: $i+1;
+	}
+
+}
+
+@mixin media($queryString){
+  @media #{$queryString} {
+    @content;
+  }
+}
+
+@mixin renderGridStyles($settings){
+
+	.container {
+	  padding-right: map-get($settings, "margin");
+	  padding-left: map-get($settings, "margin");
+	  margin-right: auto;
+	  margin-left: auto;
+	  max-width: map-get($settings,"maxWidth");
+	}
+
+	.row {
+	  margin-right: map-get($settings, "margin") * -1;
+	  margin-left: map-get($settings, "margin") * -1;
+	}
+
+	$breakpoints: map-get($settings, "breakpoints");
+
+	@each $key, $breakpoint in $breakpoints {
+	  @include media($breakpoint) {
+	    @include renderGrid($key, $settings);
+	  }
+	}
+
+}
+
+//------------------------------------------------
+//	Used in all Modules 
+//	CSS3 please! - css3 modificators
+//------------------------------------------------
+
+@mixin ui__round($radius: $base__border-radius) {
+	-webkit-border-radius: 	$radius;
+	 -moz-border-radius: 	$radius;
+	  -ms-border-radius: 	$radius;
+	      border-radius: 	$radius; // Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+  
+		  // useful if you don't want a bg color from leaking outside the border:
+		  background-clip: 	padding-box; // Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+
+}
+
+@mixin ui__shadow($h-shadow: map-get($ui__map-shadow, "hshadow"), $v-shadow: map-get($ui__map-shadow, "vshadow"), $blur: map-get($ui__map-shadow, "blur"), $spread: map-get($ui__map-shadow, "spread"), $color: map-get($ui__map-shadow, "color"), $opacity: map-get($ui__map-shadow, "opacity")) {
+  -webkit-box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity); // Android 2.3+, iOS 4.0.2-4.2, Safari 3-4
+  	 -moz-box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity); 
+     	  box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity); // Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ 
+}
+
+@mixin ui__gradient($fcolor: map-get($ui__map-gradient, "fcolor"), $scolor: map-get($ui__map-gradient, "scolor")) {
+  background-color: 		$fcolor;
+  background-image: -webkit-linear-gradient(top, $fcolor, $scolor); // Chrome 10-25, iOS 5+, Safari 5.1+ 
+  background-image:         linear-gradient(to bottom, $fcolor, $scolor); // Chrome 26, Firefox 16+, IE 10+, Opera
+}
+
+@mixin ui__rgba($r, $g, $b, $opacity: $ui__opacity){
+  background-color: transparent;
+  background-color: rgba($r, $g, $b, $opacity);  // Chrome, Firefox 3+, IE 9+, Opera 10.10+, Safari 3+ 
+}
+
+@mixin ui__rotate($r: 7.5deg){
+  -webkit-transform: rotate($r);  // Chrome, Opera 15+, Safari 3.1+ 
+      -ms-transform: rotate($r);  // IE 9 
+          transform: rotate($r);  // Firefox 16+, IE 10+, Opera 
+}
+
+@mixin ui__scale($scale: 0.8) {
+  -webkit-transform: scale($scale);  // Chrome, Opera 15+, Safari 3.1+ 
+      -ms-transform: scale($scale);  // IE 9 
+          transform: scale($scale);  // Firefox 16+, IE 10+, Opera 
+}
+
+@mixin ui__3dtransforms() {
+  -webkit-perspective: 300px;  // Chrome 12+, Safari 4+ 
+      -ms-perspective: 300px;  // IE 10 
+          perspective: 300px;
+  -webkit-transform: rotateY(180deg);  -webkit-transform-style: preserve-3d;
+      -ms-transform: rotateY(180deg);      -ms-transform-style: preserve-3d;
+          transform: rotateY(180deg);          transform-style: preserve-3d;
+}
+
+@mixin ui__transition() {
+  -webkit-transition: all 0.3s ease-out;  // Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6 
+          transition: all 0.3s ease-out;  // Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+ 
+}
+
+@mixin ui__textshadow() {
+  text-shadow: 1px 1px 3px #888; // Chrome, Firefox 3.5+, IE 10+, Opera 9+, Safari 1+ 
+}
+
+@mixin ui__opacity() {
+  opacity: 0.9; // Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+ 
+}
+
+@mixin ui__bgsize() {
+  -webkit-background-size: 100% 100%; // Safari 3-4 
+          background-size: 100% 100%; // Chrome, Firefox 4+, IE 9+, Opera, Safari 5+ 
+}
+
+@mixin ui__columns() {
+  -webkit-column-count: 2;  -webkit-column-gap: 15px; // Chrome, Safari 3 
+     -moz-column-count: 2;     -moz-column-gap: 15px; // Firefox 3.5+ 
+          column-count: 2;          column-gap: 15px; // Opera 11+ 
+}
+
+@mixin ui__animation--hover() {
+  -webkit-animation: myanim 5s infinite; // Chrome, Opera 15+, Safari 5+
+          animation: myanim 5s infinite; // Chrome, Firefox 16+, IE 10+, Opera 
+}
+
+@mixin ui__tabsize() {
+  -moz-tab-size: 2; // Firefox 4+
+       tab-size: 2;
+}
+
+@-webkit-keyframes myanim {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes myanim {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1.0; }
+}
