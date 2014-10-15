@@ -5,7 +5,8 @@ ZERW css framework  is a professional front-end framework css for building fast 
 ## Contributing
 
 Anyone and everyone is welcome to [contribute](CONTRIBUTING.md). Hundreds of
-developers have helped make the HTML5 Boilerplate what it is today.
+developers have helped make the ZERW css what it is today.
+
 =======
 zerw.css
 ========
