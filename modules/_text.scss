@@ -1,23 +1,25 @@
-@if $module__text == true{
+  // Module/Text ==========================================================================
 
-	html{
-		font-size: $base__font-size * 1px;
-	}
+  @if $module__text == true{
 
-	body{
-		@include text($base__font-size, $base__line-height);
-	}
+      html{
+          font-size: $base__font-size * 1px;
+      }
 
-	h1{
-		@include text(12, $base__line-height, 10, $color: $font__color--base, $weight: bold);
-	}
+      body{
+          @include font($base__font-size, $base__line-height);
+      }
 
-	h2{
-		@include text(36, $base__line-height, 10, $color: $font__color--base, $weight: normal);
-	}
+      h1{
+          @include font(12, $base__line-height, 10, $color: $font__color--base, $weight: bold);
+      }
 
-	h3{
-		@include text(45, $base__line-height, 10, $color: $font__color--base, $weight: normal);
-	}
+      h2{
+          @include font(36, $base__line-height, 10, $color: $font__color--base, $weight: normal);
+      }
 
-}//endif
+      h3{
+          @include font(45, $base__line-height, 10, $color: $font__color--base, $weight: normal);
+      }
+
+  }//endif

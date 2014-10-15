@@ -1,5 +1,9 @@
+  //module/panel ==========================================================================
+  @if $module__panel == true {
 
-.panel{
-	padding: 5px;
-	margin: 5px;
-}
+    .panel {
+      padding: 5px;
+      margin: 5px;
+    }
+
+  }

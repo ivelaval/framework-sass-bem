@@ -1,41 +1,42 @@
-/********************************************************
-//  Zerw.css / Framework BEM CSS     
-//  Version: 0.0.2					 
-//  Author: Ivan Elias Avila : ivelaval@gmail.com
-//  Url: www.ivanavila.com.co
-//	Created: 13/10/2014
-********************************************************/
+  /********************************************************
+  //  Zerw.css / Framework BEM CSS
+  //  Version: 0.1
+  //  Author: Ivan Elias Avila : ivelaval@gmail.com
+  //  Url: www.ivanavila.com.co
+  //  Created: 13/10/2014
+  //  Updated: 15/10/2014
+  ********************************************************/
 
-//--------------------------------------------------------------
-// sass --watch style.scss:style.min.css --style compressed
-// sass --watch style.scss:style.css
-//--------------------------------------------------------------
+  //--------------------------------------------------------------
+  // sass --watch style.scss:style.min.css --style compressed
+  // sass --watch style.scss:style.css
+  //--------------------------------------------------------------
 
-//--------------------------------------
-//	Config init
-//--------------------------------------
-@import 'core/config';
-//--------------------------------------
-// Core init
-//--------------------------------------
-@import 'core/vars';
-@import 'core/normalize';
-@import 'core/base';
-@import 'core/helpers';
-@import 'core/functions';
-@import 'core/mixins';
-//--------------------------------------
-// Modules
-//--------------------------------------
-@import 'modules/form';
-@import 'modules/image';
-@import 'modules/layout';
-@import 'modules/list';
-@import 'modules/media';
-@import 'modules/menu';
-@import 'modules/notification';
-@import 'modules/pagination';
-@import 'modules/table';
-@import 'modules/text';
-@import 'modules/breadcrumb';
-@import 'modules/panel';
+  //--------------------------------------
+  //	Config init
+  //--------------------------------------
+  @import 'core/config';
+  //--------------------------------------
+  // Core init
+  //--------------------------------------
+  @import 'core/vars';
+  @import 'core/normalize';
+  @import 'core/helpers';
+  @import 'core/functions';
+  @import 'core/mixins';
+  @import 'core/base';
+  //--------------------------------------
+  // Modules
+  //--------------------------------------
+  @import 'modules/form';
+  @import 'modules/image';
+  @import 'modules/layout';
+  @import 'modules/list';
+  @import 'modules/media';
+  @import 'modules/menu';
+  @import 'modules/notification';
+  @import 'modules/pagination';
+  @import 'modules/table';
+  @import 'modules/text';
+  @import 'modules/breadcrumb';
+  @import 'modules/panel';

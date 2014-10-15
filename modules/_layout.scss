@@ -1,35 +1,37 @@
-@if $module__layout == true{
+  //module/layout ==========================================================================
 
-  *,
-  *:after,
-  *:before {
+  @if $module__layout == true{
 
-    margin: 0;
-    padding: 0;
-    /* Removes padding behavior on widths */
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    *,
+    *:after,
+    *:before {
 
-  }
+      margin: 0;
+      padding: 0;
+      /* Removes padding behavior on widths */
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
 
-  // ----------------------------------------------------
-  // Sass (v3.4.4)
-  // Compass (v1.0.1)
-  // ----------------------------------------------------
+    }
 
-  $settings-layout: (
-      maxWidth: 800px,
-      columns: 12,
-      margin: 15px,
-      breakpoints: (
-          xs: "(max-width : 480px)",
-          sm: "(max-width : 768px) and (min-width: 481px)",
-          md: "(max-width : 1024px)  and (min-width: 769px)",
-          lg: "(min-width : 1025px)"
-      )   
-  );
+    // ----------------------------------------------------
+    // Sass (v3.4.4)
+    // Compass (v1.0.1)
+    // ----------------------------------------------------
 
-  @include renderGridStyles($settings-layout);
+    $settings-layout: (
+        maxWidth: 800px,
+        columns: 12,
+        margin: 15px,
+        breakpoints: (
+            xs: "(max-width : 480px)",
+            sm: "(max-width : 768px) and (min-width: 481px)",
+            md: "(max-width : 1024px)  and (min-width: 769px)",
+            lg: "(min-width : 1025px)"
+        )
+    );
 
-}//endif
+    @include renderGridStyles($settings-layout);
+
+  }//endif

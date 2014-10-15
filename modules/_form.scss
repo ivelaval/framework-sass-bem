@@ -1,21 +1,23 @@
-@if $module__form == true{
+  //module/Form ==========================================================================
 
-	/*
-	 * Remove default fieldset styles.
-	 */
+  @if $module__form == true{
 
-	fieldset {
-	    border: 0;
-	    margin: 0;
-	    padding: 0;
-	}
+      /*
+       * Remove default fieldset styles.
+       */
 
-	/*
-	 * Allow only vertical resizing of textareas.
-	 */
+      fieldset {
+          border: 0;
+          margin: 0;
+          padding: 0;
+      }
 
-	textarea {
-	    resize: vertical;
-	}
+      /*
+       * Allow only vertical resizing of textareas.
+       */
 
-}//endif
+      textarea {
+          resize: vertical;
+      }
+
+  }//endif

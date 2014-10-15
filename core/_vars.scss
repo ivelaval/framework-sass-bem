@@ -1,56 +1,53 @@
-//---------------------------------------------
-//  FONT                            
-//---------------------------------------------
-$font__size--96:             	em(96) !default;
-$font__size--72:               	em(72) !default;
-$font__size--48:              	em(48) !default;
-$font__size--36:              	em(36) !default; //h1 
-$font__size--30:              	em(30) !default; //h2
-$font__size--24:              	em(24) !default; //h3
-$font__size--20:              	em(20) !default; //h4
-$font__size--16:              	em(16) !default; //h5
-$font__size--14:               	em(14) !default; //h6
-$font__size--12:             	em(12) !default;
-$font__size--10:              	em(10) !default;
+  //Core/Vars ==========================================================================
 
-$font__family--sans: 			sans-serif !default;
-$font__family--helvetica: 		'Helvetica Neue', sans-serif !default;
-$font__family--open-sans: 		'Open Sans', sans-serif !default;
-$font__color--base: 			#000 !default;
+  //---------------------------------------------
+  //  FONT
+  //---------------------------------------------
+  $font__size--96:             	em(96) !default;
+  $font__size--72:               	em(72) !default;
+  $font__size--48:              	em(48) !default;
+  $font__size--36:              	em(36) !default; //h1
+  $font__size--30:              	em(30) !default; //h2
+  $font__size--24:              	em(24) !default; //h3
+  $font__size--20:              	em(20) !default; //h4
+  $font__size--16:              	em(16) !default; //h5
+  $font__size--14:               	em(14) !default; //h6
+  $font__size--12:             	em(12) !default;
+  $font__size--10:              	em(10) !default;
 
-//---------------------------------------------
-//  COLOR                            
-//---------------------------------------------
-$color__primary: 				#CCC !default;
-$color__primary--light: 		#FFF !default;
-$color__primary--dark: 			#000 !default;
-$color__background--dark:		#000 !default;
-$color__background--light:		#FFF !default;
+  $font__family--sans: 			sans-serif !default;
+  $font__family--helvetica: 		'Helvetica Neue', sans-serif !default;
+  $font__family--open-sans: 		'Open Sans', sans-serif !default;
+  $font__color--base: 			#000 !default;
 
-//---------------------------------------------
-//  BASE                            
-//---------------------------------------------
-$base__font-family:  			$font__family--sans !default;
-$base__font-size: 				16 !default; //Base font-size px to em 
-$base__line-height: 			20 !default;
+  //---------------------------------------------
+  //  COLOR
+  //---------------------------------------------
+  $color__primary:                #cc3537 !default;
+  $color__primary--light: 		#FFF !default;
+  $color__primary--dark: 			#000 !default;
+  $color__background--dark:		#000 !default;
+  $color__background--light:		#FFF !default;
 
-//---------------------------------------------
-//  UI BASE                            
-//---------------------------------------------
-$ui__border-radius:				12px;
-$ui__color-shadow:     			#CCC !default;
-$ui__color-border:     			#CCC !default;
-$ui__opacity: 					0.5;
-$ui__map-shadow: 				(
-									hshadow: 	0px,
-									vshadow: 	0px,
-									blur: 		4px,
-									spread: 	0px,
-									color: 	#ffffff,
-									opacity: 	0.75
-								);
-$ui__map-gradient: 				(
-									fcolor: #444444,
-									scolor: #999999  
-								); 
+  //---------------------------------------------
+  //  BASE
+  //---------------------------------------------
+  $base__font-family:  			$font__family--sans !default;
+  $base__font-size: 				16 !default; //Base font-size px to em
+  $base__line-height: 			20 !default;
+
+  //---------------------------------------------
+  //  UI BASE
+  //---------------------------------------------
+  $ui__border-radius:				12px;
+  $ui__color-shadow:     			#CCC !default;
+  $ui__color-border:     			#CCC !default;
+  $ui__opacity: 					0.5;
+  $ui__map-shadow: 				(hshadow:0px, vshadow:0px, blur:4px, spread:0px, color:#ffffff, opacity:0.75);
+  $ui__map-gradient: 				(fcolor: #444444, scolor: #999999);
+  $ui__rotate:                    7.5deg;
+  $ui__scale:                     0.8;
+  $ui__text-shadow:               (hshadow:1px, vshadow:1px, blur:3px, color:#888);
+  $ui__ease:                      ease-out;
+  $ui__background-size:           100% 100%;
 

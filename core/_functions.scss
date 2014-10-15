@@ -1,8 +1,18 @@
+  //Core/Functions ==========================================================================
 
-@function em($px, $base: $base__font-size){
-	@return ($px / $base) * 1em;
-}
+  @function em($px, $base: $base__font-size){
+      @return ($px / $base) * 1em;
+  }
 
-@function line-height($px: $base__line-height){
-	@return (1.5 / $px) * 1em;
-}
+  @function line-height($px: $base__line-height){
+      @return (1.5 / $px) * 1em;
+  }
+
+  @function calculate-opacity($opacity: $ui__opacity){
+    @return ($opacity*100);
+  }
+
+  @function rem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+  }

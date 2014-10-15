@@ -1,22 +1,24 @@
-@if $module__list == true{
+  //module/List ==========================================================================
 
-	.list{
+  @if $module__list == true{
 
-		padding-left: em(10);
-		list-style: none;
-	}
+      .list{
 
-	.list--bullet{
-		list-style: bullet;
-		padding-left: em(10);
-	}
+          padding-left: em(10);
+          list-style: none;
+      }
 
-	.list__item{
-		margin-bottom: em(10);
-	}
+      .list--bullet{
+          list-style: bullet;
+          padding-left: em(10);
+      }
 
-	.list__item--end{
-		margin-bottom: 0;
-	}
+      .list__item{
+          margin-bottom: em(10);
+      }
 
-}//endif
+      .list__item--end{
+          margin-bottom: 0;
+      }
+
+  }//endif
