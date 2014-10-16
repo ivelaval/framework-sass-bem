@@ -4,12 +4,15 @@
   //  Utilities for properties base
   //------------------------------------------------
 
-  @mixin base__mp($margin: 0, $padding: 0){
+  //Margin padding border mixin
+  @mixin m__base-mpb($margin: 0, $padding: 0, $border: 0){
     margin: #{$margin};
     padding: #{$padding};
+    border: #{$border};
   }
 
-  @mixin base__bs($type: border-box){
+  //Border sizing mixin
+  @mixin m__base-bs($type: border-box){
     -webkit-box-sizing: $type; /* Android ≤ 2.3, iOS ≤ 4 */
        -moz-box-sizing: $type; /* Firefox ≤ 28 */
             box-sizing: $type; /* Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1 */
@@ -22,7 +25,7 @@
   //  Used in Module _layout.scss
   //------------------------------------------------
 
-  @mixin renderGrid($key, $settings) {
+  @mixin m__render-grid($key, $settings) {
 
       $i: 1;
       @while $i <= map-get($settings, "columns") {
@@ -35,13 +38,13 @@
 
   }
 
-  @mixin media($queryString){
+  @mixin m__media($queryString){
     @media #{$queryString} {
       @content;
     }
   }
 
-  @mixin renderGridStyles($settings){
+  @mixin m__render-grid-styles($settings){
 
       .container {
         padding-right: map-get($settings, "margin");
@@ -59,8 +62,8 @@
       $breakpoints: map-get($settings, "breakpoints");
 
       @each $key, $breakpoint in $breakpoints {
-        @include media($breakpoint) {
-          @include renderGrid($key, $settings);
+        @include m__media($breakpoint) {
+          @include m__render-grid($key, $settings);
         }
       }
 
@@ -70,19 +73,19 @@
   //  Utilities for breakpoints in media query
   //------------------------------------------------
 
-  @mixin bp-large {
+  @mixin m__bp-large {
     @media only screen and (max-width: 60em) {
       @content;
     }
   }
 
-  @mixin bp-medium {
+  @mixin m__bp-medium {
     @media only screen and (max-width: 40em) {
       @content;
     }
   }
 
-  @mixin bp-small {
+  @mixin m__bp-small {
     @media only screen and (max-width: 30em) {
       @content;
     }
@@ -94,7 +97,7 @@
   //  CSS3 please! - css3 modificators
   //------------------------------------------------
 
-  @mixin ui__round($radius: $base__border-radius) {
+  @mixin m__ui-round($radius: $base__border-radius) {
       -webkit-border-radius: 	$radius;
        -moz-border-radius: 	$radius;
         -ms-border-radius: 	$radius;
@@ -103,36 +106,36 @@
             background-clip: 	padding-box; // Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+
   }
 
-  @mixin ui__shadow($h-shadow: map-get($ui__map-shadow, "hshadow"), $v-shadow: map-get($ui__map-shadow, "vshadow"), $blur: map-get($ui__map-shadow, "blur"), $spread: map-get($ui__map-shadow, "spread"), $color: map-get($ui__map-shadow, "color"), $opacity: map-get($ui__map-shadow, "opacity")) {
+  @mixin m__ui-shadow($h-shadow: map-get($ui__map-shadow, "hshadow"), $v-shadow: map-get($ui__map-shadow, "vshadow"), $blur: map-get($ui__map-shadow, "blur"), $spread: map-get($ui__map-shadow, "spread"), $color: map-get($ui__map-shadow, "color"), $opacity: map-get($ui__map-shadow, "opacity")) {
     -webkit-box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity); // Android 2.3+, iOS 4.0.2-4.2, Safari 3-4
        -moz-box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity);
             box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity); // Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+
   }
 
-  @mixin ui__gradient($fcolor: map-get($ui__map-gradient, "fcolor"), $scolor: map-get($ui__map-gradient, "scolor")) {
+  @mixin m__ui-gradient($fcolor: map-get($ui__map-gradient, "fcolor"), $scolor: map-get($ui__map-gradient, "scolor")) {
     background-color: 		$fcolor;
     background-image: -webkit-linear-gradient(top, $fcolor, $scolor); // Chrome 10-25, iOS 5+, Safari 5.1+
     background-image:         linear-gradient(to bottom, $fcolor, $scolor); // Chrome 26, Firefox 16+, IE 10+, Opera
   }
 
-  @mixin ui__rgba($r, $g, $b, $opacity: $ui__opacity){
+  @mixin m__ui-rgba($r, $g, $b, $opacity: $ui__opacity){
     background-color: transparent;
     background-color: rgba($r, $g, $b, $opacity);  // Chrome, Firefox 3+, IE 9+, Opera 10.10+, Safari 3+
   }
 
-  @mixin ui__rotate($r: $ui__rotate){
+  @mixin m__ui-rotate($r: $ui__rotate){
     -webkit-transform: rotate($r);  // Chrome, Opera 15+, Safari 3.1+
         -ms-transform: rotate($r);  // IE 9
             transform: rotate($r);  // Firefox 16+, IE 10+, Opera
   }
 
-  @mixin ui__scale($scale: $ui__scale) {
+  @mixin m__ui-scale($scale: $ui__scale) {
     -webkit-transform: scale($scale);  // Chrome, Opera 15+, Safari 3.1+
         -ms-transform: scale($scale);  // IE 9
             transform: scale($scale);  // Firefox 16+, IE 10+, Opera
   }
 
-  @mixin ui__3dtransforms($perspective: 300px, $type: "Y", $rotate: 180deg) {
+  @mixin m__ui-3dtransforms($perspective: 300px, $type: "Y", $rotate: 180deg) {
 
     -webkit-perspective: $perspective;  // Chrome 12+, Safari 4+
         -ms-perspective: $perspective;  // IE 10
@@ -144,7 +147,7 @@
 
   }
 
-  @mixin ui__transition-s($time: 0.3s, $ease: $ui__ease) {
+  @mixin m__ui-transition-s($time: 0.3s, $ease: $ui__ease) {
     -webkit-transition: all $time $ease;  // Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6
        -moz-transition: all $time $ease;
         -ms-transition: all $time $ease;
@@ -152,7 +155,7 @@
             transition: all $time $ease;  // Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+
   }
 
-  @mixin ui__transition-o($args...) {
+  @mixin m__ui-transition-o($args...) {
     -webkit-transition: $args;
        -moz-transition: $args;
         -ms-transition: $args;
@@ -160,24 +163,24 @@
             transition: $args;
   }
 
-  @mixin ui__textshadow($h-shadow: map-get($ui__text-shadow, "hshadow"), $v-shadow: map-get($ui__text-shadow, "vshadow"), $blur: map-get($ui__text-shadow, "blur"), $color: map-get($ui__text-shadow, "color")) {
+  @mixin m__ui-textshadow($h-shadow: map-get($ui__text-shadow, "hshadow"), $v-shadow: map-get($ui__text-shadow, "vshadow"), $blur: map-get($ui__text-shadow, "blur"), $color: map-get($ui__text-shadow, "color")) {
     text-shadow: $h-shadow $v-shadow $blur $color; // Chrome, Firefox 3.5+, IE 10+, Opera 9+, Safari 1+
   }
 
-  @mixin ui__opacity($opacity: $ui__opacity) {
+  @mixin m__ui-opacity($opacity: $ui__opacity) {
     zoom: 1;
     filter: alpha(opacity = calculate-opacity($opacity)); //IE8
     opacity: $opacity; // Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
   }
 
-  @mixin ui__bgsize($size: $ui__background-size) {
+  @mixin m__ui-bgsize($size: $ui__background-size) {
       -webkit-background-size: $size;
          -moz-background-size: $size;
            -o-background-size: $size;
               background-size: $size;
   }
 
-  @mixin ui__keyframes($animation-name) {
+  @mixin m__ui-keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {
       @content;
     }
@@ -195,7 +198,7 @@
     }
   }
 
-  @mixin ui__animation($str) {
+  @mixin m__ui-animation($str) {
     -webkit-animation: #{$str};
     -moz-animation: #{$str};
     -ms-animation: #{$str};
@@ -208,20 +211,20 @@
   //  Used in Module _text.scss
   //------------------------------------------------
 
-  @mixin font-s($fs: 1em, $lh: 1.4){
+  @mixin m__font-s($fs: 1em, $lh: 1.4){
     font-size: $fs;
     line-height: $lh;
   }
 
-  @mixin font($size, $line, $margin-bottom: 0, $family: $base__font-family, $color: $font__color--base, $weight: normal){
-    font-size: em($size);
+  @mixin m__font($size, $line, $margin-bottom: 0, $family: $base__font-family, $color: $font__color--base, $weight: normal){
+    font-size: f__em($size);
     line-height: ($line/$size);
     font-family: $family;
-    margin-bottom: em($margin-bottom, $size);
+    margin-bottom: f__em($margin-bottom, $size);
     color: $color;
   }
 
-  @mixin font-size($size) {
+  @mixin m__font-size($size) {
     font-size: $size;
-    font-size: rem($size);
+    font-size: f__rem($size);
   }

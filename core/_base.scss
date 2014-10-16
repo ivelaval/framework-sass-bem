@@ -1,7 +1,7 @@
   //Core/Base ==========================================================================
 
   * {
-      @include base__bs();
+      @include m__base-bs();
   }
 
   html,
@@ -13,7 +13,7 @@
   }
 
   html {
-    @include font-s();
+    @include m__font-s();
   }
 
   //--------------------------------------------------------------
@@ -41,7 +41,7 @@
       height: 1px;
       border: 0;
       border-top: 1px solid #ccc;
-      @include base__mp($margin: 1em 0);
+      @include m__base-mpb($margin: 1em 0);
   }
 
   //--------------------------------------------------------------
@@ -49,19 +49,18 @@
   //--------------------------------------------------------------
 
   ul {
-      @include base__mp();
+      @include m__base-mpb();
   }
 
   li {
-      @include base__mp();
-      list-style-type: none;
+      @include m__base-mpb();
       list-style: none;
   }
 
   a{
       text-decoration: none;
       color: #0060EF;
-      @include ui__transition-o(color .3s ease);
+      @include m__ui-transition-o(color .3s ease);
       &:hover{
           color: rgba(47, 40, 54, 0.59);
       }
@@ -72,7 +71,7 @@
   //--------------------------------------------------------------
 
   form{
-    @include base__mp();
+    @include m__base-mpb();
   }
 
 
@@ -101,7 +100,7 @@
   }
 
   footer{
-      @include base__mp();
+      @include m__base-mpb();
   }
 
   //--------------------------------------------------------------

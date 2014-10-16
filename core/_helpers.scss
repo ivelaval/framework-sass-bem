@@ -4,7 +4,7 @@
   // Helper image replacement
   //------------------------------------------------
 
-  %helper__ir {
+  %h__ir {
       background-color: transparent;
       border: 0;
       overflow: hidden;
@@ -12,7 +12,7 @@
       *text-indent: -9999px;
   }
 
-  %helper__ir:before {
+  %h__ir:before {
       content: "";
       display: block;
       width: 0;
@@ -23,7 +23,7 @@
   // Hide from both screenreaders and browsers
   //------------------------------------------------
 
-  %helper__hidden {
+  %h__hidden {
       display: none !important;
       visibility: hidden;
   }
@@ -32,7 +32,7 @@
   // Hide visually and from screenreaders, but maintain layout
   //------------------------------------------------
 
-  %helper__invisible {
+  %h__invisible {
       visibility: hidden;
   }
 
@@ -40,7 +40,7 @@
   // Clear float positions elements
   //------------------------------------------------
 
-  %helper__clearfix {
+  %h__clearfix {
     *zoom: 1;
     &:before, &:after {
       content: " ";
@@ -55,7 +55,7 @@
   // Visually hide an element
   //------------------------------------------------
 
-  %helper__visuallyhidden {
+  %h__visually-hidden {
     margin: -1px;
     padding: 0;
     width: 1px;

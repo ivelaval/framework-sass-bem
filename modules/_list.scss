@@ -4,17 +4,17 @@
 
       .list{
 
-          padding-left: em(10);
+          padding-left: f__em(10);
           list-style: none;
       }
 
       .list--bullet{
           list-style: bullet;
-          padding-left: em(10);
+          padding-left: f__em(10);
       }
 
       .list__item{
-          margin-bottom: em(10);
+          margin-bottom: f__em(10);
       }
 
       .list__item--end{
