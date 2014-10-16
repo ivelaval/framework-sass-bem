@@ -57,8 +57,8 @@
 
       .layout__container {
         position: relative;
-        padding-right: map-get($settings, "margin");
-        padding-left: map-get($settings, "margin");
+        //padding-right: map-get($settings, "margin");
+        //padding-left: map-get($settings, "margin");
         margin-right: auto;
         margin-left: auto;
         @include m__clearfix();

@@ -38,6 +38,24 @@
       left: 0;
       top: 0;
       background: #444444;
+      @include m__render-grid-universal("md"){
+        position: relative;
+        height: 36px;
+        @include m__base-mpb();
+      }
+
+      @include m__render-grid-universal("sm"){
+        position: relative;
+        height: 36px;
+        @include m__base-mpb();
+      }
+
+      @include m__render-grid-universal("xs"){
+        position: relative;
+        height: 36px;
+        @include m__base-mpb();
+      }
+
     }
 
   }//endif
