@@ -40,7 +40,7 @@
   // Clear float positions elements
   //------------------------------------------------
 
-  %clearfix {
+  %helper__clearfix {
     *zoom: 1;
     &:before, &:after {
       content: " ";
@@ -55,7 +55,7 @@
   // Visually hide an element
   //------------------------------------------------
 
-  %visuallyhidden {
+  %helper__visuallyhidden {
     margin: -1px;
     padding: 0;
     width: 1px;

@@ -2,14 +2,6 @@
 
   @if $module__text == true{
 
-      html{
-          font-size: $base__font-size * 1px;
-      }
-
-      body{
-          @include font($base__font-size, $base__line-height);
-      }
-
       h1{
           @include font(12, $base__line-height, 10, $color: $font__color--base, $weight: bold);
       }

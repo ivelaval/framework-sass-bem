@@ -1,9 +1,7 @@
   //Core/Base ==========================================================================
 
   * {
-    -webkit-box-sizing: border-box; /* Android ≤ 2.3, iOS ≤ 4 */
-       -moz-box-sizing: border-box; /* Firefox ≤ 28 */
-            box-sizing: border-box; /* Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1 */
+      @include base__bs();
   }
 
   html,
@@ -15,15 +13,14 @@
   }
 
   html {
-      font-size: 1em;
-      line-height: 1.4;
+    @include font-s();
   }
 
-  /*
-   * Remove text-shadow in selection highlight: h5bp.com/i
-   * These selection rule sets have to be separate.
-   * Customize the background color to match your design.
-   */
+  //--------------------------------------------------------------
+  // Remove text-shadow in selection highlight
+  // These selection rule sets have to be separate.
+  // Customize the background color to match your design.
+  //--------------------------------------------------------------
 
   ::-moz-selection {
       background: #b3d4fc;
@@ -35,30 +32,28 @@
       text-shadow: none;
   }
 
-  /*
-   * A better looking default horizontal rule
-   */
+  //--------------------------------------------------------------
+  // A better looking default horizontal rule
+  //--------------------------------------------------------------
 
   hr {
       display: block;
       height: 1px;
       border: 0;
       border-top: 1px solid #ccc;
-      margin: 1em 0;
-      padding: 0;
+      @include base__mp($margin: 1em 0);
   }
 
-  /*
-   * List syles default
-   */
+  //--------------------------------------------------------------
+  // List syles default
+  //--------------------------------------------------------------
+
   ul {
-      margin: 0;
-      padding: 0;
+      @include base__mp();
   }
 
   li {
-      margin: 0;
-      padding: 0;
+      @include base__mp();
       list-style-type: none;
       list-style: none;
   }
@@ -72,9 +67,18 @@
       }
   }
 
-  /*
-   * Preconfigured elements for better visualization
-   */
+  //--------------------------------------------------------------
+  //  predefined styles for forms
+  //--------------------------------------------------------------
+
+  form{
+    @include base__mp();
+  }
+
+
+  //--------------------------------------------------------------
+  // Preconfigured elements for better visualization
+  //--------------------------------------------------------------
 
   p, ol, ul, blockquote, pre, code {
       line-height: 18px;
@@ -84,10 +88,10 @@
       margin-bottom: 1.5em;
   }
 
-  /*
-   * Remove the gap between images, videos, audio and canvas and the bottom of
-   * their containers: h5bp.com/i/440
-   */
+  //--------------------------------------------------------------
+  // Remove the gap between images, videos, audio and canvas
+  // and the bottom of their containers
+  //--------------------------------------------------------------
 
   audio,
   canvas,
@@ -97,19 +101,17 @@
   }
 
   footer{
-      margin: 0;
-      padding: 0;
+      @include base__mp();
   }
 
-  /* ==========================================================================
-     Print styles.
-     Inlined to avoid required HTTP connection
-     ========================================================================== */
+  //--------------------------------------------------------------
+  //   Print styles. Inlined to avoid required HTTP connection
+  //--------------------------------------------------------------
 
   @media print {
       * {
           background: transparent !important;
-          color: #000 !important; /* Black prints faster: h5bp.com/s */
+          color: #000 !important; // Black prints faster
           box-shadow: none !important;
           text-shadow: none !important;
       }
@@ -127,9 +129,9 @@
           content: " (" attr(title) ")";
       }
 
-      /*
-       * Don't show links for images, or javascript/internal links
-       */
+      //--------------------------------------------------------------
+      // Don't show links for images, or javascript/internal links
+      //--------------------------------------------------------------
 
       .ir a:after,
       a[href^="javascript:"]:after,

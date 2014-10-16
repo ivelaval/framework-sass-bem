@@ -1,22 +1,21 @@
   //Core/Mixins ==========================================================================
 
   //------------------------------------------------
-  //  Utilities for texts
-  //	Used in Module _text.scss
+  //  Utilities for properties base
   //------------------------------------------------
 
-  @mixin font($size, $line, $margin-bottom: 0, $family: $base__font-family, $color: $font__color--base, $weight: normal){
-      font-size: em($size);
-      line-height: ($line/$size);
-      font-family: $family;
-      margin-bottom: em($margin-bottom, $size);
-      color: $color;
+  @mixin base__mp($margin: 0, $padding: 0){
+    margin: #{$margin};
+    padding: #{$padding};
   }
 
-  @mixin font-size($size) {
-    font-size: $size;
-    font-size: rem($size);
+  @mixin base__bs($type: border-box){
+    -webkit-box-sizing: $type; /* Android ≤ 2.3, iOS ≤ 4 */
+       -moz-box-sizing: $type; /* Firefox ≤ 28 */
+            box-sizing: $type; /* Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1 */
   }
+
+
 
   //------------------------------------------------
   //  Utilities for grid systems
@@ -91,8 +90,8 @@
 
   //------------------------------------------------
   //  Utilities for css3 properties
-  //	Used in all Modules
-  //	CSS3 please! - css3 modificators
+  //  Used in all Modules
+  //  CSS3 please! - css3 modificators
   //------------------------------------------------
 
   @mixin ui__round($radius: $base__border-radius) {
@@ -202,4 +201,27 @@
     -ms-animation: #{$str};
     -o-animation: #{$str};
     animation: #{$str};
+  }
+
+  //------------------------------------------------
+  //  Utilities for texts
+  //  Used in Module _text.scss
+  //------------------------------------------------
+
+  @mixin font-s($fs: 1em, $lh: 1.4){
+    font-size: $fs;
+    line-height: $lh;
+  }
+
+  @mixin font($size, $line, $margin-bottom: 0, $family: $base__font-family, $color: $font__color--base, $weight: normal){
+    font-size: em($size);
+    line-height: ($line/$size);
+    font-family: $family;
+    margin-bottom: em($margin-bottom, $size);
+    color: $color;
+  }
+
+  @mixin font-size($size) {
+    font-size: $size;
+    font-size: rem($size);
   }
