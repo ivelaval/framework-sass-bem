@@ -16,5 +16,28 @@
 
     @include m__render-grid-styles($base__layout);
 
+    .layout__sidebar{
+      bottom: 0;
+      z-index: 1000;
+      padding: 10px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      @include m__clearfix();
+    }
+
+    .layout__sidebar--left{
+      float: left;
+    }
+
+    .layout__sidebar--right{
+      float: right;
+    }
+
+    .layout__sidebar--fixed{
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: #444444;
+    }
 
   }//endif

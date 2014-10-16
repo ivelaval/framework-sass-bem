@@ -3,15 +3,15 @@
   @if $module__text == true{
 
       h1{
-          @include m__font(12, $base__line-height, 10, $color: $font__color--base, $weight: bold);
+          @include m__font(12, $base__line-height, 10, $color: $base__font-color, $weight: bold);
       }
 
       h2{
-          @include m__font(36, $base__line-height, 10, $color: $font__color--base, $weight: normal);
+          @include m__font(36, $base__line-height, 10, $color: $base__font-color, $weight: normal);
       }
 
       h3{
-          @include m__font(45, $base__line-height, 10, $color: $font__color--base, $weight: normal);
+          @include m__font(45, $base__line-height, 10, $color: $base__font-color, $weight: normal);
       }
 
   }//endif

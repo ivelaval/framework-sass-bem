@@ -1,6 +1,26 @@
   //Core/Vars ==========================================================================
 
   //---------------------------------------------
+  //  BASE
+  //---------------------------------------------
+  $base__font-family:  			    sans-serif !default;
+  $base__font-size: 				16 !default; //Base font-size px to em
+  $base__font-size-default: 	    14 !default;
+  $base__font-color: 				#000 !default;
+  $base__line-height: 			    20 !default;
+  $base__width-fixed:               980px !default;
+  $base__columns-grid:              12 !default;
+  $base__margin:                    10px !default;
+  $base__margin-left-sidebar:       260;
+  $base__layout:                    (maxWidth: $base__width-fixed, columns: $base__columns-grid, margin: $base__margin);
+  $base__breakpoints:               (
+                                      xs: "(max-width : 480px)",
+                                      sm: "(max-width : 768px) and (min-width: 481px)",
+                                      md: "(max-width : 1024px)  and (min-width: 769px)",
+                                      lg: "(min-width : 1025px)"
+                                    );
+
+  //---------------------------------------------
   //  FONT
   //---------------------------------------------
   $font__size--96:             	    f__em(96) !default;
@@ -18,34 +38,6 @@
   $font__family--sans: 			    sans-serif !default;
   $font__family--helvetica: 		'Helvetica Neue', sans-serif !default;
   $font__family--open-sans: 		'Open Sans', sans-serif !default;
-  $font__color--base: 			    #000 !default;
-
-  //---------------------------------------------
-  //  COLOR
-  //---------------------------------------------
-  $color__primary:                  #cc3537 !default;
-  $color__primary--light: 		    #FFF !default;
-  $color__primary--dark: 			#000 !default;
-  $color__background--dark:		    #000 !default;
-  $color__background--light:		#FFF !default;
-
-  //---------------------------------------------
-  //  BASE
-  //---------------------------------------------
-  $base__font-family:  			    $font__family--sans !default;
-  $base__font-size: 				16 !default; //Base font-size px to em
-  $base__line-height: 			    20 !default;
-  $base__layout:                    (
-                                      maxWidth: 800px,
-                                      columns: 12,
-                                      margin: 15px,
-                                      breakpoints: (
-                                              xs: "(max-width : 480px)",
-                                              sm: "(max-width : 768px) and (min-width: 481px)",
-                                              md: "(max-width : 1024px)  and (min-width: 769px)",
-                                              lg: "(min-width : 1025px)"
-                                      )
-                                    );
 
   //---------------------------------------------
   //  UI BASE

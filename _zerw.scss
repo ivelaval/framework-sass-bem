@@ -16,11 +16,11 @@
   //	Config init
   //--------------------------------------
   @import 'core/config';
+  @import 'core/normalize';
   //--------------------------------------
   // Core init
   //--------------------------------------
   @import 'core/vars';
-  @import 'core/normalize';
   @import 'core/helpers';
   @import 'core/functions';
   @import 'core/mixins';
@@ -34,7 +34,7 @@
   @import 'modules/list';
   @import 'modules/media';
   @import 'modules/menu';
-  @import 'modules/notification';
+  @import 'modules/_alert';
   @import 'modules/pagination';
   @import 'modules/table';
   @import 'modules/text';
