@@ -1,6 +1,141 @@
   //module/Breadcrumb ==========================================================================
 
+  //-------------------------------------------
+  //  Breadcrumb Mixins
+  //-------------------------------------------
+  @mixin breadcrumb__mixin--type($normal, $hover, $text-nomal: #FFF, $text-hover: $base__font-color){
+    li{
+      float:left;
+      a{
+        color: $text-nomal;
+        display:block;
+        background: $normal;
+        text-decoration: none;
+        position:relative;
+        height: 40px;
+        line-height:40px;
+        padding: 0 10px 0 5px;
+        text-align: center;
+        margin-right: 23px;
+      }
+      &:nth-child(even){
+        a{
+          background-color: $normal;
+
+          &:before{
+            border-color: $normal;
+            border-left-color:transparent;
+          }
+          &:after{
+            border-left-color: $normal;
+          }
+        }
+      }
+      &:first-child{
+        a{
+          padding-left:15px;
+          @include m__ui-round(4px 0 0 4px);
+          &:before{
+            border:none;
+          }
+        }
+      }
+      &:last-child{
+        a{
+          padding-right:15px;
+          @include m__ui-round(0 4px 4px 0);
+          &:after{
+            border:none;
+          }
+        }
+      }
+      a{
+        &:before,
+        &:after{
+          content: "";
+          position:absolute;
+          top: 0;
+          border:0 solid $normal;
+          border-width:20px 10px;
+          width: 0;
+          height: 0;
+        }
+        &:before{
+          left:-20px;
+          border-left-color:transparent;
+        }
+        &:after{
+          left:100%;
+          border-color:transparent;
+          border-left-color:$normal;
+        }
+        &:hover{
+          background-color: $hover;
+          color: $text-hover;
+          @include m__ui-transition-o(color .3s ease);
+          &:before{
+            border-color:$hover;
+            border-left-color:transparent;
+          }
+          &:after{
+            border-left-color:$hover;
+          }
+        }
+        &:active{
+          background-color: $hover;
+          color: $text-hover;
+          &:before{
+            border-color:$hover;
+            border-left-color:transparent;
+          }
+          &:after{
+            border-left-color:$hover;
+          }
+        }
+      }
+    }
+  }
+
+
   @if $module__breadcrumb == true{
 
+    .breadcrumb{
+      padding: 8px 15px;
+      margin-bottom: 20px;
+      background-color: #fafafa;
+      border-color: #ededed;
+      @include m__ui-round(4px);
+      @include m__ui-border(-1, 0 1px 4px 1px);
+      border-style: solid;
+      border-width: 0 1px 4px 1px;
+    }
+
+    .breadcrumb > li {
+      display: inline-block;
+      vertical-align: top;
+      &:last-child{
+        &:after{
+          content: " ";
+        }
+      }
+      &:after{
+        content: " / ";
+      }
+      &.active {
+        color: #999999;
+      }
+    }
+
+    .breadcrumb__dark{
+      list-style:none;
+      display: inline-block;
+      @include breadcrumb__mixin--type(#34495e, #243448, #FFF, #FFF);
+    }
+
+    .breadcrumb__light{
+      list-style:none;
+      display: inline-block;
+      @include breadcrumb__mixin--type($ui__color-status--normal, #afb2b3, #777777, #454545);
+    }
 
   }//endif

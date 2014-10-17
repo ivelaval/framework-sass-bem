@@ -1,5 +1,55 @@
 //module/Button ==========================================================================
+
+//-------------------------------------------
+//  Button Mixins
+//-------------------------------------------
+@mixin button__mixin--skin($backc, $borc, $c){
+  background-color: $backc;
+  border-color:$borc;
+  color: $c!important;
+}
+
 @if $module__button == true{
 
+  .button{
+
+    @include m__ui-round();
+    @include m__ui-border();
+
+    &:hover{
+      margin-top: 1px;
+      border-bottom-width: 3px;
+    }
+    &:focus{
+      text-decoration: none;
+      outline: 0;
+    }
+    &:active{
+      margin-top: 2px;
+      border-bottom-width: 2px;
+      outline: 0;
+    }
+
+  }
+
+  .button--normal{
+    @include button__mixin--skin(#eeeeee, #e2e2e2, #555555);
+  }
+
+  .button--danger{
+    @include button__mixin--skin($ui__color-status--danger, #dd3d37, #FFFFFF);
+  }
+
+  .button--warning{
+    @include button__mixin--skin($ui__color-status--warning, #d36a1b, #FFFFFF);
+  }
+
+  .button--success{
+    @include button__mixin--skin($ui__color-status--success, #51a11f, #FFFFFF);
+  }
+
+  .button--info{
+    @include button__mixin--skin($ui__color-status--info, #156f95, #FFFFFF);
+  }
 
 }//endif

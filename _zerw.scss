@@ -28,15 +28,22 @@
   //--------------------------------------
   // Modules
   //--------------------------------------
+  @import 'modules/alert';
+  @import 'modules/badge';
+  @import 'modules/breadcrumb';
+  @import 'modules/button';
   @import 'modules/form';
   @import 'modules/image';
+  @import 'modules/label';
   @import 'modules/layout';
   @import 'modules/list';
   @import 'modules/media';
   @import 'modules/menu';
-  @import 'modules/_alert';
+  @import 'modules/navbar';
   @import 'modules/pagination';
+  @import 'modules/panel';
+  @import 'modules/progressbar';
+  @import 'modules/tab';
   @import 'modules/table';
   @import 'modules/text';
-  @import 'modules/breadcrumb';
-  @import 'modules/panel';
+  @import 'modules/well';

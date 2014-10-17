@@ -1,7 +1,6 @@
   //Core/Config ==========================================================================
 
   //  MODULES
-
   $module__breadcrumb:     	    true!default;
   $module__form:           	    true!default;
   $module__image:           	true!default;
@@ -20,6 +19,10 @@
   $module__button:          	true!default;
   $module__navbar:          	true!default;
   $module__tab:          	    true!default;
+  $module__badge:               true!default;
+  $module__alert:               true!default;
+  $module__progressbar:         true!default;
+  $module__well:                true!default;
 
   //  FRAMEWORK
 

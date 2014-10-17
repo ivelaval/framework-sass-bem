@@ -6,9 +6,10 @@
 
   html, body {
     @include m__font-s();
+    font-family: $font__family--open-sans;
     color: $base__font-color;
     font-size: f__em($base__font-size-default);
-    text-align: justify;
+    text-align: $base__font-align;
   }
 
   button,
@@ -61,7 +62,7 @@
 
   a{
       text-decoration: none;
-      color: #0060EF;
+      color: #1e7eb5;
       @include m__ui-transition-o(color .3s ease);
       &:hover{
           color: rgba(47, 40, 54, 0.59);
@@ -80,6 +81,18 @@
     @include m__base-mpb();
   }
 
+
+  button,
+  html input[type="button"],
+  input[type="reset"],
+  input[type="submit"]{
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px;
+    color: $base__font-color;
+    -webkit-appearance: button;
+    cursor: pointer;
+  }
 
   //--------------------------------------------------------------
   // Preconfigured elements for better visualization

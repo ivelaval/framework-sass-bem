@@ -1,5 +1,92 @@
 //module/Badge ==========================================================================
+
+//-------------------------------------------
+//  Badge Extends
+//-------------------------------------------
+%badge__extend--badge{
+  display: inline-block;
+  min-width: 10px;
+  padding: 4px 8px;
+  font-weight: bold;
+  color: inherit;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+}
+
+%badge__extend--shadow-inside{
+  @include m__ui-shadow-o(inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2));
+}
+
+//-------------------------------------------
+//  Badge Mixins
+//-------------------------------------------
+@mixin badge__mixin--skin-badge($backc: #ff851b, $c: #ffffff){
+  background-color: $backc;
+  color: $c;
+}
+
 @if $module__badge == true{
 
+  .badge{
+    @extend %badge__extend--badge;
+    font-size: f__em(12);
+    @include m__ui-round(15px);
+  }
+
+  .badge--dark{
+    @include badge__mixin--skin-badge(#1e7eb5);
+
+  }
+
+  .badge--light{
+    @include badge__mixin--skin-badge(#e2e4e0, #454545);
+  }
+
+  .badge--shadow-inside{
+    @extend %badge__extend--shadow-inside;
+  }
+
+  .badge__float {
+    position:relative;
+  }
+  .badge__float[data-badge]:after {
+    content:attr(data-badge);
+    position:absolute;
+    top:-15px;
+    right:-20px;
+    @extend %badge__extend--badge;
+    font-size: f__em(12);
+    @include m__ui-round(15px);
+  }
+
+  .badge__float--dark[data-badge]:after{
+    @extend .badge--dark;
+  }
+
+  .badge__float--light[data-badge]:after{
+    @extend .badge--light;
+  }
+
+  .badge__float--shadow-inside[data-badge]:after{
+    @extend %badge__extend--shadow-inside;
+  }
+
+  .badge--danger, .badge__float--danger[data-badge]:after{
+    @include badge__mixin--skin-badge($ui__color-status--danger);
+  }
+
+  .badge--warning, .badge__float--warning[data-badge]:after{
+    @include badge__mixin--skin-badge($ui__color-status--warning);
+  }
+
+  .badge--success, .badge__float--success[data-badge]:after{
+    @include badge__mixin--skin-badge($ui__color-status--success);
+  }
+
+  .badge--info, .badge__float--info[data-badge]:after{
+    @include badge__mixin--skin-badge($ui__color-status--info);
+  }
 
 }//endif

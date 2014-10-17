@@ -5,10 +5,12 @@
   //------------------------------------------------
 
   //Margin padding border mixin
-  @mixin m__base-mpb($margin: 0, $padding: 0, $border: 0){
+  @mixin m__base-mpb($margin: 0, $padding: 0, $border: -1){
     margin: #{$margin};
     padding: #{$padding};
-    border: #{$border};
+    @if($border == -1){
+      border: #{$border};
+    }
   }
 
   //Border sizing mixin
@@ -66,9 +68,13 @@
 
       .layout__row {
         position: relative;
+        @include m__clearfix();
+      }
+
+      .layout__row--clear {
         margin-right: map-get($settings, "margin") * -1;
         margin-left: map-get($settings, "margin") * -1;
-        @include m__clearfix();
+        @extend .layout__row;
       }
 
       $breakpoints: $base__breakpoints;
@@ -120,19 +126,32 @@
   //  CSS3 please! - css3 modificators
   //------------------------------------------------
 
-  @mixin m__ui-round($radius: $base__border-radius) {
-      -webkit-border-radius: 	$radius;
-       -moz-border-radius: 	$radius;
-        -ms-border-radius: 	$radius;
-            border-radius: 	$radius; // Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+
+  @mixin m__ui-round($radius: $ui__border-radius) {
+      -webkit-border-radius: 	#{$radius};
+         -moz-border-radius: 	#{$radius};
+          -ms-border-radius: 	#{$radius};
+              border-radius: 	#{$radius}; // Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+
             // useful if you don't want a bg color from leaking outside the border:
             background-clip: 	padding-box; // Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+
+  }
+
+  @mixin m__ui-border($b: 1px solid transparent, $bw: 0 1px 4px 1px){
+    @if($b != -1){
+      border: #{$b};
+    }
+    border-width: #{$bw};
   }
 
   @mixin m__ui-shadow($h-shadow: map-get($ui__map-shadow, "hshadow"), $v-shadow: map-get($ui__map-shadow, "vshadow"), $blur: map-get($ui__map-shadow, "blur"), $spread: map-get($ui__map-shadow, "spread"), $color: map-get($ui__map-shadow, "color"), $opacity: map-get($ui__map-shadow, "opacity")) {
     -webkit-box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity); // Android 2.3+, iOS 4.0.2-4.2, Safari 3-4
        -moz-box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity);
             box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity); // Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+
+  }
+
+  @mixin m__ui-shadow-o($sha, $dow){
+    -webkit-box-shadow: #{$sha}, #{$dow}; // Android 2.3+, iOS 4.0.2-4.2, Safari 3-4
+       -moz-box-shadow: #{$sha}, #{$dow};
+            box-shadow: #{$sha}, #{$dow}; // Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+
   }
 
   @mixin m__ui-gradient($fcolor: map-get($ui__map-gradient, "fcolor"), $scolor: map-get($ui__map-gradient, "scolor")) {

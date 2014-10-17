@@ -1,5 +1,94 @@
   //module/Alert ==========================================================================
+
+  //-------------------------------------------
+  //  Alert Extends
+  //-------------------------------------------
+  %alert__extend--button{
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+
+  %alert__extend--link-color-light{
+    & a{
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+  %alert__extend--link-color-dark{
+    & a{
+      color: #696969;
+      text-decoration: underline;
+    }
+  }
+
+  //-------------------------------------------
+  //  Alert Mixins
+  //-------------------------------------------
+  @mixin alert__mixin--skin-button($backc: #ff851b, $borc: #ff7701, $c: #ffffff){
+    background-color: $backc;
+    border-color: $borc;
+    color: $c;
+  }
+
   @if $module__alert == true{
 
+    .alert{
+      position: relative;
+      @include m__base-mpb(12px, 8px);
+      @include m__ui-border();
+      @include m__ui-round();
+    }
+
+    .alert > p{
+      padding: 0;
+    }
+
+    .alert--closable{
+      padding-right: 45px;
+    }
+
+    .alert--normal{
+      @include alert__mixin--skin-button($ui__color-status--normal, #d9dcdd, #696969);
+      @extend %alert__extend--link-color-dark;
+    }
+
+    .alert--danger{
+      @include alert__mixin--skin-button($ui__color-status--danger, #ff1103);
+      @extend %alert__extend--link-color-light;
+    }
+
+    .alert--warning{
+      @include alert__mixin--skin-button($ui__color-status--warning, #ff7701);
+      @extend %alert__extend--link-color-light;
+    }
+
+    .alert--success{
+      @include alert__mixin--skin-button($ui__color-status--success, #53ab1e);
+      @extend %alert__extend--link-color-light;
+    }
+
+    .alert--info{
+      @include alert__mixin--skin-button($ui__color-status--info, #1e7eb5);
+      @extend %alert__extend--link-color-light;
+    }
+
+    .alert__title{
+      margin-top: 0;
+      color: inherit;
+    }
+
+    .alert__button--close{
+      @extend %alert__extend--button;
+      position: absolute;
+      opacity: 1;
+      top: 2px;
+      right: 8px;
+      color: inherit;
+      font-weight: bold;
+    }
 
   }//endif
