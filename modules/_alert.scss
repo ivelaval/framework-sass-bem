@@ -38,7 +38,7 @@
 
     .alert{
       position: relative;
-      @include m__base-mpb(12px, 8px);
+      @include m__base-mpb(10px 0, 8px);
       @include m__ui-border();
       @include m__ui-round();
     }

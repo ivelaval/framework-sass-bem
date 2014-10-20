@@ -13,8 +13,8 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="../../../css/style.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+
     </head>
     <body>
 
@@ -62,12 +62,30 @@
             <hr/>
             <div class="layout__row">
                 <h2>Buttons</h2>
+
                 <input type="button" value="aceptar" />
-                <input type="button" value="Normal" class="button button--normal"/>
-                <input type="button" value="Danger" class="button button--danger"/>
-                <input type="button" value="Warning" class="button button--warning"/>
-                <input type="button" value="Success" class="button button--success"/>
+                <input type="button" value="Normal" class="button button--normal button--lg"/>
+                <input type="button" value="Danger" class="button button--danger button--md"/>
+                <input type="button" value="Warning" class="button button--warning button--sm"/>
+                <input type="button" value="Success" class="button button--success button--xs"/>
                 <input type="button" value="Info" class="button button--info"/>
+
+                <a href="javascript:;" class="button button--danger button--lg">Link</a>
+                <a href="javascript:;" class="button button--danger button--lg button--fluid">Link</a>
+
+                <div class="button__group button__group--fluid">
+                    <a href="javascript:;" class="button button--info button--lg">Link</a>
+                    <a href="javascript:;" class="button button--warning button--lg">Link</a>
+                    <a href="javascript:;" class="button button--danger button--lg">Link</a>
+                    <a href="javascript:;" class="button button--success button--lg">Link</a>
+                    <a href="javascript:;" class="button button--normal button--lg">Link</a>
+                </div>
+
+                <div class="button__group">
+                    <a href="javascript:;" class="button button--success">8</a>
+                    <a href="javascript:;" class="button button--success" >Dropdown</a>
+                </div>
+
             </div>
             <hr/>
             <div class="layout__row">
@@ -104,11 +122,70 @@
             </div>
             <hr/>
             <div class="layout__row">
+                <h2>Form</h2>
+                <form class="form">
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Nuevo usuario</legend>
+
+                        <div class="form__group">
+                            <label for="input__nombre" class="layout__col-lg-2">Email</label>
+                            <div class="layout__col-lg-10">
+                                <input type="text" id="input__nombre" placeholder="Nombre">
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="input__nombre" class="layout__col-lg-2">Nombre</label>
+                            <div class="layout__col-lg-10">
+                                <input type="text" id="input__nombre" class="form__input form__input--lg form__input--danger" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <label for="input__apellido" class="layout__col-lg-2">Apellidos</label>
+                            <div class="layout__col-lg-10">
+                                <input type="text" id="input__apellido" class="form__input form__input--md form__input--warning" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <label for="input__email" class="layout__col-lg-2">Email</label>
+                            <div class="layout__col-lg-10">
+                                <input type="text" id="input__email" class="form__input form__input--sm form__input--success" placeholder="Email">
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="input__email" class="layout__col-lg-2">Email</label>
+                            <div class="layout__col-lg-10">
+                                <input type="text" id="input__email" class="form__input form__input--sm form__input--info" placeholder="Email">
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="input__telefono" class="layout__col-lg-2">Telefono</label>
+                            <div class="layout__col-lg-10">
+                                <input type="text" id="input__telefono" class="form__input form__input--xs" placeholder="Telefono">
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="input__descripcion" class="layout__col-lg-2">Descripcion</label>
+                            <div class="layout__col-lg-10">
+                                <textarea id="input__descripcion" class="form__textarea" placeholder="Descripcion"></textarea>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+            <hr/>
+            <div class="layout__row">
                 <div class="layout__col-sm-12 layout__col-md-6 layout__col-lg-3"><p> Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p></div>
                 <div class="layout__col-sm-12 layout__col-md-6 layout__col-lg-3"><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p></div>
                 <div class="layout__col-sm-12 layout__col-md-6 layout__col-lg-3"><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p></div>
                 <div class="layout__col-sm-12 layout__col-md-6 layout__col-lg-3"><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p></div>
             </div>
+
+
 
     </section>
 
@@ -119,3 +196,5 @@
 
     </body>
 </html>
+
+

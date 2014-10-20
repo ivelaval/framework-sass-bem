@@ -1,5 +1,66 @@
   //module/layout ==========================================================================
 
+  //-------------------------------------------
+  //  Layout Mixins
+  //-------------------------------------------
+
+  @mixin layout__mixin--grid-render($key, $settings) {
+    $i: 1;
+    @while $i <= map-get($settings, "columns") {
+      .layout__col-#{$key}-#{$i} {
+        float: left;
+        width: 100% * $i / map-get($settings,"columns");
+        @include m__clearfix();
+      }
+      $i: $i+1;
+    }
+  }
+
+  @mixin layout__mixin--grid-media($queryString){
+    @media #{$queryString} {
+      @content;
+    }
+  }
+
+  @mixin layout__mixin--grid-render-styles($settings){
+
+    .layout__container {
+      position: relative;
+      //padding-right: map-get($settings, "margin");
+      //padding-left: map-get($settings, "margin");
+      margin-right: auto;
+      margin-left: auto;
+      @include m__clearfix();
+    }
+
+    .layout__row {
+      position: relative;
+      @include m__clearfix();
+    }
+
+    .layout__row--clear {
+      margin-right: map-get($settings, "margin") * -1;
+      margin-left: map-get($settings, "margin") * -1;
+      @extend .layout__row;
+    }
+
+    $breakpoints: $base__breakpoints;
+
+    @each $key, $breakpoint in $breakpoints {
+      @include layout__mixin--grid-media($breakpoint) {
+        @include layout__mixin--grid-render($key, $settings);
+      }
+    }
+
+  }
+
+  @mixin layout__mixin--grid-render-universal($index){
+    $breakpoint: map-get($base__breakpoints,$index);
+    @include layout__mixin--grid-media($breakpoint) {
+      @content;
+    }
+  }
+
   @if $module__layout == true{
 
     *,
@@ -10,11 +71,13 @@
     }
 
     // ----------------------------------------------------
-    // Sass (v3.4.4)
-    // Compass (v1.0.1)
+    // Render Grid systems
     // ----------------------------------------------------
+    @include layout__mixin--grid-render-styles($base__layout);
 
-    @include m__render-grid-styles($base__layout);
+    .layout__element{
+      position: relative;
+    }
 
     .layout__sidebar{
       bottom: 0;
@@ -37,19 +100,19 @@
       position: fixed;
       left: 0;
       top: 0;
-      @include m__render-grid-universal("md"){
+      @include layout__mixin--grid-render-universal("md"){
         position: relative;
         height: 36px;
         @include m__base-mpb();
       }
 
-      @include m__render-grid-universal("sm"){
+      @include layout__mixin--grid-render-universal("sm"){
         position: relative;
         height: 36px;
         @include m__base-mpb();
       }
 
-      @include m__render-grid-universal("xs"){
+      @include layout__mixin--grid-render-universal("xs"){
         position: relative;
         height: 36px;
         @include m__base-mpb();

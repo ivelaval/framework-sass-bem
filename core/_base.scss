@@ -81,17 +81,62 @@
     @include m__base-mpb();
   }
 
-
   button,
   html input[type="button"],
   input[type="reset"],
-  input[type="submit"]{
+  input[type="submit"],
+  a.button{
     display: inline-block;
-    vertical-align: top;
-    padding: 8px;
+    padding: 8px 12px;
     color: $base__font-color;
-    -webkit-appearance: button;
     cursor: pointer;
+
+    &::-moz-focus-inner{
+      border: 0;
+      padding: 0;
+    }
+
+  }
+
+  fieldset{
+    @include m__base-mpb();
+  }
+
+  legend {
+    @include m__base-mpb();
+  }
+
+  label{
+    color: #606060;
+    vertical-align: middle;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="password"],
+  textarea
+  {
+    padding: map_get($base__padding-size, "md") map_get($base__padding-size, "lg");
+    border: 1px solid #a8a8a8;
+    color: #606060;
+    @include m__ui-round();
+
+    &:focus,
+    &:active{
+      outline: none;
+    }
+
+  }
+
+  textarea {
+    overflow: auto;
+  }
+
+  optgroup {
+    font-weight: bold;
   }
 
   //--------------------------------------------------------------

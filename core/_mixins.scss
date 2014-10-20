@@ -6,8 +6,12 @@
 
   //Margin padding border mixin
   @mixin m__base-mpb($margin: 0, $padding: 0, $border: -1){
-    margin: #{$margin};
-    padding: #{$padding};
+    @if($margin != -1){
+      margin: #{$margin};
+    }
+    @if($padding != -1) {
+      padding: #{$padding};
+    }
     @if($border == -1){
       border: #{$border};
     }
@@ -15,9 +19,9 @@
 
   //Border sizing mixin
   @mixin m__base-bs($type: border-box){
-    -webkit-box-sizing: $type; // Android ≤ 2.3, iOS ≤ 4
-       -moz-box-sizing: $type; // Firefox ≤ 28
-            box-sizing: $type; // Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1
+    -webkit-box-sizing: #{$type}; // Android ≤ 2.3, iOS ≤ 4
+       -moz-box-sizing: #{$type}; // Firefox ≤ 28
+            box-sizing: #{$type}; // Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1
   }
 
   @mixin m__clearfix(){
@@ -29,73 +33,6 @@
     &:after {
       clear: both;
     }
-  }
-
-  //------------------------------------------------
-  //  Utilities for grid systems
-  //  Used in Module _layout.scss
-  //------------------------------------------------
-
-  @mixin m__render-grid($key, $settings) {
-
-      $i: 1;
-      @while $i <= map-get($settings, "columns") {
-        .layout__col-#{$key}-#{$i} {
-          float: left;
-          width: 100% * $i / map-get($settings,"columns");
-          @include m__clearfix();
-        }
-        $i: $i+1;
-      }
-  }
-
-  @mixin m__media($queryString){
-    @media #{$queryString} {
-      @content;
-    }
-  }
-
-  @mixin m__render-grid-styles($settings){
-
-      .layout__container {
-        position: relative;
-        //padding-right: map-get($settings, "margin");
-        //padding-left: map-get($settings, "margin");
-        margin-right: auto;
-        margin-left: auto;
-        @include m__clearfix();
-      }
-
-      .layout__row {
-        position: relative;
-        @include m__clearfix();
-      }
-
-      .layout__row--clear {
-        margin-right: map-get($settings, "margin") * -1;
-        margin-left: map-get($settings, "margin") * -1;
-        @extend .layout__row;
-      }
-
-      $breakpoints: $base__breakpoints;
-
-      @each $key, $breakpoint in $breakpoints {
-        @include m__media($breakpoint) {
-          @include m__render-grid($key, $settings);
-        }
-      }
-
-  }
-
-  //------------------------------------------------
-  //  Render grid universal use points xs, sm, md, lg
-  //------------------------------------------------
-
-  @mixin m__render-grid-universal($index){
-    $breakpoint: map-get($base__breakpoints,$index);
-      @include m__media($breakpoint) {
-        @content;
-      }
   }
 
   //------------------------------------------------
@@ -132,7 +69,7 @@
           -ms-border-radius: 	#{$radius};
               border-radius: 	#{$radius}; // Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+
             // useful if you don't want a bg color from leaking outside the border:
-            background-clip: 	padding-box; // Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+
+            background-clip: 	padding-box; // Android 2.2+, Chrome, Firefox 4+, IE# 9+, iOS 4+, Opera 10.50+, Safari 4+
   }
 
   @mixin m__ui-border($b: 1px solid transparent, $bw: 0 1px 4px 1px){
@@ -142,16 +79,27 @@
     border-width: #{$bw};
   }
 
+  @mixin m__ui-user-select($arg: none){
+    -webkit-user-select: #{$arg};
+    -moz-user-select: #{$arg};
+    -ms-user-select: #{$arg};
+    user-select: #{$arg};
+  }
+
   @mixin m__ui-shadow($h-shadow: map-get($ui__map-shadow, "hshadow"), $v-shadow: map-get($ui__map-shadow, "vshadow"), $blur: map-get($ui__map-shadow, "blur"), $spread: map-get($ui__map-shadow, "spread"), $color: map-get($ui__map-shadow, "color"), $opacity: map-get($ui__map-shadow, "opacity")) {
     -webkit-box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity); // Android 2.3+, iOS 4.0.2-4.2, Safari 3-4
        -moz-box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity);
             box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity); // Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+
   }
 
-  @mixin m__ui-shadow-o($sha, $dow){
-    -webkit-box-shadow: #{$sha}, #{$dow}; // Android 2.3+, iOS 4.0.2-4.2, Safari 3-4
-       -moz-box-shadow: #{$sha}, #{$dow};
-            box-shadow: #{$sha}, #{$dow}; // Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+
+  @mixin m__ui-shadow-o($arg...){
+    -webkit-box-shadow: #{$arg} !important; // Android 2.3+, iOS 4.0.2-4.2, Safari 3-4
+       -moz-box-shadow: #{$arg} !important;
+            box-shadow: #{$arg} !important; // Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+
+  }
+
+  @mixin m__ui-text-shadow($arg: 0 1px 2px rgba(0, 0, 0, 0.25)){
+    text-shadow: #{$arg};
   }
 
   @mixin m__ui-gradient($fcolor: map-get($ui__map-gradient, "fcolor"), $scolor: map-get($ui__map-gradient, "scolor")) {
@@ -198,11 +146,11 @@
   }
 
   @mixin m__ui-transition-o($args...) {
-    -webkit-transition: $args;
-       -moz-transition: $args;
-        -ms-transition: $args;
-         -o-transition: $args;
-            transition: $args;
+    -webkit-transition: #{$args};
+       -moz-transition: #{$args};
+        -ms-transition: #{$args};
+         -o-transition: #{$args};
+            transition: #{$args};
   }
 
   @mixin m__ui-textshadow($h-shadow: map-get($ui__text-shadow, "hshadow"), $v-shadow: map-get($ui__text-shadow, "vshadow"), $blur: map-get($ui__text-shadow, "blur"), $color: map-get($ui__text-shadow, "color")) {
@@ -269,4 +217,9 @@
   @mixin m__font-size($size) {
     font-size: $size;
     font-size: f__rem($size);
+  }
+
+  @mixin m__font-auto-size($size, $line: $base__line-height){
+    font-size: f__em($size);
+    line-height: ($line/$size);
   }

@@ -4,32 +4,100 @@
 //  Button Mixins
 //-------------------------------------------
 @mixin button__mixin--skin($backc, $borc, $c){
-  background-color: $backc;
-  border-color:$borc;
-  color: $c!important;
+  background-color: #{$backc};
+  border-color: #{$borc};
+  color: #{$c}!important;
+}
+
+//-------------------------------------------
+//  Button Extends
+//-------------------------------------------
+%button__extend--default{
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 4px;
+  font-weight: normal;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  @include m__ui-text-shadow();
+  @include m__ui-round();
+  @include m__ui-border();
+  @include m__ui-user-select();
+}
+
+%button__extend--outline-in{
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+%button__extend--outline-off{
+  outline: 0;
+}
+
+%button__extend--button{
+
 }
 
 @if $module__button == true{
 
   .button{
 
-    @include m__ui-round();
-    @include m__ui-border();
+    @extend %button__extend--default;
 
     &:hover{
-      margin-top: 1px;
-      border-bottom-width: 3px;
+
     }
     &:focus{
       text-decoration: none;
-      outline: 0;
+      @extend %button__extend--outline-off;
     }
     &:active{
       margin-top: 2px;
       border-bottom-width: 2px;
-      outline: 0;
+      @extend %button__extend--outline-off;
     }
 
+  }
+
+  .button__group{
+
+    margin-bottom: 4px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    & > button,
+    & > input[type="button"],
+    & > input[type="reset"],
+    & > input[type="submit"],
+    & > a.button{
+
+      display: table-cell;
+      left: 0;
+      @include m__ui-round(0 0 0 0);
+
+      &:first-child{
+        @include m__ui-round(4px 0 0 4px);
+      }
+      &:last-child{
+        @include m__ui-round(0 4px 4px 0);
+      }
+      &:active{
+        border-bottom-width: 1px;
+      }
+    }
+
+  }
+
+  .button__group--fluid{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
   }
 
   .button--normal{
@@ -50,6 +118,31 @@
 
   .button--info{
     @include button__mixin--skin($ui__color-status--info, #156f95, #FFFFFF);
+  }
+
+  .button--link{
+    @include button__mixin--skin(none, none, #156f95);
+  }
+
+  .button--lg{
+    padding: map_get($base__padding-size, "lg")!important;
+  }
+
+  .button--md{
+    padding: map_get($base__padding-size, "md") 12px!important;
+  }
+
+  .button--sm{
+    padding: map_get($base__padding-size, "sm") 12px!important;
+  }
+
+  .button--xs{
+    padding: map_get($base__padding-size, "xs") 12px!important;
+  }
+
+  .button--fluid{
+    display: block;
+    width: 100%;
   }
 
 }//endif
