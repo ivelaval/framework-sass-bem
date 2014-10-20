@@ -18,6 +18,12 @@
   @import 'core/config';
   @import 'core/normalize';
   //--------------------------------------
+  // OMO OOCSS
+  //--------------------------------------
+  @import 'core/omo/overwriting';
+  @import 'core/omo/mapping';
+  @import 'core/omo/overload';
+  //--------------------------------------
   // Core init
   //--------------------------------------
   @import 'core/vars';
