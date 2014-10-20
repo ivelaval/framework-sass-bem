@@ -1,0 +1,72 @@
+// OMO > Mapping ==========================================================================
+
+//---------------------------------------------
+//  Mapping public configuration
+//---------------------------------------------
+
+//---------------------------------------------
+//  Map base layout
+//---------------------------------------------
+$mapping__base--layout:
+(
+        maxWidth:   $base__width-fixed,
+        columns:    $base__columns-grid,
+        margin:     $base__margin
+);
+
+//---------------------------------------------
+//  Map base breakpoints screen
+//---------------------------------------------
+$mapping__base--breakpoints:
+(
+        xs:         "(max-width : 480px)",
+        sm:         "(max-width : 768px) and (min-width: 481px)",
+        md:         "(max-width : 1024px)  and (min-width: 769px)",
+        lg:         "(min-width : 1025px)"
+);
+
+//---------------------------------------------
+//  Map base padding generic sizes
+//---------------------------------------------
+$mapping__base--padding-size:
+(
+        xs:         2px,
+        sm:         5px,
+        md:         8px,
+        lg:         12px
+);
+
+//---------------------------------------------
+//  Map ui shadow generic
+//---------------------------------------------
+$mapping__ui--map-shadow:
+(
+        hshadow:    0px,
+        vshadow:    0px,
+        blur:       4px,
+        spread:     0px,
+        color:      #ffffff,
+        opacity:    0.75
+);
+
+//---------------------------------------------
+//  Map ui gradient generic
+//---------------------------------------------
+$mapping__ui--map-gradient:
+(
+        fcolor:     #444444,
+        scolor:     #999999
+);
+
+//---------------------------------------------
+//  Map ui text shadow generic
+//---------------------------------------------
+$mapping__ui--text-shadow:
+(
+        hshadow:    1px,
+        vshadow:    1px,
+        blur:       3px,
+        color:      #888
+);
+
+

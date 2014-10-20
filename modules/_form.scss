@@ -33,16 +33,21 @@
     &:focus,
     &:active{
       outline: none;
-      border-color: $ui__color-status--normal;
+      border: 1px solid #747474 !important;
       @include m__ui-shadow-o(inset 0 1px 1px $ui__color-status--normal, 0 0 6px $ui__color-status--normal);
       @include m__ui-transition-o(border-color ease-in .20s, box-shadow ease-in .20s);
     }
   }
 
+  %form__extend--fluid{
+    display: block;
+    width: 100%;
+  }
+
   @if $module__form == true{
 
     .form{
-
+      padding: 2px;
     }
 
     .form__group{
@@ -53,7 +58,6 @@
     .form__fieldset{
       min-width: 0;
       border: 0;
-      padding: 40px 20px 20px 20px;
       @include m__ui-shadow-o(inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2));
       @include m__ui-round();
       background: #fcfcfc;
@@ -75,8 +79,6 @@
       @extend %form__extend--element;
     }
 
-    @include form__mixin--size-input();
-
     .form__input--danger{
       @include form__mixin--status($ui__color-status--danger);
     }
@@ -93,6 +95,11 @@
       @include form__mixin--status($ui__color-status--info);
     }
 
+    .form__input--fluid,
+    .form__textarea--fluid{
+      @extend %form__extend--fluid;
+    }
+
     .form__textarea{
       @extend %form__extend--element;
     }
@@ -100,5 +107,7 @@
     .form__select{
 
     }
+
+    @include form__mixin--size-input();
 
   }//endif

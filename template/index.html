@@ -122,60 +122,144 @@
             </div>
             <hr/>
             <div class="layout__row">
-                <h2>Form</h2>
-                <form class="form">
-                    <fieldset class="form__fieldset">
-                        <legend class="form__legend">Nuevo usuario</legend>
+                <h2>Form </h2>
+
+                <div class="layout__col-lg-6">
+                    <form class="form">
+                        <fieldset class="form__fieldset">
+                            <legend class="form__legend">New form <span class="icon icon__clock-4"></span></legend>
+
+                            <div class="form__group">
+                                <label for="input__firstname" class="layout__col-lg-2"> First name</label>
+                                <div class="layout__col-lg-10">
+                                    <input type="text" id="input__firstname" class="form__input form__input--lg form__input--fluid" placeholder="First name">
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <label for="input__lastname" class="layout__col-lg-2">Last name</label>
+                                <div class="layout__col-lg-10">
+                                    <input type="text" id="input__lastname" class="form__input form__input--lg form__input--fluid" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <label for="input__email" class="layout__col-lg-2">Email</label>
+                                <div class="layout__col-lg-10">
+                                    <input type="text" id="input__email" class="form__input form__input--lg form__input--fluid" placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="input__city" class="layout__col-lg-2">City</label>
+                                <div class="layout__col-lg-10">
+                                    <input type="text" id="input__city" class="form__input form__input--lg form__input--fluid" placeholder="City">
+                                </div>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="input__telephone" class="layout__col-lg-2">Telefono</label>
+                                <div class="layout__col-lg-10">
+                                    <input type="text" id="input__telephone" class="form__input form__input--lg form__input--fluid" placeholder="Telephone">
+                                </div>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="input__descripcion" class="layout__col-lg-2">Descripcion</label>
+                                <div class="layout__col-lg-10">
+                                    <textarea id="input__descripcion" class="form__textarea form__textarea--fluid" placeholder="Descripcion"></textarea>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="layout__col-lg-6">
+                    <div class="layout__block layout__block--m25">
 
                         <div class="form__group">
-                            <label for="input__nombre" class="layout__col-lg-2">Email</label>
+                            <label for="input__name1" class="layout__col-lg-2">Input text</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__nombre" placeholder="Nombre">
+                                <input type="text" id="input__name1" placeholder="without modifier">
                             </div>
                         </div>
 
                         <div class="form__group">
-                            <label for="input__nombre" class="layout__col-lg-2">Nombre</label>
+                            <label for="input__name2" class="layout__col-lg-2">Input text</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__nombre" class="form__input form__input--lg form__input--danger" placeholder="Nombre">
-                            </div>
-                        </div>
-                        <div class="form__group">
-                            <label for="input__apellido" class="layout__col-lg-2">Apellidos</label>
-                            <div class="layout__col-lg-10">
-                                <input type="text" id="input__apellido" class="form__input form__input--md form__input--warning" placeholder="Apellido">
-                            </div>
-                        </div>
-                        <div class="form__group">
-                            <label for="input__email" class="layout__col-lg-2">Email</label>
-                            <div class="layout__col-lg-10">
-                                <input type="text" id="input__email" class="form__input form__input--sm form__input--success" placeholder="Email">
+                                <input type="text" id="input__name2" class="form__input form__input--lg" placeholder="Normal status">
                             </div>
                         </div>
 
                         <div class="form__group">
-                            <label for="input__email" class="layout__col-lg-2">Email</label>
+                            <label for="input__name3" class="layout__col-lg-2">Input text</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__email" class="form__input form__input--sm form__input--info" placeholder="Email">
+                                <input type="text" id="input__name3" class="form__input form__input--lg form__input--danger" placeholder="Danger status">
                             </div>
                         </div>
 
                         <div class="form__group">
-                            <label for="input__telefono" class="layout__col-lg-2">Telefono</label>
+                            <label for="input__name4" class="layout__col-lg-2">Input text</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__telefono" class="form__input form__input--xs" placeholder="Telefono">
+                                <input type="text" id="input__name4" class="form__input form__input--lg form__input--warning" placeholder="Warning status">
                             </div>
                         </div>
 
                         <div class="form__group">
-                            <label for="input__descripcion" class="layout__col-lg-2">Descripcion</label>
+                            <label for="input__name5" class="layout__col-lg-2">Input text</label>
                             <div class="layout__col-lg-10">
-                                <textarea id="input__descripcion" class="form__textarea" placeholder="Descripcion"></textarea>
+                                <input type="text" id="input__name5" class="form__input form__input--lg form__input--success" placeholder="Success status">
                             </div>
                         </div>
 
-                    </fieldset>
-                </form>
+                        <div class="form__group">
+                            <label for="input__name5" class="layout__col-lg-2">Input text</label>
+                            <div class="layout__col-lg-10">
+                                <input type="text" id="input__name5" class="form__input form__input--lg form__input--info" placeholder="Info status">
+                            </div>
+                        </div>
+
+                        <hr/>
+
+                        <div class="form__group">
+                            <label for="input__name6" class="layout__col-lg-2">lg size</label>
+                            <div class="layout__col-lg-10">
+                                <input type="text" id="input__name6" class="form__input form__input--lg" placeholder="lg size">
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="input__name7" class="layout__col-lg-2">md size</label>
+                            <div class="layout__col-lg-10">
+                                <input type="text" id="input__name7" class="form__input form__input--md" placeholder="md size">
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="input__name8" class="layout__col-lg-2">sm size</label>
+                            <div class="layout__col-lg-10">
+                                <input type="text" id="input__name8" class="form__input form__input--sm" placeholder="sm size">
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="input__name9" class="layout__col-lg-2">xs size</label>
+                            <div class="layout__col-lg-10">
+                                <input type="text" id="input__name9" class="form__input form__input--xs" placeholder="xs size">
+                            </div>
+                        </div>
+
+                        <hr/>
+
+                        <div class="form__group">
+                            <label for="input__name9" class="layout__col-lg-2">xs size</label>
+                            <div class="layout__col-lg-10">
+                                <input type="text" id="input__name9" class="form__input form__input--lg" placeholder="Disabled" disabled />
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
             </div>
             <hr/>
             <div class="layout__row">

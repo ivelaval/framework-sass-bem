@@ -13,7 +13,12 @@
   $base__columns-grid:              12 !default;
   $base__margin:                    10px !default;
   $base__margin-left-sidebar:       260;
-  $base__layout:                    (maxWidth: $base__width-fixed, columns: $base__columns-grid, margin: $base__margin);
+
+  $base__layout:                    (
+                                      maxWidth: $base__width-fixed,
+                                      columns: $base__columns-grid,
+                                      margin: $base__margin
+                                    );
   $base__breakpoints:               (
                                       xs: "(max-width : 480px)",
                                       sm: "(max-width : 768px) and (min-width: 481px)",
@@ -61,7 +66,10 @@
   $ui__ease:                        ease-out !default;
   $ui__background-size:             100% 100% !default;
 
-  //Color defaults for status
+  //---------------------------------------------
+  //  UI BASE
+  //  Color defaults for status
+  //---------------------------------------------
   $ui__color-status--normal:        #e4e7e8 !default;
   $ui__color-status--danger:        #ff4136 !default;
   $ui__color-status--warning:       #ff851b !default;

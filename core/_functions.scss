@@ -1,18 +1,28 @@
   //Core/Functions ==========================================================================
 
-  @function f__em($px, $base: $base__font-size){
+  @function function__em($px, $base: $base__font-size){
       @return ($px / $base) * 1em;
   }
 
-  @function f__line-height($px: $base__line-height){
+  @function function__line-height($px: $base__line-height){
       @return (1.5 / $px) * 1em;
   }
 
-  @function f__calculate-opacity($opacity: $ui__opacity){
+  @function function__calculate-opacity($opacity: $ui__opacity){
     @return ($opacity*100);
   }
 
-  @function f__rem($size) {
+  @function function__rem($size) {
     $remSize: $size / 16px;
     @return $remSize * 1rem;
+  }
+
+  @function function__maping--theme($key){
+    $val: map-get($theme, $key);
+    @return $val;
+  }
+
+  @function function__maping--color($key){
+    $val: map-get($theme, $key);
+    @return $val;
   }

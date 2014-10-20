@@ -61,6 +61,19 @@
     }
   }
 
+  @mixin layout__mixin--create-blocks(){
+    $class-block: layout__block !default;
+    @for $i from 1 through 6{
+      $aux: $i * 5;
+      .#{$class-block}--p#{$aux}{
+        padding: #{$aux}px;
+      }
+      .#{$class-block}--m#{$aux}{
+        margin: #{$aux}px;
+      }
+    }
+  }
+
   @if $module__layout == true{
 
     *,
@@ -70,14 +83,12 @@
       @include m__base-bs();
     }
 
-    // ----------------------------------------------------
-    // Render Grid systems
-    // ----------------------------------------------------
-    @include layout__mixin--grid-render-styles($base__layout);
-
-    .layout__element{
+    .layout__block{
+      display: block;
       position: relative;
     }
+
+    @include layout__mixin--create-blocks();
 
     .layout__sidebar{
       bottom: 0;
@@ -119,5 +130,10 @@
       }
 
     }
+
+    // ----------------------------------------------------
+    // Render Grid systems
+    // ----------------------------------------------------
+    @include layout__mixin--grid-render-styles($base__layout);
 
   }//endif
