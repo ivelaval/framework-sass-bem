@@ -7,7 +7,7 @@
 //---------------------------------------------
 //  Map base layout
 //---------------------------------------------
-$mapping__base--layout:
+$__private--base-layout:
 (
         maxWidth:   $base__width-fixed,
         columns:    $base__columns-grid,
@@ -17,7 +17,7 @@ $mapping__base--layout:
 //---------------------------------------------
 //  Map base breakpoints screen
 //---------------------------------------------
-$mapping__base--breakpoints:
+$__private--base-breakpoints:
 (
         xs:         "(max-width : 480px)",
         sm:         "(max-width : 768px) and (min-width: 481px)",
@@ -28,7 +28,7 @@ $mapping__base--breakpoints:
 //---------------------------------------------
 //  Map base padding generic sizes
 //---------------------------------------------
-$mapping__base--padding-size:
+$__private--base-padding-size:
 (
         xs:         2px,
         sm:         5px,
@@ -39,7 +39,7 @@ $mapping__base--padding-size:
 //---------------------------------------------
 //  Map ui shadow generic
 //---------------------------------------------
-$mapping__ui--map-shadow:
+$__private--ui-map-shadow:
 (
         hshadow:    0px,
         vshadow:    0px,
@@ -52,7 +52,7 @@ $mapping__ui--map-shadow:
 //---------------------------------------------
 //  Map ui gradient generic
 //---------------------------------------------
-$mapping__ui--map-gradient:
+$__private--ui-map-gradient:
 (
         fcolor:     #444444,
         scolor:     #999999
@@ -61,7 +61,7 @@ $mapping__ui--map-gradient:
 //---------------------------------------------
 //  Map ui text shadow generic
 //---------------------------------------------
-$mapping__ui--text-shadow:
+$__private--ui-text-shadow:
 (
         hshadow:    1px,
         vshadow:    1px,
