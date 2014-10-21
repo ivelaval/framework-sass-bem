@@ -4,13 +4,12 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="style.css">
@@ -132,40 +131,73 @@
                             <div class="form__group">
                                 <label for="input__firstname" class="layout__col-lg-2"> First name</label>
                                 <div class="layout__col-lg-10">
-                                    <input type="text" id="input__firstname" class="form__input form__input--lg form__input--fluid" placeholder="First name">
+                                    <input type="text" id="input__firstname" class="form__input form__element--lg form__element--fluid" placeholder="First name">
                                 </div>
                             </div>
                             <div class="form__group">
                                 <label for="input__lastname" class="layout__col-lg-2">Last name</label>
                                 <div class="layout__col-lg-10">
-                                    <input type="text" id="input__lastname" class="form__input form__input--lg form__input--fluid" placeholder="Last name">
+                                    <input type="text" id="input__lastname" class="form__input form__element--lg form__element--fluid" placeholder="Last name">
                                 </div>
                             </div>
                             <div class="form__group">
                                 <label for="input__email" class="layout__col-lg-2">Email</label>
                                 <div class="layout__col-lg-10">
-                                    <input type="text" id="input__email" class="form__input form__input--lg form__input--fluid" placeholder="Email">
+                                    <input type="text" id="input__email" class="form__input form__element--lg form__element--fluid" placeholder="Email">
                                 </div>
                             </div>
 
                             <div class="form__group">
                                 <label for="input__city" class="layout__col-lg-2">City</label>
                                 <div class="layout__col-lg-10">
-                                    <input type="text" id="input__city" class="form__input form__input--lg form__input--fluid" placeholder="City">
+                                    <select id="input__city" class="form__select form__element--lg form__element--fluid form__element--danger">
+                                        <option>Seleccionar...</option>
+                                        <option>Alemania</option>
+                                        <option>Colombia</option>
+                                        <option>Brazil</option>
+                                        <option>Australia</option>
+                                    </select>
+                                    <hr/>
+                                    <select multiple id="input__city" class="form__select form__element--lg form__element--fluid">
+                                        <option>Seleccionar...</option>
+                                        <option>Alemania</option>
+                                        <option>Colombia</option>
+                                        <option>Brazil</option>
+                                        <option>Australia</option>
+                                    </select>
                                 </div>
                             </div>
 
                             <div class="form__group">
-                                <label for="input__telephone" class="layout__col-lg-2">Telefono</label>
+
+                                <div class="layout__col-lg-2 form__label">Checkbox</div>
                                 <div class="layout__col-lg-10">
-                                    <input type="text" id="input__telephone" class="form__input form__input--lg form__input--fluid" placeholder="Telephone">
+                                    <label><input type="checkbox" value="1"> Checkbox 1</label>
+                                    <label><input type="checkbox" value="2"> Checkbox 2</label>
+                                    <label><input type="checkbox" value="3"> Checkbox 3</label>
+                                </div>
+
+                                <div class="layout__col-lg-2 form__label">Radios</div>
+                                <div class="layout__col-lg-10">
+                                    <label><input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked="">Option 1</label>
+                                    <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="2" checked="">Option 2</label>
+                                    <label><input type="radio" name="optionsRadios" id="optionsRadios3" value="3" checked="">Option 3</label>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form__group">
+                                <label for="input__telephone" class="layout__col-lg-2">Telephone</label>
+                                <div class="layout__col-lg-10">
+                                    <input type="text" id="input__telephone" class="form__input form__element--lg form__element--fluid" placeholder="Telephone">
                                 </div>
                             </div>
 
                             <div class="form__group">
-                                <label for="input__descripcion" class="layout__col-lg-2">Descripcion</label>
+                                <label for="input__description" class="layout__col-lg-2">Description</label>
                                 <div class="layout__col-lg-10">
-                                    <textarea id="input__descripcion" class="form__textarea form__textarea--fluid" placeholder="Descripcion"></textarea>
+                                    <textarea id="input__description" class="form__textarea form__element--lg form__element--fluid" placeholder="Description"></textarea>
                                 </div>
                             </div>
 
@@ -185,35 +217,35 @@
                         <div class="form__group">
                             <label for="input__name2" class="layout__col-lg-2">Input text</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__name2" class="form__input form__input--lg" placeholder="Normal status">
+                                <input type="text" id="input__name2" class="form__input form__element--lg form__element--fluid" placeholder="Normal status">
                             </div>
                         </div>
 
                         <div class="form__group">
                             <label for="input__name3" class="layout__col-lg-2">Input text</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__name3" class="form__input form__input--lg form__input--danger" placeholder="Danger status">
+                                <input type="text" id="input__name3" class="form__input form__element--lg form__element--danger form__element--fluid" placeholder="Danger status">
                             </div>
                         </div>
 
                         <div class="form__group">
                             <label for="input__name4" class="layout__col-lg-2">Input text</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__name4" class="form__input form__input--lg form__input--warning" placeholder="Warning status">
+                                <input type="text" id="input__name4" class="form__input form__element--lg form__element--warning form__element--fluid" placeholder="Warning status">
                             </div>
                         </div>
 
                         <div class="form__group">
                             <label for="input__name5" class="layout__col-lg-2">Input text</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__name5" class="form__input form__input--lg form__input--success" placeholder="Success status">
+                                <input type="text" id="input__name5" class="form__input form__element--lg form__element--success form__element--fluid" placeholder="Success status">
                             </div>
                         </div>
 
                         <div class="form__group">
                             <label for="input__name5" class="layout__col-lg-2">Input text</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__name5" class="form__input form__input--lg form__input--info" placeholder="Info status">
+                                <input type="text" id="input__name5" class="form__input form__element--lg form__element--info form__element--fluid" placeholder="Info status">
                             </div>
                         </div>
 
@@ -222,28 +254,28 @@
                         <div class="form__group">
                             <label for="input__name6" class="layout__col-lg-2">lg size</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__name6" class="form__input form__input--lg" placeholder="lg size">
+                                <input type="text" id="input__name6" class="form__input form__element--lg form__element--fluid" placeholder="lg size">
                             </div>
                         </div>
 
                         <div class="form__group">
                             <label for="input__name7" class="layout__col-lg-2">md size</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__name7" class="form__input form__input--md" placeholder="md size">
+                                <input type="text" id="input__name7" class="form__input form__element--md form__element--fluid" placeholder="md size">
                             </div>
                         </div>
 
                         <div class="form__group">
                             <label for="input__name8" class="layout__col-lg-2">sm size</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__name8" class="form__input form__input--sm" placeholder="sm size">
+                                <input type="text" id="input__name8" class="form__input form__element--sm form__element--fluid" placeholder="sm size">
                             </div>
                         </div>
 
                         <div class="form__group">
                             <label for="input__name9" class="layout__col-lg-2">xs size</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__name9" class="form__input form__input--xs" placeholder="xs size">
+                                <input type="text" id="input__name9" class="form__input form__element--xs form__element--fluid" placeholder="xs size">
                             </div>
                         </div>
 
@@ -252,8 +284,25 @@
                         <div class="form__group">
                             <label for="input__name9" class="layout__col-lg-2">xs size</label>
                             <div class="layout__col-lg-10">
-                                <input type="text" id="input__name9" class="form__input form__input--lg" placeholder="Disabled" disabled />
+                                <input type="text" id="input__name9" class="form__input form__element--lg form__element--fluid" placeholder="Disabled" disabled />
                             </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="layout__col-lg-2">input complex</label>
+
+                            <div class="input-group layout__col-lg-10">
+                                <div class="form__element--fluid">
+                                    <span class="form__input-group--icon layout__col-lg-1"><span class="icon icon__clock-4"></span></span>
+                                    <input type="text" class="form__input form__element--lg layout__col-lg-9" placeholder="complex" />
+                                    <span class="form__input-group--button layout__col-lg-2">
+                                      <a href="javascript:;" class="button button--normal button--lg form__element--fluid">Link</a>
+                                    </span>
+                                </div>
+                            </div>
+
+
+
                         </div>
 
 

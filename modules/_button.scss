@@ -22,7 +22,6 @@
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  @include __ui-text-shadow(0 1px 1px rgba(0, 0, 0, 0.45));
   @include __ui-round();
   @include __ui-border();
   @include __ui-user-select();
@@ -101,23 +100,23 @@
   }
 
   .button--normal{
-    @include button__mixin--skin(#eeeeee, #e2e2e2, #555555);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, normal), __mapping($__map--ui-color-status, normal-shadow), #555555);
   }
 
   .button--danger{
-    @include button__mixin--skin(__mapping($__map--ui-color-status, danger), #dd3d37, #FFFFFF);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, danger), __mapping($__map--ui-color-status, danger-shadow), #FFFFFF);
   }
 
   .button--warning{
-    @include button__mixin--skin(__mapping($__map--ui-color-status, warning), #d36a1b, #FFFFFF);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, warning), __mapping($__map--ui-color-status, warning-shadow), #FFFFFF);
   }
 
   .button--success{
-    @include button__mixin--skin(__mapping($__map--ui-color-status, success), #51a11f, #FFFFFF);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, success), __mapping($__map--ui-color-status, success-shadow), #FFFFFF);
   }
 
   .button--info{
-    @include button__mixin--skin(__mapping($__map--ui-color-status, info), #156f95, #FFFFFF);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, info), __mapping($__map--ui-color-status, info-shadow), #FFFFFF);
   }
 
   .button--link{

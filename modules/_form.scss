@@ -3,10 +3,10 @@
   //-------------------------------------------
   //  Form Mixins
   //-------------------------------------------
-  @mixin form__mixin--size-input(){
+  @mixin form__mixin--size-element(){
     $psize: $__map--base-padding-size;
     @each $key, $size in $psize {
-      .form__input--#{$key}{
+      .form__element--#{$key}{
         padding: #{$size} #{__mapping($__map--base-padding-size, lg)} !important;
       }
     }
@@ -18,6 +18,7 @@
     @include __ui-shadow-o(inset 0 2px 0 $ui__color-status--shadow);
     &:focus,
     &:active{
+      border: 1px solid #{$primary} !important;
       @include __ui-shadow-o(inset 0 1px 1px $ui__color-status--shadow, 0 0 6px $ui__color-status--shadow);
     }
   }
@@ -26,6 +27,9 @@
   //  Form Extends
   //-------------------------------------------
   %form__extend--element{
+
+    position: relative;
+    color: __mapping($__map--base-font, color-element-form);
     border: 1px solid #e7e7e7 !important;
     @include __ui-shadow-o(inset 0 2px 0 rgba(0, 0, 0, 0.075));
     @include __ui-transition-o(border-color ease-in .20s, box-shadow ease-in .20s);
@@ -33,10 +37,26 @@
     &:focus,
     &:active{
       outline: none;
-      border: 1px solid #747474 !important;
+      border: 1px solid #{__mapping($__map--ui-color-status, normal-dark)} !important;
       @include __ui-shadow-o(inset 0 1px 1px __mapping($__map--ui-color-status, normal), 0 0 6px __mapping($__map--ui-color-status, normal));
       @include __ui-transition-o(border-color ease-in .20s, box-shadow ease-in .20s);
     }
+
+    &::-webkit-input-placeholder { /* WebKit browsers */
+      color: __mapping($__map--base-font, color-placeholder);
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: __mapping($__map--base-font, color-placeholder);
+      opacity:  1;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: __mapping($__map--base-font, color-placeholder);
+      opacity:  1;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: __mapping($__map--base-font, color-placeholder);
+    }
+
   }
 
   %form__extend--fluid{
@@ -53,6 +73,86 @@
     .form__group{
       margin-bottom: 4px;
       @include __clearfix();
+    }
+
+    .form__input-group{
+
+      display: inline-table;
+      vertical-align: middle;
+      width: 100%;
+
+      &.form__input:nth-child(2){
+        background: #105cb6;
+      }
+
+    }
+
+    .form__input-group {
+      position: relative; // For dropdowns
+      display: table;
+      border-collapse: separate; // prevent input groups from inheriting border styles from table cells when placed within a table
+
+      // Undo padding and float of grid classes
+      &[class*="col-"] {
+        float: none;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .form__input {
+        // Ensure that the input is always above the *appended* addon button for
+        // proper border colors.
+        position: relative;
+        z-index: 2;
+
+        // IE9 fubars the placeholder attribute in text inputs and the arrows on
+        // select elements in input groups. To fix it, we float the input. Details:
+        // https://github.com/twbs/bootstrap/issues/11561#issuecomment-28936855
+        float: left;
+
+        width: 100%;
+        margin-bottom: 0;
+      }
+    }
+
+    .form__input-group--icon{
+      padding: 7px 12px;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1;
+      color: #555555;
+      text-align: center;
+      background-color: #eeeeee;
+      border: 1px solid #e7e7e7;
+      border-radius: 4px;
+    }
+
+    .form__input-group--button{
+
+      & > .button{
+        border-left: 0;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+      }
+
+    }
+
+    .form__input-group--icon,
+    .form__input-group--button,
+    .form__input-group .form__input {
+      display: table-cell;
+
+      &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+      }
+
+    }
+
+    .form__input-group--icon,
+    .form__input-group--button {
+      width: 1%;
+      white-space: nowrap;
+      vertical-align: middle; // Match the inputs
     }
 
     .form__fieldset{
@@ -75,39 +175,50 @@
       border-bottom: none;
     }
 
+    .form__label{
+      color: __mapping($__map--base-font, color-label);
+      vertical-align: middle;
+    }
+
     .form__input{
       @extend %form__extend--element;
     }
 
-    .form__input--danger{
-      @include form__mixin--status(__mapping($__map--ui-color-status, danger));
-    }
-
-    .form__input--warning{
-      @include form__mixin--status(__mapping($__map--ui-color-status, warning));
-    }
-
-    .form__input--success{
-      @include form__mixin--status(__mapping($__map--ui-color-status, success));
-    }
-
-    .form__input--info{
-      @include form__mixin--status(__mapping($__map--ui-color-status, info));
-    }
-
-    .form__input--fluid,
-    .form__textarea--fluid{
-      @extend %form__extend--fluid;
-    }
-
     .form__textarea{
       @extend %form__extend--element;
+      min-height: 120px;
     }
 
     .form__select{
-
+      @extend %form__extend--element;
+      color: __mapping($__map--base-font, color-placeholder);
+      &:focus,
+      &:active{
+        color: __mapping($__map--base-font, color-element-form);
+      }
     }
 
-    @include form__mixin--size-input();
+    @include form__mixin--size-element();
+
+    .form__element--danger{
+      @include form__mixin--status(__mapping($__map--ui-color-status, danger));
+    }
+
+    .form__element--warning{
+      @include form__mixin--status(__mapping($__map--ui-color-status, warning));
+    }
+
+    .form__element--success{
+      @include form__mixin--status(__mapping($__map--ui-color-status, success));
+    }
+
+    .form__element--info{
+      @include form__mixin--status(__mapping($__map--ui-color-status, info));
+    }
+
+    .form__element--fluid{
+      @extend %form__extend--fluid;
+    }
+
 
   }//endif

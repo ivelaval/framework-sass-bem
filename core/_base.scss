@@ -107,7 +107,7 @@
   }
 
   label{
-    color: #606060;
+    color: __mapping($__map--base-font, color-label);
     vertical-align: middle;
   }
 
@@ -117,7 +117,8 @@
   input[type="tel"],
   input[type="url"],
   input[type="password"],
-  textarea
+  textarea,
+  select
   {
     padding: __mapping($__map--base-padding-size, md) __mapping($__map--base-padding-size, lg);
     border: 1px solid #a8a8a8;

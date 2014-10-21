@@ -66,6 +66,9 @@ $__map--base-font:
         size-base-em:           $__font-size-base-em,
         size:                   $__font-size-default,
         color:                  $__font-color,
+        color-element-form:     $__font-color-element-form,
+        color-placeholder:      $__font-color-placeholder,
+        color-label:            $__font-color-label,
         align:                  $__font-align,
         line-height:            $__line-height,
         weight:                 $__font-weight
@@ -127,8 +130,18 @@ $__map--ui-text-shadow:
 $__map--ui-color-status:
 (
         normal:                 $__color-status--normal,
+        normal-dark:            $__color-status--normal-dark,
+        normal-shadow:          $__color-status--normal-shadow,
         danger:                 $__color-status--danger,
+        danger-dark:            $__color-status--danger-dark,
+        danger-shadow:          $__color-status--danger-shadow,
         warning:                $__color-status--warning,
+        warning-dark:           $__color-status--warning-dark,
+        warning-shadow:         $__color-status--warning-shadow,
         success:                $__color-status--success,
-        info:                   $__color-status--info
+        success-dark:           $__color-status--success-dark,
+        success-shadow:         $__color-status--success-shadow,
+        info:                   $__color-status--info,
+        info-dark:              $__color-status--info-dark,
+        info-shadow:            $__color-status--info-shadow
 );

@@ -25,7 +25,7 @@ $__breakpoint-lg:                   "(min-width : 1025px)"!default;
 $__breakpoint-md:                   "(max-width : 1024px)  and (min-width: 769px)"!default;
 $__breakpoint-sm:                   "(max-width : 768px) and (min-width: 481px)"!default;
 $__breakpoint-xs:                   "(max-width : 480px)"!default;
-
+$__breakpoint-retina:               "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"!default;
 //---------------------------------------------
 //  BASE PADDING SIZES
 //---------------------------------------------
@@ -48,11 +48,14 @@ $__font-size-16:              	    16!default;
 $__font-size-14:                    14!default;
 $__font-size-12:             	    12!default;
 $__font-size-10:              	    10!default;
-$__font-family:                     sans-serif!default;
+$__font-family:                     'Open Sans', sans-serif!default;
 $__font-size-base-em: 			    16!default;
-$__font-size-default: 	            16!default;
+$__font-size-default: 	            15!default;
 $__font-weight:                     normal!default;
 $__font-color: 				        #000!default;
+$__font-color-element-form:         #6d6d6d !default;
+$__font-color-placeholder:          #979797 !default;
+$__font-color-label:                #6d6d6d !default;
 $__font-align: 				        left!default;
 
 //---------------------------------------------
@@ -97,4 +100,16 @@ $__color-status--danger:            #ff4136 !default;
 $__color-status--warning:           #ff851b !default;
 $__color-status--success:           #5ac51f !default;
 $__color-status--info:              #158cba !default;
+
+$__color-status--normal-shadow:     #e2e2e2 !default;
+$__color-status--danger-shadow:     #dd3d37 !default;
+$__color-status--warning-shadow:    #d36a1b !default;
+$__color-status--success-shadow:    #51a11f !default;
+$__color-status--info-shadow:       #156f95 !default;
+
+$__color-status--normal-dark:       #898c8d !default;
+$__color-status--danger-dark:       #882e2c !default;
+$__color-status--warning-dark:      #944a1b !default;
+$__color-status--success-dark:      #356b1f !default;
+$__color-status--info-dark:         #154b6e !default;
 
