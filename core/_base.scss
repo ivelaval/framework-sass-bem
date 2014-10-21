@@ -1,15 +1,15 @@
   //Core/Base ==========================================================================
 
   * {
-      @include m__base-bs();
+      @include __base-bs();
   }
 
   html, body {
-    @include m__font-s();
-    font-family: $font__family--open-sans;
-    color: $base__font-color;
-    font-size: f__em($base__font-size-default);
-    text-align: $base__font-align;
+    @include __font-s();
+    font-family: __mapping($__map--base-font, family);
+    color: __mapping($__map--base-font, color);
+    font-size: __em(__mapping($__map--base-font, size));
+    text-align: __mapping($__map--base-font, align);
   }
 
   button,
@@ -44,7 +44,7 @@
       height: 1px;
       border: 0;
       border-top: 1px solid #ccc;
-      @include m__base-mpb($margin: 1em 0);
+      @include __base-mpb($margin: 1em 0);
   }
 
   //--------------------------------------------------------------
@@ -52,18 +52,18 @@
   //--------------------------------------------------------------
 
   ul {
-      @include m__base-mpb();
+      @include __base-mpb();
   }
 
   li {
-      @include m__base-mpb();
+      @include __base-mpb();
       list-style: none;
   }
 
   a{
       text-decoration: none;
       color: #1e7eb5;
-      @include m__ui-transition-o(color .3s ease);
+      @include __ui-transition-o(color .3s ease);
       &:hover{
           color: rgba(47, 40, 54, 0.59);
       }
@@ -78,7 +78,7 @@
   //--------------------------------------------------------------
 
   form{
-    @include m__base-mpb();
+    @include __base-mpb();
   }
 
   button,
@@ -88,7 +88,7 @@
   a.button{
     display: inline-block;
     padding: 8px 12px;
-    color: $base__font-color;
+    color: __mapping($__map--base-font, color);
     cursor: pointer;
 
     &::-moz-focus-inner{
@@ -103,7 +103,7 @@
   }
 
   legend {
-    @include m__base-mpb();
+    @include __base-mpb();
   }
 
   label{
@@ -119,10 +119,10 @@
   input[type="password"],
   textarea
   {
-    padding: map_get($base__padding-size, "md") map_get($base__padding-size, "lg");
+    padding: __mapping($__map--base-padding-size, md) __mapping($__map--base-padding-size, lg);
     border: 1px solid #a8a8a8;
     color: #606060;
-    @include m__ui-round();
+    @include __ui-round();
 
     &:focus,
     &:active{
@@ -144,7 +144,7 @@
   //--------------------------------------------------------------
 
   p, ol, ul, blockquote, pre, code {
-      font-size: f__em($base__font-size-default);
+      font-size: __em(__mapping($__map--base-font, size));
   }
 
   //--------------------------------------------------------------
@@ -160,7 +160,7 @@
   }
 
   footer{
-      @include m__base-mpb();
+      @include __base-mpb();
   }
 
   //--------------------------------------------------------------

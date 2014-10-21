@@ -6,11 +6,11 @@
 
   @mixin layout__mixin--grid-render($key, $settings) {
     $i: 1;
-    @while $i <= map-get($settings, "columns") {
+    @while $i <= __mapping($settings, "columns") {
       .layout__col-#{$key}-#{$i} {
         float: left;
-        width: 100% * $i / map-get($settings,"columns");
-        @include m__clearfix();
+        width: 100% * $i / __mapping($settings,"columns");
+        @include __clearfix();
       }
       $i: $i+1;
     }
@@ -26,25 +26,23 @@
 
     .layout__container {
       position: relative;
-      //padding-right: map-get($settings, "margin");
-      //padding-left: map-get($settings, "margin");
       margin-right: auto;
       margin-left: auto;
-      @include m__clearfix();
+      @include __clearfix();
     }
 
     .layout__row {
       position: relative;
-      @include m__clearfix();
+      @include __clearfix();
     }
 
     .layout__row--clear {
-      margin-right: map-get($settings, "margin") * -1;
-      margin-left: map-get($settings, "margin") * -1;
+      margin-right: __mapping($settings, "margin") * -1;
+      margin-left: __mapping($settings, "margin") * -1;
       @extend .layout__row;
     }
 
-    $breakpoints: $base__breakpoints;
+    $breakpoints: $__map--base-breakpoints;
 
     @each $key, $breakpoint in $breakpoints {
       @include layout__mixin--grid-media($breakpoint) {
@@ -55,7 +53,7 @@
   }
 
   @mixin layout__mixin--grid-render-universal($index){
-    $breakpoint: map-get($base__breakpoints,$index);
+    $breakpoint: __mapping($__map--base-breakpoints,$index);
     @include layout__mixin--grid-media($breakpoint) {
       @content;
     }
@@ -79,8 +77,8 @@
     *,
     *:after,
     *:before {
-      @include m__base-mpb();
-      @include m__base-bs();
+      @include __base-mpb();
+      @include __base-bs();
     }
 
     .layout__block{
@@ -96,7 +94,7 @@
       padding: 10px;
       overflow-x: hidden;
       overflow-y: auto;
-      @include m__clearfix();
+      @include __clearfix();
     }
 
     .layout__sidebar--left{
@@ -114,19 +112,19 @@
       @include layout__mixin--grid-render-universal("md"){
         position: relative;
         height: 36px;
-        @include m__base-mpb();
+        @include __base-mpb();
       }
 
       @include layout__mixin--grid-render-universal("sm"){
         position: relative;
         height: 36px;
-        @include m__base-mpb();
+        @include __base-mpb();
       }
 
       @include layout__mixin--grid-render-universal("xs"){
         position: relative;
         height: 36px;
-        @include m__base-mpb();
+        @include __base-mpb();
       }
 
     }
@@ -134,6 +132,6 @@
     // ----------------------------------------------------
     // Render Grid systems
     // ----------------------------------------------------
-    @include layout__mixin--grid-render-styles($base__layout);
+    @include layout__mixin--grid-render-styles($__map--base-layout);
 
   }//endif

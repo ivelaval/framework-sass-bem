@@ -5,80 +5,96 @@
 //---------------------------------------------
 
 //---------------------------------------------
-//  BASE GENERIC
+//  BASE
 //---------------------------------------------
-$__public--line-height: 			      20!default;
-$__public--width-fixed:                   980px!default;
-$__public--columns-grid:                  12!default;
+$__margin-left-sidebar:             260!default;
+$__line-height: 			        20!default;
+$__width-fixed:                     980px!default;
+$__padding:                         0!default;
 
 //---------------------------------------------
-//  BASE MARGIN
+//  BASE LAYOUT GENERIC
 //---------------------------------------------
-$__public--margin:                        10px!default;
-$__public--margin-left-sidebar:           260!default;
+$__columns-grid:                    12!default;
+$__margin:                          10px!default;
 
 //---------------------------------------------
 //  BASE BREAKPOINT
 //---------------------------------------------
-$__public--breakpoint-lg:                 "(min-width : 1025px)"!default;
-$__public--breakpoint-md:                 "(max-width : 1024px)  and (min-width: 769px)"!default;
-$__public--breakpoint-sm:                 "(max-width : 768px) and (min-width: 481px)"!default;
-$__public--breakpoint-xs:                 "(max-width : 480px)"!default;
+$__breakpoint-lg:                   "(min-width : 1025px)"!default;
+$__breakpoint-md:                   "(max-width : 1024px)  and (min-width: 769px)"!default;
+$__breakpoint-sm:                   "(max-width : 768px) and (min-width: 481px)"!default;
+$__breakpoint-xs:                   "(max-width : 480px)"!default;
 
 //---------------------------------------------
-//  PADDING
+//  BASE PADDING SIZES
 //---------------------------------------------
-$__public--padding-lg:                    12px!default;
-$__public--padding-md:                    8px!default;
-$__public--padding-sm:                    5px!default;
-$__public--padding-xs:                    2px!default;
+$__padding-lg:                      12px!default;
+$__padding-md:                      8px!default;
+$__padding-sm:                      5px!default;
+$__padding-xs:                      2px!default;
 
 //---------------------------------------------
-//  BASE FONT PROPERTIES
+//  FONT PROPERTIES
 //---------------------------------------------
-$__public--font-size-96:             	  96!default;
-$__public--font-size-72:               	  72!default;
-$__public--font-size-48:              	  48!default;
-$__public--font-size-36:              	  36!default; //h1
-$__public--font-size-30:              	  30!default; //h2
-$__public--font-size-24:              	  24!default; //h3
-$__public--font-size-20:              	  20!default; //h4
-$__public--font-size-16:              	  16!default; //h5
-$__public--font-size-14:               	  14!default; //h6
-$__public--font-size-12:             	  12!default;
-$__public--font-size-10:              	  10!default;
-$__public--font-family:                   sans-serif!default;
-$__public--font-size-base-em: 			  16!default; //Base font-size px to em
-$__public--font-size-default: 	          15!default;
-$__public--font-color: 				      #000!default;
-$__public--font-align: 				      left!default;
+$__font-size-96:             	    96!default;
+$__font-size-72:                    72!default;
+$__font-size-48:              	    48!default;
+$__font-size-36:              	    36!default;
+$__font-size-30:              	    30!default;
+$__font-size-24:              	    24!default;
+$__font-size-20:              	    20!default;
+$__font-size-16:              	    16!default;
+$__font-size-14:                    14!default;
+$__font-size-12:             	    12!default;
+$__font-size-10:              	    10!default;
+$__font-family:                     sans-serif!default;
+$__font-size-base-em: 			    16!default;
+$__font-size-default: 	            16!default;
+$__font-weight:                     normal!default;
+$__font-color: 				        #000!default;
+$__font-align: 				        left!default;
 
 //---------------------------------------------
-//  BASE GENERIC UI
+//  GENERIC UI
 //---------------------------------------------
-$__public--ui-border-radius:				4px !default;
-$__public--ui-color-shadow:     			#CCC !default;
-$__public--ui-color-border:     			#CCC !default;
-$__public--ui-opacity: 					    0.5 !default;
-$__public--ui-shadow-h:                     0px!default;
-$__public--ui-shadow-v:                     0px!default;
-$__public--ui-shadow-blur:                  4px!default;
-$__public--ui-shadow-spread:                0px!default;
-$__public--ui-shadow-color:                 #FFFFFF!default;
-$__public--ui-shadow-opacity:               0.75!default;
-$__public--ui-gradient-fcolor:              #444444!default;
-$__public--ui-gradient-scolor:              #999999!default;
-$__public--ui-rotate:                       7.5deg!default;
-$__public--ui-scale:                        0.8!default;
-$__public--ui-ease:                         ease-out!default;
-$__public--ui-background-size:              100% 100%!default;
+$__border-radius:				    4px !default;
+$__color-shadow:     			    #CCC !default;
+$__color-border:     			    #CCC !default;
+$__opacity: 					    0.5 !default;
+$__gradient-fcolor:                 #444444!default;
+$__gradient-scolor:                 #999999!default;
+$__rotate:                          7.5deg!default;
+$__scale:                           0.8!default;
+$__ease:                            ease-out!default;
+$__background-size:                 100% 100%!default;
+
 
 //---------------------------------------------
-//  BASE GENERIC COLOR UI
+//  GENERIC UI BOX SHADOW
 //---------------------------------------------
-$__public--ui-color-status--normal:        #e4e7e8 !default;
-$__public--ui-color-status--danger:        #ff4136 !default;
-$__public--ui-color-status--warning:       #ff851b !default;
-$__public--ui-color-status--success:       #5ac51f !default;
-$__public--ui-color-status--info:          #158cba !default;
+$__shadow-h:                        0px!default;
+$__shadow-v:                        0px!default;
+$__shadow-blur:                     4px!default;
+$__shadow-spread:                   0px!default;
+$__shadow-color:                    #FFFFFF!default;
+$__shadow-opacity:                  0.75!default;
+
+//---------------------------------------------
+//  GENERIC UI TEXT SHADOW
+//---------------------------------------------
+$__text-shadow-h:                   $__shadow-h!default;
+$__text-shadow-v:                   $__shadow-v!default;
+$__text-shadow-blur:                $__shadow-blur!default;
+$__text-shadow-color:               $__shadow-color!default;
+$__text-shadow-opacity:             $__shadow-opacity!default;
+
+//---------------------------------------------
+//  GENERIC COLOR UI
+//---------------------------------------------
+$__color-status--normal:            #e4e7e8 !default;
+$__color-status--danger:            #ff4136 !default;
+$__color-status--warning:           #ff851b !default;
+$__color-status--success:           #5ac51f !default;
+$__color-status--info:              #158cba !default;
 

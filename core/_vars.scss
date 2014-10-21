@@ -3,11 +3,7 @@
   //---------------------------------------------
   //  BASE
   //---------------------------------------------
-  $base__font-family:  			    sans-serif !default;
-  $base__font-size: 				16 !default; //Base font-size px to em
-  $base__font-size-default: 	    15 !default;
-  $base__font-color: 				#000 !default;
-  $base__font-align: 				left !default;
+/*
   $base__line-height: 			    20 !default;
   $base__width-fixed:               980px !default;
   $base__columns-grid:              12 !default;
@@ -47,6 +43,12 @@
   $font__size--12:             	    f__em(12) !default;
   $font__size--10:              	f__em(10) !default;
 
+  $base__font-family:  			    sans-serif !default;
+  $base__font-size: 				16 !default; //Base font-size px to em
+  $base__font-size-default: 	    15 !default;
+  $base__font-color: 				#000 !default;
+  $base__font-align: 				left !default;
+
   $font__family--sans: 			    $base__font-family !default;
   $font__family--helvetica: 		'Helvetica Neue', #{$base__font-family} !default;
   $font__family--open-sans: 		'Open Sans', #{$base__font-family} !default;
@@ -75,4 +77,4 @@
   $ui__color-status--warning:       #ff851b !default;
   $ui__color-status--success:       #5ac51f !default;
   $ui__color-status--info:          #158cba !default;
-
+*/

@@ -38,9 +38,9 @@
 
     .alert{
       position: relative;
-      @include m__base-mpb(10px 0, 8px);
-      @include m__ui-border();
-      @include m__ui-round();
+      @include __base-mpb(10px 0, 8px);
+      @include __ui-border();
+      @include __ui-round();
     }
 
     .alert > p{
@@ -52,27 +52,27 @@
     }
 
     .alert--normal{
-      @include alert__mixin--skin-button($ui__color-status--normal, #d9dcdd, #696969);
+      @include alert__mixin--skin-button(__mapping($__map--ui-color-status, normal), #d9dcdd, #696969);
       @extend %alert__extend--link-color-dark;
     }
 
     .alert--danger{
-      @include alert__mixin--skin-button($ui__color-status--danger, #ff1103);
+      @include alert__mixin--skin-button(__mapping($__map--ui-color-status, danger), #ff1103);
       @extend %alert__extend--link-color-light;
     }
 
     .alert--warning{
-      @include alert__mixin--skin-button($ui__color-status--warning, #ff7701);
+      @include alert__mixin--skin-button(__mapping($__map--ui-color-status, warning), #ff7701);
       @extend %alert__extend--link-color-light;
     }
 
     .alert--success{
-      @include alert__mixin--skin-button($ui__color-status--success, #53ab1e);
+      @include alert__mixin--skin-button(__mapping($__map--ui-color-status, success), #53ab1e);
       @extend %alert__extend--link-color-light;
     }
 
     .alert--info{
-      @include alert__mixin--skin-button($ui__color-status--info, #1e7eb5);
+      @include alert__mixin--skin-button(__mapping($__map--ui-color-status, info), #1e7eb5);
       @extend %alert__extend--link-color-light;
     }
 

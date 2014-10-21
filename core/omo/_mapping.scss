@@ -5,68 +5,130 @@
 //---------------------------------------------
 
 //---------------------------------------------
+//  Map base
+//---------------------------------------------
+$__map--base:
+(
+       margin:                  $__margin,
+       margin-left-sidebar:     $__margin-left-sidebar,
+       padding:                 $__padding,
+       max-width:               $__width-fixed
+);
+
+//---------------------------------------------
 //  Map base layout
 //---------------------------------------------
-$__private--base-layout:
+$__map--base-layout:
 (
-        maxWidth:   $base__width-fixed,
-        columns:    $base__columns-grid,
-        margin:     $base__margin
+        columns:                $__columns-grid,
+        margin:                 $__margin
 );
 
 //---------------------------------------------
 //  Map base breakpoints screen
 //---------------------------------------------
-$__private--base-breakpoints:
+$__map--base-breakpoints:
 (
-        xs:         "(max-width : 480px)",
-        sm:         "(max-width : 768px) and (min-width: 481px)",
-        md:         "(max-width : 1024px)  and (min-width: 769px)",
-        lg:         "(min-width : 1025px)"
+        xs:                     $__breakpoint-xs,
+        sm:                     $__breakpoint-sm,
+        md:                     $__breakpoint-md,
+        lg:                     $__breakpoint-lg
 );
 
 //---------------------------------------------
 //  Map base padding generic sizes
 //---------------------------------------------
-$__private--base-padding-size:
+$__map--base-padding-size:
 (
-        xs:         2px,
-        sm:         5px,
-        md:         8px,
-        lg:         12px
+        xs:                     $__padding-xs,
+        sm:                     $__padding-sm,
+        md:                     $__padding-md,
+        lg:                     $__padding-lg
 );
 
 //---------------------------------------------
-//  Map ui shadow generic
+//  Map base font properties
 //---------------------------------------------
-$__private--ui-map-shadow:
+$__map--base-font:
 (
-        hshadow:    0px,
-        vshadow:    0px,
-        blur:       4px,
-        spread:     0px,
-        color:      #ffffff,
-        opacity:    0.75
+        size-96:                $__font-size-96,
+        size-72:                $__font-size-72,
+        size-48:                $__font-size-48,
+        size-36:                $__font-size-36,
+        size-30:                $__font-size-30,
+        size-24:                $__font-size-24,
+        size-20:                $__font-size-20,
+        size-16:                $__font-size-16,
+        size-14:                $__font-size-14,
+        size-12:                $__font-size-12,
+        size-10:                $__font-size-10,
+        family:                 $__font-family,
+        size-base-em:           $__font-size-base-em,
+        size:                   $__font-size-default,
+        color:                  $__font-color,
+        align:                  $__font-align,
+        line-height:            $__line-height,
+        weight:                 $__font-weight
 );
 
 //---------------------------------------------
-//  Map ui gradient generic
+//  Map UI
 //---------------------------------------------
-$__private--ui-map-gradient:
+$__map--ui:
 (
-        fcolor:     #444444,
-        scolor:     #999999
+        border-radius:          $__border-radius,
+        color-shadow:           $__color-shadow,
+        color-border:           $__color-border,
+        opacity:                $__opacity,
+        rotate:                 $__rotate,
+        scale:                  $__scale,
+        ease:                   $__ease,
+        background-size:        $__background-size
 );
 
 //---------------------------------------------
-//  Map ui text shadow generic
+//  Map UI gradient generic
 //---------------------------------------------
-$__private--ui-text-shadow:
+$__map--ui-gradient:
 (
-        hshadow:    1px,
-        vshadow:    1px,
-        blur:       3px,
-        color:      #888
+        fcolor:                 $__gradient-fcolor,
+        scolor:                 $__gradient-scolor
+);
+
+//---------------------------------------------
+//  Map UI shadow generic
+//---------------------------------------------
+$__map--ui-shadow:
+(
+        hshadow:                $__shadow-h,
+        vshadow:                $__shadow-v,
+        blur:                   $__shadow-blur,
+        spread:                 $__shadow-spread,
+        color:                  $__shadow-color,
+        opacity:                $__shadow-opacity
+);
+
+//---------------------------------------------
+//  Map UI text shadow generic
+//---------------------------------------------
+$__map--ui-text-shadow:
+(
+        hshadow:                $__text-shadow-h,
+        vshadow:                $__text-shadow-v,
+        blur:                   $__text-shadow-blur,
+        color:                  $__text-shadow-color,
+        opacity:                $__text-shadow-opacity
 );
 
 
+//---------------------------------------------
+//  Map UI color status
+//---------------------------------------------
+$__map--ui-color-status:
+(
+        normal:                 $__color-status--normal,
+        danger:                 $__color-status--danger,
+        warning:                $__color-status--warning,
+        success:                $__color-status--success,
+        info:                   $__color-status--info
+);

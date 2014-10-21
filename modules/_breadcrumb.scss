@@ -3,7 +3,7 @@
   //-------------------------------------------
   //  Breadcrumb Mixins
   //-------------------------------------------
-  @mixin breadcrumb__mixin--type($normal, $hover, $text-nomal: #FFF, $text-hover: $base__font-color){
+  @mixin breadcrumb__mixin--type($normal, $hover, $text-nomal: #FFF, $text-hover: __mapping($__map--base-font, color)){
     li{
       float:left;
       a{
@@ -34,7 +34,7 @@
       &:first-child{
         a{
           padding-left:15px;
-          @include m__ui-round(4px 0 0 4px);
+          @include __ui-round(4px 0 0 4px);
           &:before{
             border:none;
           }
@@ -43,7 +43,7 @@
       &:last-child{
         a{
           padding-right:15px;
-          @include m__ui-round(0 4px 4px 0);
+          @include __ui-round(0 4px 4px 0);
           &:after{
             border:none;
           }
@@ -72,7 +72,7 @@
         &:hover{
           background-color: $hover;
           color: $text-hover;
-          @include m__ui-transition-o(color .3s ease);
+          @include __ui-transition-o(color .3s ease);
           &:before{
             border-color:$hover;
             border-left-color:transparent;
@@ -104,8 +104,8 @@
       margin-bottom: 20px;
       background-color: #fafafa;
       border-color: #ededed;
-      @include m__ui-round(4px);
-      @include m__ui-border(-1, 0 1px 4px 1px);
+      @include __ui-round(4px);
+      @include __ui-border(-1, 0 1px 4px 1px);
       border-style: solid;
       border-width: 0 1px 4px 1px;
     }
@@ -135,7 +135,7 @@
     .breadcrumb__light{
       list-style:none;
       display: inline-block;
-      @include breadcrumb__mixin--type($ui__color-status--normal, #afb2b3, #777777, #454545);
+      @include breadcrumb__mixin--type(__mapping($__map--ui-color-status, normal), #afb2b3, #777777, #454545);
     }
 
   }//endif

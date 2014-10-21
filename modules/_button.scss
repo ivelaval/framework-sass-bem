@@ -22,10 +22,10 @@
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  @include m__ui-text-shadow(0 1px 1px rgba(0, 0, 0, 0.45));
-  @include m__ui-round();
-  @include m__ui-border();
-  @include m__ui-user-select();
+  @include __ui-text-shadow(0 1px 1px rgba(0, 0, 0, 0.45));
+  @include __ui-round();
+  @include __ui-border();
+  @include __ui-user-select();
 }
 
 %button__extend--outline-in{
@@ -78,13 +78,13 @@
 
       display: table-cell;
       left: 0;
-      @include m__ui-round(0 0 0 0);
+      @include __ui-round(0 0 0 0);
 
       &:first-child{
-        @include m__ui-round(4px 0 0 4px);
+        @include __ui-round(4px 0 0 4px);
       }
       &:last-child{
-        @include m__ui-round(0 4px 4px 0);
+        @include __ui-round(0 4px 4px 0);
       }
       &:active{
         border-bottom-width: 1px;
@@ -105,19 +105,19 @@
   }
 
   .button--danger{
-    @include button__mixin--skin($ui__color-status--danger, #dd3d37, #FFFFFF);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, danger), #dd3d37, #FFFFFF);
   }
 
   .button--warning{
-    @include button__mixin--skin($ui__color-status--warning, #d36a1b, #FFFFFF);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, warning), #d36a1b, #FFFFFF);
   }
 
   .button--success{
-    @include button__mixin--skin($ui__color-status--success, #51a11f, #FFFFFF);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, success), #51a11f, #FFFFFF);
   }
 
   .button--info{
-    @include button__mixin--skin($ui__color-status--info, #156f95, #FFFFFF);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, info), #156f95, #FFFFFF);
   }
 
   .button--link{
@@ -125,19 +125,19 @@
   }
 
   .button--lg{
-    padding: map_get($base__padding-size, "lg")!important;
+    padding: __mapping($__map--base-padding-size, lg)!important;
   }
 
   .button--md{
-    padding: map_get($base__padding-size, "md") 12px!important;
+    padding: __mapping($__map--base-padding-size, md) __mapping($__map--base-padding-size, lg)!important;
   }
 
   .button--sm{
-    padding: map_get($base__padding-size, "sm") 12px!important;
+    padding: __mapping($__map--base-padding-size, sm) __mapping($__map--base-padding-size, lg)!important;
   }
 
   .button--xs{
-    padding: map_get($base__padding-size, "xs") 12px!important;
+    padding: __mapping($__map--base-padding-size, xs) __mapping($__map--base-padding-size, lg)!important;
   }
 
   .button--fluid{
