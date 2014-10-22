@@ -27,7 +27,7 @@
   color: $c;
 }
 
-@if $module__badge == true{
+@if $__module-badge == true or $__zerw-debug == true {
 
   .badge{
     @extend %badge__extend--badge;

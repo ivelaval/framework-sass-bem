@@ -41,7 +41,7 @@
 
 }
 
-@if $module__button == true{
+@if $__module-button == true or $__zerw-debug == true{
 
   .button{
 

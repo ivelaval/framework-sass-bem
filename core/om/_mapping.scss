@@ -51,17 +51,17 @@ $__map--base-padding-size:
 //---------------------------------------------
 $__map--base-font:
 (
-        size-96:                $__font-size-96,
-        size-72:                $__font-size-72,
-        size-48:                $__font-size-48,
-        size-36:                $__font-size-36,
-        size-30:                $__font-size-30,
-        size-24:                $__font-size-24,
-        size-20:                $__font-size-20,
-        size-16:                $__font-size-16,
-        size-14:                $__font-size-14,
-        size-12:                $__font-size-12,
-        size-10:                $__font-size-10,
+        size-tera:              $__font-size-tera,
+        size-giga:              $__font-size-giga,
+        size-mega:              $__font-size-mega,
+        size-h1:                $__font-size-h1,
+        size-h2:                $__font-size-h2,
+        size-h3:                $__font-size-h3,
+        size-h4:                $__font-size-h4,
+        size-h5:                $__font-size-h5,
+        size-h6:                $__font-size-h6,
+        size-byte:              $__font-size-byte,
+        size-bit:               $__font-size-bit,
         family:                 $__font-family,
         size-base-em:           $__font-size-base-em,
         size:                   $__font-size-default,
@@ -122,7 +122,6 @@ $__map--ui-text-shadow:
         color:                  $__text-shadow-color,
         opacity:                $__text-shadow-opacity
 );
-
 
 //---------------------------------------------
 //  Map UI color status

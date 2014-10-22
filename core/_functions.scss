@@ -20,3 +20,32 @@
   @function __mapping($map, $key){
     @return map-get($map,$key);
   }
+  @function __transform-color-sl($color: #000000, $adjust: 0, $lighten: 0, $saturate: 0){
+
+    $new-color: $color;
+    @if $lighten != 0 and $saturate != 0 {
+      $new-color: saturate(lighten(adjust_hue($color, $adjust), $lighten), $saturate);
+    } @else if $lighten != 0 and $saturate == 0 {
+      $new-color: lighten(adjust_hue($color, $adjust), $lighten);
+    } @else if $lighten == 0 and $saturate == 0 {
+      $new-color: adjust_hue($color, $adjust);
+    }
+
+    @return $new-color;
+
+  }
+
+  @function __transform-color-dd($color: #000000, $adjust: 0, $darken: 0, $desaturate: 0){
+
+    $new-color: $color;
+    @if $darken != 0 and $desaturate != 0 {
+      $new-color: desaturate(darken(adjust_hue($color, $adjust), $darken), $desaturate);
+    } @else if $darken != 0 and $desaturate == 0 {
+      $new-color: darken(adjust_hue($color, $adjust), $darken);
+    } @else if $darken == 0 and $desaturate == 0 {
+      $new-color: adjust_hue($color, $adjust);
+    }
+
+    @return $new-color;
+
+  }

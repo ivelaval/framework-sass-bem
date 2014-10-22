@@ -6,7 +6,7 @@
 //  Created: 13/10/2014
 //  Updated: 15/10/2014
 ********************************************************/
-/* Core/! normalize.css v3.0.2 | MIT License | git.io/normalize  ========================================================================== */
+/* normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -381,7 +381,7 @@ button,
 input,
 select,
 textarea {
-  color: rgba(43, 43, 43, 0.1); }
+  color: #2B2B2B; }
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -3330,7 +3330,7 @@ footer {
 
 .button--normal {
   background-color: #e4e7e8;
-  border-color: #e2e2e2;
+  border-color: #cfcfcf;
   color: #555555!important; }
 
 .button--danger {
@@ -3430,10 +3430,7 @@ footer {
 
 .form__input-group {
   display: inline-table;
-  vertical-align: middle;
-  width: 100%; }
-  .form__input-group.form__input:nth-child(2) {
-    background: #105cb6; }
+  vertical-align: middle; }
 
 .form__input-group {
   position: relative;
@@ -3451,10 +3448,7 @@ footer {
     margin-bottom: 0; }
 
 .form__input-group--icon {
-  padding: 7px 12px;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1;
+  padding: 0 12px;
   color: #555555;
   text-align: center;
   background-color: #eeeeee;
@@ -4187,9 +4181,5 @@ footer {
 
 .list__item--end {
   margin-bottom: 0; }
-
-.panel {
-  padding: 5px;
-  margin: 5px; }
 
 /*# sourceMappingURL=style.css.map */

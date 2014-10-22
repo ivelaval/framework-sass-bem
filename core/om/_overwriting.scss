@@ -4,6 +4,36 @@
 //  Overwriting public configuration
 //---------------------------------------------
 
+$__zerw-debug:                  true!default;
+$__core-normalize:              true!default;
+
+//---------------------------------------------
+//  USE MODULES CONFIG
+//---------------------------------------------
+$__module-breadcrumb:     	    false!default;
+$__module-form:           	    false!default;
+$__module-image:           	    false!default;
+$__module-layout:     		    false!default;
+$__module-list:          	    false!default;
+$__module-media:           	    false!default;
+$__module-menu:           	    false!default;
+$__module-pagination:     	    false!default;
+$__module-table:          	    false!default;
+$__module-text:          	    false!default;
+$__module-panel:          	    false!default;
+$__module-alert:          	    false!default;
+$__module-well:          	    false!default;
+$__module-label:          	    false!default;
+$__module-badge:          	    false!default;
+$__module-button:          	    false!default;
+$__module-navbar:          	    false!default;
+$__module-tab:          	    false!default;
+$__module-badge:                false!default;
+$__module-alert:                false!default;
+$__module-progressbar:          false!default;
+$__module-well:                 false!default;
+$__module-icon:                 false!default;
+
 //---------------------------------------------
 //  BASE
 //---------------------------------------------
@@ -37,17 +67,17 @@ $__padding-xs:                      2px!default;
 //---------------------------------------------
 //  FONT PROPERTIES
 //---------------------------------------------
-$__font-size-96:             	    96!default;
-$__font-size-72:                    72!default;
-$__font-size-48:              	    48!default;
-$__font-size-36:              	    36!default;
-$__font-size-30:              	    30!default;
-$__font-size-24:              	    24!default;
-$__font-size-20:              	    20!default;
-$__font-size-16:              	    16!default;
-$__font-size-14:                    14!default;
-$__font-size-12:             	    12!default;
-$__font-size-10:              	    10!default;
+$__font-size-tera:             	    96!default;
+$__font-size-giga:                  72!default;
+$__font-size-mega:              	48!default;
+$__font-size-h1:              	    36!default;
+$__font-size-h2:              	    30!default;
+$__font-size-h3:              	    24!default;
+$__font-size-h4:              	    20!default;
+$__font-size-h5:              	    16!default;
+$__font-size-h6:                    14!default;
+$__font-size-byte:             	    12!default;
+$__font-size-bit:              	    10!default;
 $__font-family:                     'Open Sans', sans-serif!default;
 $__font-size-base-em: 			    16!default;
 $__font-size-default: 	            15!default;
@@ -93,7 +123,14 @@ $__text-shadow-color:               $__shadow-color!default;
 $__text-shadow-opacity:             $__shadow-opacity!default;
 
 //---------------------------------------------
-//  GENERIC COLOR UI
+//  STATUS COLOR UI
+//---------------------------------------------
+$__color--ruby:                      #e80500 !default;
+$__color--emerald:                   #00a10b !default;
+$__color--sapphire:                  #0200e8 !default;
+
+//---------------------------------------------
+//  STATUS COLOR UI
 //---------------------------------------------
 $__color-status--normal:            #e4e7e8 !default;
 $__color-status--danger:            #ff4136 !default;
@@ -101,7 +138,7 @@ $__color-status--warning:           #ff851b !default;
 $__color-status--success:           #5ac51f !default;
 $__color-status--info:              #158cba !default;
 
-$__color-status--normal-shadow:     #e2e2e2 !default;
+$__color-status--normal-shadow:     #cfcfcf !default;
 $__color-status--danger-shadow:     #dd3d37 !default;
 $__color-status--warning-shadow:    #d36a1b !default;
 $__color-status--success-shadow:    #51a11f !default;

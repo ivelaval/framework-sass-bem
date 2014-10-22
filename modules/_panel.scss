@@ -1,9 +1,6 @@
   //module/panel ==========================================================================
-  @if $module__panel == true {
+  @if $__module-panel == true or $__zerw-debug == true{
 
-    .panel {
-      padding: 5px;
-      margin: 5px;
-    }
+
 
   }

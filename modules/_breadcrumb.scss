@@ -97,7 +97,7 @@
   }
 
 
-  @if $module__breadcrumb == true{
+  @if $__module-breadcrumb == true or $__zerw-debug == true {
 
     .breadcrumb{
       padding: 8px 15px;
