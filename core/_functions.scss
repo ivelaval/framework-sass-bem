@@ -1,5 +1,9 @@
   //Core/Functions ==========================================================================
 
+  @function __mapping($map, $key){
+    @return map-get($map,$key);
+  }
+
   @function __em($px, $base: __mapping($__map--base-font, size-base-em)){
       @return ($px / $base) * 1em;
   }
@@ -17,9 +21,6 @@
     @return $remSize * 1rem;
   }
 
-  @function __mapping($map, $key){
-    @return map-get($map,$key);
-  }
   @function __transform-color-sl($color: #000000, $adjust: 0, $lighten: 0, $saturate: 0){
 
     $new-color: $color;

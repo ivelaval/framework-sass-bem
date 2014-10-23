@@ -3,10 +3,13 @@
 //-------------------------------------------
 //  Button Mixins
 //-------------------------------------------
-@mixin button__mixin--skin($backc, $borc, $c){
-  background-color: #{$backc};
-  border-color: #{$borc};
-  color: #{$c}!important;
+@mixin button__mixin--skin($color: -1, $color-text: __mapping($__map--ui, color-link)){
+  @if $color != -1 {
+    $color-dark: __transform-color-dd($color, $darken: __mapping($__map--ui, percent-color-dark));
+    background-color: #{$color};
+    border-color: #{$color-dark};
+  }
+  color: #{$color-text}!important;
 }
 
 //-------------------------------------------
@@ -80,10 +83,10 @@
       @include __ui-round(0 0 0 0);
 
       &:first-child{
-        @include __ui-round(4px 0 0 4px);
+        @include __ui-round(__mapping($__map--ui, border-radius) 0 0 __mapping($__map--ui, border-radius));
       }
       &:last-child{
-        @include __ui-round(0 4px 4px 0);
+        @include __ui-round(0 __mapping($__map--ui, border-radius) __mapping($__map--ui, border-radius) 0);
       }
       &:active{
         border-bottom-width: 1px;
@@ -100,27 +103,27 @@
   }
 
   .button--normal{
-    @include button__mixin--skin(__mapping($__map--ui-color-status, normal), __mapping($__map--ui-color-status, normal-shadow), #555555);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, normal), #555555);
   }
 
   .button--danger{
-    @include button__mixin--skin(__mapping($__map--ui-color-status, danger), __mapping($__map--ui-color-status, danger-shadow), #FFFFFF);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, danger), #FFFFFF);
   }
 
   .button--warning{
-    @include button__mixin--skin(__mapping($__map--ui-color-status, warning), __mapping($__map--ui-color-status, warning-shadow), #FFFFFF);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, warning), #FFFFFF);
   }
 
   .button--success{
-    @include button__mixin--skin(__mapping($__map--ui-color-status, success), __mapping($__map--ui-color-status, success-shadow), #FFFFFF);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, success), #FFFFFF);
   }
 
   .button--info{
-    @include button__mixin--skin(__mapping($__map--ui-color-status, info), __mapping($__map--ui-color-status, info-shadow), #FFFFFF);
+    @include button__mixin--skin(__mapping($__map--ui-color-status, info), #FFFFFF);
   }
 
   .button--link{
-    @include button__mixin--skin(none, none, #156f95);
+    @include button__mixin--skin();
   }
 
   .button--lg{

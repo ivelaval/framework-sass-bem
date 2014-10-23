@@ -43,7 +43,8 @@ $__map--base-padding-size:
         xs:                     $__padding-xs,
         sm:                     $__padding-sm,
         md:                     $__padding-md,
-        lg:                     $__padding-lg
+        lg:                     $__padding-lg,
+        normal:                 $__padding-md
 );
 
 //---------------------------------------------
@@ -86,7 +87,9 @@ $__map--ui:
         rotate:                 $__rotate,
         scale:                  $__scale,
         ease:                   $__ease,
-        background-size:        $__background-size
+        background-size:        $__background-size,
+        percent-color-dark:     $__percent-color-dark,
+        color-link:             $__color-link
 );
 
 //---------------------------------------------
@@ -129,18 +132,8 @@ $__map--ui-text-shadow:
 $__map--ui-color-status:
 (
         normal:                 $__color-status--normal,
-        normal-dark:            $__color-status--normal-dark,
-        normal-shadow:          $__color-status--normal-shadow,
         danger:                 $__color-status--danger,
-        danger-dark:            $__color-status--danger-dark,
-        danger-shadow:          $__color-status--danger-shadow,
         warning:                $__color-status--warning,
-        warning-dark:           $__color-status--warning-dark,
-        warning-shadow:         $__color-status--warning-shadow,
         success:                $__color-status--success,
-        success-dark:           $__color-status--success-dark,
-        success-shadow:         $__color-status--success-shadow,
-        info:                   $__color-status--info,
-        info-dark:              $__color-status--info-dark,
-        info-shadow:            $__color-status--info-shadow
+        info:                   $__color-status--info
 );

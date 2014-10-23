@@ -56,13 +56,14 @@ $__breakpoint-md:                   "(max-width : 1024px)  and (min-width: 769px
 $__breakpoint-sm:                   "(max-width : 768px) and (min-width: 481px)"!default;
 $__breakpoint-xs:                   "(max-width : 480px)"!default;
 $__breakpoint-retina:               "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"!default;
+
 //---------------------------------------------
 //  BASE PADDING SIZES
 //---------------------------------------------
-$__padding-lg:                      12px!default;
-$__padding-md:                      8px!default;
-$__padding-sm:                      5px!default;
-$__padding-xs:                      2px!default;
+$__padding-lg:                      15px!default;
+$__padding-md:                      10px!default;
+$__padding-sm:                      7px!default;
+$__padding-xs:                      4px!default;
 
 //---------------------------------------------
 //  FONT PROPERTIES
@@ -91,16 +92,20 @@ $__font-align: 				        left!default;
 //---------------------------------------------
 //  GENERIC UI
 //---------------------------------------------
-$__border-radius:				    4px !default;
+
 $__color-shadow:     			    #CCC !default;
 $__color-border:     			    #CCC !default;
-$__opacity: 					    0.5 !default;
+$__color-link:                      #1e7eb5!default;
 $__gradient-fcolor:                 #444444!default;
 $__gradient-scolor:                 #999999!default;
+$__border-radius:				    4px !default;
+$__opacity: 					    0.5 !default;
 $__rotate:                          7.5deg!default;
 $__scale:                           0.8!default;
 $__ease:                            ease-out!default;
 $__background-size:                 100% 100%!default;
+$__percent-color-dark:              6!default;
+
 
 
 //---------------------------------------------
@@ -143,10 +148,3 @@ $__color-status--danger-shadow:     #dd3d37 !default;
 $__color-status--warning-shadow:    #d36a1b !default;
 $__color-status--success-shadow:    #51a11f !default;
 $__color-status--info-shadow:       #156f95 !default;
-
-$__color-status--normal-dark:       #898c8d !default;
-$__color-status--danger-dark:       #882e2c !default;
-$__color-status--warning-dark:      #944a1b !default;
-$__color-status--success-dark:      #356b1f !default;
-$__color-status--info-dark:         #154b6e !default;
-

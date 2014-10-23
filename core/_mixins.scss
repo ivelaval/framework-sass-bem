@@ -64,12 +64,32 @@
   //------------------------------------------------
 
   @mixin __ui-round($radius: __mapping($__map--ui, border-radius)) {
-      -webkit-border-radius: 	#{$radius};
-         -moz-border-radius: 	#{$radius};
-          -ms-border-radius: 	#{$radius};
-              border-radius: 	#{$radius}; // Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+
+      -webkit-border-radius: #{$radius};
+         -moz-border-radius: #{$radius};
+          -ms-border-radius: #{$radius};
+              border-radius: #{$radius}; // Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+
             // useful if you don't want a bg color from leaking outside the border:
             background-clip: 	padding-box; // Android 2.2+, Chrome, Firefox 4+, IE# 9+, iOS 4+, Opera 10.50+, Safari 4+
+  }
+
+  @mixin __ui-round--top($radius) {
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+  }
+
+  @mixin __ui-round--right($radius) {
+    border-bottom-right-radius: $radius;
+    border-top-right-radius: $radius;
+  }
+
+  @mixin __ui-round--bottom($radius) {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }
+
+  @mixin __ui-round--left($radius) {
+    border-bottom-left-radius: $radius;
+    border-top-left-radius: $radius;
   }
 
   @mixin __ui-border($b: 1px solid transparent, $bw: 0 1px 4px 1px){

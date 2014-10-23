@@ -86,8 +86,8 @@
   input[type="reset"],
   input[type="submit"],
   a.button{
+    padding: __mapping($__map--base-padding-size, normal) __mapping($__map--base-padding-size, normal);
     display: inline-block;
-    padding: 8px 12px;
     color: __mapping($__map--base-font, color);
     cursor: pointer;
 
