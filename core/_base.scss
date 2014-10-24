@@ -1,239 +1,238 @@
-  //Core/Base ==========================================================================
+//Core/Base ==========================================================================
 
-  * {
-      @include __base-bs();
-      @include __debug();
-  }
+* {
+    @include __base-bs();
+    @include __debug();
+}
 
-  html, body {
-    @include __font-s();
-    font-family: __mapping($__map--base-font, family);
-    color: __mapping($__map--base-font, color);
-    font-size: __em(__mapping($__map--base-font, size));
-    text-align: __mapping($__map--base-font, align);
-  }
+html, body {
+  @include __font-s();
+  font-family: __mapping($__map--base-font, family);
+  color: __mapping($__map--base-font, color);
+  font-size: __em(__mapping($__map--base-font, size));
+  text-align: __mapping($__map--base-font, align);
+}
 
-  button,
-  input,
-  select,
-  textarea {
-      color: #2B2B2B;
-  }
+button,
+input,
+select,
+textarea {
+    color: #2B2B2B;
+}
 
-  //--------------------------------------------------------------
-  // Remove text-shadow in selection highlight
-  // These selection rule sets have to be separate.
-  // Customize the background color to match your design.
-  //--------------------------------------------------------------
+//--------------------------------------------------------------
+// Remove text-shadow in selection highlight
+// These selection rule sets have to be separate.
+// Customize the background color to match your design.
+//--------------------------------------------------------------
 
-  ::-moz-selection {
-      background: #b3d4fc;
-      text-shadow: none;
-  }
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
 
-  ::selection {
-      background: #b3d4fc;
-      text-shadow: none;
-  }
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
 
-  //--------------------------------------------------------------
-  // A better looking default horizontal rule
-  //--------------------------------------------------------------
+//--------------------------------------------------------------
+// A better looking default horizontal rule
+//--------------------------------------------------------------
 
-  hr {
-      display: block;
-      height: 1px;
-      border: 0;
-      border-top: 1px solid #ccc;
-      @include __base-mpb($margin: 1em 0);
-  }
-
-  //--------------------------------------------------------------
-  // List syles default
-  //--------------------------------------------------------------
-
-  ul {
-      @include __base-mpb();
-  }
-
-  li {
-      @include __base-mpb();
-      list-style: none;
-  }
-
-  a{
-      text-decoration: none;
-      color: #1e7eb5;
-      @include __ui-transition-o(color .3s ease);
-      &:hover{
-          color: rgba(47, 40, 54, 0.59);
-      }
-  }
-
-  p{
-    padding: 10px;
-  }
-
-  //--------------------------------------------------------------
-  //  predefined styles for forms
-  //--------------------------------------------------------------
-
-  form{
-    @include __base-mpb();
-  }
-
-  button,
-  html input[type="button"],
-  input[type="reset"],
-  input[type="submit"],
-  a.button{
-    padding: __mapping($__map--base-padding-size, normal) __mapping($__map--base-padding-size, normal);
-    display: inline-block;
-    color: __mapping($__map--base-font, color);
-    cursor: pointer;
-
-    &::-moz-focus-inner{
-      border: 0;
-      padding: 0;
-    }
-
-  }
-
-  fieldset{
-    padding: 40px 20px 20px 20px;
-  }
-
-  legend {
-    @include __base-mpb();
-  }
-
-  label{
+hr {
     display: block;
-    color: __mapping($__map--base-font, color-label);
-    vertical-align: middle;
-    margin-bottom: 4px;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    @include __base-mpb($margin: 1em 0);
+}
+
+//--------------------------------------------------------------
+// List syles default
+//--------------------------------------------------------------
+
+ul {
+    @include __base-mpb();
+}
+
+li {
+    @include __base-mpb();
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #1e7eb5;
+    @include __ui-transition-o(color .3s ease);
+    &:hover{
+        color: rgba(47, 40, 54, 0.59);
+    }
+}
+
+p{
+  padding: 10px;
+}
+
+//--------------------------------------------------------------
+//  predefined styles for forms
+//--------------------------------------------------------------
+
+form{
+  @include __base-mpb();
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"],
+a.button{
+  padding: __mapping($__map--base-padding-size, md) __mapping($__map--base-padding-size, md);
+  display: inline-block;
+  color: __mapping($__map--base-font, color);
+  cursor: pointer;
+
+  &::-moz-focus-inner{
+    border: 0;
+    padding: 0;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  input[type="tel"],
-  input[type="url"],
-  input[type="password"],
-  textarea,
-  select
-  {
-    padding: __mapping($__map--base-padding-size, md) __mapping($__map--base-padding-size, lg);
-    border: 1px solid #a8a8a8;
-    color: #606060;
-    @include __ui-round();
+}
 
-    &:focus,
-    &:active{
-      outline: none;
+fieldset{
+  padding: 40px 20px 20px 20px;
+}
+
+legend {
+  @include __base-mpb();
+}
+
+label{
+  display: block;
+  color: __mapping($__map--base-font, color-label);
+  vertical-align: middle;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select
+{
+  padding: __mapping($__map--base-padding-size, md) __mapping($__map--base-padding-size, lg);
+  border: 1px solid #a8a8a8;
+  color: #606060;
+  @include __ui-round();
+
+  &:focus,
+  &:active{
+    outline: none;
+  }
+
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+//--------------------------------------------------------------
+// Preconfigured elements for better visualization
+//--------------------------------------------------------------
+p, ol, ul, blockquote, pre, code {
+    font-size: __em(__mapping($__map--base-font, size));
+}
+
+//--------------------------------------------------------------
+// Remove the gap between images, videos, audio and canvas
+// and the bottom of their containers
+//--------------------------------------------------------------
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+footer{
+    @include __base-mpb();
+}
+
+//--------------------------------------------------------------
+//   Print styles. Inlined to avoid required HTTP connection
+//--------------------------------------------------------------
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; // Black prints faster
+        box-shadow: none !important;
+        text-shadow: none !important;
     }
 
-  }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
 
-  textarea {
-    overflow: auto;
-  }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
 
-  optgroup {
-    font-weight: bold;
-  }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
 
-  //--------------------------------------------------------------
-  // Preconfigured elements for better visualization
-  //--------------------------------------------------------------
+    //--------------------------------------------------------------
+    // Don't show links for images, or javascript/internal links
+    //--------------------------------------------------------------
 
-  p, ol, ul, blockquote, pre, code {
-      font-size: __em(__mapping($__map--base-font, size));
-  }
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
 
-  //--------------------------------------------------------------
-  // Remove the gap between images, videos, audio and canvas
-  // and the bottom of their containers
-  //--------------------------------------------------------------
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
 
-  audio,
-  canvas,
-  img,
-  video {
-      vertical-align: middle;
-  }
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
 
-  footer{
-      @include __base-mpb();
-  }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
 
-  //--------------------------------------------------------------
-  //   Print styles. Inlined to avoid required HTTP connection
-  //--------------------------------------------------------------
+    img {
+        max-width: 100% !important;
+    }
 
-  @media print {
-      * {
-          background: transparent !important;
-          color: #000 !important; // Black prints faster
-          box-shadow: none !important;
-          text-shadow: none !important;
-      }
+    @page {
+        margin: 0.5cm;
+    }
 
-      a,
-      a:visited {
-          text-decoration: underline;
-      }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
 
-      a[href]:after {
-          content: " (" attr(href) ")";
-      }
-
-      abbr[title]:after {
-          content: " (" attr(title) ")";
-      }
-
-      //--------------------------------------------------------------
-      // Don't show links for images, or javascript/internal links
-      //--------------------------------------------------------------
-
-      .ir a:after,
-      a[href^="javascript:"]:after,
-      a[href^="#"]:after {
-          content: "";
-      }
-
-      pre,
-      blockquote {
-          border: 1px solid #999;
-          page-break-inside: avoid;
-      }
-
-      thead {
-          display: table-header-group; /* h5bp.com/t */
-      }
-
-      tr,
-      img {
-          page-break-inside: avoid;
-      }
-
-      img {
-          max-width: 100% !important;
-      }
-
-      @page {
-          margin: 0.5cm;
-      }
-
-      p,
-      h2,
-      h3 {
-          orphans: 3;
-          widows: 3;
-      }
-
-      h2,
-      h3 {
-          page-break-after: avoid;
-      }
-  }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

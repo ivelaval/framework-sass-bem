@@ -15,7 +15,7 @@
     }
   }
 
-  @mixin form__mixin--status($primary){
+  @mixin form__mixin--status-border($primary){
     $ui__color-status--shadow: $primary;
     border-color: $primary !important;
     @include __ui-shadow-o(inset 0 2px 0 $ui__color-status--shadow);
@@ -109,11 +109,7 @@
 
       }
 
-      .form__input-group-icon{
-        color: #555555;
-        text-align: center;
-        background-color: #eeeeee;
-        @include __ui-round();
+      .addon{
 
         &:first-child{
           @include __ui-round--right(0);
@@ -142,7 +138,7 @@
       }
 
       .button{
-        border-width: 0 1px 3px 1px;
+        border-width: 0 1px 2px 1px;
         margin-bottom: 0;
         &:active{
           border-bottom-width: 0;
@@ -152,7 +148,7 @@
 
      }
 
-    .form__input-group-icon,
+    .addon,
     .form__input-group-button,
     .form__input-group .form__input {
       display: table-cell;
@@ -161,7 +157,7 @@
       }
     }
 
-    .form__input-group-icon,
+    .addon,
     .form__input-group-button {
       width: 1%;
       white-space: nowrap;
@@ -215,24 +211,29 @@
 
     @include form__mixin--size-element();
 
+    .form__input--normal,
+    .form__select--normal{
+      @include form__mixin--status-border(__mapping($__map--ui-color-status, normal));
+    }
+
     .form__input--danger,
     .form__select--danger{
-      @include form__mixin--status(__mapping($__map--ui-color-status, danger));
+      @include form__mixin--status-border(__mapping($__map--ui-color-status, danger));
     }
 
     .form__input--warning,
     .form__select--warning{
-      @include form__mixin--status(__mapping($__map--ui-color-status, warning));
+      @include form__mixin--status-border(__mapping($__map--ui-color-status, warning));
     }
 
     .form__input--success,
     .form__select--success{
-      @include form__mixin--status(__mapping($__map--ui-color-status, success));
+      @include form__mixin--status-border(__mapping($__map--ui-color-status, success));
     }
 
     .form__input--info,
     .form__select--info{
-      @include form__mixin--status(__mapping($__map--ui-color-status, info));
+      @include form__mixin--status-border(__mapping($__map--ui-color-status, info));
     }
 
     .form__input--fluid,

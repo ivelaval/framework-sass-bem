@@ -1,0 +1,61 @@
+  //module/Addon ==========================================================================
+
+  //-------------------------------------------
+  //  Button Mixins
+  //-------------------------------------------
+  @mixin addon__mixin--skin($color: -1, $color-text: __mapping($__map--ui, color-link)){
+    @if $color != -1 {
+      $color-dark: __transform-color-dd($color, $darken: __mapping($__map--ui, percent-color-dark));
+      background-color: #{$color};
+      border-color: #{$color-dark};
+    }
+    color: #{$color-text}!important;
+  }
+
+  @mixin addon__mixin--size(){
+    $psize: $__map--base-padding-size;
+    @each $key, $size in $psize {
+      .addon--#{$key}
+      {
+        padding: #{$size} #{__mapping($__map--base-padding-size, lg)} !important;
+      }
+    }
+  }
+
+  @if __use-module(addon) {
+
+    .addon{
+      color: #555555;
+      text-align: center;
+      background-color: #eeeeee;
+      @include __ui-round();
+    }
+
+    .addon--normal{
+      @include addon__mixin--skin(__mapping($__map--ui-color-status, normal), #555555);
+    }
+
+    .addon--danger{
+      @include addon__mixin--skin(__mapping($__map--ui-color-status, danger), #FFFFFF);
+    }
+
+    .addon--warning{
+      @include addon__mixin--skin(__mapping($__map--ui-color-status, warning), #FFFFFF);
+    }
+
+    .addon--success{
+      @include addon__mixin--skin(__mapping($__map--ui-color-status, success), #FFFFFF);
+    }
+
+    .addon--info{
+      @include addon__mixin--skin(__mapping($__map--ui-color-status, info), #FFFFFF);
+    }
+
+    @include addon__mixin--size();
+
+    .addon--fluid{
+      display: block;
+      width: 100%;
+    }
+
+  }//endif

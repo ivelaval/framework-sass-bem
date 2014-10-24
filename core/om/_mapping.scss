@@ -38,7 +38,8 @@ $__map--modules:
         alert:                  $__module-alert,
         progressbar:            $__module-progressbar,
         well:                   $__module-well,
-        icon:                   $__module-icon
+        icon:                   $__module-icon,
+        addon:                  $__module-addon
 );
 
 //---------------------------------------------
@@ -80,8 +81,7 @@ $__map--base-padding-size:
         xs:                     $__padding-xs,
         sm:                     $__padding-sm,
         md:                     $__padding-md,
-        lg:                     $__padding-lg,
-        normal:                 $__padding-md
+        lg:                     $__padding-lg
 );
 
 //---------------------------------------------
