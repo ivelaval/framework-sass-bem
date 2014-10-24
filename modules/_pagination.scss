@@ -1,6 +1,6 @@
   //module/Pagination ==========================================================================
 
-  @if $__module-pagination == true or $__zerw-debug == true{
+  @if __use-module(pagination) {
 
 
   }//endif

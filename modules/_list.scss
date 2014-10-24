@@ -1,6 +1,6 @@
   //module/List ==========================================================================
 
-  @if $__module-list == true or $__zerw-debug == true{
+  @if __use-module(list) {
 
       .list{
 

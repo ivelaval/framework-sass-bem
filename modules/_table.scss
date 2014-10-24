@@ -1,4 +1,4 @@
   //module/Table ==========================================================================
-  @if $__module-table == true or $__zerw-debug == true{
+  @if __use-module(table) {
 
   }//endif

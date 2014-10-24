@@ -34,7 +34,7 @@
     color: $c;
   }
 
-  @if $__module-alert == true or $__zerw-debug == true {
+  @if __use-module(alert) {
 
     .alert{
       position: relative;

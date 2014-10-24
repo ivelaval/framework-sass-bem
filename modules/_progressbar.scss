@@ -1,6 +1,6 @@
 //module/Progressbar ==========================================================================
 
-@if $__module-progressbar == true or $__zerw-debug == true{
+@if __use-module(progressbar) {
 
 
 }//endif

@@ -1,6 +1,5 @@
 //module/Well ==========================================================================
-@if $__module-well == true or $__zerw-debug == true{
-
+@if __use-module(well){
 
 
 }//endif

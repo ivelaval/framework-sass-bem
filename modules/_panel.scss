@@ -1,5 +1,5 @@
   //module/panel ==========================================================================
-  @if $__module-panel == true or $__zerw-debug == true{
+  @if __use-module(panel){
 
 
 

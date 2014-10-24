@@ -4,8 +4,9 @@
 //  Overwriting public configuration
 //---------------------------------------------
 
-$__zerw-debug:                  true!default;
-$__core-normalize:              true!default;
+$__zerw-debug:                  false!default;
+$__zerw-all-modules:            true!default;
+$__zerw-normalize:              true!default;
 
 //---------------------------------------------
 //  USE MODULES CONFIG
@@ -22,14 +23,11 @@ $__module-table:          	    false!default;
 $__module-text:          	    false!default;
 $__module-panel:          	    false!default;
 $__module-alert:          	    false!default;
-$__module-well:          	    false!default;
 $__module-label:          	    false!default;
 $__module-badge:          	    false!default;
 $__module-button:          	    false!default;
 $__module-navbar:          	    false!default;
 $__module-tab:          	    false!default;
-$__module-badge:                false!default;
-$__module-alert:                false!default;
 $__module-progressbar:          false!default;
 $__module-well:                 false!default;
 $__module-icon:                 false!default;

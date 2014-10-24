@@ -2,6 +2,7 @@
 
   * {
       @include __base-bs();
+      @include __debug();
   }
 
   html, body {
@@ -107,8 +108,10 @@
   }
 
   label{
+    display: block;
     color: __mapping($__map--base-font, color-label);
     vertical-align: middle;
+    margin-bottom: 4px;
   }
 
   input[type="text"],

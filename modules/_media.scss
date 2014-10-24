@@ -1,6 +1,6 @@
   //module/Media ==========================================================================
 
-  @if $__module-media == true or $__zerw-debug == true{
+  @if __use-module(media) {
 
 
   }//endif

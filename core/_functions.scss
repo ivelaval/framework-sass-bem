@@ -1,5 +1,13 @@
   //Core/Functions ==========================================================================
 
+  @function __use-module($module){
+    $response: false;
+    @if __mapping($__map--modules, $module) == true or __mapping($__map--zerw, all-modules) == true {
+      $response: true;
+    }
+    @return $response;
+  }
+
   @function __mapping($map, $key){
     @return map-get($map,$key);
   }

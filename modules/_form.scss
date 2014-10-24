@@ -71,23 +71,8 @@
     width: 100%;
   }
 
-  %form__extend--border-radius-child{
 
-    &:first-child{
-      border-right: 0;
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
-    }
-
-    &:last-child{
-      border-left: 0;
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-    }
-
-  }
-
-  @if $__module-form == true or $__zerw-debug == true{
+  @if __use-module(form) {
 
     .form{
       padding: 2px;
@@ -108,58 +93,61 @@
       position: relative;
       border-collapse: separate; // prevent input groups from inheriting border styles from table cells when placed within a table
       display: table;
-      margin-bottom: 4px;
-      @extend %__clearfix;
 
       .form__input {
-        position: relative;
-        z-index: 2;
-        float: left;
         width: 100%;
         margin-bottom: 0;
-        border-radius: 0;
+        float: left;
 
         &:first-child{
-          @include __ui-round--left(__mapping($__map--ui, border-radius));
+          @include __ui-round--right(0);
         }
 
         &:last-child{
-          @include __ui-round--right(__mapping($__map--ui, border-radius));
+          @include __ui-round--left(0);
         }
 
       }
 
       .form__input-group-icon{
-        padding: 0 12px !important;
         color: #555555;
         text-align: center;
         background-color: #eeeeee;
-        border: 1px solid #e7e7e7;
-        @extend %form__extend--border-radius-child;
+        @include __ui-round();
+
+        &:first-child{
+          @include __ui-round--right(0);
+        }
+
+        &:last-child{
+          @include __ui-round--left(0);
+        }
+
       }
 
     }
 
     .form__input-group-button{
 
+      &:first-child{
+        .button{
+          @include __ui-round--right(0);
+        }
+      }
+
+      &:last-child{
+        .button{
+          @include __ui-round--left(0);
+        }
+      }
+
       .button{
-
-        border-width: 0 1px 2px 1px;
+        border-width: 0 1px 3px 1px;
         margin-bottom: 0;
-
         &:active{
           border-bottom-width: 0;
           @extend %button__extend--outline-off;
         }
-
-        &:first-child{
-          background-color: #105cb6;
-        }
-
-        &:last-child{
-          background-color: #ae571b;
-        }
-
       }
 
      }
@@ -203,6 +191,8 @@
     .form__label{
       color: __mapping($__map--base-font, color-label);
       vertical-align: middle;
+      margin-bottom: 4px;
+      display: block;
     }
 
     .form__input{

@@ -4,6 +4,13 @@
   //  Utilities for properties base
   //------------------------------------------------
 
+  //Debug active
+  @mixin __debug(){
+    @if __mapping($__map--zerw, debug) {
+      border: 1px solid #00a10b !important;
+    }
+  }
+
   //Margin padding border mixin
   @mixin __base-mpb($margin: 0, $padding: 0, $border: -1){
     @if($margin != -1){

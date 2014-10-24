@@ -5,6 +5,43 @@
 //---------------------------------------------
 
 //---------------------------------------------
+//  Map zerw
+//---------------------------------------------
+$__map--zerw:
+(
+        debug:                  $__zerw-debug,
+        all-modules:            $__zerw-all-modules,
+        normalize:              $__zerw-normalize
+);
+
+//---------------------------------------------
+//  Map modules
+//---------------------------------------------
+$__map--modules:
+(
+        breadcrumb:             $__module-breadcrumb,
+        form:                   $__module-form,
+        image:                  $__module-image,
+        layout:                 $__module-layout,
+        list:                   $__module-list,
+        media:                  $__module-media,
+        menu:                   $__module-menu,
+        pagination:             $__module-pagination,
+        table:                  $__module-table,
+        text:                   $__module-text,
+        panel:                  $__module-panel,
+        label:                  $__module-label,
+        badge:                  $__module-badge,
+        button:                 $__module-button,
+        navbar:                 $__module-navbar,
+        tab:                    $__module-tab,
+        alert:                  $__module-alert,
+        progressbar:            $__module-progressbar,
+        well:                   $__module-well,
+        icon:                   $__module-icon
+);
+
+//---------------------------------------------
 //  Map base
 //---------------------------------------------
 $__map--base:

@@ -1,5 +1,5 @@
 //module/Navbar ==========================================================================
-@if $__module-navbar == true or $__zerw-debug == true{
+@if __use-module(navbar) {
 
 
 }//endif

@@ -10,7 +10,7 @@
   text-transform: none !important;
 }
 
-@if $__module-icon == true or $__zerw-debug == true{
+@if __use-module(icon) {
 
   @font-face {
     font-family: "zerw_fostastic";

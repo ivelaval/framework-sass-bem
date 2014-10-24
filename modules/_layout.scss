@@ -72,7 +72,7 @@
     }
   }
 
-  @if $__module-layout == true or $__zerw-debug == true{
+  @if __use-module(layout) {
 
     *,
     *:after,

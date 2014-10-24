@@ -1,6 +1,6 @@
   // Module/Text ==========================================================================
 
-  @if $__module-text == true or $__zerw-debug == true{
+  @if __use-module(text) {
 
 
 

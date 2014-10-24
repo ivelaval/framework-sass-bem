@@ -1,6 +1,6 @@
   //module/Image ==========================================================================
 
-  @if $__module-image == true or $__zerw-debug == true{
+  @if __use-module(image) {
 
 
   }//endif

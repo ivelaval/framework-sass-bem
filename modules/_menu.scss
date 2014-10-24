@@ -1,5 +1,5 @@
   //module/Menu ==========================================================================
-  @if $__module-menu == true or $__zerw-debug == true{
+  @if __use-module(menu) {
 
 
   }//endif

@@ -115,7 +115,7 @@
   }
 
 
-  @if $__module-breadcrumb == true or $__zerw-debug == true {
+  @if __use-module(breadcrumb) {
 
     .breadcrumb{
       @extend %breadcrumb__extend--global;

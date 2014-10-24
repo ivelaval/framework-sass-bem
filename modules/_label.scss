@@ -1,5 +1,5 @@
 //module/Label ==========================================================================
-@if $__module-label == true or $__zerw-debug == true{
+@if __use-module(label) {
 
 
 }//endif
