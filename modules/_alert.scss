@@ -1,58 +1,60 @@
-  //module/Alert ==========================================================================
+//module/Alert ==========================================================================
 
-  //-------------------------------------------
-  //  Alert Extends
-  //-------------------------------------------
-  %alert__extend--button{
+//-------------------------------------------
+//  Alert Extends
+//-------------------------------------------
+%alert__extend--button {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+//-------------------------------------------
+//  Alert Mixins
+//-------------------------------------------
+@mixin alert__mixin--skin-button($backc: #ff851b, $borc: #ff7701, $c: #ffffff) {
+  background-color: $backc;
+  border-color: $borc;
+  color: $c;
+}
+
+@if __use-module(alert) {
+
+  .alert {
+    position: relative;
+    @include __base-mpb(10px 0, 8px);
+    @include __ui-border();
+    @include __ui-round();
+  }
+
+  .alert > p {
     padding: 0;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    -webkit-appearance: none;
   }
 
-  //-------------------------------------------
-  //  Alert Mixins
-  //-------------------------------------------
-  @mixin alert__mixin--skin-button($backc: #ff851b, $borc: #ff7701, $c: #ffffff){
-    background-color: $backc;
-    border-color: $borc;
-    color: $c;
+  .alert--closable {
+    padding-right: __em(20);
   }
 
-  @if __use-module(alert) {
+  @include __base-status(alert, true, true);
 
-    .alert{
-      position: relative;
-      @include __base-mpb(10px 0, 8px);
-      @include __ui-border();
-      @include __ui-round();
-    }
+  .alert__title {
+    margin-top: 0;
+    color: inherit;
+  }
 
-    .alert > p{
-      padding: 0;
-    }
+  .alert__button--close {
+    @extend %alert__extend--button;
+    position: absolute;
+    opacity: 1;
+    top: _em(2);
+    right: __em(8);
+    color: inherit;
+    font-weight: bold;
+    outline: 0;
+  }
 
-    .alert--closable{
-      padding-right: __em(20);
-    }
+}
 
-    @include __base-status(alert, true, true);
-
-    .alert__title{
-      margin-top: 0;
-      color: inherit;
-    }
-
-    .alert__button--close{
-      @extend %alert__extend--button;
-      position: absolute;
-      opacity: 1;
-      top: _em(2);
-      right: __em(8);
-      color: inherit;
-      font-weight: bold;
-      outline: 0;
-    }
-
-  }//endif
+//endif

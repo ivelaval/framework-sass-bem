@@ -1,68 +1,62 @@
-  //Core/Functions ==========================================================================
+//Core/Functions ==========================================================================
 
-  @function __use-module($module){
-    $response: false;
-    @if __mapping($__map--modules, $module) == true or __mapping($__map--zerw, all-modules) == true {
-      $response: true;
-    }
-    @return $response;
+@function __use-module($module) {
+  $response: false;
+  @if __mapping($__map--modules, $module) == true or __mapping($__map--zerw, all-modules) == true {
+    $response: true;
   }
+  @return $response;
+}
 
-  @function __mapping($map, $key){
-    @return map-get($map,$key);
+@function __mapping($map, $key) {
+  @return map-get($map, $key);
+}
+
+@function __em($px, $base: __mapping($__map--base-font, size-base-em)) {
+  @return ($px / $base) * 1em;
+}
+
+@function __line-height($px, $lg: __mapping($__map--base-font, line-height)) {
+  @return ($lg / $px) * 1em;
+}
+
+@function __calculate-opacity($opacity: __mapping($__map--ui, opacity)) {
+  @return ($opacity*100);
+}
+
+@function __rem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@function __transform-color-sl($color: #000000, $adjust: 0, $lighten: 0, $saturate: 0) {
+  $new-color: $color;
+  @if $lighten != 0 and $saturate != 0 {
+    $new-color: saturate(lighten(adjust_hue($color, $adjust), $lighten), $saturate);
+  } @else if $lighten != 0 and $saturate == 0 {
+    $new-color: lighten(adjust_hue($color, $adjust), $lighten);
+  } @else if $lighten == 0 and $saturate == 0 {
+    $new-color: adjust_hue($color, $adjust);
   }
+  @return $new-color;
+}
 
-  @function __em($px, $base: __mapping($__map--base-font, size-base-em)){
-      @return ($px / $base) * 1em;
+@function __transform-color-dd($color: #000000, $adjust: 0, $darken: 0, $desaturate: 0) {
+  $new-color: $color;
+  @if $darken != 0 and $desaturate != 0 {
+    $new-color: desaturate(darken(adjust_hue($color, $adjust), $darken), $desaturate);
+  } @else if $darken != 0 and $desaturate == 0 {
+    $new-color: darken(adjust_hue($color, $adjust), $darken);
+  } @else if $darken == 0 and $desaturate == 0 {
+    $new-color: adjust_hue($color, $adjust);
   }
+  @return $new-color;
+}
 
-  @function __line-height($px, $lg: __mapping($__map--base-font, line-height)){
-      @return ($lg / $px) * 1em;
+@function __dynamic-text-color($color, $lightness: 70, $setdark: #555555, $setlight: #ffffff) {
+  @if (lightness($color) > $lightness) {
+    @return $setdark; // Lighter backgorund, return dark color
+  } @else {
+    @return $setlight; // Darker background, return light color
   }
-
-  @function __calculate-opacity($opacity: __mapping($__map--ui, opacity)){
-    @return ($opacity*100);
-  }
-
-  @function __rem($size) {
-    $remSize: $size / 16px;
-    @return $remSize * 1rem;
-  }
-
-  @function __transform-color-sl($color: #000000, $adjust: 0, $lighten: 0, $saturate: 0){
-
-    $new-color: $color;
-    @if $lighten != 0 and $saturate != 0 {
-      $new-color: saturate(lighten(adjust_hue($color, $adjust), $lighten), $saturate);
-    } @else if $lighten != 0 and $saturate == 0 {
-      $new-color: lighten(adjust_hue($color, $adjust), $lighten);
-    } @else if $lighten == 0 and $saturate == 0 {
-      $new-color: adjust_hue($color, $adjust);
-    }
-
-    @return $new-color;
-
-  }
-
-  @function __transform-color-dd($color: #000000, $adjust: 0, $darken: 0, $desaturate: 0){
-
-    $new-color: $color;
-    @if $darken != 0 and $desaturate != 0 {
-      $new-color: desaturate(darken(adjust_hue($color, $adjust), $darken), $desaturate);
-    } @else if $darken != 0 and $desaturate == 0 {
-      $new-color: darken(adjust_hue($color, $adjust), $darken);
-    } @else if $darken == 0 and $desaturate == 0 {
-      $new-color: adjust_hue($color, $adjust);
-    }
-
-    @return $new-color;
-
-  }
-
-  @function __dynamic-text-color($color, $lightness: 70,  $setdark: #555555, $setlight: #ffffff) {
-    @if (lightness($color) > $lightness) {
-      @return $setdark; // Lighter backgorund, return dark color
-    } @else {
-      @return $setlight; // Darker background, return light color
-    }
-  }
+}

@@ -1,152 +1,173 @@
-  //module/Breadcrumb ==========================================================================
+//module/Breadcrumb ==========================================================================
 
-  //-------------------------------------------
-  //  Breadcrumb Mixins
-  //-------------------------------------------
-  @mixin breadcrumb__mixin--type($normal, $hover, $text-nomal: #FFF, $text-hover: __mapping($__map--base-font, color)){
-    li{
-      float:left;
+//-------------------------------------------
+//  Breadcrumb Mixins
+//-------------------------------------------
+@mixin breadcrumb__mixin--type($normal, $hover, $text-nomal: #FFF, $text-hover: __mapping($__map--base-font, color)) {
 
-      a{
-        color: $text-nomal;
-        display:block;
-        background: $normal;
-        text-decoration: none;
-        position:relative;
-        height: 40px;
-        line-height:40px;
-        padding: 0 10px 0 5px;
-        text-align: center;
-        margin-right: 23px;
+  li {
+
+    float: left;
+
+    a {
+      color: $text-nomal;
+      display: block;
+      background: $normal;
+      text-decoration: none;
+      position: relative;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px 0 5px;
+      text-align: center;
+      margin-right: 23px;
+    }
+
+    &:nth-child(even) {
+
+      a {
+        background-color: $normal;
+
+        &:before {
+          border-color: $normal;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          border-left-color: $normal;
+        }
+
       }
 
-      &:nth-child(even){
-        a{
-          background-color: $normal;
+    }
 
-          &:before{
-            border-color: $normal;
-            border-left-color:transparent;
-          }
-          &:after{
-            border-left-color: $normal;
-          }
+    &:first-child {
+
+      a {
+        padding-left: 15px;
+        @include __ui-round(4px 0 0 4px);
+
+        &:before {
+          border: none;
         }
+
       }
 
-      &:first-child{
-        a{
-          padding-left:15px;
-          @include __ui-round(4px 0 0 4px);
-          &:before{
-            border:none;
-          }
+    }
+
+    &:last-child {
+
+      a {
+        padding-right: 15px;
+        @include __ui-round(0 4px 4px 0);
+
+        &:after {
+          border: none;
         }
+
+      }
+    }
+
+    a {
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        border: 0 solid $normal;
+        border-width: 20px 10px;
+        width: 0;
+        height: 0;
       }
 
-      &:last-child{
-        a{
-          padding-right:15px;
-          @include __ui-round(0 4px 4px 0);
-          &:after{
-            border:none;
-          }
-        }
+      &:before {
+        left: -20px;
+        border-left-color: transparent;
       }
 
-      a{
-        &:before,
-        &:after{
-          content: "";
-          position:absolute;
-          top: 0;
-          border:0 solid $normal;
-          border-width:20px 10px;
-          width: 0;
-          height: 0;
+      &:after {
+        left: 100%;
+        border-color: transparent;
+        border-left-color: $normal;
+      }
+
+      &:hover {
+        background-color: $hover;
+        color: $text-hover;
+        @include __ui-transition-o(color .3s ease);
+        &:before {
+          border-color: $hover;
+          border-left-color: transparent;
         }
-        &:before{
-          left:-20px;
-          border-left-color:transparent;
+
+        &:after {
+          border-left-color: $hover;
         }
-        &:after{
-          left:100%;
-          border-color:transparent;
-          border-left-color:$normal;
+
+      }
+
+      &:active {
+        background-color: $hover;
+        color: $text-hover;
+        &:before {
+          border-color: $hover;
+          border-left-color: transparent;
         }
-        &:hover{
-          background-color: $hover;
-          color: $text-hover;
-          @include __ui-transition-o(color .3s ease);
-          &:before{
-            border-color:$hover;
-            border-left-color:transparent;
-          }
-          &:after{
-            border-left-color:$hover;
-          }
-        }
-        &:active{
-          background-color: $hover;
-          color: $text-hover;
-          &:before{
-            border-color:$hover;
-            border-left-color:transparent;
-          }
-          &:after{
-            border-left-color:$hover;
-          }
+        &:after {
+          border-left-color: $hover;
         }
       }
     }
   }
+}
 
-  //-------------------------------------------
-  //  Breadcrumb Extends
-  //-------------------------------------------
+//-------------------------------------------
+//  Breadcrumb Extends
+//-------------------------------------------
 
-  %breadcrumb__extend--global{
-    padding: 8px 15px;
-    margin-bottom: __em(__mapping($__map--base, margin-bottom));
-    background-color: #fafafa;
-    border-color: #ededed;
-    border-style: solid;
-    border-width: 0 1px 4px 1px;
+%breadcrumb__extend--global {
+  padding: 8px 15px;
+  margin-bottom: __em(__mapping($__map--base, margin-bottom));
+  background-color: #fafafa;
+  border-color: #ededed;
+  border-style: solid;
+  border-width: 0 1px 4px 1px;
+}
+
+@if __use-module(breadcrumb) {
+
+  .breadcrumb {
+    @extend %breadcrumb__extend--global;
+    @include __ui-round(4px);
+    @include __ui-border(-1, 0 1px 4px 1px);
   }
 
+  @include __base-status(breadcrumb, true);
 
-  @if __use-module(breadcrumb) {
+  @include __base-size(breadcrumb);
 
-    .breadcrumb{
-      @extend %breadcrumb__extend--global;
-      @include __ui-round(4px);
-      @include __ui-border(-1, 0 1px 4px 1px);
-    }
-
-    @include __base-status(breadcrumb, true);
-
-    @include __base-size(breadcrumb);
-
-    .breadcrumb > li {
-      display: inline-block;
-      vertical-align: top;
-      &:last-child{
-        &:after{
-          content: " ";
-        }
-      }
-      &:after{
-        content: " / ";
-      }
-      &.active {
-        color: #999999;
+  .breadcrumb > li {
+    display: inline-block;
+    vertical-align: top;
+    &:last-child {
+      &:after {
+        content: " ";
       }
     }
-
-    .breadcrumb__arrow{
-      list-style:none;
-      display: inline-block;
-      @include breadcrumb__mixin--type(__mapping($__map--ui-color-status, normal), #d9dcdd, #777777, #454545);
+    &:after {
+      content: " / ";
     }
+    &.active {
+      color: #999999;
+    }
+  }
 
-  }//endif
+  .breadcrumb__arrow {
+    list-style: none;
+    display: inline-block;
+    @include breadcrumb__mixin--type(__mapping($__map--ui-color-status, normal), #d9dcdd, #777777, #454545);
+  }
+
+}
+
+//endif

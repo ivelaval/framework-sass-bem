@@ -3,11 +3,11 @@
 //-------------------------------------------
 //  Icon Extends
 //-------------------------------------------
-%icon__mixin--font-default{
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
+%icon__mixin--font-default {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
 }
 
 @if __use-module(icon) {
@@ -24,7 +24,7 @@
   }
 
   [data-icon]:before {
-    font-family: "zerw_fostastic" !important;
+    font-family: "zerw_fostastic";
     content: attr(data-icon);
     @extend %icon__mixin--font-default;
     speak: none;
@@ -35,14 +35,14 @@
 
   [class^="icon__"]:before,
   [class*=" icon__"]:before {
-    font-family: "zerw_fostastic" !important;
+    font-family: "zerw_fostastic";
     @extend %icon__mixin--font-default;
     speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .icon{
+  .icon {
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -51,35 +51,35 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .icon--xl{
+  .icon--xl {
     $size: 60;
     $__line-height: $size - 10;
     font-size: __em($size);
     line-height: __line-height($__line-height);
   }
 
-  .icon--lg{
+  .icon--lg {
     $size: 50;
     $__line-height: $size - 10;
     font-size: __em($size);
     line-height: __line-height($__line-height);
   }
 
-  .icon--md{
+  .icon--md {
     $size: 40;
     $__line-height: $size - 10;
     font-size: __em($size);
     line-height: __line-height($__line-height);
   }
 
-  .icon--sm{
+  .icon--sm {
     $size: 30;
     $__line-height: $size - 10;
     font-size: __em($size);
     line-height: __line-height($__line-height);
   }
 
-  .icon--xs{
+  .icon--xs {
     $size: 20;
     $__line-height: $size - 10;
     font-size: __em($size);
@@ -89,396 +89,527 @@
   .icon__clock:before {
     content: "a";
   }
+
   .icon__camera:before {
     content: "b";
   }
+
   .icon__align-right:before {
     content: "c";
   }
+
   .icon__battery-2:before {
     content: "d";
   }
+
   .icon__tag:before {
     content: "e";
   }
+
   .icon__comment:before {
     content: "f";
   }
+
   .icon__banknote:before {
     content: "g";
   }
+
   .icon__bubble:before {
     content: "h";
   }
+
   .icon__bulb:before {
     content: "i";
   }
+
   .icon__calendar:before {
     content: "j";
   }
+
   .icon__camera-1:before {
     content: "k";
   }
+
   .icon__clip:before {
     content: "l";
   }
+
   .icon__clock-1:before {
     content: "m";
   }
+
   .icon__cloud:before {
     content: "n";
   }
+
   .icon__cup:before {
     content: "o";
   }
+
   .icon__data:before {
     content: "p";
   }
+
   .icon__diamond:before {
     content: "q";
   }
+
   .icon__display:before {
     content: "r";
   }
+
   .icon__eye:before {
     content: "s";
   }
+
   .icon__note:before {
     content: "t";
   }
+
   .icon__news:before {
     content: "u";
   }
+
   .icon__music:before {
     content: "v";
   }
+
   .icon__megaphone:before {
     content: "w";
   }
+
   .icon__mail:before {
     content: "x";
   }
+
   .icon__lock:before {
     content: "y";
   }
+
   .icon__location:before {
     content: "z";
   }
+
   .icon__like:before {
     content: "A";
   }
+
   .icon__lab:before {
     content: "B";
   }
+
   .icon__key:before {
     content: "D";
   }
+
   .icon__food:before {
     content: "C";
   }
+
   .icon__fire:before {
     content: "E";
   }
+
   .icon__paperplane:before {
     content: "F";
   }
+
   .icon__params:before {
     content: "G";
   }
+
   .icon__pen:before {
     content: "H";
   }
+
   .icon__phone:before {
     content: "I";
   }
+
   .icon__photo:before {
     content: "J";
   }
+
   .icon__search:before {
     content: "K";
   }
+
   .icon__settings:before {
     content: "L";
   }
+
   .icon__shop:before {
     content: "M";
   }
+
   .icon__sound:before {
     content: "N";
   }
+
   .icon__stack:before {
     content: "O";
   }
+
   .icon__star:before {
     content: "P";
   }
+
   .icon__study:before {
     content: "Q";
   }
+
   .icon__t-shirt:before {
     content: "R";
   }
+
   .icon__vynil:before {
     content: "S";
   }
+
   .icon__world:before {
     content: "T";
   }
+
   .icon__video:before {
     content: "U";
   }
+
   .icon__vallet:before {
     content: "V";
   }
+
   .icon__user:before {
     content: "W";
   }
+
   .icon__tv:before {
     content: "X";
   }
+
   .icon__truck:before {
     content: "Y";
   }
+
   .icon__trash:before {
     content: "Z";
   }
+
   .icon__tag-1:before {
     content: "0";
   }
+
   .icon__cardiac-pulse:before {
     content: "1";
   }
+
   .icon__book-close:before {
     content: "2";
   }
+
   .icon__bones:before {
     content: "3";
   }
+
   .icon__atom:before {
     content: "4";
   }
+
   .icon__bolt:before {
     content: "5";
   }
+
   .icon__calendar-1:before {
     content: "6";
   }
+
   .icon__calculator:before {
     content: "7";
   }
+
   .icon__connection-0:before {
     content: "8";
   }
+
   .icon__comment-1:before {
     content: "9";
   }
+
   .icon__coffee:before {
     content: "!";
   }
+
   .icon__cloud-1:before {
     content: "\"";
   }
+
   .icon__diamond-1:before {
     content: "#";
   }
+
   .icon__cube:before {
     content: "$";
   }
+
   .icon__crop:before {
     content: "%";
   }
+
   .icon__checkbox-checked:before {
     content: "&";
   }
+
   .icon__checkmark:before {
     content: "'";
   }
+
   .icon__browser:before {
     content: "(";
   }
+
   .icon__box:before {
     content: ")";
   }
+
   .icon__bars:before {
     content: "*";
   }
+
   .icon__align-center:before {
     content: "+";
   }
+
   .icon__align-justify:before {
     content: ",";
   }
+
   .icon__battery-0:before {
     content: "-";
   }
+
   .icon__battery-1:before {
     content: ".";
   }
+
   .icon__align-left:before {
     content: "/";
   }
+
   .icon__archive:before {
     content: ":";
   }
+
   .icon__arrow-down:before {
     content: ";";
   }
+
   .icon__arrow-left:before {
     content: "<";
   }
+
   .icon__arrow-right:before {
     content: "=";
   }
+
   .icon__arrow-up:before {
     content: ">";
   }
+
   .icon__bag:before {
     content: "?";
   }
+
   .icon__bank-notes:before {
     content: "@";
   }
+
   .icon__barbell:before {
     content: "[";
   }
+
   .icon__bookmark:before {
     content: "^";
   }
+
   .icon__cd:before {
     content: "]";
   }
+
   .icon__credit-cards:before {
     content: "_";
   }
+
   .icon__connection-4:before {
     content: "`";
   }
+
   .icon__character:before {
     content: "{";
   }
+
   .icon__connection-3:before {
     content: "|";
   }
+
   .icon__connection-2:before {
     content: "~";
   }
+
   .icon__beer:before {
     content: "}";
   }
+
   .icon__battery-power:before {
     content: "\\";
   }
+
   .icon__battery-4:before {
     content: "\e000";
   }
+
   .icon__bubble-1:before {
     content: "\e001";
   }
+
   .icon__bubble-2:before {
     content: "\e002";
   }
+
   .icon__bubble-2-1:before {
     content: "\e003";
   }
+
   .icon__bubble-3:before {
     content: "\e004";
   }
+
   .icon__bucket:before {
     content: "\e005";
   }
+
   .icon__book-open:before {
     content: "\e006";
   }
+
   .icon__file-settings:before {
     content: "\e007";
   }
+
   .icon__file-broken:before {
     content: "\e009";
   }
+
   .icon__file:before {
     content: "\e008";
   }
+
   .icon__file-add:before {
     content: "\e00a";
   }
+
   .icon__eyedropper:before {
     content: "\e00b";
   }
+
   .icon__envelope:before {
     content: "\e00c";
   }
+
   .icon__enter:before {
     content: "\e00d";
   }
+
   .icon__email-plane:before {
     content: "\e00e";
   }
+
   .icon__email:before {
     content: "\e00f";
   }
+
   .icon__download:before {
     content: "\e010";
   }
+
   .icon__folder:before {
     content: "\e011";
   }
+
   .icon__clipboard:before {
     content: "\e012";
   }
+
   .icon__flag:before {
     content: "\e013";
   }
+
   .icon__files:before {
     content: "\e014";
   }
+
   .icon__folder-add:before {
     content: "\e015";
   }
+
   .icon__folder-settings:before {
     content: "\e016";
   }
+
   .icon__folder-check:before {
     content: "\e017";
   }
+
   .icon__forbidden:before {
     content: "\e018";
   }
+
   .icon__frames:before {
     content: "\e019";
   }
+
   .icon__glass:before {
     content: "\e01a";
   }
+
   .icon__graph:before {
     content: "\e01b";
   }
+
   .icon__grid:before {
     content: "\e01c";
   }
+
   .icon__home:before {
     content: "\e01d";
   }
+
   .icon__heart:before {
     content: "\e01e";
   }
+
   .icon__connection-1:before {
     content: "\e01f";
   }
+
   .icon__battery-3:before {
     content: "\e020";
   }
+
   .icon__micro:before {
     content: "\e021";
   }
+
   .icon__meter:before {
     content: "\e022";
   }
+
   .icon__measure:before {
     content: "\e023";
   }
+
   .icon__map:before {
     content: "\e024";
   }
+
   .icon__locked:before {
     content: "\e025";
   }

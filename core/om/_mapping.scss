@@ -7,175 +7,163 @@
 //---------------------------------------------
 //  Map zerw
 //---------------------------------------------
-$__map--zerw:
-(
-        debug:                  $__zerw-debug,
-        all-modules:            $__zerw-all-modules,
-        normalize:              $__zerw-normalize
+$__map--zerw: (
+        debug: $__zerw-debug,
+        all-modules: $__zerw-all-modules,
+        normalize: $__zerw-normalize
 );
 
 //---------------------------------------------
 //  Map modules
 //---------------------------------------------
-$__map--modules:
-(
-        breadcrumb:             $__module-breadcrumb,
-        form:                   $__module-form,
-        image:                  $__module-image,
-        layout:                 $__module-layout,
-        list:                   $__module-list,
-        media:                  $__module-media,
-        menu:                   $__module-menu,
-        pagination:             $__module-pagination,
-        table:                  $__module-table,
-        text:                   $__module-text,
-        panel:                  $__module-panel,
-        label:                  $__module-label,
-        badge:                  $__module-badge,
-        button:                 $__module-button,
-        navbar:                 $__module-navbar,
-        tab:                    $__module-tab,
-        alert:                  $__module-alert,
-        progressbar:            $__module-progressbar,
-        well:                   $__module-well,
-        icon:                   $__module-icon,
-        addon:                  $__module-addon
+$__map--modules: (
+        breadcrumb: $__module-breadcrumb,
+        form: $__module-form,
+        image: $__module-image,
+        layout: $__module-layout,
+        list: $__module-list,
+        media: $__module-media,
+        menu: $__module-menu,
+        pagination: $__module-pagination,
+        table: $__module-table,
+        text: $__module-text,
+        panel: $__module-panel,
+        label: $__module-label,
+        badge: $__module-badge,
+        button: $__module-button,
+        navbar: $__module-navbar,
+        tab: $__module-tab,
+        alert: $__module-alert,
+        progressbar: $__module-progressbar,
+        well: $__module-well,
+        icon: $__module-icon,
+        addon: $__module-addon
 );
 
 //---------------------------------------------
 //  Map base
 //---------------------------------------------
-$__map--base:
-(
-        margin:                 $__margin,
-        margin-left-sidebar:    $__margin-left-sidebar,
-        padding:                $__padding,
-        max-width:              $__width-fixed,
-        margin-top:             $__margin-top,
-        margin-bottom:          $__margin-bottom,
-        margin-left:            $__margin-left,
-        margin-right:           $__margin-right,
+$__map--base: (
+        margin: $__margin,
+        margin-left-sidebar: $__margin-left-sidebar,
+        padding: $__padding,
+        max-width: $__width-fixed,
+        margin-top: $__margin-top,
+        margin-bottom: $__margin-bottom,
+        margin-left: $__margin-left,
+        margin-right: $__margin-right,
 );
 
 //---------------------------------------------
 //  Map base layout
 //---------------------------------------------
-$__map--base-layout:
-(
-        columns:                $__columns-grid,
-        margin:                 $__margin
+$__map--base-layout: (
+        columns: $__columns-grid,
+        margin: $__margin
 );
 
 //---------------------------------------------
 //  Map base breakpoints screen
 //---------------------------------------------
-$__map--base-breakpoints:
-(
-        xs:                     $__breakpoint-xs,
-        sm:                     $__breakpoint-sm,
-        md:                     $__breakpoint-md,
-        lg:                     $__breakpoint-lg
+$__map--base-breakpoints: (
+        xs: $__breakpoint-xs,
+        sm: $__breakpoint-sm,
+        md: $__breakpoint-md,
+        lg: $__breakpoint-lg
 );
 
 //---------------------------------------------
 //  Map base padding generic sizes
 //---------------------------------------------
-$__map--base-padding-size:
-(
-        xl:                     $__padding-xl,
-        xs:                     $__padding-xs,
-        sm:                     $__padding-sm,
-        md:                     $__padding-md,
-        lg:                     $__padding-lg
+$__map--base-padding-size: (
+        xl: $__padding-xl,
+        xs: $__padding-xs,
+        sm: $__padding-sm,
+        md: $__padding-md,
+        lg: $__padding-lg
 );
 
 //---------------------------------------------
 //  Map base font properties
 //---------------------------------------------
-$__map--base-font:
-(
-        size-tera:              $__font-size-tera,
-        size-giga:              $__font-size-giga,
-        size-mega:              $__font-size-mega,
-        size-h1:                $__font-size-h1,
-        size-h2:                $__font-size-h2,
-        size-h3:                $__font-size-h3,
-        size-h4:                $__font-size-h4,
-        size-h5:                $__font-size-h5,
-        size-h6:                $__font-size-h6,
-        size-byte:              $__font-size-byte,
-        size-bit:               $__font-size-bit,
-        family:                 $__font-family,
-        size-base-em:           $__font-size-base-em,
-        size:                   $__font-size-default,
-        color:                  $__font-color,
-        color-element-form:     $__font-color-element-form,
-        color-placeholder:      $__font-color-placeholder,
-        color-label:            $__font-color-label,
-        align:                  $__font-align,
-        line-height:            $__line-height,
-        weight:                 $__font-weight
+$__map--base-font: (
+        size-tera: $__font-size-tera,
+        size-giga: $__font-size-giga,
+        size-mega: $__font-size-mega,
+        size-h1: $__font-size-h1,
+        size-h2: $__font-size-h2,
+        size-h3: $__font-size-h3,
+        size-h4: $__font-size-h4,
+        size-h5: $__font-size-h5,
+        size-h6: $__font-size-h6,
+        size-byte: $__font-size-byte,
+        size-bit: $__font-size-bit,
+        family: $__font-family,
+        size-base-em: $__font-size-base-em,
+        size: $__font-size-default,
+        color: $__font-color,
+        color-element-form: $__font-color-element-form,
+        color-placeholder: $__font-color-placeholder,
+        color-label: $__font-color-label,
+        align: $__font-align,
+        line-height: $__line-height,
+        weight: $__font-weight
 );
 
 //---------------------------------------------
 //  Map UI
 //---------------------------------------------
-$__map--ui:
-(
-        border-radius:          $__border-radius,
-        color-shadow:           $__color-shadow,
-        color-border:           $__color-border,
-        opacity:                $__opacity,
-        rotate:                 $__rotate,
-        scale:                  $__scale,
-        ease:                   $__ease,
-        background-size:        $__background-size,
-        percent-color-dark:     $__percent-color-dark,
-        color-link:             $__color-link
+$__map--ui: (
+        border-radius: $__border-radius,
+        color-shadow: $__color-shadow,
+        color-border: $__color-border,
+        opacity: $__opacity,
+        rotate: $__rotate,
+        scale: $__scale,
+        ease: $__ease,
+        background-size: $__background-size,
+        percent-color-dark: $__percent-color-dark,
+        color-link: $__color-link
 );
 
 //---------------------------------------------
 //  Map UI gradient generic
 //---------------------------------------------
-$__map--ui-gradient:
-(
-        fcolor:                 $__gradient-fcolor,
-        scolor:                 $__gradient-scolor
+$__map--ui-gradient: (
+        fcolor: $__gradient-fcolor,
+        scolor: $__gradient-scolor
 );
 
 //---------------------------------------------
 //  Map UI shadow generic
 //---------------------------------------------
-$__map--ui-shadow:
-(
-        hshadow:                $__shadow-h,
-        vshadow:                $__shadow-v,
-        blur:                   $__shadow-blur,
-        spread:                 $__shadow-spread,
-        color:                  $__shadow-color,
-        opacity:                $__shadow-opacity
+$__map--ui-shadow: (
+        hshadow: $__shadow-h,
+        vshadow: $__shadow-v,
+        blur: $__shadow-blur,
+        spread: $__shadow-spread,
+        color: $__shadow-color,
+        opacity: $__shadow-opacity
 );
 
 //---------------------------------------------
 //  Map UI text shadow generic
 //---------------------------------------------
-$__map--ui-text-shadow:
-(
-        hshadow:                $__text-shadow-h,
-        vshadow:                $__text-shadow-v,
-        blur:                   $__text-shadow-blur,
-        color:                  $__text-shadow-color,
-        opacity:                $__text-shadow-opacity
+$__map--ui-text-shadow: (
+        hshadow: $__text-shadow-h,
+        vshadow: $__text-shadow-v,
+        blur: $__text-shadow-blur,
+        color: $__text-shadow-color,
+        opacity: $__text-shadow-opacity
 );
 
 //---------------------------------------------
 //  Map UI color status
 //---------------------------------------------
-$__map--ui-color-status:
-(
-        normal:                 $__color-status--normal,
-        danger:                 $__color-status--danger,
-        warning:                $__color-status--warning,
-        success:                $__color-status--success,
-        info:                   $__color-status--info
+$__map--ui-color-status: (
+        normal: $__color-status--normal,
+        danger: $__color-status--danger,
+        warning: $__color-status--warning,
+        success: $__color-status--success,
+        info: $__color-status--info
 );

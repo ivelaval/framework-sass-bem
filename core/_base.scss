@@ -1,8 +1,8 @@
 //Core/Base ==========================================================================
 
 * {
-    @include __base-bs();
-    @include __debug();
+  @include __base-bs();
+  @include __debug();
 }
 
 html, body {
@@ -17,7 +17,7 @@ button,
 input,
 select,
 textarea {
-    color: #2B2B2B;
+  color: #2B2B2B;
 }
 
 //--------------------------------------------------------------
@@ -27,13 +27,13 @@ textarea {
 //--------------------------------------------------------------
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 //--------------------------------------------------------------
@@ -41,11 +41,11 @@ textarea {
 //--------------------------------------------------------------
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    @include __base-mpb($margin: 1em 0);
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  @include __base-mpb($margin: 1em 0);
 }
 
 //--------------------------------------------------------------
@@ -53,24 +53,24 @@ hr {
 //--------------------------------------------------------------
 
 ul {
-    @include __base-mpb();
+  @include __base-mpb();
 }
 
 li {
-    @include __base-mpb();
-    list-style: none;
+  @include __base-mpb();
+  list-style: none;
 }
 
-a{
-    text-decoration: none;
-    color: #1e7eb5;
-    @include __ui-transition-o(color .3s ease);
-    &:hover{
-        color: rgba(47, 40, 54, 0.59);
-    }
+a {
+  text-decoration: none;
+  color: #1e7eb5;
+  @include __ui-transition-o(color .3s ease);
+  &:hover {
+    color: rgba(47, 40, 54, 0.59);
+  }
 }
 
-p{
+p {
   padding: 10px;
 }
 
@@ -78,7 +78,7 @@ p{
 //  predefined styles for forms
 //--------------------------------------------------------------
 
-form{
+form {
   @include __base-mpb();
 }
 
@@ -86,20 +86,17 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"],
-a.button{
-  padding: __mapping($__map--base-padding-size, md) __mapping($__map--base-padding-size, md);
+a.button {
   display: inline-block;
-  color: __mapping($__map--base-font, color);
   cursor: pointer;
-
-  &::-moz-focus-inner{
+  &::-moz-focus-inner {
     border: 0;
     padding: 0;
   }
 
 }
 
-fieldset{
+fieldset {
   padding: 40px 20px 20px 20px;
 }
 
@@ -107,7 +104,7 @@ legend {
   @include __base-mpb();
 }
 
-label{
+label {
   display: block;
   color: __mapping($__map--base-font, color-label);
   vertical-align: middle;
@@ -121,15 +118,14 @@ input[type="tel"],
 input[type="url"],
 input[type="password"],
 textarea,
-select
-{
-  padding: __mapping($__map--base-padding-size, md) __mapping($__map--base-padding-size, lg);
-  border: 1px solid #a8a8a8;
-  color: #606060;
+select {
+  //padding: __mapping($__map--base-padding-size, md) __mapping($__map--base-padding-size, lg);
+  //border: 1px solid #a8a8a8;
+  //color: #606060;
   @include __ui-round();
 
   &:focus,
-  &:active{
+  &:active {
     outline: none;
   }
 
@@ -146,8 +142,13 @@ optgroup {
 //--------------------------------------------------------------
 // Preconfigured elements for better visualization
 //--------------------------------------------------------------
-p, ol, ul, blockquote, pre, code {
-    font-size: __em(__mapping($__map--base-font, size));
+p,
+ol,
+ul,
+blockquote,
+pre,
+code {
+  font-size: __em(__mapping($__map--base-font, size));
 }
 
 //--------------------------------------------------------------
@@ -159,11 +160,11 @@ audio,
 canvas,
 img,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
-footer{
-    @include __base-mpb();
+footer {
+  @include __base-mpb();
 }
 
 //--------------------------------------------------------------
@@ -171,68 +172,68 @@ footer{
 //--------------------------------------------------------------
 
 @media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; // Black prints faster
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+  * {
+    background: transparent;
+    color: #000; // Black prints faster
+    box-shadow: none;
+    text-shadow: none;
+  }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
 
-    //--------------------------------------------------------------
-    // Don't show links for images, or javascript/internal links
-    //--------------------------------------------------------------
+  //--------------------------------------------------------------
+  // Don't show links for images, or javascript/internal links
+  //--------------------------------------------------------------
 
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
 
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
+  thead {
+    display: table-header-group; /* h5bp.com/t */
+  }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-    img {
-        max-width: 100% !important;
-    }
+  img {
+    max-width: 100%;
+  }
 
-    @page {
-        margin: 0.5cm;
-    }
+  @page {
+    margin: 0.5cm;
+  }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }

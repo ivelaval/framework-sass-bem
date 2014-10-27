@@ -440,7 +440,9 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"],
 a.button {
+  padding: 10px 10px;
   display: inline-block;
+  color: #000;
   cursor: pointer; }
   button::-moz-focus-inner,
   html input[type="button"]::-moz-focus-inner,
@@ -472,6 +474,9 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
+  padding: 10px 15px;
+  border: 1px solid #a8a8a8;
+  color: #606060;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -500,12 +505,7 @@ textarea {
 optgroup {
   font-weight: bold; }
 
-p,
-ol,
-ul,
-blockquote,
-pre,
-code {
+p, ol, ul, blockquote, pre, code {
   font-size: 0.9375em; }
 
 audio,
@@ -686,10 +686,10 @@ footer {
 
 [data-icon]:before, [class^="icon__"]:before,
 [class*=" icon__"]:before {
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none; }
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important; }
 
 @font-face {
   font-family: "zerw_fostastic";
@@ -5035,4 +5035,4 @@ footer {
 .list__group-item--lg {
   padding: 15px 15px; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=zerw.css.map */

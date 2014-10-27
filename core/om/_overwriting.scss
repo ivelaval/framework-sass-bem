@@ -4,152 +4,150 @@
 //  Overwriting public configuration
 //---------------------------------------------
 
-$__zerw-debug:                  false!default;
-$__zerw-all-modules:            true!default;
-$__zerw-normalize:              true!default;
+$__zerw-debug: false !default;
+$__zerw-all-modules: true !default;
+$__zerw-normalize: true !default;
 
 //---------------------------------------------
 //  USE MODULES CONFIG
 //---------------------------------------------
-$__module-breadcrumb:     	    false!default;
-$__module-form:           	    false!default;
-$__module-image:           	    false!default;
-$__module-layout:     		    false!default;
-$__module-list:          	    false!default;
-$__module-media:           	    false!default;
-$__module-menu:           	    false!default;
-$__module-pagination:     	    false!default;
-$__module-table:          	    false!default;
-$__module-text:          	    false!default;
-$__module-panel:          	    false!default;
-$__module-alert:          	    false!default;
-$__module-label:          	    false!default;
-$__module-badge:          	    false!default;
-$__module-button:          	    false!default;
-$__module-navbar:          	    false!default;
-$__module-tab:          	    false!default;
-$__module-progressbar:          false!default;
-$__module-well:                 false!default;
-$__module-icon:                 false!default;
-$__module-addon:                false!default;
+$__module-breadcrumb: false !default;
+$__module-form: false !default;
+$__module-image: false !default;
+$__module-layout: false !default;
+$__module-list: false !default;
+$__module-media: false !default;
+$__module-menu: false !default;
+$__module-pagination: false !default;
+$__module-table: false !default;
+$__module-text: false !default;
+$__module-panel: false !default;
+$__module-alert: false !default;
+$__module-label: false !default;
+$__module-badge: false !default;
+$__module-button: false !default;
+$__module-navbar: false !default;
+$__module-tab: false !default;
+$__module-progressbar: false !default;
+$__module-well: false !default;
+$__module-icon: false !default;
+$__module-addon: false !default;
 
 //---------------------------------------------
 //  BASE
 //---------------------------------------------
-$__margin-left-sidebar:             260!default;
-$__line-height: 			        1.5!default;
-$__width-fixed:                     980px!default;
-$__padding:                         4!default;
+$__margin-left-sidebar: 260 !default;
+$__line-height: 1.5 !default;
+$__width-fixed: 980px !default;
+$__padding: 4 !default;
 
-$__margin-left:                     4!default;
-$__margin-right:                    4!default;
-$__margin-top:                      4!default;
-$__margin-bottom:                   4!default;
+$__margin-left: 4 !default;
+$__margin-right: 4 !default;
+$__margin-top: 4 !default;
+$__margin-bottom: 4 !default;
 
 //---------------------------------------------
 //  BASE LAYOUT GENERIC
 //---------------------------------------------
-$__columns-grid:                    12!default;
-$__margin:                          10px!default;
+$__columns-grid: 12 !default;
+$__margin: 10px !default;
 
 //---------------------------------------------
 //  BASE BREAKPOINT
 //---------------------------------------------
-$__breakpoint-lg:                   "(min-width : 1025px)"!default;
-$__breakpoint-md:                   "(max-width : 1024px)  and (min-width: 769px)"!default;
-$__breakpoint-sm:                   "(max-width : 768px) and (min-width: 481px)"!default;
-$__breakpoint-xs:                   "(max-width : 480px)"!default;
-$__breakpoint-retina:               "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"!default;
+$__breakpoint-lg: "(min-width : 1025px)" !default;
+$__breakpoint-md: "(max-width : 1024px)  and (min-width: 769px)" !default;
+$__breakpoint-sm: "(max-width : 768px) and (min-width: 481px)" !default;
+$__breakpoint-xs: "(max-width : 480px)" !default;
+$__breakpoint-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)" !default;
 
 //---------------------------------------------
 //  BASE PADDING SIZES
 //---------------------------------------------
-$__padding-xl:                      20px!default;
-$__padding-lg:                      15px!default;
-$__padding-md:                      10px!default;
-$__padding-sm:                      7px!default;
-$__padding-xs:                      4px!default;
+$__padding-xl: 20px !default;
+$__padding-lg: 15px !default;
+$__padding-md: 10px !default;
+$__padding-sm: 7px !default;
+$__padding-xs: 4px !default;
 
 //---------------------------------------------
 //  FONT PROPERTIES
 //---------------------------------------------
-$__font-size-tera:             	    96!default;
-$__font-size-giga:                  72!default;
-$__font-size-mega:              	48!default;
-$__font-size-h1:              	    36!default;
-$__font-size-h2:              	    30!default;
-$__font-size-h3:              	    24!default;
-$__font-size-h4:              	    20!default;
-$__font-size-h5:              	    16!default;
-$__font-size-h6:                    14!default;
-$__font-size-byte:             	    12!default;
-$__font-size-bit:              	    10!default;
-$__font-family:                     'Open Sans', sans-serif!default;
-$__font-size-base-em: 			    16!default;
-$__font-size-default: 	            15!default;
-$__font-weight:                     normal!default;
-$__font-color: 				        #000!default;
-$__font-color-element-form:         #6d6d6d !default;
-$__font-color-placeholder:          #979797 !default;
-$__font-color-label:                #6d6d6d !default;
-$__font-align: 				        left!default;
+$__font-size-tera: 96 !default;
+$__font-size-giga: 72 !default;
+$__font-size-mega: 48 !default;
+$__font-size-h1: 36 !default;
+$__font-size-h2: 30 !default;
+$__font-size-h3: 24 !default;
+$__font-size-h4: 20 !default;
+$__font-size-h5: 16 !default;
+$__font-size-h6: 14 !default;
+$__font-size-byte: 12 !default;
+$__font-size-bit: 10 !default;
+$__font-family: 'Open Sans', sans-serif !default;
+$__font-size-base-em: 16 !default;
+$__font-size-default: 15 !default;
+$__font-weight: normal !default;
+$__font-color: #000 !default;
+$__font-color-element-form: #6d6d6d !default;
+$__font-color-placeholder: #979797 !default;
+$__font-color-label: #6d6d6d !default;
+$__font-align: left !default;
 
 //---------------------------------------------
 //  GENERIC UI
 //---------------------------------------------
 
-$__color-shadow:     			    #CCC !default;
-$__color-border:     			    #CCC !default;
-$__color-link:                      #1e7eb5!default;
-$__gradient-fcolor:                 #444444!default;
-$__gradient-scolor:                 #999999!default;
-$__border-radius:				    4px !default;
-$__opacity: 					    0.5 !default;
-$__rotate:                          7.5deg!default;
-$__scale:                           0.8!default;
-$__ease:                            ease-out!default;
-$__background-size:                 100% 100%!default;
-$__percent-color-dark:              10!default;
-
-
+$__color-shadow: #CCC !default;
+$__color-border: #CCC !default;
+$__color-link: #1e7eb5 !default;
+$__gradient-fcolor: #444444 !default;
+$__gradient-scolor: #999999 !default;
+$__border-radius: 4px !default;
+$__opacity: 0.5 !default;
+$__rotate: 7.5deg !default;
+$__scale: 0.8 !default;
+$__ease: ease-out !default;
+$__background-size: 100% 100% !default;
+$__percent-color-dark: 10 !default;
 
 //---------------------------------------------
 //  GENERIC UI BOX SHADOW
 //---------------------------------------------
-$__shadow-h:                        0px!default;
-$__shadow-v:                        0px!default;
-$__shadow-blur:                     4px!default;
-$__shadow-spread:                   0px!default;
-$__shadow-color:                    #FFFFFF!default;
-$__shadow-opacity:                  0.75!default;
+$__shadow-h: 0px !default;
+$__shadow-v: 0px !default;
+$__shadow-blur: 4px !default;
+$__shadow-spread: 0px !default;
+$__shadow-color: #FFFFFF !default;
+$__shadow-opacity: 0.75 !default;
 
 //---------------------------------------------
 //  GENERIC UI TEXT SHADOW
 //---------------------------------------------
-$__text-shadow-h:                   $__shadow-h!default;
-$__text-shadow-v:                   $__shadow-v!default;
-$__text-shadow-blur:                $__shadow-blur!default;
-$__text-shadow-color:               $__shadow-color!default;
-$__text-shadow-opacity:             $__shadow-opacity!default;
+$__text-shadow-h: $__shadow-h !default;
+$__text-shadow-v: $__shadow-v !default;
+$__text-shadow-blur: $__shadow-blur !default;
+$__text-shadow-color: $__shadow-color !default;
+$__text-shadow-opacity: $__shadow-opacity !default;
 
 //---------------------------------------------
 //  STATUS COLOR UI
 //---------------------------------------------
-$__color--ruby:                      #e80500 !default;
-$__color--emerald:                   #00a10b !default;
-$__color--sapphire:                  #0200e8 !default;
+$__color--ruby: #e80500 !default;
+$__color--emerald: #00a10b !default;
+$__color--sapphire: #0200e8 !default;
 
 //---------------------------------------------
 //  STATUS COLOR UI
 //---------------------------------------------
-$__color-status--normal:            #e4e7e8 !default;
-$__color-status--danger:            #ff4136 !default;
-$__color-status--warning:           #ff851b !default;
-$__color-status--success:           #5ac51f !default;
-$__color-status--info:              #158cba !default;
+$__color-status--normal: #e4e7e8 !default;
+$__color-status--danger: #ff4136 !default;
+$__color-status--warning: #ff851b !default;
+$__color-status--success: #5ac51f !default;
+$__color-status--info: #158cba !default;
 
-$__color-status--normal-shadow:     #cfcfcf !default;
-$__color-status--danger-shadow:     #dd3d37 !default;
-$__color-status--warning-shadow:    #d36a1b !default;
-$__color-status--success-shadow:    #51a11f !default;
-$__color-status--info-shadow:       #156f95 !default;
+$__color-status--normal-shadow: #cfcfcf !default;
+$__color-status--danger-shadow: #dd3d37 !default;
+$__color-status--warning-shadow: #d36a1b !default;
+$__color-status--success-shadow: #51a11f !default;
+$__color-status--info-shadow: #156f95 !default;

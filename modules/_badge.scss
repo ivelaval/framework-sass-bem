@@ -3,7 +3,7 @@
 //-------------------------------------------
 //  Badge Extends
 //-------------------------------------------
-%badge__extend--badge{
+%badge__extend--badge {
   display: inline-block;
   min-width: 10px;
   padding: 4px 8px;
@@ -17,50 +17,52 @@
 
 @if __use-module(badge) {
 
-  .badge{
+  .badge {
     @extend %badge__extend--badge;
     font-size: __em(12);
     @include __ui-round(15px);
   }
 
-  .badge--shadow-inside{
+  .badge--shadow-inside {
     @extend %__shadow-inside;
   }
 
   @include __base-status(badge);
 
   .badge__float {
-    position:relative;
+    position: relative;
   }
 
   .badge__float[data-badge]:after {
-    content:attr(data-badge);
-    position:absolute;
-    top:-15px;
-    right:-20px;
+    content: attr(data-badge);
+    position: absolute;
+    top: -15px;
+    right: -20px;
     @extend %badge__extend--badge;
     font-size: __em(12);
     @include __ui-round(15px);
   }
 
-  .badge__float--normal[data-badge]:after{
+  .badge__float--normal[data-badge]:after {
     @include __base-skin(__mapping($__map--ui-color-status, normal));
   }
 
-  .badge__float--danger[data-badge]:after{
+  .badge__float--danger[data-badge]:after {
     @include __base-skin(__mapping($__map--ui-color-status, danger));
   }
 
-  .badge__float--warning[data-badge]:after{
+  .badge__float--warning[data-badge]:after {
     @include __base-skin(__mapping($__map--ui-color-status, warning));
   }
 
-  .badge__float--success[data-badge]:after{
+  .badge__float--success[data-badge]:after {
     @include __base-skin(__mapping($__map--ui-color-status, success));
   }
 
-  .badge__float--info[data-badge]:after{
+  .badge__float--info[data-badge]:after {
     @include __base-skin(__mapping($__map--ui-color-status, info));
   }
 
-}//endif
+}
+
+//endif

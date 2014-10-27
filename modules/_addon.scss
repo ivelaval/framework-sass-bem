@@ -1,55 +1,50 @@
-  //module/Addon ==========================================================================
+//module/Addon ==========================================================================
 
-  //-------------------------------------------
-  //  Button Mixins
-  //-------------------------------------------
+//-------------------------------------------
+//  Button Mixins
+//-------------------------------------------
 
+@if __use-module(addon) {
 
-  @if __use-module(addon) {
+  .addon {
+    display: inline-block;
+    vertical-align: middle;
+    color: #555555;
+    text-align: center;
+    background-color: __mapping($__map--ui-color-status, normal);
+    padding: __mapping($__map--base-padding-size, md);
+    @include __ui-round();
+  }
 
-    .addon{
-      display: inline-block;
-      vertical-align: middle;
-      color: #555555;
-      text-align: center;
-      background-color: __mapping($__map--ui-color-status, normal);
-      padding: __mapping($__map--base-padding-size, md);
-      @include __ui-round();
-    }
+  .addon--shadow-inside {
+    @extend %__shadow-inside;
+  }
 
-    .addon--shadow-inside{
-      @extend %__shadow-inside;
-    }
-
-    .addon__group{
-
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
-
-      .addon{
-
-        display: table-cell;
-        @include __ui-round(0);
-
-        &:first-child{
-          @include __ui-round(__mapping($__map--ui, border-radius) 0 0 __mapping($__map--ui, border-radius));
-        }
-        &:last-child{
-          @include __ui-round(0 __mapping($__map--ui, border-radius) __mapping($__map--ui, border-radius) 0);
-        }
-
+  .addon__group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    .addon {
+      display: table-cell;
+      @include __ui-round(0);
+      &:first-child {
+        @include __ui-round(__mapping($__map--ui, border-radius) 0 0 __mapping($__map--ui, border-radius));
       }
-
+      &:last-child {
+        @include __ui-round(0 __mapping($__map--ui, border-radius) __mapping($__map--ui, border-radius) 0);
+      }
     }
+  }
 
-    @include __base-status(addon);
+  @include __base-status(addon);
 
-    @include __base-size(addon);
+  @include __base-size(addon);
 
-    .addon--fluid{
-      display: block;
-      width: 100%;
-    }
+  .addon--fluid {
+    display: block;
+    width: 100%;
+  }
 
-  }//endif
+}
+
+//endif

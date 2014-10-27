@@ -1,7 +1,7 @@
 //module/Label ==========================================================================
 @if __use-module(label) {
 
-  .label{
+  .label {
     font-weight: normal;
     display: inline;
     vertical-align: baseline;
@@ -13,10 +13,16 @@
     border-radius: __mapping($__map--ui, border-radius);
   }
 
-  .label--shadow-inside{
+  .label--shadow-inside {
     @extend %__shadow-inside;
+  }
+
+  .label--shadow {
+
   }
 
   @include __base-status(label);
 
-}//endif
+}
+
+//endif

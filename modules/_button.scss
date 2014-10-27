@@ -3,21 +3,20 @@
 //-------------------------------------------
 //  Button Mixins
 //-------------------------------------------
-@mixin button__mixin--skin($color: -1, $color-text: __mapping($__map--ui, color-link)){
+@mixin button__mixin--skin($color: -1, $color-text: __mapping($__map--ui, color-link)) {
   @if $color != -1 {
     $color-dark: __transform-color-dd($color, $darken: __mapping($__map--ui, percent-color-dark));
     background-color: #{$color};
     border-color: #{$color-dark};
   }
-  color: #{$color-text}!important;
+  color: #{$color-text};
 }
 
-@mixin button__mixin--size(){
+@mixin button__mixin--size() {
   $psize: $__map--base-padding-size;
   @each $key, $size in $psize {
-    .button--#{$key}
-    {
-      padding: #{$size} #{__mapping($__map--base-padding-size, lg)} !important;
+    .button--#{$key} {
+      padding: #{$size} #{__mapping($__map--base-padding-size, lg)};
     }
   }
 }
@@ -25,7 +24,7 @@
 //-------------------------------------------
 //  Button Extends
 //-------------------------------------------
-%button__extend--default{
+%button__extend--default {
   text-align: center;
   display: inline-block;
   margin-bottom: 4px;
@@ -35,48 +34,45 @@
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  text-decoration: none !important;
+  text-decoration: none;
   @include __ui-round();
   @include __ui-border();
   @include __ui-user-select();
 }
 
-%button__extend--outline-in{
+%button__extend--outline-in {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-%button__extend--outline-off{
+%button__extend--outline-off {
   outline: 0;
 }
 
-%button__extend--button{
+%button__extend--button {
 
 }
 
 @if __use-module(button) {
 
-  .button{
-
+  .button {
     @extend %button__extend--default;
-
-    &:hover{
+    &:hover {
 
     }
-    &:focus{
+    &:focus {
       text-decoration: none;
       @extend %button__extend--outline-off;
     }
-    &:active{
+    &:active {
       margin-top: 2px;
       border-bottom-width: 2px;
       @extend %button__extend--outline-off;
     }
-
   }
 
-  .button__group{
+  .button__group {
 
     margin-bottom: 4px;
     position: relative;
@@ -87,26 +83,23 @@
     & > input[type="reset"],
     & > input[type="submit"],
     & > input[type="button"],
-    & > a.button{
-
+    & > a.button {
       display: table-cell;
       left: 0;
       @include __ui-round(0);
-
-      &:first-child{
+      &:first-child {
         @include __ui-round(__mapping($__map--ui, border-radius) 0 0 __mapping($__map--ui, border-radius));
       }
-      &:last-child{
+      &:last-child {
         @include __ui-round(0 __mapping($__map--ui, border-radius) __mapping($__map--ui, border-radius) 0);
       }
-      &:active{
+      &:active {
         border-bottom-width: 1px;
       }
     }
-
   }
 
-  .button__group--fluid{
+  .button__group--fluid {
     display: table;
     width: 100%;
     table-layout: fixed;
@@ -115,15 +108,17 @@
 
   @include __base-status(button, true);
 
-  .button--link{
+  .button--link {
     @include button__mixin--skin();
   }
 
   @include button__mixin--size();
 
-  .button--fluid{
+  .button--fluid {
     display: block;
     width: 100%;
   }
 
-}//endif
+}
+
+//endif

@@ -1,23 +1,25 @@
-  //module/Image ==========================================================================
+//module/Image ==========================================================================
 
-  @if __use-module(image) {
+@if __use-module(image) {
 
-    .image{
-      display: inline-block;
-      vertical-align: middle;
-    }
+  .image {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-    .image__fluid{
-      max-width: 100%;
-      height: auto;
-    }
+  .image__fluid {
+    max-width: 100%;
+    height: auto;
+  }
 
-    .image--shadow-inside{
-      @extend %__shadow-inside;
-    }
+  .image--shadow-inside {
+    @extend %__shadow-inside;
+  }
 
-    .image--round{
-      @include __ui-round();
-    }
+  .image--round {
+    @include __ui-round();
+  }
 
-  }//endif
+}
+
+//endif
