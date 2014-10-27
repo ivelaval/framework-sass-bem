@@ -64,11 +64,65 @@
     @for $i from 1 through 6{
       $aux: $i * 5;
       .#{$class-block}--p#{$aux}{
-        padding: #{$aux}px;
+        padding: __em($aux);
       }
+
+      .#{$class-block}--pl#{$aux}{
+        padding-left: __em($aux);
+      }
+
+      .#{$class-block}--pr#{$aux}{
+        padding-right: __em($aux);
+      }
+
+      .#{$class-block}--plr#{$aux}{
+        padding-left: __em($aux);
+        padding-right: __em($aux);
+      }
+
+      .#{$class-block}--pt#{$aux}{
+        padding-top: __em($aux);
+      }
+
+      .#{$class-block}--pb#{$aux}{
+        padding-bottom: __em($aux);
+      }
+
+      .#{$class-block}--ptb#{$aux}{
+        padding-top: __em($aux);
+        padding-bottom: __em($aux);
+      }
+
       .#{$class-block}--m#{$aux}{
-        margin: #{$aux}px;
+        margin: __em($aux);
       }
+
+      .#{$class-block}--ml#{$aux}{
+        margin-left: __em($aux);
+      }
+
+      .#{$class-block}--mr#{$aux}{
+        margin-right: __em($aux);
+      }
+
+      .#{$class-block}--mlr#{$aux}{
+        margin-left: __em($aux);
+        margin-right: __em($aux);
+      }
+
+      .#{$class-block}--mt#{$aux}{
+        margin-top: __em($aux);
+      }
+
+      .#{$class-block}--mb#{$aux}{
+        margin-bottom: __em($aux);
+      }
+
+      .#{$class-block}--mtb#{$aux}{
+        margin-top: __em($aux);
+        margin-bottom: __em($aux);
+      }
+
     }
   }
 
@@ -84,6 +138,43 @@
     .layout__block{
       display: block;
       position: relative;
+    }
+
+    //Margin block to all sides
+    .layout__block--m{
+      margin: #{__em(__mapping($__map--base, margin-top))} #{__em(__mapping($__map--base, margin-left))} #{__em(__mapping($__map--base, margin-bottom))} #{__em(__mapping($__map--base, margin-right))};
+    }
+
+    //Margin block to bottom
+    .layout__block--mb{
+      margin-bottom: __em(__mapping($__map--base, margin-bottom));
+    }
+
+    //Margin block to top
+    .layout__block--mt{
+      margin-top: __em(__mapping($__map--base, margin-top));
+    }
+
+    //Margin block to top and bottom
+    .layout__block--mtb{
+      margin-top: __em(__mapping($__map--base, margin-top));
+      margin-bottom: __em(__mapping($__map--base, margin-bottom));
+    }
+
+    //Margin block to left
+    .layout__block--ml{
+      margin-left: __em(__mapping($__map--base, margin-left));
+    }
+
+    //Margin block to right
+    .layout__block--mr{
+      margin-right: __em(__mapping($__map--base, margin-right));
+    }
+
+    //Margin block to left and right
+    .layout__block--mlr{
+      margin-left: __em(__mapping($__map--base, margin-left));
+      margin-right: __em(__mapping($__map--base, margin-right));
     }
 
     @include layout__mixin--create-blocks();

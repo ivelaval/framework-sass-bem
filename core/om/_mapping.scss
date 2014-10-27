@@ -47,10 +47,14 @@ $__map--modules:
 //---------------------------------------------
 $__map--base:
 (
-       margin:                  $__margin,
-       margin-left-sidebar:     $__margin-left-sidebar,
-       padding:                 $__padding,
-       max-width:               $__width-fixed
+        margin:                 $__margin,
+        margin-left-sidebar:    $__margin-left-sidebar,
+        padding:                $__padding,
+        max-width:              $__width-fixed,
+        margin-top:             $__margin-top,
+        margin-bottom:          $__margin-bottom,
+        margin-left:            $__margin-left,
+        margin-right:           $__margin-right,
 );
 
 //---------------------------------------------
@@ -78,6 +82,7 @@ $__map--base-breakpoints:
 //---------------------------------------------
 $__map--base-padding-size:
 (
+        xl:                     $__padding-xl,
         xs:                     $__padding-xs,
         sm:                     $__padding-sm,
         md:                     $__padding-md,

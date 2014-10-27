@@ -2,5 +2,22 @@
 
   @if __use-module(image) {
 
+    .image{
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .image__fluid{
+      max-width: 100%;
+      height: auto;
+    }
+
+    .image--shadow-inside{
+      @extend %__shadow-inside;
+    }
+
+    .image--round{
+      @include __ui-round();
+    }
 
   }//endif

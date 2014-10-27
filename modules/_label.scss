@@ -1,5 +1,22 @@
 //module/Label ==========================================================================
 @if __use-module(label) {
 
+  .label{
+    font-weight: normal;
+    display: inline;
+    vertical-align: baseline;
+    white-space: nowrap;
+    font-size: 70%;
+    line-height: 1;
+    text-align: center;
+    padding: #{__em(5)} #{__em(10)};
+    border-radius: __mapping($__map--ui, border-radius);
+  }
+
+  .label--shadow-inside{
+    @extend %__shadow-inside;
+  }
+
+  @include __base-status(label);
 
 }//endif

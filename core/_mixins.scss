@@ -31,6 +31,59 @@
             box-sizing: #{$type}; // Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1
   }
 
+  @mixin __base-status($prefix, $extra: false, $underline: false){
+    $colorstatus: $__map--ui-color-status;
+    @each $key, $color in $colorstatus {
+      .#{$prefix}--#{$key}
+      {
+        @include __base-skin($color, $extra: $extra, $underline: $underline);
+      }
+    }
+  }
+
+  @mixin __base-size($prefix){
+    $psize: $__map--base-padding-size;
+    @each $key, $size in $psize {
+      .#{$prefix}--#{$key}
+      {
+        padding: #{$size} #{__mapping($__map--base-padding-size, lg)} !important;
+      }
+    }
+  }
+
+  @mixin __base-skin($color: -1, $color-text: -1, $extra: false, $underline: false){
+
+    @if $color-text == -1{
+      $color-text: __dynamic-text-color($color);
+    }
+
+    @if $color != -1 {
+      $color-dark: __transform-color-dd($color, $darken: __mapping($__map--ui, percent-color-dark));
+      background-color: #{$color};
+      border-color: #{$color-dark};
+      @include __ui-transition-o(background-color .3s ease);
+
+      //An event is generated for object anchors
+      &:hover {
+        color: $color-text;
+      }
+
+      @if $extra == true{
+        & li,
+        & a{
+          color: $color-text !important;
+          @if $underline == true{
+            text-decoration: underline;
+          }
+        }
+        & li.active{
+          color: darken($color-text, 20) !important;
+        }
+      }
+    }
+    color: $color-text !important;
+  }
+
   @mixin __clearfix(){
     *zoom: 1;
     &:before, &:after {
@@ -120,9 +173,9 @@
   }
 
   @mixin __ui-shadow-o($arg...){
-    -webkit-box-shadow: #{$arg} !important; // Android 2.3+, iOS 4.0.2-4.2, Safari 3-4
-       -moz-box-shadow: #{$arg} !important;
-            box-shadow: #{$arg} !important; // Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+
+    -webkit-box-shadow: $arg; // Android 2.3+, iOS 4.0.2-4.2, Safari 3-4
+       -moz-box-shadow: $arg;
+            box-shadow: $arg; // Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+
   }
 
   @mixin __ui-text-shadow($arg: 0 1px 2px rgba(0, 0, 0, 0.25)){

@@ -146,9 +146,9 @@
         }
       }
 
-     }
+    }
 
-    .addon,
+    .form__input-group .addon,
     .form__input-group-button,
     .form__input-group .form__input {
       display: table-cell;
@@ -157,7 +157,7 @@
       }
     }
 
-    .addon,
+    .form__input-group .addon,
     .form__input-group-button {
       width: 1%;
       white-space: nowrap;

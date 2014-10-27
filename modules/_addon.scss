@@ -3,55 +3,49 @@
   //-------------------------------------------
   //  Button Mixins
   //-------------------------------------------
-  @mixin addon__mixin--skin($color: -1, $color-text: __mapping($__map--ui, color-link)){
-    @if $color != -1 {
-      $color-dark: __transform-color-dd($color, $darken: __mapping($__map--ui, percent-color-dark));
-      background-color: #{$color};
-      border-color: #{$color-dark};
-    }
-    color: #{$color-text}!important;
-  }
 
-  @mixin addon__mixin--size(){
-    $psize: $__map--base-padding-size;
-    @each $key, $size in $psize {
-      .addon--#{$key}
-      {
-        padding: #{$size} #{__mapping($__map--base-padding-size, lg)} !important;
-      }
-    }
-  }
 
   @if __use-module(addon) {
 
     .addon{
+      display: inline-block;
+      vertical-align: middle;
       color: #555555;
       text-align: center;
-      background-color: #eeeeee;
+      background-color: __mapping($__map--ui-color-status, normal);
+      padding: __mapping($__map--base-padding-size, md);
       @include __ui-round();
     }
 
-    .addon--normal{
-      @include addon__mixin--skin(__mapping($__map--ui-color-status, normal), #555555);
+    .addon--shadow-inside{
+      @extend %__shadow-inside;
     }
 
-    .addon--danger{
-      @include addon__mixin--skin(__mapping($__map--ui-color-status, danger), #FFFFFF);
+    .addon__group{
+
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+
+      .addon{
+
+        display: table-cell;
+        @include __ui-round(0);
+
+        &:first-child{
+          @include __ui-round(__mapping($__map--ui, border-radius) 0 0 __mapping($__map--ui, border-radius));
+        }
+        &:last-child{
+          @include __ui-round(0 __mapping($__map--ui, border-radius) __mapping($__map--ui, border-radius) 0);
+        }
+
+      }
+
     }
 
-    .addon--warning{
-      @include addon__mixin--skin(__mapping($__map--ui-color-status, warning), #FFFFFF);
-    }
+    @include __base-status(addon);
 
-    .addon--success{
-      @include addon__mixin--skin(__mapping($__map--ui-color-status, success), #FFFFFF);
-    }
-
-    .addon--info{
-      @include addon__mixin--skin(__mapping($__map--ui-color-status, info), #FFFFFF);
-    }
-
-    @include addon__mixin--size();
+    @include __base-size(addon);
 
     .addon--fluid{
       display: block;

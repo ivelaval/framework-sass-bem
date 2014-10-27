@@ -11,20 +11,6 @@
     -webkit-appearance: none;
   }
 
-  %alert__extend--link-color-light{
-    & a{
-      color: #fff;
-      text-decoration: underline;
-    }
-  }
-
-  %alert__extend--link-color-dark{
-    & a{
-      color: #696969;
-      text-decoration: underline;
-    }
-  }
-
   //-------------------------------------------
   //  Alert Mixins
   //-------------------------------------------
@@ -48,33 +34,10 @@
     }
 
     .alert--closable{
-      padding-right: 45px;
+      padding-right: __em(20);
     }
 
-    .alert--normal{
-      @include alert__mixin--skin-button(__mapping($__map--ui-color-status, normal), #d9dcdd, #696969);
-      @extend %alert__extend--link-color-dark;
-    }
-
-    .alert--danger{
-      @include alert__mixin--skin-button(__mapping($__map--ui-color-status, danger), #ff1103);
-      @extend %alert__extend--link-color-light;
-    }
-
-    .alert--warning{
-      @include alert__mixin--skin-button(__mapping($__map--ui-color-status, warning), #ff7701);
-      @extend %alert__extend--link-color-light;
-    }
-
-    .alert--success{
-      @include alert__mixin--skin-button(__mapping($__map--ui-color-status, success), #53ab1e);
-      @extend %alert__extend--link-color-light;
-    }
-
-    .alert--info{
-      @include alert__mixin--skin-button(__mapping($__map--ui-color-status, info), #1e7eb5);
-      @extend %alert__extend--link-color-light;
-    }
+    @include __base-status(alert, true, true);
 
     .alert__title{
       margin-top: 0;
@@ -85,10 +48,11 @@
       @extend %alert__extend--button;
       position: absolute;
       opacity: 1;
-      top: 2px;
-      right: 8px;
+      top: _em(2);
+      right: __em(8);
       color: inherit;
       font-weight: bold;
+      outline: 0;
     }
 
   }//endif

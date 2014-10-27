@@ -38,14 +38,52 @@
     font-family: "zerw_fostastic" !important;
     @extend %icon__mixin--font-default;
     speak: none;
-    line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   .icon{
+    position: relative;
     display: inline-block;
     vertical-align: middle;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon--xl{
+    $size: 60;
+    $__line-height: $size - 10;
+    font-size: __em($size);
+    line-height: __line-height($__line-height);
+  }
+
+  .icon--lg{
+    $size: 50;
+    $__line-height: $size - 10;
+    font-size: __em($size);
+    line-height: __line-height($__line-height);
+  }
+
+  .icon--md{
+    $size: 40;
+    $__line-height: $size - 10;
+    font-size: __em($size);
+    line-height: __line-height($__line-height);
+  }
+
+  .icon--sm{
+    $size: 30;
+    $__line-height: $size - 10;
+    font-size: __em($size);
+    line-height: __line-height($__line-height);
+  }
+
+  .icon--xs{
+    $size: 20;
+    $__line-height: $size - 10;
+    font-size: __em($size);
+    line-height: __line-height($__line-height);
   }
 
   .icon__clock:before {

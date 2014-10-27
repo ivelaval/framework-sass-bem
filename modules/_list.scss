@@ -3,7 +3,6 @@
   @if __use-module(list) {
 
       .list{
-
           padding-left: f__em(10);
           list-style: none;
       }
@@ -20,5 +19,28 @@
       .list__item--end{
           margin-bottom: 0;
       }
+
+      .list__group{
+          display: compact;
+          max-width: __em(400);
+          margin-bottom: __em(__mapping($__map--base, margin-bottom));
+      }
+
+      .list__group-item{
+          border-bottom: 1px solid __mapping($__map--ui-color-status, normal);
+          @include __ui-round(0);
+          @include __ui-border(1px solid __mapping($__map--ui-color-status, normal));
+          padding: __em(__mapping($__map--base, padding));
+
+          &:first-child{
+            @include __ui-round--top(__mapping($__map--ui, border-radius));
+          }
+          &:last-child{
+              @include __ui-round--bottom(__mapping($__map--ui, border-radius));
+          }
+      }
+
+      @include __base-status(list__group-item);
+      @include __base-size(list__group-item);
 
   }//endif

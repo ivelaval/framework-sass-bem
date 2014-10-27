@@ -107,7 +107,7 @@
 
   %breadcrumb__extend--global{
     padding: 8px 15px;
-    margin-bottom: 20px;
+    margin-bottom: __em(__mapping($__map--base, margin-bottom));
     background-color: #fafafa;
     border-color: #ededed;
     border-style: solid;
@@ -122,6 +122,10 @@
       @include __ui-round(4px);
       @include __ui-border(-1, 0 1px 4px 1px);
     }
+
+    @include __base-status(breadcrumb, true);
+
+    @include __base-size(breadcrumb);
 
     .breadcrumb > li {
       display: inline-block;
@@ -139,16 +143,10 @@
       }
     }
 
-    .breadcrumb__dark{
+    .breadcrumb__arrow{
       list-style:none;
       display: inline-block;
-      @include breadcrumb__mixin--type(#34495e, #243448, #FFF, #FFF);
-    }
-
-    .breadcrumb__light{
-      list-style:none;
-      display: inline-block;
-      @include breadcrumb__mixin--type(__mapping($__map--ui-color-status, normal), #afb2b3, #777777, #454545);
+      @include breadcrumb__mixin--type(__mapping($__map--ui-color-status, normal), #d9dcdd, #777777, #454545);
     }
 
   }//endif
