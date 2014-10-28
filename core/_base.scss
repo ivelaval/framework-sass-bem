@@ -20,7 +20,7 @@ textarea {
   color: #2B2B2B;
 
   &:disabled{
-    background-color: __mapping($__map--ui-color-status, normal) !important;
+    background-color: __mapping($__map--ui-color-status, normal);
   }
 
 }
