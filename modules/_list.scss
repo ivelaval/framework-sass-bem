@@ -3,40 +3,122 @@
 @if __use-module(list) {
 
   .list {
-    padding-left: f__em(10);
+    padding-left: __em(10);
     list-style: none;
   }
 
   .list--bullet {
     list-style: bullet;
-    padding-left: f__em(10);
+    padding-left: __em(10);
   }
 
   .list__item {
-    margin-bottom: f__em(10);
+    margin-bottom: __em(10);
   }
 
   .list__item--end {
     margin-bottom: 0;
   }
 
+  // Base class
+  //
+  // Easily usable on <ul>, <ol>, or <div>.
+
   .list__group {
-    display: compact;
-    max-width: __em(400);
-    margin-bottom: __em(__mapping($__map--base, margin-bottom));
+    // No need to set list-style: none; since .list-group-item is block level
+    margin-bottom: 20px;
+    padding-left: 0; // reset padding because ul and ol
+  }
+
+
+  // Individual list items
+  //
+  // Use on `li`s or `div`s within the `.list-group` parent.
+
+  .list__group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    // Place the border on the list items and negative margin up for better styling
+    margin-bottom: -1px;
+    background-color: #ffffff;
+    border: 1px solid #454545;
+
+    // Round the first and last items
+    &:first-child {
+      @include __ui-round--top(4px);
+    }
+    &:last-child {
+      margin-bottom: 0;
+      @include __ui-round--bottom(4px);
+    }
+
+    // Align badges within list items
+    > .badge {
+      float: right;
+    }
+    > .badge + .badge {
+      margin-right: 5px;
+    }
+  }
+
+
+  // Linked list items
+  //
+  // Use anchor elements instead of `li`s or `div`s to create linked list items.
+  // Includes an extra `.active` modifier class for showing selected items.
+
+  a.list__group-item {
+    color: #000;
+
+    .list__group-item-heading {
+      color: #00a10b;
+    }
+
+    // Hover state
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #454545;
+      background-color: #f3f3f3;
+    }
   }
 
   .list__group-item {
-    border-bottom: 1px solid __mapping($__map--ui-color-status, normal);
-    @include __ui-round(0);
-    @include __ui-border(1px solid __mapping($__map--ui-color-status, normal));
-    padding: __em(__mapping($__map--base, padding));
+    // Disabled state
+    &.disabled,
+    &.disabled:hover,
+    &.disabled:focus {
+      background-color: #454545;
+      color: #FFFFFF;
 
-    &:first-child {
-      @include __ui-round--top(__mapping($__map--ui, border-radius));
+      // Force color to inherit for custom content
+      .list__group-item-heading {
+        color: inherit;
+      }
+      .list__group-item-text {
+        color: #ffffff;
+      }
     }
-    &:last-child {
-      @include __ui-round--bottom(__mapping($__map--ui, border-radius));
+
+    // Active class on item itself, not parent
+    &.active,
+    &.active:hover,
+    &.active:focus {
+      z-index: 2; // Place active items above their siblings for proper border styling
+      color: #454545;
+      background-color: #ffffff;
+      border-color: #777777;
+
+      // Force color to inherit for custom content
+      .list__group-item-heading,
+      .list__group-item-heading > small,
+      .list__group-item-heading > .small {
+        color: inherit;
+      }
+      .list__group-item-text {
+        color: #454545;
+      }
     }
   }
 
