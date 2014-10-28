@@ -420,7 +420,7 @@ html, body {
   font-size: 1em;
   line-height: 1.4;
   font-family: "Open Sans", sans-serif;
-  color: black;
+  color: #000;
   font-size: 0.9375em;
   text-align: left;
 }
@@ -435,7 +435,7 @@ button:disabled,
 input:disabled,
 select:disabled,
 textarea:disabled {
-  background-color: #e4e7e8 !important;
+  background-color: #e4e7e8;
 }
 
 ::-moz-selection {
@@ -716,10 +716,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .addon--danger:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .addon--warning {
@@ -730,10 +730,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .addon--warning:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .addon--success {
@@ -744,10 +744,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .addon--success:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .addon--info {
@@ -758,10 +758,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .addon--info:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .addon--xl {
@@ -4054,13 +4054,13 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .alert--danger:hover {
-  color: white;
+  color: #ffffff;
 }
 .alert--danger li, .alert--danger a {
-  color: white;
+  color: #ffffff;
   text-decoration: underline;
 }
 .alert--danger li.active {
@@ -4075,13 +4075,13 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .alert--warning:hover {
-  color: white;
+  color: #ffffff;
 }
 .alert--warning li, .alert--warning a {
-  color: white;
+  color: #ffffff;
   text-decoration: underline;
 }
 .alert--warning li.active {
@@ -4096,13 +4096,13 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .alert--success:hover {
-  color: white;
+  color: #ffffff;
 }
 .alert--success li, .alert--success a {
-  color: white;
+  color: #ffffff;
   text-decoration: underline;
 }
 .alert--success li.active {
@@ -4117,13 +4117,13 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .alert--info:hover {
-  color: white;
+  color: #ffffff;
 }
 .alert--info li, .alert--info a {
-  color: white;
+  color: #ffffff;
   text-decoration: underline;
 }
 .alert--info li.active {
@@ -4188,10 +4188,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge--danger:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .badge--warning {
@@ -4202,10 +4202,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge--warning:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .badge--success {
@@ -4216,10 +4216,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge--success:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .badge--info {
@@ -4230,10 +4230,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge--info:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .badge__float {
@@ -4275,10 +4275,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge__float--danger[data-badge]:after:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .badge__float--warning[data-badge]:after {
@@ -4289,10 +4289,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge__float--warning[data-badge]:after:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .badge__float--success[data-badge]:after {
@@ -4303,10 +4303,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge__float--success[data-badge]:after:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .badge__float--info[data-badge]:after {
@@ -4317,10 +4317,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge__float--info[data-badge]:after:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .breadcrumb {
@@ -4369,13 +4369,13 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--danger:hover {
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--danger li, .breadcrumb--danger a {
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--danger li.active {
   color: #cccccc;
@@ -4389,13 +4389,13 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--warning:hover {
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--warning li, .breadcrumb--warning a {
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--warning li.active {
   color: #cccccc;
@@ -4409,13 +4409,13 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--success:hover {
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--success li, .breadcrumb--success a {
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--success li.active {
   color: #cccccc;
@@ -4429,13 +4429,13 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--info:hover {
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--info li, .breadcrumb--info a {
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--info li.active {
   color: #cccccc;
@@ -4676,13 +4676,13 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .button--danger:hover {
-  color: white;
+  color: #ffffff;
 }
 .button--danger li, .button--danger a {
-  color: white;
+  color: #ffffff;
 }
 .button--danger li.active {
   color: #cccccc;
@@ -4696,13 +4696,13 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .button--warning:hover {
-  color: white;
+  color: #ffffff;
 }
 .button--warning li, .button--warning a {
-  color: white;
+  color: #ffffff;
 }
 .button--warning li.active {
   color: #cccccc;
@@ -4716,13 +4716,13 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .button--success:hover {
-  color: white;
+  color: #ffffff;
 }
 .button--success li, .button--success a {
-  color: white;
+  color: #ffffff;
 }
 .button--success li.active {
   color: #cccccc;
@@ -4736,13 +4736,13 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .button--info:hover {
-  color: white;
+  color: #ffffff;
 }
 .button--info li, .button--info a {
-  color: white;
+  color: #ffffff;
 }
 .button--info li.active {
   color: #cccccc;
@@ -5110,10 +5110,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .label--danger:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .label--warning {
@@ -5124,10 +5124,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .label--warning:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .label--success {
@@ -5138,10 +5138,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .label--success:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .label--info {
@@ -5152,10 +5152,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .label--info:hover {
-  color: white;
+  color: #ffffff;
 }
 
 *,
@@ -6329,9 +6329,7 @@ footer {
 
 a.list__group-item {
   color: #000;
-}
-a.list__group-item .list__group-item-heading {
-  color: #00a10b;
+  font-size: 0.9375em;
 }
 a.list__group-item:hover, a.list__group-item:focus {
   text-decoration: none;
@@ -6343,29 +6341,11 @@ a.list__group-item:hover, a.list__group-item:focus {
   background-color: #454545;
   color: #FFFFFF;
 }
-.list__group-item.disabled .list__group-item-heading, .list__group-item.disabled:hover .list__group-item-heading, .list__group-item.disabled:focus .list__group-item-heading {
-  color: inherit;
-}
-.list__group-item.disabled .list__group-item-text, .list__group-item.disabled:hover .list__group-item-text, .list__group-item.disabled:focus .list__group-item-text {
-  color: #ffffff;
-}
 .list__group-item.active, .list__group-item.active:hover, .list__group-item.active:focus {
   z-index: 2;
   color: #454545;
   background-color: #ffffff;
   border-color: #777777;
-}
-.list__group-item.active .list__group-item-heading,
-.list__group-item.active .list__group-item-heading > small,
-.list__group-item.active .list__group-item-heading > .small, .list__group-item.active:hover .list__group-item-heading,
-.list__group-item.active:hover .list__group-item-heading > small,
-.list__group-item.active:hover .list__group-item-heading > .small, .list__group-item.active:focus .list__group-item-heading,
-.list__group-item.active:focus .list__group-item-heading > small,
-.list__group-item.active:focus .list__group-item-heading > .small {
-  color: inherit;
-}
-.list__group-item.active .list__group-item-text, .list__group-item.active:hover .list__group-item-text, .list__group-item.active:focus .list__group-item-text {
-  color: #454545;
 }
 
 .list__group-item--normal {
@@ -6390,10 +6370,10 @@ a.list__group-item:hover, a.list__group-item:focus {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .list__group-item--danger:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .list__group-item--warning {
@@ -6404,10 +6384,10 @@ a.list__group-item:hover, a.list__group-item:focus {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .list__group-item--warning:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .list__group-item--success {
@@ -6418,10 +6398,10 @@ a.list__group-item:hover, a.list__group-item:focus {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .list__group-item--success:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .list__group-item--info {
@@ -6432,10 +6412,10 @@ a.list__group-item:hover, a.list__group-item:focus {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .list__group-item--info:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .list__group-item--xl {
@@ -6457,3 +6437,5 @@ a.list__group-item:hover, a.list__group-item:focus {
 .list__group-item--lg {
   padding: 15px 15px;
 }
+
+/*# sourceMappingURL=style.css.map */

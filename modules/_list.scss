@@ -20,40 +20,29 @@
     margin-bottom: 0;
   }
 
-  // Base class
-  //
-  // Easily usable on <ul>, <ol>, or <div>.
-
   .list__group {
-    // No need to set list-style: none; since .list-group-item is block level
     margin-bottom: 20px;
-    padding-left: 0; // reset padding because ul and ol
+    padding-left: 0;
   }
 
-
-  // Individual list items
-  //
-  // Use on `li`s or `div`s within the `.list-group` parent.
 
   .list__group-item {
     position: relative;
     display: block;
     padding: 10px 15px;
-    // Place the border on the list items and negative margin up for better styling
     margin-bottom: -1px;
     background-color: #ffffff;
     border: 1px solid #454545;
 
-    // Round the first and last items
     &:first-child {
       @include __ui-round--top(4px);
     }
+
     &:last-child {
       margin-bottom: 0;
       @include __ui-round--bottom(4px);
     }
 
-    // Align badges within list items
     > .badge {
       float: right;
     }
@@ -63,19 +52,10 @@
   }
 
 
-  // Linked list items
-  //
-  // Use anchor elements instead of `li`s or `div`s to create linked list items.
-  // Includes an extra `.active` modifier class for showing selected items.
-
   a.list__group-item {
     color: #000;
+    font-size: __em(__mapping($__map--base-font, size));
 
-    .list__group-item-heading {
-      color: #00a10b;
-    }
-
-    // Hover state
     &:hover,
     &:focus {
       text-decoration: none;
@@ -85,40 +65,21 @@
   }
 
   .list__group-item {
-    // Disabled state
+
     &.disabled,
     &.disabled:hover,
     &.disabled:focus {
       background-color: #454545;
       color: #FFFFFF;
-
-      // Force color to inherit for custom content
-      .list__group-item-heading {
-        color: inherit;
-      }
-      .list__group-item-text {
-        color: #ffffff;
-      }
     }
 
-    // Active class on item itself, not parent
     &.active,
     &.active:hover,
     &.active:focus {
-      z-index: 2; // Place active items above their siblings for proper border styling
+      z-index: 2;
       color: #454545;
       background-color: #ffffff;
       border-color: #777777;
-
-      // Force color to inherit for custom content
-      .list__group-item-heading,
-      .list__group-item-heading > small,
-      .list__group-item-heading > .small {
-        color: inherit;
-      }
-      .list__group-item-text {
-        color: #454545;
-      }
     }
   }
 
