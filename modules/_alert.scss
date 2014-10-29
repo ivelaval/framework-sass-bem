@@ -27,7 +27,7 @@
   }
 
   .alert__button--close {
-    @extend %alert__extend--button;
+    @extend %__alert-extend--button;
     position: absolute;
     opacity: 1;
     top: _em(2);

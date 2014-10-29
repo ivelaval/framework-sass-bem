@@ -5,7 +5,7 @@
 @if __use-module(breadcrumb) {
 
   .breadcrumb {
-    @extend %breadcrumb__extend--global;
+    @extend %__breadcrumb-extend--global;
     @include __ui-round(4px);
     @include __ui-border(-1, 0 1px 4px 1px);
   }
@@ -33,7 +33,7 @@
   .breadcrumb__arrow {
     list-style: none;
     display: inline-block;
-    @include breadcrumb__mixin--type(__mapping($__map--ui-color-status, normal), #d9dcdd, #777777, #454545);
+    @include __breadcrumb-mixin--type(__mapping($__map--ui-color-status, normal), #d9dcdd, #777777, #454545);
   }
 
 }

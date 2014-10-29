@@ -53,7 +53,7 @@
     margin-right: __em(__mapping($__map--base, margin-right));
   }
 
-  @include layout__mixin--create-blocks();
+  @include __layout-mixin--create-blocks();
 
   .layout__sidebar {
     bottom: 0;
@@ -76,19 +76,19 @@
     position: fixed;
     left: 0;
     top: 0;
-    @include layout__mixin--grid-render-universal("md") {
+    @include __layout-mixin--grid-render-universal("md") {
       position: relative;
       height: 36px;
       @include __base-mpb();
     }
 
-    @include layout__mixin--grid-render-universal("sm") {
+    @include __layout-mixin--grid-render-universal("sm") {
       position: relative;
       height: 36px;
       @include __base-mpb();
     }
 
-    @include layout__mixin--grid-render-universal("xs") {
+    @include __layout-mixin--grid-render-universal("xs") {
       position: relative;
       height: 36px;
       @include __base-mpb();
@@ -99,7 +99,7 @@
   // ----------------------------------------------------
   // Render Grid systems
   // ----------------------------------------------------
-  @include layout__mixin--grid-render-styles($__map--base-layout);
+  @include __layout-mixin--grid-render-styles($__map--base-layout);
 
 }
 

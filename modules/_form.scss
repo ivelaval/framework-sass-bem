@@ -71,7 +71,7 @@
       margin-bottom: 0;
       &:active {
         border-bottom-width: 0;
-        @extend %button__extend--outline-off;
+        @extend %__button-extend--outline-off;
       }
     }
 
@@ -121,16 +121,16 @@
   }
 
   .form__input {
-    @extend %form__extend--element;
+    @extend %__form-extend--element;
   }
 
   .form__textarea {
-    @extend %form__extend--element;
+    @extend %__form-extend--element;
     min-height: 120px;
   }
 
   .form__select {
-    @extend %form__extend--element;
+    @extend %__form-extend--element;
     color: __mapping($__map--base-font, color-placeholder);
     &:focus,
     &:active {
@@ -138,37 +138,37 @@
     }
   }
 
-  @include form__mixin--size-element();
+  @include __form-mixin--size-element();
 
   .form__input--normal,
   .form__select--normal {
-    @include form__mixin--status-border(__mapping($__map--ui-color-status, normal));
+    @include __form-mixin--status-border(__mapping($__map--ui-color-status, normal));
   }
 
   .form__input--danger,
   .form__select--danger {
-    @include form__mixin--status-border(__mapping($__map--ui-color-status, danger));
+    @include __form-mixin--status-border(__mapping($__map--ui-color-status, danger));
   }
 
   .form__input--warning,
   .form__select--warning {
-    @include form__mixin--status-border(__mapping($__map--ui-color-status, warning));
+    @include __form-mixin--status-border(__mapping($__map--ui-color-status, warning));
   }
 
   .form__input--success,
   .form__select--success {
-    @include form__mixin--status-border(__mapping($__map--ui-color-status, success));
+    @include __form-mixin--status-border(__mapping($__map--ui-color-status, success));
   }
 
   .form__input--info,
   .form__select--info {
-    @include form__mixin--status-border(__mapping($__map--ui-color-status, info));
+    @include __form-mixin--status-border(__mapping($__map--ui-color-status, info));
   }
 
   .form__input--fluid,
   .form__select--fluid,
   .form__element--fluid {
-    @extend %form__extend--fluid;
+    @extend %__fluid;
   }
 
 }

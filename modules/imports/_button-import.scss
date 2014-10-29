@@ -1,7 +1,7 @@
 //-------------------------------------------
 //  Button Mixins
 //-------------------------------------------
-@mixin button__mixin--skin($color: -1, $color-text: __mapping($__map--ui, color-link)) {
+@mixin __button-mixin--skin($color: -1, $color-text: __mapping($__map--ui, color-link)) {
   @if $color != -1 {
     $color-dark: __transform-color-dd($color, $darken: __mapping($__map--ui, percent-color-dark));
     background-color: #{$color};
@@ -10,7 +10,7 @@
   color: #{$color-text};
 }
 
-@mixin button__mixin--size() {
+@mixin __button-mixin--size() {
   $psize: $__map--base-padding-size;
   @each $key, $size in $psize {
     .button--#{$key} {
@@ -22,7 +22,7 @@
 //-------------------------------------------
 //  Button Extends
 //-------------------------------------------
-%button__extend--default {
+%__button-extend--default {
   text-align: center;
   display: inline-block;
   margin-bottom: 4px;
@@ -38,13 +38,13 @@
   @include __ui-user-select();
 }
 
-%button__extend--outline-in {
+%__button-extend--outline-in {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-%button__extend--outline-off {
+%__button-extend--outline-off {
   outline: 0;
 }
 

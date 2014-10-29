@@ -1,7 +1,7 @@
 //-------------------------------------------
 //  Form Mixins
 //-------------------------------------------
-@mixin form__mixin--size-element() {
+@mixin __form-mixin--size-element() {
   $psize: $__map--base-padding-size;
   @each $key, $size in $psize {
     .form__element--#{$key},
@@ -13,7 +13,7 @@
   }
 }
 
-@mixin form__mixin--status-border($primary) {
+@mixin __form-mixin--status-border($primary) {
   $ui__color-status--shadow: $primary;
   border-color: $primary;
   @include __ui-shadow-o(inset 0 2px 0 $ui__color-status--shadow);
@@ -27,7 +27,7 @@
 //-------------------------------------------
 //  Form Extends
 //-------------------------------------------
-%form__extend--element {
+%__form-extend--element {
 
   position: relative;
   background: #FFFFFF;
@@ -66,9 +66,4 @@
     color: __mapping($__map--base-font, color-placeholder);
   }
 
-}
-
-%form__extend--fluid {
-  display: block;
-  width: 100%;
 }

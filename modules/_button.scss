@@ -5,18 +5,18 @@
 @if __use-module(button) {
 
   .button {
-    @extend %button__extend--default;
+    @extend %__button-extend--default;
     &:hover {
 
     }
     &:focus {
       text-decoration: none;
-      @extend %button__extend--outline-off;
+      @extend %__button-extend--outline-off;
     }
     &:active {
       margin-top: 2px;
       border-bottom-width: 2px;
-      @extend %button__extend--outline-off;
+      @extend %__button-extend--outline-off;
     }
   }
 
@@ -57,14 +57,13 @@
   @include __base-status(button, true);
 
   .button--link {
-    @include button__mixin--skin();
+    @include __button-mixin--skin();
   }
 
-  @include button__mixin--size();
+  @include __button-mixin--size();
 
   .button--fluid {
-    display: block;
-    width: 100%;
+    @extend %__fluid;
   }
 
 }

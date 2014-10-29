@@ -1,7 +1,7 @@
 //-------------------------------------------
 //  Breadcrumb Mixins
 //-------------------------------------------
-@mixin breadcrumb__mixin--type($normal, $hover, $text-nomal: #FFF, $text-hover: __mapping($__map--base-font, color)) {
+@mixin __breadcrumb-mixin--type($normal, $hover, $text-nomal: #FFF, $text-hover: __mapping($__map--base-font, color)) {
 
   li {
 
@@ -123,7 +123,7 @@
 //  Breadcrumb Extends
 //-------------------------------------------
 
-%breadcrumb__extend--global {
+%__breadcrumb-extend--global {
   padding: 8px 15px;
   margin-bottom: __em(__mapping($__map--base, margin-bottom));
   background-color: #fafafa;

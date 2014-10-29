@@ -2,7 +2,7 @@
 //  Layout Mixins
 //-------------------------------------------
 
-@mixin layout__mixin--grid-render($key, $settings) {
+@mixin __layout-mixin--grid-render($key, $settings) {
   $i: 1;
   @while $i <= __mapping($settings, "columns") {
     .layout__col-#{$key}-#{$i} {
@@ -14,13 +14,13 @@
   }
 }
 
-@mixin layout__mixin--grid-media($queryString) {
+@mixin __layout-mixin--grid-media($queryString) {
   @media #{$queryString} {
     @content;
   }
 }
 
-@mixin layout__mixin--grid-render-styles($settings) {
+@mixin __layout-mixin--grid-render-styles($settings) {
 
   .layout__container {
     position: relative;
@@ -43,21 +43,21 @@
   $breakpoints: $__map--base-breakpoints;
 
   @each $key, $breakpoint in $breakpoints {
-    @include layout__mixin--grid-media($breakpoint) {
-      @include layout__mixin--grid-render($key, $settings);
+    @include __layout-mixin--grid-media($breakpoint) {
+      @include __layout-mixin--grid-render($key, $settings);
     }
   }
 
 }
 
-@mixin layout__mixin--grid-render-universal($index) {
+@mixin __layout-mixin--grid-render-universal($index) {
   $breakpoint: __mapping($__map--base-breakpoints, $index);
-  @include layout__mixin--grid-media($breakpoint) {
+  @include __layout-mixin--grid-media($breakpoint) {
     @content;
   }
 }
 
-@mixin layout__mixin--create-blocks() {
+@mixin __layout-mixin--create-blocks() {
   $class-block: layout__block !default;
   @for $i from 1 through 6 {
     $aux: $i * 5;
@@ -123,3 +123,8 @@
 
   }
 }
+
+//-------------------------------------------
+//  Layout Extends
+//-------------------------------------------
+

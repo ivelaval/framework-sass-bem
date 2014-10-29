@@ -1,16 +1,12 @@
 //-------------------------------------------
 //  Alert Mixins
 //-------------------------------------------
-@mixin alert__mixin--skin-button($backc: #ff851b, $borc: #ff7701, $c: #ffffff) {
-  background-color: $backc;
-  border-color: $borc;
-  color: $c;
-}
+
 
 //-------------------------------------------
 //  Alert Extends
 //-------------------------------------------
-%alert__extend--button {
+%__alert-extend--button {
   padding: 0;
   cursor: pointer;
   background: transparent;

@@ -18,7 +18,7 @@
   [data-icon]:before {
     font-family: "zerw_fostastic";
     content: attr(data-icon);
-    @extend %icon__mixin--font-default;
+    @extend %__icon-extend--font-default;
     speak: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
@@ -28,7 +28,7 @@
   [class^="icon__"]:before,
   [class*=" icon__"]:before {
     font-family: "zerw_fostastic";
-    @extend %icon__mixin--font-default;
+    @extend %__icon-extend--font-default;
     speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

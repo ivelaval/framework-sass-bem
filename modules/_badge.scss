@@ -5,7 +5,7 @@
 @if __use-module(badge) {
 
   .badge {
-    @extend %badge__extend--badge;
+    @extend %__badge-extend--badge;
     font-size: __em(12);
     @include __ui-round(15px);
   }
@@ -25,7 +25,7 @@
     position: absolute;
     top: -15px;
     right: -20px;
-    @extend %badge__extend--badge;
+    @extend %__badge-extend--badge;
     font-size: __em(12);
     @include __ui-round(15px);
   }
