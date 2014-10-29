@@ -1,0 +1,34 @@
+
+//-------------------------------------------
+//  List Mixins
+//-------------------------------------------
+@mixin __list-mixin--base-status($extra: false, $underline: false) {
+  $prefix: list__group-item;
+  $colorstatus: $__map--ui-color-status;
+  @each $key, $color in $colorstatus {
+    .#{$prefix}--#{$key} {
+      @include __list-mixin--base-skin($color, $extra: $extra, $underline: $underline);
+    }
+  }
+}
+
+@mixin __list-mixin--base-skin($color: -1, $color-text: -1, $extra: false, $underline: false) {
+  @if $color-text == -1 {
+    $color-text: __dynamic-text-color($color);
+  }
+
+  @if $color != -1 {
+    $color-dark: __transform-color-dd($color, $darken: __mapping($__map--ui, percent-color-dark));
+    background-color: #{$color};
+    border-color: #{$color-dark};
+    @include __ui-transition-o(background-color .3s ease, color .3s ease);
+
+    &:hover {
+      background-color: #{$color-dark};
+      color: $color-text;
+    }
+
+  }
+  color: $color-text;
+}
+

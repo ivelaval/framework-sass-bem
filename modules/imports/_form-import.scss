@@ -1,0 +1,74 @@
+//-------------------------------------------
+//  Form Mixins
+//-------------------------------------------
+@mixin form__mixin--size-element() {
+  $psize: $__map--base-padding-size;
+  @each $key, $size in $psize {
+    .form__element--#{$key},
+    .form__input--#{$key},
+    .form__select--#{$key},
+    {
+      padding: #{$size} #{__mapping($__map--base-padding-size, lg)};
+    }
+  }
+}
+
+@mixin form__mixin--status-border($primary) {
+  $ui__color-status--shadow: $primary;
+  border-color: $primary;
+  @include __ui-shadow-o(inset 0 2px 0 $ui__color-status--shadow);
+  &:focus,
+  &:active {
+    border: 1px solid #{$primary};
+    @include __ui-shadow-o(inset 0 1px 1px $ui__color-status--shadow, 0 0 6px $ui__color-status--shadow);
+  }
+}
+
+//-------------------------------------------
+//  Form Extends
+//-------------------------------------------
+%form__extend--element {
+
+  position: relative;
+  background: #FFFFFF;
+  color: __mapping($__map--base-font, color-element-form);
+  border: 1px solid #e7e7e7;
+  @include __ui-shadow-o(inset 0 2px 0 rgba(0, 0, 0, 0.075));
+  @include __ui-transition-o(border-color ease-in .20s, box-shadow ease-in .20s);
+
+  &:focus,
+  &:active {
+    outline: none;
+    border: 1px solid #{__mapping($__map--ui-color-status, normal-dark)};
+    @include __ui-shadow-o(inset 0 1px 1px __mapping($__map--ui-color-status, normal), 0 0 6px __mapping($__map--ui-color-status, normal));
+    @include __ui-transition-o(border-color ease-in .20s, box-shadow ease-in .20s);
+  }
+
+  &::-webkit-input-placeholder {
+    // WebKit browsers
+    color: __mapping($__map--base-font, color-placeholder);
+  }
+
+  &:-moz-placeholder {
+    // Mozilla Firefox 4 to 18
+    color: __mapping($__map--base-font, color-placeholder);
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    // Mozilla Firefox 19+
+    color: __mapping($__map--base-font, color-placeholder);
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    // Internet Explorer 10+
+    color: __mapping($__map--base-font, color-placeholder);
+  }
+
+}
+
+%form__extend--fluid {
+  display: block;
+  width: 100%;
+}

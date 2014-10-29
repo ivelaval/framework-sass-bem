@@ -426,29 +426,45 @@
 
             <article class="layout__row">
                 <h2>Lista</h2>
-                <ul class="list__group">
-                    <li class="list__group-item list__group-item--xl list__group-item--warning">Lista 1</li>
-                    <li class="list__group-item list__group-item--xl list__group-item--danger">Lista 2</li>
-                    <li class="list__group-item list__group-item--xl list__group-item--success">Lista 3</li>
-                </ul>
 
-                <ul class="list__group">
-                    <li class="list__group-item">Lista 1</li>
-                    <li class="list__group-item">Lista 2</li>
-                    <li class="list__group-item">Lista 3</li>
-                </ul>
+                <div class="layout__col-lg-6 layout__block--p10">
+                    <h3>ul, li, a</h3>
+                    <hr/>
+                    <ul class="list__group">
+                        <li class="list__group-item list__group-item--xl list__group-item--warning">List 1 xl</li>
+                        <li class="list__group-item list__group-item--lg list__group-item--danger">List 2 lg</li>
+                        <li class="list__group-item list__group-item--md list__group-item--success">List 3 md</li>
+                    </ul>
 
-                <ul class="list__group">
-                    <li class="list__group-item"><a href="#" >Lista 1</a></li>
-                    <li class="list__group-item"><a href="#" >Lista 2</a></li>
-                    <li class="list__group-item"><a href="#" >Lista 3</a></li>
-                </ul>
+                    <ul class="list__group">
+                        <li class="list__group-item"><a href="javascript:;" >List 1</a> <span class="badge badge--info">45</span></li>
+                        <li class="list__group-item"><a href="javascript:;" >List 2</a> <span class="badge badge--danger">Error</span></li>
+                        <li class="list__group-item"><a href="javascript:;" >List 3</a> <span class="badge badge--warning">+999</span></li>
+                    </ul>
 
-                <div class="list__group">
-                    <a href="javascript:;" class="list__group-item">Lista 1</a>
-                    <a href="javascript:;" class="list__group-item">Lista 2</a>
-                    <a href="javascript:;" class="list__group-item">Lista 3</a>
                 </div>
+                <div class="layout__col-lg-6 layout__block--p10">
+                    <h3>div, a</h3>
+                    <hr/>
+                    <div class="list__group list__group--danger">
+                        <a href="javascript:;" class="list__group-item">List 1 <span class="badge badge--warning">waiting</span></a>
+                        <a href="javascript:;" class="list__group-item">List 2 <span class="badge badge--success">Aproved</span></a>
+                        <a href="javascript:;" class="list__group-item">List 3 <span class="badge badge--danger">rejected</span></a>
+                    </div>
+
+                    <div class="list__group list__group--danger">
+                        <a href="javascript:;" class="list__group-item list__group-item--info">List 1</a>
+                        <a href="javascript:;" class="list__group-item list__group-item--info">List 2</a>
+                        <a href="javascript:;" class="list__group-item list__group-item--info">List 3 <span class="badge badge--normal badge--shadow-inside">+999</span></a>
+                    </div>
+
+                </div>
+
+
+
+
+
+
 
             </article>
 

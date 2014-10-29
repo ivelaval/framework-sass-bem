@@ -1,9 +1,5 @@
 //module/Addon ==========================================================================
 
-//-------------------------------------------
-//  Button Mixins
-//-------------------------------------------
-
 @if __use-module(addon) {
 
   .addon {
@@ -36,14 +32,14 @@
     }
   }
 
-  @include __base-status(addon);
-
-  @include __base-size(addon);
-
   .addon--fluid {
     display: block;
     width: 100%;
   }
+
+  @include __base-status(addon);
+
+  @include __base-size(addon);
 
 }
 

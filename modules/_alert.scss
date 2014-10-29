@@ -1,24 +1,6 @@
 //module/Alert ==========================================================================
 
-//-------------------------------------------
-//  Alert Extends
-//-------------------------------------------
-%alert__extend--button {
-  padding: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none;
-}
-
-//-------------------------------------------
-//  Alert Mixins
-//-------------------------------------------
-@mixin alert__mixin--skin-button($backc: #ff851b, $borc: #ff7701, $c: #ffffff) {
-  background-color: $backc;
-  border-color: $borc;
-  color: $c;
-}
+@import "imports/alert-import";
 
 @if __use-module(alert) {
 

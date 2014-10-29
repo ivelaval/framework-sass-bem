@@ -1,5 +1,7 @@
 //module/List ==========================================================================
 
+@import 'imports/list-import';
+
 @if __use-module(list) {
 
   .list {
@@ -25,14 +27,12 @@
     padding-left: 0;
   }
 
-
   .list__group-item {
     position: relative;
     display: block;
     padding: 10px 15px;
     margin-bottom: -1px;
-    background-color: #ffffff;
-    border: 1px solid #454545;
+    border: 1px solid __mapping($__map--ui-color-status, normal);
 
     &:first-child {
       @include __ui-round--top(4px);
@@ -53,14 +53,13 @@
 
 
   a.list__group-item {
-    color: #000;
     font-size: __em(__mapping($__map--base-font, size));
 
     &:hover,
     &:focus {
       text-decoration: none;
-      color: #454545;
-      background-color: #f3f3f3;
+      //color: #454545;
+      //background-color: #f3f3f3;
     }
   }
 
@@ -69,21 +68,21 @@
     &.disabled,
     &.disabled:hover,
     &.disabled:focus {
-      background-color: #454545;
-      color: #FFFFFF;
+      //background-color: #454545;
+      //color: #FFFFFF;
     }
 
     &.active,
     &.active:hover,
     &.active:focus {
       z-index: 2;
-      color: #454545;
-      background-color: #ffffff;
-      border-color: #777777;
+      //color: #454545;
+      //background-color: #ffffff;
+      //border-color: #777777;
     }
   }
 
-  @include __base-status(list__group-item);
+  @include __list-mixin--base-status();
   @include __base-size(list__group-item);
 
 }

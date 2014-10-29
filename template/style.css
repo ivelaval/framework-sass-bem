@@ -420,7 +420,7 @@ html, body {
   font-size: 1em;
   line-height: 1.4;
   font-family: "Open Sans", sans-serif;
-  color: #000;
+  color: black;
   font-size: 0.9375em;
   text-align: left;
 }
@@ -694,9 +694,14 @@ footer {
   background-clip: padding-box;
 }
 
+.addon--fluid {
+  display: block;
+  width: 100%;
+}
+
 .addon--normal {
   background-color: #e4e7e8;
-  border-color: #c8cfd1;
+  border-color: #d6dbdc;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
@@ -710,58 +715,58 @@ footer {
 
 .addon--danger {
   background-color: #ff4136;
-  border-color: #ff1103;
+  border-color: #ff291d;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .addon--danger:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .addon--warning {
   background-color: #ff851b;
-  border-color: #e76b00;
+  border-color: #ff7701;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .addon--warning:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .addon--success {
   background-color: #5ac51f;
-  border-color: #469918;
+  border-color: #50af1c;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .addon--success:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .addon--info {
   background-color: #158cba;
-  border-color: #106a8c;
+  border-color: #127ba3;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .addon--info:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .addon--xl {
@@ -782,11 +787,6 @@ footer {
 
 .addon--lg {
   padding: 15px 15px;
-}
-
-.addon--fluid {
-  display: block;
-  width: 100%;
 }
 
 [data-icon]:before, [class^="icon__"]:before,
@@ -4027,7 +4027,7 @@ footer {
 
 .alert--normal {
   background-color: #e4e7e8;
-  border-color: #c8cfd1;
+  border-color: #d6dbdc;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
@@ -4048,19 +4048,19 @@ footer {
 
 .alert--danger {
   background-color: #ff4136;
-  border-color: #ff1103;
+  border-color: #ff291d;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .alert--danger:hover {
-  color: #ffffff;
+  color: white;
 }
 .alert--danger li, .alert--danger a {
-  color: #ffffff;
+  color: white;
   text-decoration: underline;
 }
 .alert--danger li.active {
@@ -4069,19 +4069,19 @@ footer {
 
 .alert--warning {
   background-color: #ff851b;
-  border-color: #e76b00;
+  border-color: #ff7701;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .alert--warning:hover {
-  color: #ffffff;
+  color: white;
 }
 .alert--warning li, .alert--warning a {
-  color: #ffffff;
+  color: white;
   text-decoration: underline;
 }
 .alert--warning li.active {
@@ -4090,19 +4090,19 @@ footer {
 
 .alert--success {
   background-color: #5ac51f;
-  border-color: #469918;
+  border-color: #50af1c;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .alert--success:hover {
-  color: #ffffff;
+  color: white;
 }
 .alert--success li, .alert--success a {
-  color: #ffffff;
+  color: white;
   text-decoration: underline;
 }
 .alert--success li.active {
@@ -4111,19 +4111,19 @@ footer {
 
 .alert--info {
   background-color: #158cba;
-  border-color: #106a8c;
+  border-color: #127ba3;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .alert--info:hover {
-  color: #ffffff;
+  color: white;
 }
 .alert--info li, .alert--info a {
-  color: #ffffff;
+  color: white;
   text-decoration: underline;
 }
 .alert--info li.active {
@@ -4168,7 +4168,7 @@ footer {
 
 .badge--normal {
   background-color: #e4e7e8;
-  border-color: #c8cfd1;
+  border-color: #d6dbdc;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
@@ -4182,58 +4182,58 @@ footer {
 
 .badge--danger {
   background-color: #ff4136;
-  border-color: #ff1103;
+  border-color: #ff291d;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .badge--danger:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .badge--warning {
   background-color: #ff851b;
-  border-color: #e76b00;
+  border-color: #ff7701;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .badge--warning:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .badge--success {
   background-color: #5ac51f;
-  border-color: #469918;
+  border-color: #50af1c;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .badge--success:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .badge--info {
   background-color: #158cba;
-  border-color: #106a8c;
+  border-color: #127ba3;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .badge--info:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .badge__float {
@@ -4255,7 +4255,7 @@ footer {
 
 .badge__float--normal[data-badge]:after {
   background-color: #e4e7e8;
-  border-color: #c8cfd1;
+  border-color: #d6dbdc;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
@@ -4269,58 +4269,58 @@ footer {
 
 .badge__float--danger[data-badge]:after {
   background-color: #ff4136;
-  border-color: #ff1103;
+  border-color: #ff291d;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .badge__float--danger[data-badge]:after:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .badge__float--warning[data-badge]:after {
   background-color: #ff851b;
-  border-color: #e76b00;
+  border-color: #ff7701;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .badge__float--warning[data-badge]:after:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .badge__float--success[data-badge]:after {
   background-color: #5ac51f;
-  border-color: #469918;
+  border-color: #50af1c;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .badge__float--success[data-badge]:after:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .badge__float--info[data-badge]:after {
   background-color: #158cba;
-  border-color: #106a8c;
+  border-color: #127ba3;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .badge__float--info[data-badge]:after:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .breadcrumb {
@@ -4343,7 +4343,7 @@ footer {
 
 .breadcrumb--normal {
   background-color: #e4e7e8;
-  border-color: #c8cfd1;
+  border-color: #d6dbdc;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
@@ -4363,19 +4363,19 @@ footer {
 
 .breadcrumb--danger {
   background-color: #ff4136;
-  border-color: #ff1103;
+  border-color: #ff291d;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .breadcrumb--danger:hover {
-  color: #ffffff;
+  color: white;
 }
 .breadcrumb--danger li, .breadcrumb--danger a {
-  color: #ffffff;
+  color: white;
 }
 .breadcrumb--danger li.active {
   color: #cccccc;
@@ -4383,19 +4383,19 @@ footer {
 
 .breadcrumb--warning {
   background-color: #ff851b;
-  border-color: #e76b00;
+  border-color: #ff7701;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .breadcrumb--warning:hover {
-  color: #ffffff;
+  color: white;
 }
 .breadcrumb--warning li, .breadcrumb--warning a {
-  color: #ffffff;
+  color: white;
 }
 .breadcrumb--warning li.active {
   color: #cccccc;
@@ -4403,19 +4403,19 @@ footer {
 
 .breadcrumb--success {
   background-color: #5ac51f;
-  border-color: #469918;
+  border-color: #50af1c;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .breadcrumb--success:hover {
-  color: #ffffff;
+  color: white;
 }
 .breadcrumb--success li, .breadcrumb--success a {
-  color: #ffffff;
+  color: white;
 }
 .breadcrumb--success li.active {
   color: #cccccc;
@@ -4423,19 +4423,19 @@ footer {
 
 .breadcrumb--info {
   background-color: #158cba;
-  border-color: #106a8c;
+  border-color: #127ba3;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .breadcrumb--info:hover {
-  color: #ffffff;
+  color: white;
 }
 .breadcrumb--info li, .breadcrumb--info a {
-  color: #ffffff;
+  color: white;
 }
 .breadcrumb--info li.active {
   color: #cccccc;
@@ -4650,7 +4650,7 @@ footer {
 
 .button--normal {
   background-color: #e4e7e8;
-  border-color: #c8cfd1;
+  border-color: #d6dbdc;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
@@ -4670,19 +4670,19 @@ footer {
 
 .button--danger {
   background-color: #ff4136;
-  border-color: #ff1103;
+  border-color: #ff291d;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .button--danger:hover {
-  color: #ffffff;
+  color: white;
 }
 .button--danger li, .button--danger a {
-  color: #ffffff;
+  color: white;
 }
 .button--danger li.active {
   color: #cccccc;
@@ -4690,19 +4690,19 @@ footer {
 
 .button--warning {
   background-color: #ff851b;
-  border-color: #e76b00;
+  border-color: #ff7701;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .button--warning:hover {
-  color: #ffffff;
+  color: white;
 }
 .button--warning li, .button--warning a {
-  color: #ffffff;
+  color: white;
 }
 .button--warning li.active {
   color: #cccccc;
@@ -4710,19 +4710,19 @@ footer {
 
 .button--success {
   background-color: #5ac51f;
-  border-color: #469918;
+  border-color: #50af1c;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .button--success:hover {
-  color: #ffffff;
+  color: white;
 }
 .button--success li, .button--success a {
-  color: #ffffff;
+  color: white;
 }
 .button--success li.active {
   color: #cccccc;
@@ -4730,19 +4730,19 @@ footer {
 
 .button--info {
   background-color: #158cba;
-  border-color: #106a8c;
+  border-color: #127ba3;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .button--info:hover {
-  color: #ffffff;
+  color: white;
 }
 .button--info li, .button--info a {
-  color: #ffffff;
+  color: white;
 }
 .button--info li.active {
   color: #cccccc;
@@ -5090,7 +5090,7 @@ footer {
 
 .label--normal {
   background-color: #e4e7e8;
-  border-color: #c8cfd1;
+  border-color: #d6dbdc;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
@@ -5104,58 +5104,58 @@ footer {
 
 .label--danger {
   background-color: #ff4136;
-  border-color: #ff1103;
+  border-color: #ff291d;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .label--danger:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .label--warning {
   background-color: #ff851b;
-  border-color: #e76b00;
+  border-color: #ff7701;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .label--warning:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .label--success {
   background-color: #5ac51f;
-  border-color: #469918;
+  border-color: #50af1c;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .label--success:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .label--info {
   background-color: #158cba;
-  border-color: #106a8c;
+  border-color: #127ba3;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: #ffffff;
+  color: white;
 }
 .label--info:hover {
-  color: #ffffff;
+  color: white;
 }
 
 *,
@@ -6308,8 +6308,7 @@ footer {
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #ffffff;
-  border: 1px solid #454545;
+  border: 1px solid #e4e7e8;
 }
 .list__group-item:first-child {
   border-top-right-radius: 4px;
@@ -6328,94 +6327,89 @@ footer {
 }
 
 a.list__group-item {
-  color: #000;
   font-size: 0.9375em;
 }
 a.list__group-item:hover, a.list__group-item:focus {
   text-decoration: none;
-  color: #454545;
-  background-color: #f3f3f3;
 }
 
-.list__group-item.disabled, .list__group-item.disabled:hover, .list__group-item.disabled:focus {
-  background-color: #454545;
-  color: #FFFFFF;
-}
 .list__group-item.active, .list__group-item.active:hover, .list__group-item.active:focus {
   z-index: 2;
-  color: #454545;
-  background-color: #ffffff;
-  border-color: #777777;
 }
 
 .list__group-item--normal {
   background-color: #e4e7e8;
-  border-color: #c8cfd1;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  border-color: #d6dbdc;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -moz-transition: background-color 0.3s ease, color 0.3s ease;
+  -ms-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   color: #555555;
 }
 .list__group-item--normal:hover {
+  background-color: #d6dbdc;
   color: #555555;
 }
 
 .list__group-item--danger {
   background-color: #ff4136;
-  border-color: #ff1103;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-  color: #ffffff;
+  border-color: #ff291d;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -moz-transition: background-color 0.3s ease, color 0.3s ease;
+  -ms-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white;
 }
 .list__group-item--danger:hover {
-  color: #ffffff;
+  background-color: #ff291d;
+  color: white;
 }
 
 .list__group-item--warning {
   background-color: #ff851b;
-  border-color: #e76b00;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-  color: #ffffff;
+  border-color: #ff7701;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -moz-transition: background-color 0.3s ease, color 0.3s ease;
+  -ms-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white;
 }
 .list__group-item--warning:hover {
-  color: #ffffff;
+  background-color: #ff7701;
+  color: white;
 }
 
 .list__group-item--success {
   background-color: #5ac51f;
-  border-color: #469918;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-  color: #ffffff;
+  border-color: #50af1c;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -moz-transition: background-color 0.3s ease, color 0.3s ease;
+  -ms-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white;
 }
 .list__group-item--success:hover {
-  color: #ffffff;
+  background-color: #50af1c;
+  color: white;
 }
 
 .list__group-item--info {
   background-color: #158cba;
-  border-color: #106a8c;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-  color: #ffffff;
+  border-color: #127ba3;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -moz-transition: background-color 0.3s ease, color 0.3s ease;
+  -ms-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white;
 }
 .list__group-item--info:hover {
-  color: #ffffff;
+  background-color: #127ba3;
+  color: white;
 }
 
 .list__group-item--xl {
@@ -6437,5 +6431,3 @@ a.list__group-item:hover, a.list__group-item:focus {
 .list__group-item--lg {
   padding: 15px 15px;
 }
-
-/*# sourceMappingURL=style.css.map */

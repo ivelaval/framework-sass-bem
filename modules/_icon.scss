@@ -1,14 +1,6 @@
 //module/Icon ==========================================================================
 
-//-------------------------------------------
-//  Icon Extends
-//-------------------------------------------
-%icon__mixin--font-default {
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-}
+@import "imports/icon-import";
 
 @if __use-module(icon) {
 
