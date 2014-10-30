@@ -1,6 +1,46 @@
 //module/Menu ==========================================================================
 
+@import "../core/extends/nav__extend";
+
 @if __use-module(menu) {
+
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  @include __clearfix;
+
+  > li {
+
+    @extend %__nav-extend--inline;
+
+    > a {
+      position: relative;
+      display: block;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    &.disabled > a {
+      color: #156f95;
+
+      &:hover,
+      &:focus {
+        color: #444444;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+
+  > li > a > img {
+    max-width: none;
+  }
+}
 
 }
 
