@@ -1,30 +1,4 @@
 //-------------------------------------------
-//  Form Mixins
-//-------------------------------------------
-@mixin __form-mixin--size-element() {
-  $psize: $__map--base-padding-size;
-  @each $key, $size in $psize {
-    .form__element--#{$key},
-    .form__input--#{$key},
-    .form__select--#{$key},
-    {
-      padding: #{$size} #{__mapping($__map--base-padding-size, lg)};
-    }
-  }
-}
-
-@mixin __form-mixin--status-border($primary) {
-  $ui__color-status--shadow: $primary;
-  border-color: $primary;
-  @include __ui-shadow-o(inset 0 2px 0 $ui__color-status--shadow);
-  &:focus,
-  &:active {
-    border: 1px solid #{$primary};
-    @include __ui-shadow-o(inset 0 1px 1px $ui__color-status--shadow, 0 0 6px $ui__color-status--shadow);
-  }
-}
-
-//-------------------------------------------
 //  Form Extends
 //-------------------------------------------
 %__form-extend--element {

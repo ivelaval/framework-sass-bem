@@ -1,6 +1,7 @@
 //module/layout ==========================================================================
 
-@import "imports/layout-import";
+@import "../core/mixins/layout__mixin";
+@import "../core/extends/layout__extend";
 
 @if __use-module(layout) {
 

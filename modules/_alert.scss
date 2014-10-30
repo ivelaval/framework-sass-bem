@@ -1,6 +1,7 @@
 //module/Alert ==========================================================================
 
-@import "imports/alert-import";
+@import "../core/mixins/alert__mixin";
+@import "../core/extends/alert__extend";
 
 @if __use-module(alert) {
 

@@ -1,6 +1,7 @@
 //module/List ==========================================================================
 
-@import 'imports/list-import';
+@import '../core/mixins/list__mixin';
+@import '../core/extends/list__extend';
 
 @if __use-module(list) {
 

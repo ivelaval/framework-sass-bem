@@ -1,6 +1,7 @@
 //module/Button ==========================================================================
 
-@import "imports/button-import";
+@import "../core/mixins/button__mixin";
+@import "../core/extends/button__extend";
 
 @if __use-module(button) {
 

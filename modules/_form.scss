@@ -1,6 +1,7 @@
 //module/Form ==========================================================================
 
-@import "imports/form-import";
+@import "../core/mixins/form__mixin";
+@import "../core/extends/form__extend";
 
 @if __use-module(form) {
 

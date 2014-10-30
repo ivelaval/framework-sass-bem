@@ -1,6 +1,7 @@
 //module/Icon ==========================================================================
 
-@import "imports/icon-import";
+@import "../core/mixins/icon__mixin";
+@import "../core/extends/icon__extend";
 
 @if __use-module(icon) {
 

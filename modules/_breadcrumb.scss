@@ -1,6 +1,7 @@
 //module/Breadcrumb ==========================================================================
 
-@import "imports/breadcrumb-import";
+@import "../core/mixins/breadcrumb__mixin";
+@import "../core/extends/breadcrumb__extend";
 
 @if __use-module(breadcrumb) {
 

@@ -1,6 +1,7 @@
 //module/Badge ==========================================================================
 
-@import "imports/badge-import";
+@import "../core/mixins/badge__mixin";
+@import "../core/extends/badge__extend";
 
 @if __use-module(badge) {
 
