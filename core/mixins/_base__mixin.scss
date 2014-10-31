@@ -56,6 +56,7 @@
 
   @if $color != -1 {
     $color-dark: __transform-color-dd($color, $darken: __mapping($__map--ui, percent-color-dark));
+    $color-light: __transform-color-sl($color, 0, 2, 0);
     background-color: #{$color};
     border-color: #{$color-dark};
     @include __ui-transition-o(background-color .3s ease);
@@ -63,6 +64,7 @@
     //An event is generated for object anchors
     &:hover {
       color: $color-text;
+      background-color: #{$color-light};
     }
 
     @if $extra == true {
@@ -153,7 +155,9 @@
   @if ($b != -1) {
     border: #{$b};
   }
-  border-width: #{$bw};
+  @if($bw != -1){
+    border-width: #{$bw};
+  }
 }
 
 @mixin __ui-user-select($arg: none) {

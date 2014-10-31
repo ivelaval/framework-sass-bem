@@ -4,6 +4,5 @@
 
 %__nav-extend--inline{
   position: relative;
-  display: inline-block;
-  vertical-align: baseline;
+  @include __ui-round();
 }

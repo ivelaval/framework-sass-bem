@@ -76,3 +76,8 @@
   width: 100%;
 }
 
+%__status--default{
+  border: 1px solid __mapping($__map--ui-color-status, normal);
+  background-color: #FFF;
+}
+
