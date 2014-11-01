@@ -35,6 +35,14 @@
       border-bottom: 1px solid __mapping($__map--ui-color-status, normal);
     }
 
+    > .badge {
+      float: right;
+    }
+
+    > .badge + .badge {
+      margin-right: 5px;
+    }
+
   }
 }
 

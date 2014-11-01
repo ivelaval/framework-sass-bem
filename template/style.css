@@ -6354,12 +6354,6 @@ footer {
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
 }
-.list__group-item > .badge {
-  float: right;
-}
-.list__group-item > .badge + .badge {
-  margin-right: 5px;
-}
 
 a.list__group-item {
   font-size: 0.9375em;
@@ -6512,6 +6506,12 @@ a.list__group-item:hover, a.list__group-item:focus {
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   border-bottom: 1px solid #e4e7e8;
+}
+.nav--vertical .nav__item > .badge {
+  float: right;
+}
+.nav--vertical .nav__item > .badge + .badge {
+  margin-right: 5px;
 }
 
 .nav__item:hover, .nav__item:focus {
