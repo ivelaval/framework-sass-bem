@@ -425,74 +425,96 @@
             <hr/>
 
             <article class="layout__row">
-                <h2>Lista</h2>
-
-                <div class="layout__col-lg-6 layout__block--p10">
-                    <h3>ul, li, a</h3>
-                    <hr/>
-                    <ul class="list__group">
-                        <li class="list__group-item list__group-item--xl list__group-item--warning">List 1 xl</li>
-                        <li class="list__group-item list__group-item--lg list__group-item--danger">List 2 lg</li>
-                        <li class="list__group-item list__group-item--md list__group-item--success">List 3 md</li>
-                    </ul>
-
-                    <ul class="list__group">
-                        <li class="list__group-item"><a href="javascript:;" >List 1</a> <span class="badge badge--info">45</span></li>
-                        <li class="list__group-item"><a href="javascript:;" >List 2</a> <span class="badge badge--danger">Error</span></li>
-                        <li class="list__group-item"><a href="javascript:;" >List 3</a> <span class="badge badge--warning">+999</span></li>
-                    </ul>
-
-                </div>
-                <div class="layout__col-lg-6 layout__block--p10">
-                    <h3>div, a</h3>
-                    <hr/>
-                    <div class="list__group list__group--danger">
-                        <a href="javascript:;" class="list__group-item">List 1 <span class="badge badge--warning">waiting</span></a>
-                        <a href="javascript:;" class="list__group-item">List 2 <span class="badge badge--success">Aproved</span></a>
-                        <a href="javascript:;" class="list__group-item">List 3 <span class="badge badge--danger">rejected</span></a>
-                    </div>
-
-                    <div class="list__group list__group--danger">
-                        <a href="javascript:;" class="list__group-item list__group-item--info">List 1</a>
-                        <a href="javascript:;" class="list__group-item list__group-item--info">List 2</a>
-                        <a href="javascript:;" class="list__group-item list__group-item--info">List 3 <span class="badge badge--normal badge--shadow-inside">+999</span></a>
-                    </div>
-
-                </div>
-
-            </article>
-
-            <hr/>
-
-            <article class="layout__row">
                 <h2>Navs</h2>
-                <ul class="nav">
-                    <li class="nav__item nav__item--lg nav__item--without-border"><a href="javascript:;">Home</a></li>
-                    <li class="nav__item nav__item--lg nav__item--without-border"><a href="javascript:;">History</a></li>
-                    <li class="nav__item nav__item--lg nav__item--without-border"><a href="javascript:;">Contact</a></li>
-                </ul>
                 <hr/>
-                <ul class="nav nav--vertical">
-                    <li class="nav__item nav__item--sm"><a href="javascript:;">Home</a></li>
-                    <li class="nav__item nav__item--sm"><a href="javascript:;">History</a></li>
-                    <li class="nav__item nav__item--sm"><a href="javascript:;">Contact</a></li>
-                </ul>
+                <h3>Nav bar with nav__item</h3>
+                <div class="nav__bar nav__bar--danger nav__bar--round">
+
+                    <ul class="nav nav--right nav__size--xl">
+                        <li class="nav__item"><a href="javascript:;">Configuration</a></li>
+                        <li class="nav__item"><a href="javascript:;">Profile <span class="icon icon__cog"></span></a></li>
+                    </ul>
+
+                    <ul class="nav nav--horizontal nav--left nav__size--xl nav__status--danger">
+                        <li class="nav__item"><a href="javascript:;">Home</a></li>
+                        <li class="nav__item"><a href="javascript:;">List</a></li>
+                        <li class="nav__item "><a href="javascript:;">Contact</a></li>
+                        <li class="nav__item"><a href="javascript:;">Summary</a></li>
+                    </ul>
+                </div>
                 <hr/>
-                <nav class="nav--vertical">
-                    <a href="javascript:;" class="nav__item nav__item--xl nav__item--danger">Home</a>
-                    <a href="javascript:;" class="nav__item nav__item--xl nav__item--warning">History</a>
-                    <a href="javascript:;" class="nav__item nav__item--xl nav__item--info">Contact</a>
-                    <a href="javascript:;" class="nav__item nav__item--xl">Contact</a>
+                <h3>Nav block</h3>
+                <nav class="nav__block">
+                    <div class="nav__block-header">Zerw UI</div>
+                    <ul class="nav__block-menu">
+                        <li>Home</li>
+                        <li>Categories</li>
+                        <li>Contact</li>
+                    </ul>
                 </nav>
                 <hr/>
-                <nav class="nav--vertical">
-                    <li class="nav__item nav__item--xl nav__item--danger">Home <span class="badge badge--danger badge--shadow-inside">+999</span></li>
-                    <li class="nav__item nav__item--lg nav__item--warning">History <span class="badge badge--warning badge--shadow-inside">+999</span></li>
-                    <li class="nav__item nav__item--md nav__item--info">Contact <span class="badge badge--info badge--shadow-inside">+999</span></li>
-                    <li class="nav__item nav__item--sm">Contact <span class="badge badge--normal badge--shadow-inside">+999</span></li>
+                <h3>Nav status and size</h3>
+                <ul class="nav nav__status--success nav__size--xl">
+                    <li class="nav__item nav__item--without-border"><a href="javascript:;"> Without border lg</a></li>
+                    <li class="nav__item nav__item--without-border"><a href="javascript:;"> Without border lg</a></li>
+                    <li class="nav__item nav__item--without-border"><a href="javascript:;"> Without border lg</a></li>
+                </ul>
+
+                <ul class="nav nav__status--danger nav__size--lg">
+                    <li class="nav__item"><a href="javascript:;"><span class="icon icon__baidu"></span> Home lg</a></li>
+                    <li class="nav__item"><a href="javascript:;"><span class="icon icon__behance"></span> History lg</a></li>
+                    <li class="nav__item"><a href="javascript:;"><span class="icon icon__aim"></span> Contact lg</a></li>
+                </ul>
+                <ul class="nav nav__status--info nav__size--md">
+                    <li class="nav__item"><a href="javascript:;"> link md</a></li>
+                    <li class="nav__item"><a href="javascript:;"> link md</a></li>
+                    <li class="nav__item"><a href="javascript:;"> link md</a></li>
+                </ul>
+                <ul class="nav nav__status--warning nav__size--sm">
+                    <li class="nav__item"><a href="javascript:;"> link sm</a></li>
+                    <li class="nav__item"><a href="javascript:;"> link sm</a></li>
+                    <li class="nav__item"><a href="javascript:;"> link sm</a></li>
+                </ul>
+                <ul class="nav nav__status--normal nav__size--xs">
+                    <li class="nav__item"><a href="javascript:;"> link xs</a></li>
+                    <li class="nav__item"><a href="javascript:;"> link xs</a></li>
+                    <li class="nav__item"><a href="javascript:;"> link xs</a></li>
+                </ul>
+                <hr/>
+                <h3>Nav vertical</h3>
+                <ul class="nav nav__status--info nav__size--lg nav--vertical nav--inline nav--text-center">
+                    <li class="nav__item nav__item--text-center"><a href="javascript:;"><span class="icon icon__amazon icon--md"></span> Center</a></li>
+                    <li class="nav__item"><a href="javascript:;"><span class="icon icon__bag"></span> History</a></li>
+                    <li class="nav__item"><a href="javascript:;"><span class="icon icon__briefcase"></span> Contact contact</a></li>
+                </ul>
+                <nav class="nav nav--vertical nav__size--lg">
+                    <li class="nav__item nav__item--danger"><a href="javascript:;">Home <span class="badge badge--danger badge--shadow-inside nav__item--child-float-right">+999</span></a></li>
+                    <li class="nav__item nav__item--warning"><a href="javascript:;">History <span class="badge badge--warning badge--shadow-inside nav__item--child-float-right">+999</span></a> </li>
+                    <li class="nav__item nav__item--info"><a href="javascript:;">Tools <span class="badge badge--info badge--shadow-inside nav__item--child-float-right">+999</span></a> </li>
+                    <li class="nav__item "><a href="javascript:;">Session <span class="label label--danger nav__item--child-float-right">Approved</span> <span class="badge badge--normal badge--shadow-inside nav__item--child-float-right">+999</span></a> </li>
+                </nav>
+                <hr/>
+                <h3>Nav horizontal</h3>
+                <nav class="nav nav__size--lg">
+                    <a href="javascript:;" class="nav__item nav__item--danger">Messages <span class="badge badge--danger badge--shadow-inside">45</span></a>
+                    <a href="javascript:;" class="nav__item nav__item--warning">Notifications</a>
+                    <a href="javascript:;" class="nav__item nav__item--info">Inbox</a>
+                    <a href="javascript:;" class="nav__item ">Logout</a>
+                </nav>
+                <nav class="nav nav--horizontal nav__size--lg nav__status--info">
+                    <li class="nav__item"><a href="javascript:;">Home</a></li>
+                    <li class="nav__item"><a href="javascript:;">History </a> </li>
+                    <li class="nav__item"><a href="javascript:;">Tools </a> </li>
+                    <li class="nav__item "><a href="javascript:;">Session <span class="label label--danger label--xs nav__item--child-float-right">Approved</span> <span class="badge badge--normal badge--shadow-inside nav__item--child-float-right">+999</span></a> </li>
                 </nav>
 
             </article>
+            <hr/>
+            <h2>Panel</h2>
+            <hr/>
+            <h2>Table</h2>
+            <hr/>
+            <h2>Text</h2>
             <hr/>
             <article class="layout__row">
                 <h2>System grid</h2>

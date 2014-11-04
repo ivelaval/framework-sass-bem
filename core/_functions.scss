@@ -9,7 +9,12 @@
 }
 
 @function __mapping($map, $key) {
-  @return map-get($map, $key);
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  } @else {
+    @warn "Couldn't find key `#{$key}` in map `#{$map}`";
+  }
+  @return null;
 }
 
 @function __em($px, $base: __mapping($__map--base-font, size-base-em)) {

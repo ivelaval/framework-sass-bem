@@ -3,6 +3,11 @@
 //-------------------------------------------
 
 %__nav-extend--inline{
-  position: relative;
+  display: inline-block;
+  vertical-align: middle;
   @include __ui-round();
+}
+
+%__nav-extend--text-center{
+    text-align: center;
 }

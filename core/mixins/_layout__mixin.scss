@@ -4,6 +4,7 @@
 
 @mixin __layout-mixin--grid-render($key, $settings) {
   $i: 1;
+
   @while $i <= __mapping($settings, "columns") {
     .layout__col-#{$key}-#{$i} {
       float: left;
@@ -54,6 +55,18 @@
   $breakpoint: __mapping($__map--base-breakpoints, $index);
   @include __layout-mixin--grid-media($breakpoint) {
     @content;
+  }
+}
+
+@mixin __layout-mixin--grid-generic(){
+  @for $i from 1 through __mapping($__map--base-layout, "columns") {
+
+    .layout__col-#{$i} {
+      float: left;
+      width: 100% * $i / __mapping($__map--base-layout,"columns");
+      @include __clearfix();
+    }
+
   }
 }
 

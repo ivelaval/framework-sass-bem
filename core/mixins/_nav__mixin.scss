@@ -1,3 +1,63 @@
 //-------------------------------------------
 //  Nav Mixins
 //-------------------------------------------
+
+@mixin __nav-mixin--status($prefix) {
+  $colorstatus: $__map--ui-color-status;
+  @each $key, $color in $colorstatus {
+    .#{$prefix}--#{$key}{
+      .nav__item{
+        &:hover{
+          background-color: $color;
+          a{
+            color: __dynamic-text-color($color);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin __nav-mixin--size($prefix) {
+  $psize: $__map--base-padding-size;
+  @each $key, $size in $psize {
+    .#{$prefix}--#{$key}{
+      .nav__item{
+        a {
+          display: block;
+          padding: #{$size} #{__mapping($__map--base-padding-size, lg)};
+        }
+      }
+      a.nav__item{
+        padding: #{$size} #{__mapping($__map--base-padding-size, lg)};
+      }
+    }
+
+  }
+}
+
+
+@mixin __nav-mixin--size-nav-bar() {
+  $psize: $__map--base-padding-size;
+
+  .nav{
+    display: table-cell;
+    .nav__item{
+      @include __ui-border(0);
+      @include __ui-round(0);
+    }
+
+    @each $key, $size in $psize {
+      .nav__item--#{$key}{
+
+        a {
+          padding: #{$size} #{__mapping($__map--base-padding-size, xs)};
+          @include __ui-border(0);
+        }
+      }
+    }
+
+  }
+
+
+}

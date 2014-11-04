@@ -76,6 +76,7 @@ $__map--base-breakpoints: (
 //  Map base padding generic sizes
 //---------------------------------------------
 $__map--base-padding-size: (
+        xxl: $__padding-xxl,
         xl: $__padding-xl,
         xs: $__padding-xs,
         sm: $__padding-sm,
@@ -167,3 +168,19 @@ $__map--ui-color-status: (
         success: $__color-status--success,
         info: $__color-status--info
 );
+
+//---------------------------------------------
+//  Map z layers
+//---------------------------------------------
+$__map--z-layers: (
+        bottomless-pit: -9999,
+        default: 1,
+        dropdown: 3000,
+        overlay: 4000,
+        modal: 4001
+);
+
+//---------------------------------------------
+//  Map colors
+//---------------------------------------------
+$__map--color: ();

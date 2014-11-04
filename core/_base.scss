@@ -2,7 +2,9 @@
 
 * {
   @include __base-bs();
-  @include __debug();
+  @include __debug(){
+    border: 1px solid #00a10b;
+  };
 }
 
 html, body {
@@ -67,13 +69,35 @@ li {
 }
 
 a {
+
   text-decoration: none;
   color: #1e7eb5;
   @include __ui-transition-o(color .3s ease);
+
   &:hover {
     color: rgba(47, 40, 54, 0.59);
   }
+
+
+  &[href = ""] {
+
+    @include __debug(){
+      background: red;
+      color: white;
+      font-size: x-large;
+    }
+
+  }
+
+  &[href ^= http] {
+    display: inline-block;
+    color: red;
+    transform: rotate(180deg);
+  }
+
 }
+
+
 
 p {
   padding: 10px;

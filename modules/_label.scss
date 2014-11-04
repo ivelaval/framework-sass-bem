@@ -4,25 +4,22 @@
 
   .label {
     font-weight: normal;
-    display: inline;
-    vertical-align: baseline;
+    display: inline-block;
+    vertical-align: middle;
     white-space: nowrap;
     font-size: 70%;
     line-height: 1;
     text-align: center;
-    padding: #{__em(5)} #{__em(10)};
     border-radius: __mapping($__map--ui, border-radius);
+    @extend .label--xs;
   }
 
   .label--shadow-inside {
     @extend %__shadow-inside;
   }
 
-  .label--shadow {
-
-  }
-
   @include __base-status(label);
+  @include __base-size(label);
 
 }
 

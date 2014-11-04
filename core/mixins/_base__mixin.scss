@@ -7,7 +7,7 @@
 //Debug active
 @mixin __debug() {
   @if __mapping($__map--zerw, debug) {
-    border: 1px solid #00a10b;
+    @content;
   }
 }
 

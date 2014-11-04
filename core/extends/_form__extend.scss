@@ -13,7 +13,7 @@
   &:focus,
   &:active {
     outline: none;
-    border: 1px solid #{__mapping($__map--ui-color-status, normal-dark)};
+    border: 1px solid #{__mapping($__map--ui-color-status, normal)};
     @include __ui-shadow-o(inset 0 1px 1px __mapping($__map--ui-color-status, normal), 0 0 6px __mapping($__map--ui-color-status, normal));
     @include __ui-transition-o(border-color ease-in .20s, box-shadow ease-in .20s);
   }
