@@ -4652,6 +4652,12 @@ footer {
   border-bottom-width: 2px;
 }
 
+.button__round {
+  padding: 6px;
+  border-radius: 50%;
+  background-color: #cfcfcf;
+}
+
 .button__group {
   margin-bottom: 4px;
   position: relative;

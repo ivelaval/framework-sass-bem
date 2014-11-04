@@ -65,3 +65,19 @@
     @return $setlight; // Darker background, return light color
   }
 }
+
+/// Compute the maximum depth of a map
+/// @param {Map} $map
+/// @return {Number} max depth of `$map`
+
+@function depth($map) {
+  $level: 1;
+
+  @each $key, $value in $map {
+    @if type-of($value) == "map" {
+      $level: max(depth($value) + 1, $level);
+    }
+  }
+
+  @return $level;
+}
