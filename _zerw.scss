@@ -21,8 +21,8 @@
 // Core zerw
 //--------------------------------------
 @import 'core/functions';
-@import 'core/mixins/base__mixin';
-@import 'core/extends/base__extend';
+@import 'core/mixins';
+@import 'core/extends';
 //--------------------------------------
 @import 'core/normalize';
 @import 'core/base';
@@ -39,7 +39,6 @@
 @import 'modules/image';
 @import 'modules/label';
 @import 'modules/layout';
-@import 'modules/list';
 @import 'modules/nav';
 @import 'modules/panel';
 @import 'modules/table';
