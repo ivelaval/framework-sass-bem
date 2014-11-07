@@ -75,9 +75,8 @@
     @extend %__fluid;
     @include __ui-border();
     @include __ui-user-select();
-    @include __clearfix();
-
     @include __nav-mixin--size-nav-bar();
+    @include __clearfix();
 
     .nav{
       margin-bottom: 0;
@@ -103,11 +102,11 @@
 
   @include __base-status(nav__bar, true);
 
-  .nav__bar--round{
+  .nav--round{
     @include __ui-round();
   }
 
-  .nav__bar--fixed{
+  .nav--fixed{
     position: fixed;
     top: 0;
     left: 0;
@@ -123,24 +122,45 @@
   //------------------------------------------------
   .nav__block{
 
+    @include __ui-border();
+    @include __clearfix();
+
     .nav__block-header{
+      @extend %__nav-extend--inline;
+      @include __clearfix();
+    }
+
+    .nav__block-menu{
+      @extend %__nav-extend--inline;
+      @include __clearfix();
+      li{
+        @extend %__nav-extend--inline;
+
+        a{
+          padding: 10px;
+          @include __ui-round();
+
+          &:hover{
+            background-color: #00a10b;
+          }
+        }
+
+      }
 
     }
 
-
-
-
   }
 
+  @include __base-status(nav__block, true);
+  @include __base-size(nav__block);
 
-  @include __nav-mixin--status(nav__status);
-  @include __nav-mixin--size(nav__size);
 
   .nav__item{
 
     @extend %__nav-extend--inline;
     @include __ui-transition-o(all 0.3s ease-out);
     @include __ui-border();
+    @include __ui-round();
     @include __clearfix();
 
     font-size: __em(__mapping($__map--base-font, size));
@@ -168,5 +188,7 @@
 
   @include __base-status(nav__item, true);
   @include __base-size(nav__item);
+  @include __nav-mixin--status(nav__status);
+  @include __nav-mixin--size(nav__size);
 
 }//endif
