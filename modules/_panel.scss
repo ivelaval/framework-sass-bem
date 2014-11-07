@@ -1,45 +1,39 @@
 //module/panel ==========================================================================
 @if __use-module(panel) {
 
-  // Base class
   .panel {
-    margin-bottom: #a4a4a4;
-    background-color: #c0c0c0;
-    border: 1px solid transparent;
-    border-radius: 4px;
     margin-bottom: 4px;
-
+    @include __ui-border();
+    border-color: __mapping($__map--ui-color-status, normal);
   }
 
-  // Panel contents
-  .panel-body {
-    padding: 8px;
-    @include __clearfix();
+  .panel--round{
+    @include __ui-round();
   }
 
-  // Optional heading
-  .panel-heading {
-    padding: 8px;
-    border-bottom: 1px solid transparent;
-  }
-
-  // Within heading, strip any `h*` tag of its default margins for spacing.
   .panel-title {
     margin-top: 0;
     margin-bottom: 0;
     font-size: ceil((12px * 1.125));
     color: inherit;
+    background-color: #e0e0e0;
+    padding: 12px;
+    @include __ui-round--top(4px);
 
     > a {
       color: inherit;
     }
   }
 
-  // Optional footer (stays gray in every modifier class)
+  .panel-body {
+    padding: 8px;
+    @include __clearfix();
+  }
+
   .panel-footer {
     padding: 5px;
-    background-color: #777777;
-    border-top: 1px solid #777777;
+    background-color: #e0e0e0;
+    border-top: 1px solid #d9d9d9;
   }
 
 }

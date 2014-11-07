@@ -426,7 +426,7 @@ html, body {
   font-size: 1em;
   line-height: 1.4;
   font-family: "Open Sans", sans-serif;
-  color: black;
+  color: #000;
   font-size: 0.9375em;
   text-align: left;
 }
@@ -733,10 +733,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .addon--danger:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff4b40;
 }
 
@@ -748,10 +748,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .addon--warning:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff8a25;
 }
 
@@ -763,10 +763,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .addon--success:hover {
-  color: white;
+  color: #ffffff;
   background-color: #5ece20;
 }
 
@@ -778,10 +778,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .addon--info:hover {
-  color: white;
+  color: #ffffff;
   background-color: #1693c3;
 }
 
@@ -4075,14 +4075,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .alert--danger:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff4b40;
 }
 .alert--danger li, .alert--danger a {
-  color: white;
+  color: #ffffff;
   text-decoration: underline;
 }
 .alert--danger li.active {
@@ -4097,14 +4097,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .alert--warning:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff8a25;
 }
 .alert--warning li, .alert--warning a {
-  color: white;
+  color: #ffffff;
   text-decoration: underline;
 }
 .alert--warning li.active {
@@ -4119,14 +4119,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .alert--success:hover {
-  color: white;
+  color: #ffffff;
   background-color: #5ece20;
 }
 .alert--success li, .alert--success a {
-  color: white;
+  color: #ffffff;
   text-decoration: underline;
 }
 .alert--success li.active {
@@ -4141,14 +4141,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .alert--info:hover {
-  color: white;
+  color: #ffffff;
   background-color: #1693c3;
 }
 .alert--info li, .alert--info a {
-  color: white;
+  color: #ffffff;
   text-decoration: underline;
 }
 .alert--info li.active {
@@ -4214,10 +4214,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge--danger:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff4b40;
 }
 
@@ -4229,10 +4229,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge--warning:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff8a25;
 }
 
@@ -4244,10 +4244,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge--success:hover {
-  color: white;
+  color: #ffffff;
   background-color: #5ece20;
 }
 
@@ -4259,10 +4259,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge--info:hover {
-  color: white;
+  color: #ffffff;
   background-color: #1693c3;
 }
 
@@ -4306,10 +4306,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge__float--danger[data-badge]:after:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff4b40;
 }
 
@@ -4321,10 +4321,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge__float--warning[data-badge]:after:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff8a25;
 }
 
@@ -4336,10 +4336,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge__float--success[data-badge]:after:hover {
-  color: white;
+  color: #ffffff;
   background-color: #5ece20;
 }
 
@@ -4351,10 +4351,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .badge__float--info[data-badge]:after:hover {
-  color: white;
+  color: #ffffff;
   background-color: #1693c3;
 }
 
@@ -4405,14 +4405,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--danger:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff4b40;
 }
 .breadcrumb--danger li, .breadcrumb--danger a {
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--danger li.active {
   color: #cccccc;
@@ -4426,14 +4426,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--warning:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff8a25;
 }
 .breadcrumb--warning li, .breadcrumb--warning a {
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--warning li.active {
   color: #cccccc;
@@ -4447,14 +4447,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--success:hover {
-  color: white;
+  color: #ffffff;
   background-color: #5ece20;
 }
 .breadcrumb--success li, .breadcrumb--success a {
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--success li.active {
   color: #cccccc;
@@ -4468,14 +4468,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--info:hover {
-  color: white;
+  color: #ffffff;
   background-color: #1693c3;
 }
 .breadcrumb--info li, .breadcrumb--info a {
-  color: white;
+  color: #ffffff;
 }
 .breadcrumb--info li.active {
   color: #cccccc;
@@ -4727,14 +4727,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .button--danger:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff4b40;
 }
 .button--danger li, .button--danger a {
-  color: white;
+  color: #ffffff;
 }
 .button--danger li.active {
   color: #cccccc;
@@ -4748,14 +4748,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .button--warning:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff8a25;
 }
 .button--warning li, .button--warning a {
-  color: white;
+  color: #ffffff;
 }
 .button--warning li.active {
   color: #cccccc;
@@ -4769,14 +4769,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .button--success:hover {
-  color: white;
+  color: #ffffff;
   background-color: #5ece20;
 }
 .button--success li, .button--success a {
-  color: white;
+  color: #ffffff;
 }
 .button--success li.active {
   color: #cccccc;
@@ -4790,14 +4790,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .button--info:hover {
-  color: white;
+  color: #ffffff;
   background-color: #1693c3;
 }
 .button--info li, .button--info a {
-  color: white;
+  color: #ffffff;
 }
 .button--info li.active {
   color: #cccccc;
@@ -5164,10 +5164,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .label--danger:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff4b40;
 }
 
@@ -5179,10 +5179,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .label--warning:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff8a25;
 }
 
@@ -5194,10 +5194,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .label--success:hover {
-  color: white;
+  color: #ffffff;
   background-color: #5ece20;
 }
 
@@ -5209,10 +5209,10 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .label--info:hover {
-  color: white;
+  color: #ffffff;
   background-color: #1693c3;
 }
 
@@ -6687,14 +6687,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .nav__bar--danger:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff4b40;
 }
 .nav__bar--danger li, .nav__bar--danger a {
-  color: white;
+  color: #ffffff;
 }
 .nav__bar--danger li.active {
   color: #cccccc;
@@ -6708,14 +6708,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .nav__bar--warning:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff8a25;
 }
 .nav__bar--warning li, .nav__bar--warning a {
-  color: white;
+  color: #ffffff;
 }
 .nav__bar--warning li.active {
   color: #cccccc;
@@ -6729,14 +6729,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .nav__bar--success:hover {
-  color: white;
+  color: #ffffff;
   background-color: #5ece20;
 }
 .nav__bar--success li, .nav__bar--success a {
-  color: white;
+  color: #ffffff;
 }
 .nav__bar--success li.active {
   color: #cccccc;
@@ -6750,14 +6750,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .nav__bar--info:hover {
-  color: white;
+  color: #ffffff;
   background-color: #1693c3;
 }
 .nav__bar--info li, .nav__bar--info a {
-  color: white;
+  color: #ffffff;
 }
 .nav__bar--info li.active {
   color: #cccccc;
@@ -6853,14 +6853,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .nav__block--danger:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff4b40;
 }
 .nav__block--danger li, .nav__block--danger a {
-  color: white;
+  color: #ffffff;
 }
 .nav__block--danger li.active {
   color: #cccccc;
@@ -6874,14 +6874,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .nav__block--warning:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff8a25;
 }
 .nav__block--warning li, .nav__block--warning a {
-  color: white;
+  color: #ffffff;
 }
 .nav__block--warning li.active {
   color: #cccccc;
@@ -6895,14 +6895,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .nav__block--success:hover {
-  color: white;
+  color: #ffffff;
   background-color: #5ece20;
 }
 .nav__block--success li, .nav__block--success a {
-  color: white;
+  color: #ffffff;
 }
 .nav__block--success li.active {
   color: #cccccc;
@@ -6916,14 +6916,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .nav__block--info:hover {
-  color: white;
+  color: #ffffff;
   background-color: #1693c3;
 }
 .nav__block--info li, .nav__block--info a {
-  color: white;
+  color: #ffffff;
 }
 .nav__block--info li.active {
   color: #cccccc;
@@ -7018,14 +7018,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .nav__item--danger:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff4b40;
 }
 .nav__item--danger li, .nav__item--danger a {
-  color: white;
+  color: #ffffff;
 }
 .nav__item--danger li.active {
   color: #cccccc;
@@ -7039,14 +7039,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .nav__item--warning:hover {
-  color: white;
+  color: #ffffff;
   background-color: #ff8a25;
 }
 .nav__item--warning li, .nav__item--warning a {
-  color: white;
+  color: #ffffff;
 }
 .nav__item--warning li.active {
   color: #cccccc;
@@ -7060,14 +7060,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .nav__item--success:hover {
-  color: white;
+  color: #ffffff;
   background-color: #5ece20;
 }
 .nav__item--success li, .nav__item--success a {
-  color: white;
+  color: #ffffff;
 }
 .nav__item--success li.active {
   color: #cccccc;
@@ -7081,14 +7081,14 @@ footer {
   -ms-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  color: white;
+  color: #ffffff;
 }
 .nav__item--info:hover {
-  color: white;
+  color: #ffffff;
   background-color: #1693c3;
 }
 .nav__item--info li, .nav__item--info a {
-  color: white;
+  color: #ffffff;
 }
 .nav__item--info li.active {
   color: #cccccc;
@@ -7129,28 +7129,28 @@ footer {
   background-color: #ff4136;
 }
 .nav__status--danger .nav__item:hover a {
-  color: white;
+  color: #ffffff;
 }
 
 .nav__status--warning .nav__item:hover {
   background-color: #ff851b;
 }
 .nav__status--warning .nav__item:hover a {
-  color: white;
+  color: #ffffff;
 }
 
 .nav__status--success .nav__item:hover {
   background-color: #5ac51f;
 }
 .nav__status--success .nav__item:hover a {
-  color: white;
+  color: #ffffff;
 }
 
 .nav__status--info .nav__item:hover {
   background-color: #158cba;
 }
 .nav__status--info .nav__item:hover a {
-  color: white;
+  color: #ffffff;
 }
 
 .nav__size--xxl .nav__item a {
@@ -7202,11 +7202,32 @@ footer {
 }
 
 .panel {
-  margin-bottom: #a4a4a4;
-  background-color: #c0c0c0;
-  border: 1px solid transparent;
-  border-radius: 4px;
   margin-bottom: 4px;
+  border: 1px solid transparent;
+  border-width: 0 1px 4px 1px;
+  border-color: #e4e7e8;
+}
+
+.panel--round {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  background-clip: padding-box;
+}
+
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: inherit;
+  background-color: #e0e0e0;
+  padding: 12px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.panel-title > a {
+  color: inherit;
 }
 
 .panel-body {
@@ -7221,23 +7242,10 @@ footer {
   clear: both;
 }
 
-.panel-heading {
-  padding: 8px;
-  border-bottom: 1px solid transparent;
-}
-
-.panel-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 14px;
-  color: inherit;
-}
-.panel-title > a {
-  color: inherit;
-}
-
 .panel-footer {
   padding: 5px;
-  background-color: #777777;
-  border-top: 1px solid #777777;
+  background-color: #e0e0e0;
+  border-top: 1px solid #d9d9d9;
 }
+
+/*# sourceMappingURL=style.css.map */
