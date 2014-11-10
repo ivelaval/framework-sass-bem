@@ -2,6 +2,35 @@
 
 @if __use-module(text) {
 
+  .text{
+    margin: 0;
+    padding: 0;
+  }
+
+  h1{
+    font-size: __em(__mapping($__map--base-font, size-h1));
+  }
+
+  h2{
+    font-size: __em(__mapping($__map--base-font, size-h2));
+  }
+
+  h3{
+    font-size: __em(__mapping($__map--base-font, size-h3));
+  }
+
+  h4{
+    font-size: __em(__mapping($__map--base-font, size-h4));
+  }
+
+  h5{
+    font-size: __em(__mapping($__map--base-font, size-h5));
+  }
+
+  h6{
+    font-size: __em(__mapping($__map--base-font, size-h6));
+  }
+
 }
 
 //endif
