@@ -7,28 +7,32 @@
     padding: 0;
   }
 
-  h1{
-    font-size: __em(__mapping($__map--base-font, size-h1));
+  .text__h1{
+    font-size: __em(__mapping($__map--base-font, size-txl));
   }
 
-  h2{
-    font-size: __em(__mapping($__map--base-font, size-h2));
+  .text__h2{
+    font-size: __em(__mapping($__map--base-font, size-gxl));
   }
 
-  h3{
-    font-size: __em(__mapping($__map--base-font, size-h3));
+  .text__h3{
+    font-size: __em(__mapping($__map--base-font, size-mxl));
   }
 
-  h4{
-    font-size: __em(__mapping($__map--base-font, size-h4));
+  .text__h4{
+    font-size: __em(__mapping($__map--base-font, size-xxl));
   }
 
-  h5{
-    font-size: __em(__mapping($__map--base-font, size-h5));
+  .text__h5{
+    font-size: __em(__mapping($__map--base-font, size-xl));
   }
 
-  h6{
-    font-size: __em(__mapping($__map--base-font, size-h6));
+  .text__h6{
+    font-size: __em(__mapping($__map--base-font, size-lg));
+  }
+
+  .text__blockquote{
+    padding: 5px;
   }
 
 }

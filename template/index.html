@@ -439,6 +439,7 @@
                 </div>
 
             </article>
+
             <hr/>
 
             <article class="layout__row">
@@ -457,15 +458,14 @@
                 <h2>Navs</h2>
                 <hr/>
                 <h3>Nav bar with nav__item</h3>
-                <div class="nav__bar nav__bar--danger nav--round">
+                <div class="nav__bar nav__bar--normal nav--round">
 
                     <ul class="nav nav--right nav__size--xl">
                         <li class="nav__item"><a href="javascript:;">Configuration</a></li>
                         <li class="nav__item"><a href="javascript:;">Profile <span class="icon icon__cog"></span></a></li>
                     </ul>
 
-                    <ul class="nav nav--horizontal nav--left nav__size--xl nav__status--danger">
-                        <li class="nav__item"><a href="javascript:;"><span class="icon icon__cog icon--lg"></span></a> </li>
+                    <ul class="nav nav--horizontal nav--left nav__size--xl nav__status--normal">
                         <li class="nav__item"><a href="javascript:;">Home</a></li>
                         <li class="nav__item"><a href="javascript:;">List</a></li>
                         <li class="nav__item "><a href="javascript:;">Contact</a></li>
@@ -475,8 +475,8 @@
                 <hr/>
                 <h3>Nav block</h3>
 
-                <nav class="nav__block nav__block--warning nav__block--lg nav--round">
-                    <h4 class="nav__block-header nav--left"> <a href="javascript:;"><span class="icon icon__chart-pie icon--md"></span> Zerw UI</a></h4>
+                <nav class="nav__block nav__block--normal nav__block--lg nav--round">
+                    <span class="nav__block-header nav--left"> <a href="javascript:;">Zerw UI</a></span>
                     <ul class="nav__block-menu nav--right">
                         <li><a href="javascript:;">Home</a></li>
                         <li><a href="javascript:;">Categories</a></li>
@@ -580,13 +580,15 @@
 
                     <!-- Responsive table starts here -->
                     <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
-                    <div class="table-responsive-vertical shadow-z-1">
+                    <div class="content__table-responsive">
                         <!-- Table starts here -->
-                        <table id="table" class="table table-hover table-mc-light-blue">
+                        <table class="table table--hover table--bordered table--striped">
                             <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
+                                <th>last name</th>
+                                <th>Link</th>
                                 <th>Link</th>
                                 <th>Status</th>
                             </tr>
@@ -595,74 +597,49 @@
                             <tr>
                                 <td data-title="ID">1</td>
                                 <td data-title="Name">Material Design Sidebar</td>
-                                <td data-title="Link">
-                                    <a href="javascript:;" target="_blank">Link</a></td>
+                                <td data-title="Name">Material Design Sidebar</td>
+                                <td data-title="Link"><a href="javascript:;" target="_blank">Link</a></td>
+                                <td data-title="Link"><a href="javascript:;" target="_blank">Link</a></td>
                                 <td data-title="Status">Completed</td>
                             </tr>
                             <tr>
                                 <td data-title="ID">2</td>
-                                <td data-title="Name">Material Design Tiles</td>
-                                <td data-title="Link">
-                                    <a href="javascript:;" target="_blank">Link</a>
-                                </td>
+                                <td data-title="Name">Material Design Sidebar</td>
+                                <td data-title="Name">Material Design Sidebar</td>
+                                <td data-title="Link"><a href="javascript:;" target="_blank">Link</a></td>
+                                <td data-title="Link"><a href="javascript:;" target="_blank">Link</a></td>
                                 <td data-title="Status">Completed</td>
                             </tr>
                             <tr>
                                 <td data-title="ID">3</td>
-                                <td data-title="Name">Material Design Animation Timing</td>
-                                <td data-title="Link">
-                                    <a href="javascript:;" target="_blank">Link</a>
-                                </td>
+                                <td data-title="Name">Material Design Sidebar</td>
+                                <td data-title="Name">Material Design Sidebar</td>
+                                <td data-title="Link"><a href="javascript:;" target="_blank">Link</a></td>
+                                <td data-title="Link"><a href="javascript:;" target="_blank">Link</a></td>
                                 <td data-title="Status">Completed</td>
                             </tr>
-                            <tr>
-                                <td data-title="ID">4</td>
-                                <td data-title="Name">Material Design Iconic Font</td>
-                                <td data-title="Link">
-                                    <a href="javascript:;" target="_blank">Link</a>
-                                </td>
-                                <td data-title="Status">Completed</td>
-                            </tr>
-                            <tr>
-                                <td data-title="ID">5</td>
-                                <td data-title="Name">Material Design Typography</td>
-                                <td data-title="Link">
-                                    <a href="javascript:;" target="_blank">Link</a>
-                                </td>
-                                <td data-title="Status">Completed</td>
-                            </tr>
-                            <tr>
-                                <td data-title="ID">6</td>
-                                <td data-title="Name">Material Design Buttons</td>
-                                <td data-title="Link">
-                                    <a href="javascript:;" target="_blank">Link</a>
-                                </td>
-                                <td data-title="Status">In progress</td>
-                            </tr>
-                            <tr>
-                                <td data-title="ID">7</td>
-                                <td data-title="Name">Material Design Form Elements</td>
-                                <td data-title="Link">
-                                    <a href="javascript:;" target="_blank">Link</a>
-                                </td>
-                                <td data-title="Status">In progress</td>
-                            </tr>
+
                             </tbody>
                         </table>
                     </div>
 
             </article>
+
             <hr/>
              <article class="layout__row">
             <h2>Text</h2>
 
-                 <h1 class="text">Header title 1</h1>
-                 <h2 class="text">Header title 2</h2>
-                 <h3 class="text">Header title 3</h3>
-                 <h4 class="text">Header title 4</h4>
-                 <h5 class="text">Header title 5</h5>
-                 <h6 class="text">Header title 6</h6>
-
+                 <h1 class="text text__h1">Header title 1</h1>
+                 <h2 class="text text__h2">Header title 2</h2>
+                 <h3 class="text text__h3">Header title 3</h3>
+                 <h4 class="text text__h4">Header title 4</h4>
+                 <h5 class="text text__h5">Header title 5</h5>
+                 <h6 class="text text__h6">Header title 6</h6>
+                 <hr/>
+                 <blockquote class=text__blockquote">
+                     <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus.</p>
+                     <small>Steve Jobs, CEO Apple</small>
+                 </blockquote>
             </article>
             <hr/>
             <article class="layout__row">

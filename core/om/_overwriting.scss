@@ -1,9 +1,8 @@
-// OMO > Overwriting ==========================================================================
+// OM > Overwriting ==========================================================================
 
 //---------------------------------------------
-//  Overwriting public configuration
+//  OVERWRITING PUBLIC CONFIGURATION
 //---------------------------------------------
-
 $__zerw-debug: false !default;
 $__zerw-all-modules: true !default;
 $__zerw-normalize: true !default;
@@ -84,17 +83,22 @@ $__dimensions-xs: 20 !default;
 //---------------------------------------------
 //  FONT PROPERTIES
 //---------------------------------------------
-$__font-size-tera: 96 !default;
-$__font-size-giga: 72 !default;
-$__font-size-mega: 48 !default;
-$__font-size-h1: 36 !default;
-$__font-size-h2: 30 !default;
-$__font-size-h3: 24 !default;
-$__font-size-h4: 20 !default;
-$__font-size-h5: 16 !default;
-$__font-size-h6: 14 !default;
-$__font-size-byte: 12 !default;
-$__font-size-bit: 10 !default;
+$__font-size-geopxl: 500 !default;
+$__font-size-bxl: 380 !default;
+$__font-size-yxl: 240 !default;
+$__font-size-zxl: 160 !default;
+$__font-size-exl: 120 !default;
+$__font-size-pxl: 96 !default;
+$__font-size-txl: 72 !default;
+$__font-size-gxl: 48 !default;
+$__font-size-mxl: 36 !default;
+$__font-size-xxl: 30 !default;
+$__font-size-xl: 24 !default;
+$__font-size-lg: 20 !default;
+$__font-size-md: 16 !default;
+$__font-size-sm: 14 !default;
+$__font-size-xs: 12 !default;
+$__font-size-xxs: 10 !default;
 $__font-family: 'Open Sans', sans-serif !default;
 $__font-size-base-em: 16 !default;
 $__font-size-default: 15 !default;
