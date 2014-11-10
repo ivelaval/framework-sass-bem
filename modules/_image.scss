@@ -16,9 +16,28 @@
     @extend %__shadow-inside;
   }
 
-  .image--round {
-    @include __ui-round();
+  .image__avatar {
+    padding: 0;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    float: left;
+
+    span {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
   }
+
+  .image__avatar--round {
+    @include __ui-round(100%);
+  }
+
+  //-------------------------------------------
+  //  Run Mixins
+  //-------------------------------------------
+  @include __base-size(image__avatar, 5, 2);
 
 }
 

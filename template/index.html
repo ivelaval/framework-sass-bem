@@ -66,11 +66,12 @@
                 <h2>Buttons</h2>
 
                 <input type="button" value="aceptar" />
-                <input type="button" value="Normal" class="button button--normal button--xl"/>
-                <input type="button" value="Normal" class="button button--danger button--lg"/>
-                <input type="button" value="Danger" class="button button--warning button--md"/>
-                <input type="button" value="Warning" class="button button--success button--sm"/>
-                <input type="button" value="Success" class="button button--info button--xs"/>
+                <input type="button" value="Normal xxl" class="button button--normal button--xxl"/>
+                <input type="button" value="Normal xl" class="button button--danger button--xl"/>
+                <input type="button" value="Normal lg" class="button button--danger button--lg"/>
+                <input type="button" value="Danger md" class="button button--warning button--md"/>
+                <input type="button" value="Warning sm" class="button button--success button--sm"/>
+                <input type="button" value="Success xs" class="button button--info button--xs"/>
 
                 <a href="javascript:;" class="button button--danger button--lg">Link</a>
                 <a href="javascript:;" class="button button--danger button--lg button--fluid">Link</a>
@@ -93,11 +94,13 @@
             <article class="layout__row">
                 <h2>Badges</h2>
                 <p>
-                    <span class="badge badge--normal badge--shadow-inside">+88888</span>
-                    <span class="badge badge--danger badge--shadow-inside">+999</span>
-                    <span class="badge badge--warning badge--shadow-inside">+999</span>
-                    <span class="badge badge--success badge--shadow-inside">+999</span>
-                    <span class="badge badge--info badge--shadow-inside">+999</span>
+                    <span class="badge badge--normal badge--shadow-inside">+999</span>
+                    <span class="badge badge--normal badge--shadow-inside badge--xxl">+88888</span>
+                    <span class="badge badge--danger badge--shadow-inside badge--xl">+999</span>
+                    <span class="badge badge--warning badge--shadow-inside badge--lg">+999</span>
+                    <span class="badge badge--success badge--shadow-inside badge--md">+999</span>
+                    <span class="badge badge--info badge--shadow-inside badge--sm">+999</span>
+                    <span class="badge badge--normal badge--shadow-inside badge--xs">+999</span>
                     <span class="badge__float badge__float--warning" data-badge="60">Badge Notification Example</span>
                 </p>
             </article>
@@ -366,12 +369,12 @@
             <article class="layout__row">
                 <h2>Addon</h2>
                     <span class="addon">Addon</span>
+                <span class="addon addon--normal addon--xxl">Addon danger xxl</span>
                     <span class="addon addon--normal addon--xl">Addon danger xl</span>
                     <span class="addon addon--danger addon--lg">Addon danger lg</span>
                     <span class="addon addon--warning addon--md addon--shadow-inside">Addon warning md, shadow inside</span>
                     <span class="addon addon--success addon--sm">Addon success sm</span>
                     <span class="addon addon--info addon--xs">Addon info xs</span>
-                    <a href="javascript:;" class="addon addon--warning">Addon link</a>
                     <hr/>
                     <span class="addon addon--lg addon--danger"><span class="icon icon--lg icon__battery-4"></span></span>
                     <span class="addon addon--md addon--warning"><span class="icon icon--lg icon__battery-4"></span></span>
@@ -391,10 +394,34 @@
             </article>
             <hr/>
             <article class="layout__row">
+                <h2>Icons</h2>
+                <hr/>
+                <div class="layout__block--inline">
+                    <a href="javascript:;"  class="icon icon__round icon__round--normal icon__round--xxl icon__add icon--xxl icon__round--shadow-dark"></a>
+                </div>
+                <div class="layout__block--inline">
+                    <a href="javascript:;"  class="icon icon__round icon__round--danger icon__round--xl icon__remove icon--xl "></a>
+                </div>
+                <div class="layout__block--inline">
+                    <a href="javascript:;"  class="icon icon__round icon__round--warning icon__round--lg icon__upload icon--lg"></a>
+                </div>
+                <div class="layout__block--inline">
+                    <a href="javascript:;"  class="icon icon__round icon__round--success icon__round--md icon__close-delete icon--md"></a>
+                </div>
+                <div class="layout__block--inline">
+                <a href="javascript:;"  class="icon icon__round icon__round--info icon__round--sm icon__apple icon--sm"></a>
+                </div>
+                <div class="layout__block--inline">
+                    <a href="javascript:;"  class="icon icon__round icon__round--info icon__round--xs icon__archive icon--xs"></a>
+                </div>
+
+            </article>
+            <hr/>
+            <article class="layout__row">
                 <h2>Image</h2>
                 <div class="layout__col-lg-6">
                     <div class="layout__block--p10">
-                        <img src="https://lh4.googleusercontent.com/-1cDjVZHyh14/T_RUAivRohI/AAAAAAAAAbg/Wv6wcWuwWxY/w973-h567-no/135863_1338827551_large.jpg" class="image image__fluid image--round image--shadow-inside"/>
+                        <img src="https://lh4.googleusercontent.com/-1cDjVZHyh14/T_RUAivRohI/AAAAAAAAAbg/Wv6wcWuwWxY/w973-h567-no/135863_1338827551_large.jpg" class="image image__fluid image--shadow-inside"/>
                     </div>
                 </div>
                 <div class="layout__col-lg-6">
@@ -402,24 +429,26 @@
                         <img src="https://lh6.googleusercontent.com/-_dCaJuPN4FI/T_RUMYly7GI/AAAAAAAAAe8/A42g1ILXsFI/w977-h550-no/abstractism_by_mangotangofox-d36lc3c.jpg" class="image image__fluid image--shadow-inside"/>
                     </div>
                 </div>
+                <div class="layout__col-lg-12">
+                    <img class="image image__avatar image__avatar--round image__avatar--xxl" src="https://lh4.googleusercontent.com/-1cDjVZHyh14/T_RUAivRohI/AAAAAAAAAbg/Wv6wcWuwWxY/w973-h567-no/135863_1338827551_large.jpg" border="0"/>
+                    <img class="image image__avatar image__avatar--round image__avatar--xl" src="https://lh4.googleusercontent.com/-1cDjVZHyh14/T_RUAivRohI/AAAAAAAAAbg/Wv6wcWuwWxY/w973-h567-no/135863_1338827551_large.jpg" border="0"/>
+                    <img class="image image__avatar image__avatar--round image__avatar--lg" src="https://lh4.googleusercontent.com/-1cDjVZHyh14/T_RUAivRohI/AAAAAAAAAbg/Wv6wcWuwWxY/w973-h567-no/135863_1338827551_large.jpg" border="0"/>
+                    <img class="image image__avatar image__avatar--round image__avatar--md" src="https://lh4.googleusercontent.com/-1cDjVZHyh14/T_RUAivRohI/AAAAAAAAAbg/Wv6wcWuwWxY/w973-h567-no/135863_1338827551_large.jpg" border="0"/>
+                    <img class="image image__avatar image__avatar--round image__avatar--sm" src="https://lh4.googleusercontent.com/-1cDjVZHyh14/T_RUAivRohI/AAAAAAAAAbg/Wv6wcWuwWxY/w973-h567-no/135863_1338827551_large.jpg" border="0"/>
+                    <img class="image image__avatar image__avatar--round image__avatar--xs" src="https://lh4.googleusercontent.com/-1cDjVZHyh14/T_RUAivRohI/AAAAAAAAAbg/Wv6wcWuwWxY/w973-h567-no/135863_1338827551_large.jpg" border="0"/>
+                </div>
 
             </article>
             <hr/>
 
             <article class="layout__row">
                 <h2>Labels</h2>
-                <span class="label label--normal">Normal</span>
-                <span class="label label--danger">Danger</span>
-                <span class="label label--warning">Warning</span>
-                <span class="label label--success">Success</span>
-                <span class="label label--info">Info</span>
-                <span class="label label--danger label--shadow-inside">Shadow inside</span>
-                <hr/>
-                <a href="javascript:;" class="label label--normal">Normal</a>
-                <a href="javascript:;" class="label label--danger">Normal</a>
-                <a href="javascript:;" class="label label--warning">Normal</a>
-                <a href="javascript:;" class="label label--success">Normal</a>
-                <a href="javascript:;" class="label label--info">Normal</a>
+                <span class="label label--normal label--xxl">Normal</span>
+                <span class="label label--danger label--xl">Danger</span>
+                <span class="label label--warning label--lg">Warning</span>
+                <span class="label label--success label--md">Success</span>
+                <span class="label label--info label--sm">Info</span>
+                <span class="label label--danger label--shadow-inside label--xs">Shadow inside</span>
             </article>
 
             <hr/>
@@ -445,17 +474,16 @@
                 </div>
                 <hr/>
                 <h3>Nav block</h3>
-                <nav class="nav__block nav__block--success nav__block--lg nav--round">
 
-                    <div class="nav__block-header nav--left"> <a href="javascript:;"><span class="icon icon__chart-pie icon--md"></span> Zerw UI</a></div>
-
+                <nav class="nav__block nav__block--warning nav__block--lg nav--round">
+                    <h4 class="nav__block-header nav--left"> <a href="javascript:;"><span class="icon icon__chart-pie icon--md"></span> Zerw UI</a></h4>
                     <ul class="nav__block-menu nav--right">
                         <li><a href="javascript:;">Home</a></li>
                         <li><a href="javascript:;">Categories</a></li>
                         <li><a href="javascript:;">Contact</a></li>
                     </ul>
-
                 </nav>
+
                 <hr/>
                 <h3>Nav status and size</h3>
                 <ul class="nav nav__status--success nav__size--xl">
@@ -519,24 +547,30 @@
 
             <h2>Panel</h2>
 
-                <div class="panel panel--round">
-                    <div class="panel-body">
-                        Basic panel
+                <div class="panel panel--success panel--round">
+                    <div class="panel__header">
+                        Este es el title del panel
+                    </div>
+                    <div class="panel__body">
+                        Este es el content del panel
+                    </div>
+                    <div class="panel__footer panel__footer--xs">
+                        Este es el footer del panel
                     </div>
                 </div>
 
-                <div class="panel panel--round">
-                    <div class="panel-title">Panel heading</div>
-                    <div class="panel-body">
+                <div class="panel panel--info panel--round">
+                    <div class="panel__header panel__header--xs">Panel heading</div>
+                    <div class="panel__body panel__body--lg">
                         Panel content
                     </div>
                 </div>
 
-                <div class="panel panel--round">
-                    <div class="panel-body">
+                <div class="panel panel--warning panel--round panel--shadow-inside">
+                    <div class="panel__body">
                         Panel content
                     </div>
-                    <div class="panel-footer">Panel footer</div>
+                    <div class="panel__footer panel__footer--xxl">Panel footer</div>
                 </div>
 
             </article>
@@ -544,10 +578,90 @@
             <article class="layout__row">
             <h2>Table</h2>
 
+                    <!-- Responsive table starts here -->
+                    <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+                    <div class="table-responsive-vertical shadow-z-1">
+                        <!-- Table starts here -->
+                        <table id="table" class="table table-hover table-mc-light-blue">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Link</th>
+                                <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td data-title="ID">1</td>
+                                <td data-title="Name">Material Design Sidebar</td>
+                                <td data-title="Link">
+                                    <a href="javascript:;" target="_blank">Link</a></td>
+                                <td data-title="Status">Completed</td>
+                            </tr>
+                            <tr>
+                                <td data-title="ID">2</td>
+                                <td data-title="Name">Material Design Tiles</td>
+                                <td data-title="Link">
+                                    <a href="javascript:;" target="_blank">Link</a>
+                                </td>
+                                <td data-title="Status">Completed</td>
+                            </tr>
+                            <tr>
+                                <td data-title="ID">3</td>
+                                <td data-title="Name">Material Design Animation Timing</td>
+                                <td data-title="Link">
+                                    <a href="javascript:;" target="_blank">Link</a>
+                                </td>
+                                <td data-title="Status">Completed</td>
+                            </tr>
+                            <tr>
+                                <td data-title="ID">4</td>
+                                <td data-title="Name">Material Design Iconic Font</td>
+                                <td data-title="Link">
+                                    <a href="javascript:;" target="_blank">Link</a>
+                                </td>
+                                <td data-title="Status">Completed</td>
+                            </tr>
+                            <tr>
+                                <td data-title="ID">5</td>
+                                <td data-title="Name">Material Design Typography</td>
+                                <td data-title="Link">
+                                    <a href="javascript:;" target="_blank">Link</a>
+                                </td>
+                                <td data-title="Status">Completed</td>
+                            </tr>
+                            <tr>
+                                <td data-title="ID">6</td>
+                                <td data-title="Name">Material Design Buttons</td>
+                                <td data-title="Link">
+                                    <a href="javascript:;" target="_blank">Link</a>
+                                </td>
+                                <td data-title="Status">In progress</td>
+                            </tr>
+                            <tr>
+                                <td data-title="ID">7</td>
+                                <td data-title="Name">Material Design Form Elements</td>
+                                <td data-title="Link">
+                                    <a href="javascript:;" target="_blank">Link</a>
+                                </td>
+                                <td data-title="Status">In progress</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
             </article>
             <hr/>
              <article class="layout__row">
             <h2>Text</h2>
+
+                 <h1>Header title 1</h1>
+                 <h2>Header title 2</h2>
+                 <h3>Header title 3</h3>
+                 <h4>Header title 4</h4>
+                 <h5>Header title 5</h5>
+                 <h6>Header title 6</h6>
 
             </article>
             <hr/>
@@ -558,8 +672,6 @@
                 <div class="layout__col-sm-12 layout__col-md-6 layout__col-lg-3"><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p></div>
                 <div class="layout__col-sm-12 layout__col-md-6 layout__col-lg-3"><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p></div>
             </article>
-
-
 
 
     </section>

@@ -1,5 +1,4 @@
 //module/Icon ==========================================================================
-
 @import "../core/mixins/icon__mixin";
 @import "../core/extends/icon__extend";
 
@@ -36,7 +35,6 @@
   }
 
   .icon {
-    position: relative;
     display: inline-block;
     vertical-align: middle;
     line-height: 1;
@@ -44,39 +42,54 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  .icon__round {
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    @include __ui-round(100%);
+
+    &:before {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+  }
+
+  .icon--shadow-dark,
+  .icon__round--shadow-dark {
+    @extend %__shadow-dark;
+  }
+
+  .icon--shadow-light,
+  .icon__round--shadow-light {
+    @extend %__shadow-light;
+  }
+
+  .icon--xxl {
+    @include __icon-mixin--size-element(70);
+  }
+
   .icon--xl {
-    $size: 60;
-    $__line-height: $size - 10;
-    font-size: __em($size);
-    line-height: __line-height($__line-height);
+    @include __icon-mixin--size-element(60);
   }
 
   .icon--lg {
-    $size: 50;
-    $__line-height: $size - 10;
-    font-size: __em($size);
-    line-height: __line-height($__line-height);
+    @include __icon-mixin--size-element(50);
   }
 
   .icon--md {
-    $size: 40;
-    $__line-height: $size - 10;
-    font-size: __em($size);
-    line-height: __line-height($__line-height);
+    @include __icon-mixin--size-element(40);
   }
 
   .icon--sm {
-    $size: 30;
-    $__line-height: $size - 10;
-    font-size: __em($size);
-    line-height: __line-height($__line-height);
+    @include __icon-mixin--size-element(30);
   }
 
   .icon--xs {
-    $size: 20;
-    $__line-height: $size - 10;
-    font-size: __em($size);
-    line-height: __line-height($__line-height);
+    @include __icon-mixin--size-element(20);
   }
 
   .icon__clock:before {
@@ -2565,5 +2578,12 @@
   .icon__cloud-4:before {
     content: "\e2b4";
   }
+
+  //-------------------------------------------
+  //  Run Mixins
+  //-------------------------------------------
+  @include __base-status(icon, true);
+  @include __base-status(icon__round, true);
+  @include __base-size(icon__round);
 
 }

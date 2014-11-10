@@ -1,3 +1,8 @@
 //-------------------------------------------
 //  Icon Mixins
 //-------------------------------------------
+@mixin __icon-mixin--size-element($size){
+  $__line-height: $size - 10;
+  font-size: __em($size);
+  line-height: __line-height($__line-height);
+}

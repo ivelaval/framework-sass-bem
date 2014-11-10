@@ -78,21 +78,20 @@ a {
     color: rgba(47, 40, 54, 0.59);
   }
 
-
   &[href = ""] {
-
     @include __debug(){
       background: red;
       color: white;
       font-size: x-large;
     }
-
   }
 
   &[href ^= http] {
-    display: inline-block;
-    color: red;
-    transform: rotate(180deg);
+    @include __debug() {
+      display: inline-block;
+      color: red;
+      transform: rotate(180deg);
+    }
   }
 
 }
@@ -178,6 +177,11 @@ blockquote,
 pre,
 code {
   font-size: __em(__mapping($__map--base-font, size));
+}
+
+h1, h2, h3, h4, h5, h6{
+  display: block;
+  @extend %__clearfix;
 }
 
 //--------------------------------------------------------------

@@ -1,5 +1,4 @@
 //module/Menu ==========================================================================
-
 @import "../core/extends/nav__extend";
 @import "../core/mixins/nav__mixin";
 
@@ -14,28 +13,23 @@
     margin-bottom: __em(__mapping($__map--base, margin-bottom));
     list-style: none;
     display: block;
-    @include __clearfix;
-
+    @extend %__clearfix;
   }
 
-  .nav--horizontal{
-
-    .nav__item{
+  .nav--horizontal {
+    .nav__item {
       display: inline-block;
       vertical-align: middle;
     }
-
   }
 
-  .nav--vertical{
+  .nav--vertical {
 
-    .nav__item{
-
+    .nav__item {
       @include __ui-round(0);
       display: block;
 
-      &:nth-child(n)
-      {
+      &:nth-child(n) {
         border-bottom: 0;
       }
 
@@ -52,23 +46,23 @@
 
   }
 
-  .nav--inline{
+  .nav--inline {
     display: inline-block;
     vertical-align: middle;
   }
 
-  .nav--left{
+  .nav--left {
     float: left;
   }
 
-  .nav--right{
+  .nav--right {
     float: right;
   }
 
   //------------------------------------------------
   // Nav bar
   //------------------------------------------------
-  .nav__bar{
+  .nav__bar {
     position: relative;
     margin: 0;
     padding: 0 10px;
@@ -76,42 +70,40 @@
     @include __ui-border();
     @include __ui-user-select();
     @include __nav-mixin--size-nav-bar();
-    @include __clearfix();
+    @extend %__clearfix;
 
-    .nav{
+    .nav {
       margin-bottom: 0;
     }
 
-    .nav__item{
+    .nav__item {
       border: 0;
     }
 
-    p,h1,h2,h3,h4,h5,h6{
+    p, h1, h2, h3, h4, h5, h6 {
       line-height: 1;
       margin: 0;
       padding: 0;
     }
 
-    ul{
-      li,a{
+    ul {
+      li, a {
         margin-right: -4px;
       }
     }
 
   }
 
-  @include __base-status(nav__bar, true);
-
-  .nav--round{
+  .nav--round {
     @include __ui-round();
   }
 
-  .nav--fixed{
+  .nav--fixed {
     position: fixed;
     top: 0;
     left: 0;
 
-    body{
+    body {
       padding-top: 50px;
     }
 
@@ -120,29 +112,26 @@
   //------------------------------------------------
   // Nav block
   //------------------------------------------------
-  .nav__block{
+  .nav__block {
 
     @include __ui-border();
-    @include __clearfix();
+    @extend %__clearfix;
 
-    .nav__block-header{
+    .nav__block-header {
       @extend %__nav-extend--inline;
-      @include __clearfix();
+      @extend %__clearfix;
     }
 
-    .nav__block-menu{
+    .nav__block-menu {
       @extend %__nav-extend--inline;
-      @include __clearfix();
-      li{
+      @extend %__clearfix;
+
+      li {
         @extend %__nav-extend--inline;
 
-        a{
+        a {
           padding: 10px;
           @include __ui-round();
-
-          &:hover{
-            background-color: #00a10b;
-          }
         }
 
       }
@@ -151,17 +140,13 @@
 
   }
 
-  @include __base-status(nav__block, true);
-  @include __base-size(nav__block);
-
-
-  .nav__item{
+  .nav__item {
 
     @extend %__nav-extend--inline;
     @include __ui-transition-o(all 0.3s ease-out);
     @include __ui-border();
     @include __ui-round();
-    @include __clearfix();
+    @extend %__clearfix;
 
     font-size: __em(__mapping($__map--base-font, size));
     border: 1px solid __mapping($__map--ui-color-status, normal);
@@ -171,24 +156,34 @@
       text-decoration: none;
     }
 
-    .nav__item--child-float-right{
+    .nav__item--child-float-right {
       float: right;
       margin-left: 4px;
     }
 
   }
 
-  .nav__item--text-center{
+  .nav__item--text-center {
     @extend %__nav-extend--text-center;
   }
 
-  .nav__item--without-border{
+  .nav__item--without-border {
     border: none;
   }
 
-  @include __base-status(nav__item, true);
-  @include __base-size(nav__item);
-  @include __nav-mixin--status(nav__status);
-  @include __nav-mixin--size(nav__size);
+  //-------------------------------------------
+  //  Run Mixins
+  //-------------------------------------------
+  @include __base-status(nav__bar, true);
 
-}//endif
+  @include __nav-mixin--status-nav-block();
+  @include __base-padding(nav__block);
+
+  @include __base-status(nav__item, true);
+  @include __base-padding(nav__item);
+  @include __nav-mixin--status(nav__status);
+  @include __nav-mixin--padding(nav__size);
+
+}
+
+//endif

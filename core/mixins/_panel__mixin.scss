@@ -1,0 +1,55 @@
+//-------------------------------------------
+//  Panel Mixins
+//-------------------------------------------
+
+@mixin __panel-mixin--status($prefix) {
+
+  $colorstatus: $__map--ui-color-status;
+  @each $key, $color in $colorstatus {
+
+    $color-text: __dynamic-text-color($color);
+    $color-dark: __transform-color-dd($color, $darken: __mapping($__map--ui, percent-color-dark));
+
+    .#{$prefix}--#{$key}{
+
+      border-color: $color-dark;
+
+      .#{$prefix}__header,
+      .#{$prefix}__footer{
+        background-color: $color;
+        color: $color-text;
+      }
+
+    }
+
+  }
+
+}
+
+@mixin __panel-mixin--padding($prefix, $plf: md) {
+
+  $psize: $__map--base-padding-size;
+  @each $key, $size in $psize {
+    .#{$prefix}--#{$key}{
+      .#{$prefix}__header,
+      .#{$prefix}__body,
+      .#{$prefix}__footer{
+        padding: #{__em($size, __mapping($__map--base, size-base-em))} #{__em(__mapping($__map--base-padding-size, $plf), __mapping($__map--base, size-base-em))};
+      }
+    }
+  }
+}
+
+@mixin __panel-mixin--padding-child($plf: md) {
+  $psize: $__map--base-padding-size;
+  @each $key, $size in $psize {
+    .panel{
+      .panel__header--#{$key},
+      .panel__body--#{$key},
+      .panel__footer--#{$key}
+      {
+        padding: #{__em($size, __mapping($__map--base, size-base-em))} #{__em(__mapping($__map--base-padding-size, $plf), __mapping($__map--base, size-base-em))};
+      }
+    }
+  }
+}

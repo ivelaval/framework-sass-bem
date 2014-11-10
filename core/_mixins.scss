@@ -40,13 +40,36 @@
   }
 }
 
-@mixin __base-size($prefix) {
+@mixin __base-size($prefix, $scale: -1, $contrast: -1) {
+  $psize: $__map--base-dimensions-size;
+  @each $key, $size in $psize {
+
+    @if $scale != -1 {
+      $size: ($size + $scale);
+    }
+
+    @if $contrast != -1{
+      $size: ($size * $contrast);
+    }
+
+    .#{$prefix}--#{$key} {
+      width: #{__em($size, __mapping($__map--base, size-base-em))};
+      height: #{__em($size, __mapping($__map--base, size-base-em))};
+    }
+  }
+}
+
+@mixin __base-padding($prefix, $plf: lg) {
   $psize: $__map--base-padding-size;
   @each $key, $size in $psize {
     .#{$prefix}--#{$key} {
-      padding: #{$size} #{__mapping($__map--base-padding-size, lg)};
+      padding: #{__em($size, __mapping($__map--base, size-base-em))} #{__em(__mapping($__map--base-padding-size, $plf), __mapping($__map--base, size-base-em))};
     }
   }
+}
+
+@mixin __base-padding-change($size, $plf: lg) {
+      padding: #{__em($size, __mapping($__map--base, size-base-em))} #{__em(__mapping($__map--base-padding-size, $plf), __mapping($__map--base, size-base-em))};
 }
 
 @mixin __base-skin($color: -1, $color-text: -1, $extra: false, $underline: false) {
@@ -81,17 +104,6 @@
     }
   }
   color: $color-text;
-}
-
-@mixin __clearfix() {
-  *zoom: 1;
-  &:before, &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
 }
 
 //------------------------------------------------
@@ -151,7 +163,7 @@
   border-top-left-radius: $radius;
 }
 
-@mixin __ui-border($b: 1px solid transparent, $bw: 0 1px 4px 1px) {
+@mixin __ui-border($b: 1px solid transparent, $bw: 0 __em(1, __mapping($__map--base, size-base-em)) __em(4, __mapping($__map--base, size-base-em)) __em(1, __mapping($__map--base, size-base-em))) {
   @if ($b != -1) {
     border: #{$b};
   }

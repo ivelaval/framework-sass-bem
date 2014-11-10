@@ -1,5 +1,4 @@
 //module/Badge ==========================================================================
-
 @import "../core/mixins/badge__mixin";
 @import "../core/extends/badge__extend";
 
@@ -7,15 +6,12 @@
 
   .badge {
     @extend %__badge-extend--badge;
-    font-size: __em(12);
-    @include __ui-round(15px);
+    @include __ui-round(__em(15));
   }
 
   .badge--shadow-inside {
     @extend %__shadow-inside;
   }
-
-  @include __base-status(badge);
 
   .badge__float {
     position: relative;
@@ -27,8 +23,7 @@
     top: -15px;
     right: -20px;
     @extend %__badge-extend--badge;
-    font-size: __em(12);
-    @include __ui-round(15px);
+    @include __ui-round(__em(15));
   }
 
   .badge__float--normal[data-badge]:after {
@@ -50,6 +45,9 @@
   .badge__float--info[data-badge]:after {
     @include __base-skin(__mapping($__map--ui-color-status, info));
   }
+
+  @include __base-status(badge);
+  @include __base-padding(badge, md);
 
 }
 

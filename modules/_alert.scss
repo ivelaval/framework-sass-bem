@@ -1,5 +1,4 @@
 //module/Alert ==========================================================================
-
 @import "../core/mixins/alert__mixin";
 @import "../core/extends/alert__extend";
 
@@ -20,8 +19,6 @@
     padding-right: __em(20);
   }
 
-  @include __base-status(alert, true, true);
-
   .alert__title {
     margin-top: 0;
     color: inherit;
@@ -31,12 +28,17 @@
     @extend %__alert-extend--button;
     position: absolute;
     opacity: 1;
-    top: _em(2);
-    right: __em(8);
+    top: __em(2, __mapping($__map--base, size-base-em));
+    right: __em(8, __mapping($__map--base, size-base-em));
     color: inherit;
     font-weight: bold;
     outline: 0;
   }
+
+  //-------------------------------------------
+  //  Run Mixins
+  //-------------------------------------------
+  @include __base-status(alert, true, true);
 
 }
 

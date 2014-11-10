@@ -1,5 +1,4 @@
 //module/layout ==========================================================================
-
 @import "../core/mixins/layout__mixin";
 @import "../core/extends/layout__extend";
 
@@ -14,6 +13,12 @@
 
   .layout__block {
     display: block;
+    position: relative;
+  }
+
+  .layout__block--inline {
+    display: inline-block;
+    vertical-align: middle;
     position: relative;
   }
 
@@ -62,7 +67,7 @@
     padding: 10px;
     overflow-x: hidden;
     overflow-y: auto;
-    @include __clearfix();
+    @extend %__clearfix;
   }
 
   .layout__sidebar--left {

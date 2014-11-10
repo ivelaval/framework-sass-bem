@@ -3,12 +3,13 @@
 //-------------------------------------------
 %__badge-extend--badge {
   display: inline-block;
-  min-width: 10px;
-  padding: 4px 8px;
+  min-width: __em(10);
+  padding: #{__em(__mapping($__map--base-padding-size, sm), __mapping($__map--base, size-base-em))} #{__em(__mapping($__map--base-padding-size, md), __mapping($__map--base, size-base-em))};
   font-weight: bold;
   color: inherit;
   line-height: 1;
   vertical-align: middle;
   white-space: nowrap;
   text-align: center;
+  font-size: __em(12);
 }

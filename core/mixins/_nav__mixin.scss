@@ -18,18 +18,18 @@
   }
 }
 
-@mixin __nav-mixin--size($prefix) {
+@mixin __nav-mixin--padding($prefix) {
   $psize: $__map--base-padding-size;
   @each $key, $size in $psize {
     .#{$prefix}--#{$key}{
       .nav__item{
         a {
           display: block;
-          padding: #{$size} #{__mapping($__map--base-padding-size, lg)};
+          @include __base-padding-change($size);
         }
       }
       a.nav__item{
-        padding: #{$size} #{__mapping($__map--base-padding-size, lg)};
+        @include __base-padding-change($size);
       }
     }
 
@@ -39,14 +39,12 @@
 
 @mixin __nav-mixin--size-nav-bar() {
   $psize: $__map--base-padding-size;
-
   .nav{
     display: table-cell;
     .nav__item{
       @include __ui-border(0);
       @include __ui-round(0);
     }
-
     @each $key, $size in $psize {
       .nav__item--#{$key}{
 
@@ -56,8 +54,39 @@
         }
       }
     }
-
   }
+}
 
+@mixin __nav-mixin--status-nav-block() {
+  $colorstatus: $__map--ui-color-status;
+  @each $key, $color in $colorstatus {
 
+    $color-text: __dynamic-text-color($color);
+    $color-dark: __transform-color-dd($color, $darken: __mapping($__map--ui, percent-color-dark));
+
+    .nav__block--#{$key}{
+
+      @include __ui-border();
+      background-color: $color;
+      border-color: $color-dark;
+
+      .nav__block-header{
+        a{
+          color: $color-text;
+        }
+      }
+
+      .nav__block-menu{
+        li{
+          a{
+            color: $color-text;
+            &:hover{
+              background-color: $color-dark;
+            }
+          }
+        }
+      }
+
+    }
+  }
 }

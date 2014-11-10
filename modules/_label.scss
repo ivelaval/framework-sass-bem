@@ -10,15 +10,19 @@
     font-size: 70%;
     line-height: 1;
     text-align: center;
-    border-radius: __mapping($__map--ui, border-radius);
-    padding: __mapping($__map--base-padding-size, xs) __mapping($__map--base-padding-size, xs);
+    border-radius: __mapping($__map--ui, border-radius);;
   }
 
   .label--shadow-inside {
     @extend %__shadow-inside;
   }
 
+  //-------------------------------------------
+  //  Run Mixins
+  //-------------------------------------------
   @include __base-status(label);
-  @include __base-size(label);
+  @include __base-padding(label);
 
-}//endif
+}
+
+//endif

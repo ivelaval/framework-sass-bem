@@ -10,11 +10,7 @@
   color: #{$color-text};
 }
 
-@mixin __button-mixin--size() {
-  $psize: $__map--base-padding-size;
-  @each $key, $size in $psize {
-    .button--#{$key} {
-      padding: #{$size} #{__mapping($__map--base-padding-size, lg)};
-    }
-  }
-}
+//-------------------------------------------
+//  Button Run Mixins
+//-------------------------------------------
+@include __base-padding(button);

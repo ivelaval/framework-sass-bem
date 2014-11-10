@@ -1,5 +1,4 @@
 //module/Breadcrumb ==========================================================================
-
 @import "../core/mixins/breadcrumb__mixin";
 @import "../core/extends/breadcrumb__extend";
 
@@ -12,8 +11,7 @@
   }
 
   @include __base-status(breadcrumb, true);
-
-  @include __base-size(breadcrumb);
+  @include __base-padding(breadcrumb);
 
   .breadcrumb > li {
     display: inline-block;

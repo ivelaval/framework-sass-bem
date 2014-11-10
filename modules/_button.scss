@@ -1,5 +1,4 @@
 //module/Button ==========================================================================
-
 @import "../core/mixins/button__mixin";
 @import "../core/extends/button__extend";
 
@@ -16,16 +15,15 @@
       @extend %__button-extend--outline-off;
     }
     &:active {
-      margin-top: 2px;
-      border-bottom-width: 2px;
+      margin-top: __em(2, __mapping($__map--base, size-base-em));
+      border-bottom-width: __em(2, __mapping($__map--base, size-base-em));
       @extend %__button-extend--outline-off;
     }
   }
 
-  .button__round{
+  .button__round {
     padding: 6px;
     border-radius: 50%;
-    background-color: #cfcfcf;
   }
 
   .button__group {
@@ -62,17 +60,18 @@
     border-collapse: separate;
   }
 
-  @include __base-status(button, true);
-
   .button--link {
     @include __button-mixin--skin();
   }
 
-  @include __button-mixin--size();
-
   .button--fluid {
     @extend %__fluid;
   }
+
+  //-------------------------------------------
+  //  Run Mixins
+  //-------------------------------------------
+  @include __base-status(button, true);
 
 }
 

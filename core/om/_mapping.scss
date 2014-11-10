@@ -48,10 +48,11 @@ $__map--base: (
         margin-left-sidebar: $__margin-left-sidebar,
         padding: $__padding,
         max-width: $__width-fixed,
+        size-base-em: $__size-base-em,
         margin-top: $__margin-top,
         margin-bottom: $__margin-bottom,
         margin-left: $__margin-left,
-        margin-right: $__margin-right,
+        margin-right: $__margin-right
 );
 
 //---------------------------------------------
@@ -66,22 +67,31 @@ $__map--base-layout: (
 //  Map base breakpoints screen
 //---------------------------------------------
 $__map--base-breakpoints: (
-        xs: $__breakpoint-xs,
-        sm: $__breakpoint-sm,
-        md: $__breakpoint-md,
-        lg: $__breakpoint-lg
+        xs:     $__breakpoint-xs,
+        sm:     $__breakpoint-sm,
+        md:     $__breakpoint-md,
+        lg:     $__breakpoint-lg
 );
 
 //---------------------------------------------
 //  Map base padding generic sizes
 //---------------------------------------------
 $__map--base-padding-size: (
-        xxl: $__padding-xxl,
-        xl: $__padding-xl,
-        xs: $__padding-xs,
-        sm: $__padding-sm,
-        md: $__padding-md,
-        lg: $__padding-lg
+        xxl:    $__padding-xxl,
+        xl:     $__padding-xl,
+        xs:     $__padding-xs,
+        sm:     $__padding-sm,
+        md:     $__padding-md,
+        lg:     $__padding-lg
+);
+
+$__map--base-dimensions-size: (
+        xxl:    $__dimensions-xxl,
+        xl:     $__dimensions-xl,
+        xs:     $__dimensions-xs,
+        sm:     $__dimensions-sm,
+        md:     $__dimensions-md,
+        lg:     $__dimensions-lg
 );
 
 //---------------------------------------------

@@ -1,39 +1,48 @@
 //module/panel ==========================================================================
+@import "../core/mixins/panel__mixin";
+@import "../core/extends/panel__extend";
+
 @if __use-module(panel) {
 
   .panel {
     margin-bottom: 4px;
     @include __ui-border();
     border-color: __mapping($__map--ui-color-status, normal);
+
+    .panel__header {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: __em(__mapping($__map--base-padding-size, lg));
+      border-bottom: 1px transparent;
+      @include __ui-round--top(4px);
+
+      > a {
+        color: inherit;
+      }
+    }
+
+    .panel__body {
+      padding: 8px;
+      @extend %__clearfix;
+    }
+
+    .panel__footer {
+      padding: __em(__mapping($__map--base-padding-size, lg));
+      border-top: 1px solid transparent;
+    }
+
   }
 
-  .panel--round{
+  .panel--round {
     @include __ui-round();
   }
 
-  .panel-title {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: ceil((12px * 1.125));
-    color: inherit;
-    background-color: #e0e0e0;
-    padding: 12px;
-    @include __ui-round--top(4px);
-
-    > a {
-      color: inherit;
-    }
+  .panel--shadow-inside {
+    @extend %__shadow-inside;
   }
 
-  .panel-body {
-    padding: 8px;
-    @include __clearfix();
-  }
-
-  .panel-footer {
-    padding: 5px;
-    background-color: #e0e0e0;
-    border-top: 1px solid #d9d9d9;
-  }
+  @include __panel-mixin--status(panel);
+  @include __panel-mixin--padding(panel);
+  @include __panel-mixin--padding-child();
 
 }

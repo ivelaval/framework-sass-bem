@@ -40,7 +40,7 @@ $__margin-left-sidebar: 260 !default;
 $__line-height: 1.5 !default;
 $__width-fixed: 980px !default;
 $__padding: 4 !default;
-
+$__size-base-em: 14 !default;
 $__margin-left: 4 !default;
 $__margin-right: 4 !default;
 $__margin-top: 4 !default;
@@ -64,12 +64,22 @@ $__breakpoint-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192
 //---------------------------------------------
 //  BASE PADDING SIZES
 //---------------------------------------------
-$__padding-xxl: 30px !default;
-$__padding-xl: 20px !default;
-$__padding-lg: 15px !default;
-$__padding-md: 10px !default;
-$__padding-sm: 7px !default;
-$__padding-xs: 4px !default;
+$__padding-xxl: 30 !default;
+$__padding-xl: 20 !default;
+$__padding-lg: 15 !default;
+$__padding-md: 10 !default;
+$__padding-sm: 7 !default;
+$__padding-xs: 4 !default;
+
+//---------------------------------------------
+//  BASE DIMENSIONS SIZES
+//---------------------------------------------
+$__dimensions-xxl: 45 !default;
+$__dimensions-xl: 40 !default;
+$__dimensions-lg: 35 !default;
+$__dimensions-md: 30 !default;
+$__dimensions-sm: 25 !default;
+$__dimensions-xs: 20 !default;
 
 //---------------------------------------------
 //  FONT PROPERTIES

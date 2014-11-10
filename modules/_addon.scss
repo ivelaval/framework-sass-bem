@@ -7,6 +7,7 @@
     vertical-align: middle;
     color: #555555;
     text-align: center;
+    border: none;
     background-color: __mapping($__map--ui-color-status, normal);
     padding: __mapping($__map--base-padding-size, md);
     @include __ui-round();
@@ -37,9 +38,11 @@
     width: 100%;
   }
 
+  //-------------------------------------------
+  //  Run Mixins
+  //------------------------------------------
   @include __base-status(addon);
-
-  @include __base-size(addon);
+  @include __base-padding(addon);
 
 }
 
