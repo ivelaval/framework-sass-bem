@@ -23,7 +23,7 @@
 
     .panel__body {
       padding: 8px;
-      @extend %__clearfix;
+      @include __clearfix();
     }
 
     .panel__footer {

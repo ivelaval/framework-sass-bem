@@ -13,7 +13,7 @@
     margin-bottom: __em(__mapping($__map--base, margin-bottom));
     list-style: none;
     display: block;
-    @extend %__clearfix;
+    @include __clearfix();
   }
 
   .nav--horizontal {
@@ -68,9 +68,8 @@
     padding: 0 10px;
     @extend %__fluid;
     @include __ui-border();
-    @include __ui-user-select();
+    @include __clearfix();
     @include __nav-mixin--size-nav-bar();
-    @extend %__clearfix;
 
     .nav {
       margin-bottom: 0;
@@ -115,16 +114,16 @@
   .nav__block {
 
     @include __ui-border();
-    @extend %__clearfix;
+    @include __clearfix();
 
     .nav__block-header {
       @extend %__nav-extend--inline;
-      @extend %__clearfix;
+      @include __clearfix();
     }
 
     .nav__block-menu {
       @extend %__nav-extend--inline;
-      @extend %__clearfix;
+      @include __clearfix();
 
       li {
         @extend %__nav-extend--inline;
@@ -146,7 +145,7 @@
     @include __ui-transition-o(all 0.3s ease-out);
     @include __ui-border();
     @include __ui-round();
-    @extend %__clearfix;
+    @include __clearfix();
 
     font-size: __em(__mapping($__map--base-font, size));
     border: 1px solid __mapping($__map--ui-color-status, normal);

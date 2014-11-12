@@ -45,7 +45,11 @@
 //------------------------------------------------
 
 %__clearfix {
-  *zoom: 1;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  */
+  zoom: 1;
   &:before,
   &:after {
     content: " ";
@@ -81,11 +85,9 @@
 }
 
 %__shadow-dark{
-  -webkit-box-shadow: 0px 0px 4px 0px #000000; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-  box-shadow: 0px 0px 4px 0px #000000; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+  @include __ui-shadow-o(0px 0px 4px 0px #000000);
 }
 
 %__shadow-light{
-  -webkit-box-shadow: 0px 0px 4px 0px #ffffff; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-  box-shadow: 0px 0px 4px 0px #ffffff; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+  @include __ui-shadow-o(0px 0px 4px 0px #ffffff);
 }

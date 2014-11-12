@@ -6,3 +6,10 @@
   font-size: __em($size);
   line-height: __line-height($__line-height);
 }
+
+@mixin __icon-mixin--font-smooting(){
+  @if __mapping($__map--zerw, support-prefix) == true {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

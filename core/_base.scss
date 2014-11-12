@@ -28,22 +28,6 @@ textarea {
 }
 
 //--------------------------------------------------------------
-// Remove text-shadow in selection highlight
-// These selection rule sets have to be separate.
-// Customize the background color to match your design.
-//--------------------------------------------------------------
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-//--------------------------------------------------------------
 // A better looking default horizontal rule
 //--------------------------------------------------------------
 
@@ -182,7 +166,7 @@ code {
 h1, h2, h3, h4, h5, h6{
   display: block;
   @include __base-mpb();
-  @extend %__clearfix;
+  @include __clearfix();
 }
 
 //--------------------------------------------------------------
@@ -253,10 +237,6 @@ footer {
 
   img {
     max-width: 100%;
-  }
-
-  @page {
-    margin: 0.5cm;
   }
 
   p,

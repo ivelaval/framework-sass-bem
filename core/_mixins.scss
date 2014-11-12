@@ -4,11 +4,39 @@
 //  Utilities for properties base
 //------------------------------------------------
 
+//clearfix
+@mixin __clearfix() {
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 //Debug active
 @mixin __debug() {
   @if __mapping($__map--zerw, debug) {
     @content;
   }
+}
+
+//Vendor prefix
+@mixin __base-prefix($name, $argument) {
+  @if __mapping($__map--zerw, support-prefix) == true{
+    -webkit-#{$name}: #{$argument}; // Android ≤ 2.3, iOS ≤ 4
+    -ms-#{$name}: #{$argument};
+    -moz-#{$name}: #{$argument}; // Firefox ≤ 28
+    -o-#{$name}: #{$argument};
+  }
+  #{$name}: #{$argument}; //Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1
 }
 
 //Margin padding border mixin
@@ -19,16 +47,14 @@
   @if ($padding != -1) {
     padding: #{$padding};
   }
-  @if ($border == -1) {
+  @if ($border != -1) {
     border: #{$border};
   }
 }
 
 //Border sizing mixin
 @mixin __base-bs($type: border-box) {
-  -webkit-box-sizing: #{$type}; // Android ≤ 2.3, iOS ≤ 4
-  -moz-box-sizing: #{$type}; // Firefox ≤ 28
-  box-sizing: #{$type}; // Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1
+  @include __base-prefix(box-sizing, $type);
 }
 
 @mixin __base-status($prefix, $extra: false, $underline: false) {
@@ -63,7 +89,7 @@
   $psize: $__map--base-padding-size;
   @each $key, $size in $psize {
     .#{$prefix}--#{$key} {
-      padding: #{__em($size, __mapping($__map--base, size-base-em))} #{__em(__mapping($__map--base-padding-size, $plf), __mapping($__map--base, size-base-em))};
+      padding: __em($size, __mapping($__map--base, size-base-em)) __em(__mapping($__map--base-padding-size, $plf), __mapping($__map--base, size-base-em));
     }
   }
 }
@@ -135,11 +161,7 @@
 //------------------------------------------------
 
 @mixin __ui-round($radius: __mapping($__map--ui, border-radius)) {
-  -webkit-border-radius: #{$radius};
-  -moz-border-radius: #{$radius};
-  -ms-border-radius: #{$radius};
-  border-radius: #{$radius}; // Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+
-  // useful if you don't want a bg color from leaking outside the border:
+  @include __base-prefix(border-radius, $radius);
   background-clip: padding-box; // Android 2.2+, Chrome, Firefox 4+, IE# 9+, iOS 4+, Opera 10.50+, Safari 4+
 }
 
@@ -172,27 +194,16 @@
   }
 }
 
-@mixin __ui-user-select($arg: none) {
-  -webkit-user-select: #{$arg};
-  -moz-user-select: #{$arg};
-  -ms-user-select: #{$arg};
-  user-select: #{$arg};
-}
-
 @mixin __ui-shadow($h-shadow: __mapping($__map--ui-shadow, hshadow), $v-shadow: __mapping($__map--ui-shadow, vshadow), $blur: __mapping($__map--ui-shadow, blur), $spread: __mapping($__map--ui-shadow, spread), $color: __mapping($__map--ui-shadow, color), $opacity: __mapping($__map--ui-shadow, opacity)) {
-  -webkit-box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity); // Android 2.3+, iOS 4.0.2-4.2, Safari 3-4
-  -moz-box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity);
-  box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity); // Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+
+  @include __base-prefix(box-shadow, $h-shadow $v-shadow $blur $spread rgba($color, $opacity));
 }
 
 @mixin __ui-shadow-o($arg...) {
-  -webkit-box-shadow: $arg; // Android 2.3+, iOS 4.0.2-4.2, Safari 3-4
-  -moz-box-shadow: $arg;
-  box-shadow: $arg; // Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+
+  @include __base-prefix(box-shadow, $arg);
 }
 
 @mixin __ui-text-shadow($arg: 0 1px 2px rgba(0, 0, 0, 0.25)) {
-  text-shadow: #{$arg};
+  @include __base-prefix(text-shadow, $arg);
 }
 
 @mixin __ui-gradient($fcolor: __mapping($__map--ui-gradient, fcolor), $scolor: __mapping($__map--ui-gradient, scolor)) {
@@ -207,46 +218,25 @@
 }
 
 @mixin __ui-rotate($r: __mapping($__map--ui, rotate)) {
-  -webkit-transform: rotate($r); // Chrome, Opera 15+, Safari 3.1+
-  -ms-transform: rotate($r); // IE 9
-  transform: rotate($r); // Firefox 16+, IE 10+, Opera
+  @include __base-prefix(transform, rotate($r));
 }
 
 @mixin __ui-scale($scale: __mapping($__map--ui, scale)) {
-  -webkit-transform: scale($scale); // Chrome, Opera 15+, Safari 3.1+
-  -ms-transform: scale($scale); // IE 9
-  transform: scale($scale); // Firefox 16+, IE 10+, Opera
+  @include __base-prefix(transform, scale($r));
 }
 
 @mixin __ui-3dtransforms($perspective: 300px, $type: "Y", $rotate: 180deg) {
-
-  -webkit-perspective: $perspective; // Chrome 12+, Safari 4+
-  -ms-perspective: $perspective; // IE 10
-  perspective: $perspective;
-
-  -webkit-transform: rotate#{$type}($rotate);
-  -webkit-transform-style: preserve-3d;
-  -ms-transform: rotate#{$type}($rotate);
-  -ms-transform-style: preserve-3d;
-  transform: rotate#{$type}($rotate);
-  transform-style: preserve-3d;
-
+  @include __base-prefix(perspective, $perspective);
+  @include __base-prefix(transform, rotate#{$type}($rotate));
+  @include __base-prefix(transform-style, preserve-3d);
 }
 
 @mixin __ui-transition-s($time: 0.3s, $ease: __mapping($__map--ui, ease)) {
-  -webkit-transition: all $time $ease; // Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6
-  -moz-transition: all $time $ease;
-  -ms-transition: all $time $ease;
-  -o-transition: all $time $ease;
-  transition: all $time $ease; // Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+
+  @include __base-prefix(transition, all $time $ease);
 }
 
 @mixin __ui-transition-o($args...) {
-  -webkit-transition: #{$args};
-  -moz-transition: #{$args};
-  -ms-transition: #{$args};
-  -o-transition: #{$args};
-  transition: #{$args};
+  @include __base-prefix(transition, $args);
 }
 
 @mixin __ui-textshadow($h-shadow: __mapping($__map--ui-text-shadow, hshadow), $v-shadow: __mapping($__map--ui-text-shadow, vshadow), $blur: __mapping($__map--ui-text-shadow, blur), $color: __mapping($__map--ui-text-shadow, color)) {
@@ -260,10 +250,7 @@
 }
 
 @mixin __ui-bgsize($size: __mapping($__map--ui, background-size)) {
-  -webkit-background-size: $size;
-  -moz-background-size: $size;
-  -o-background-size: $size;
-  background-size: $size;
+  @include __base-prefix(background-size, $size);
 }
 
 @mixin __ui-keyframes($animation-name) {
@@ -290,11 +277,7 @@
 }
 
 @mixin __ui-animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};
+  @include __base-prefix(animation, $str);
 }
 
 //------------------------------------------------

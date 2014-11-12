@@ -7,20 +7,7 @@
 //  Updated: 15/10/2014
 ********************************************************/
 .addon--shadow-inside, .badge--shadow-inside, .image--shadow-inside, .label--shadow-inside, .panel--shadow-inside {
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
-}
-
-h1, h2, h3, h4, h5, h6, .form__group, .layout__sidebar, .layout__col-1, .layout__col-2, .layout__col-3, .layout__col-4, .layout__col-5, .layout__col-6, .layout__col-7, .layout__col-8, .layout__col-9, .layout__col-10, .layout__col-11, .layout__col-12, .layout__container, .layout__row, .layout__row--clear, .nav, .nav__bar, .nav__block, .nav__block .nav__block-header, .nav__block .nav__block-menu, .nav__item, .panel .panel__body {
-  *zoom: 1;
-}
-h1:before, h2:before, h3:before, h4:before, h5:before, h6:before, .form__group:before, .layout__sidebar:before, .layout__col-1:before, .layout__col-2:before, .layout__col-3:before, .layout__col-4:before, .layout__col-5:before, .layout__col-6:before, .layout__col-7:before, .layout__col-8:before, .layout__col-9:before, .layout__col-10:before, .layout__col-11:before, .layout__col-12:before, .layout__container:before, .layout__row:before, .layout__row--clear:before, .nav:before, .nav__bar:before, .nav__block:before, .nav__block .nav__block-header:before, .nav__block .nav__block-menu:before, .nav__item:before, .panel .panel__body:before, h1:after, h2:after, h3:after, h4:after, h5:after, h6:after, .form__group:after, .layout__sidebar:after, .layout__col-1:after, .layout__col-2:after, .layout__col-3:after, .layout__col-4:after, .layout__col-5:after, .layout__col-6:after, .layout__col-7:after, .layout__col-8:after, .layout__col-9:after, .layout__col-10:after, .layout__col-11:after, .layout__col-12:after, .layout__container:after, .layout__row:after, .layout__row--clear:after, .nav:after, .nav__bar:after, .nav__block:after, .nav__block .nav__block-header:after, .nav__block .nav__block-menu:after, .nav__item:after, .panel .panel__body:after {
-  content: " ";
-  display: table;
-}
-h1:after, h2:after, h3:after, h4:after, h5:after, h6:after, .form__group:after, .layout__sidebar:after, .layout__col-1:after, .layout__col-2:after, .layout__col-3:after, .layout__col-4:after, .layout__col-5:after, .layout__col-6:after, .layout__col-7:after, .layout__col-8:after, .layout__col-9:after, .layout__col-10:after, .layout__col-11:after, .layout__col-12:after, .layout__container:after, .layout__row:after, .layout__row--clear:after, .nav:after, .nav__bar:after, .nav__block:after, .nav__block .nav__block-header:after, .nav__block .nav__block-menu:after, .nav__item:after, .panel .panel__body:after {
-  clear: both;
 }
 
 .button--fluid, .form__input--fluid,
@@ -31,21 +18,15 @@ h1:after, h2:after, h3:after, h4:after, h5:after, h6:after, .form__group:after, 
 
 .icon--shadow-dark,
 .icon__round--shadow-dark {
-  -webkit-box-shadow: 0px 0px 4px 0px #000000;
-  /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
   box-shadow: 0px 0px 4px 0px #000000;
-  /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
 }
 
 .icon--shadow-light,
 .icon__round--shadow-light {
-  -webkit-box-shadow: 0px 0px 4px 0px #ffffff;
-  /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
   box-shadow: 0px 0px 4px 0px #ffffff;
-  /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
 }
 
-/* normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -444,8 +425,6 @@ th {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -471,16 +450,6 @@ textarea:disabled {
   background-color: #e4e7e8;
 }
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
 hr {
   display: block;
   height: 1px;
@@ -488,29 +457,22 @@ hr {
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
-  border: -1;
 }
 
 ul {
   margin: 0;
   padding: 0;
-  border: -1;
 }
 
 li {
   margin: 0;
   padding: 0;
-  border: -1;
   list-style: none;
 }
 
 a {
   text-decoration: none;
   color: #1e7eb5;
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -ms-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 a:hover {
@@ -524,7 +486,6 @@ p {
 form {
   margin: 0;
   padding: 0;
-  border: -1;
 }
 
 button,
@@ -551,7 +512,6 @@ fieldset {
 legend {
   margin: 0;
   padding: 0;
-  border: -1;
 }
 
 label {
@@ -569,9 +529,6 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
 }
@@ -614,7 +571,18 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   margin: 0;
   padding: 0;
-  border: -1;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+h1:before, h1:after, h2:before, h2:after, h3:before, h3:after, h4:before, h4:after, h5:before, h5:after, h6:before, h6:after {
+  content: " ";
+  display: table;
+}
+h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+  clear: both;
 }
 
 audio,
@@ -627,7 +595,6 @@ video {
 footer {
   margin: 0;
   padding: 0;
-  border: -1;
 }
 
 @media print {
@@ -677,9 +644,6 @@ footer {
     max-width: 100%;
   }
 
-  @page {
-    margin: 0.5cm;
-  }
   p,
   h2,
   h3 {
@@ -699,10 +663,7 @@ footer {
   text-align: center;
   border: none;
   background-color: #e4e7e8;
-  padding: 10;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
+  padding: 0.71429em;
   border-radius: 4px;
   background-clip: padding-box;
 }
@@ -714,23 +675,14 @@ footer {
 }
 .addon__group .addon {
   display: table-cell;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
   border-radius: 0;
   background-clip: padding-box;
 }
 .addon__group .addon:first-child {
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  -ms-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
   background-clip: padding-box;
 }
 .addon__group .addon:last-child {
-  -webkit-border-radius: 0 4px 4px 0;
-  -moz-border-radius: 0 4px 4px 0;
-  -ms-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
   background-clip: padding-box;
 }
@@ -743,10 +695,6 @@ footer {
 .addon--normal {
   background-color: #e4e7e8;
   border-color: #d6dbdc;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #555555;
 }
@@ -758,10 +706,6 @@ footer {
 .addon--danger {
   background-color: #ff4136;
   border-color: #ff291d;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -773,10 +717,6 @@ footer {
 .addon--warning {
   background-color: #ff851b;
   border-color: #ff7701;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -788,10 +728,6 @@ footer {
 .addon--success {
   background-color: #5ac51f;
   border-color: #50af1c;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -803,10 +739,6 @@ footer {
 .addon--info {
   background-color: #158cba;
   border-color: #127ba3;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -859,24 +791,18 @@ footer {
   content: attr(data-icon);
   speak: none;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 [class^="icon__"]:before,
 [class*=" icon__"]:before {
   font-family: "zerw_fostastic";
   speak: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon {
   display: inline-block;
   vertical-align: middle;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon__round {
@@ -886,9 +812,6 @@ footer {
   padding: 0;
   width: 80px;
   height: 80px;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
   border-radius: 100%;
   background-clip: padding-box;
 }
@@ -4070,10 +3993,6 @@ footer {
 .icon--normal {
   background-color: #e4e7e8;
   border-color: #d6dbdc;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #555555;
 }
@@ -4091,10 +4010,6 @@ footer {
 .icon--danger {
   background-color: #ff4136;
   border-color: #ff291d;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4112,10 +4027,6 @@ footer {
 .icon--warning {
   background-color: #ff851b;
   border-color: #ff7701;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4133,10 +4044,6 @@ footer {
 .icon--success {
   background-color: #5ac51f;
   border-color: #50af1c;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4154,10 +4061,6 @@ footer {
 .icon--info {
   background-color: #158cba;
   border-color: #127ba3;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4175,10 +4078,6 @@ footer {
 .icon__round--normal {
   background-color: #e4e7e8;
   border-color: #d6dbdc;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #555555;
 }
@@ -4196,10 +4095,6 @@ footer {
 .icon__round--danger {
   background-color: #ff4136;
   border-color: #ff291d;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4217,10 +4112,6 @@ footer {
 .icon__round--warning {
   background-color: #ff851b;
   border-color: #ff7701;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4238,10 +4129,6 @@ footer {
 .icon__round--success {
   background-color: #5ac51f;
   border-color: #50af1c;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4259,10 +4146,6 @@ footer {
 .icon__round--info {
   background-color: #158cba;
   border-color: #127ba3;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4319,12 +4202,8 @@ footer {
   position: relative;
   margin: 10px 0;
   padding: 8px;
-  border: -1;
   border: 1px solid transparent;
   border-width: 0 0.07143em 0.28571em 0.07143em;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
 }
@@ -4355,10 +4234,6 @@ footer {
 .alert--normal {
   background-color: #e4e7e8;
   border-color: #d6dbdc;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #555555;
 }
@@ -4377,10 +4252,6 @@ footer {
 .alert--danger {
   background-color: #ff4136;
   border-color: #ff291d;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4399,10 +4270,6 @@ footer {
 .alert--warning {
   background-color: #ff851b;
   border-color: #ff7701;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4421,10 +4288,6 @@ footer {
 .alert--success {
   background-color: #5ac51f;
   border-color: #50af1c;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4443,10 +4306,6 @@ footer {
 .alert--info {
   background-color: #158cba;
   border-color: #127ba3;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4476,9 +4335,6 @@ footer {
 }
 
 .badge {
-  -webkit-border-radius: 0.9375em;
-  -moz-border-radius: 0.9375em;
-  -ms-border-radius: 0.9375em;
   border-radius: 0.9375em;
   background-clip: padding-box;
 }
@@ -4492,9 +4348,6 @@ footer {
   position: absolute;
   top: -15px;
   right: -20px;
-  -webkit-border-radius: 0.9375em;
-  -moz-border-radius: 0.9375em;
-  -ms-border-radius: 0.9375em;
   border-radius: 0.9375em;
   background-clip: padding-box;
 }
@@ -4502,10 +4355,6 @@ footer {
 .badge__float--normal[data-badge]:after {
   background-color: #e4e7e8;
   border-color: #d6dbdc;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #555555;
 }
@@ -4517,10 +4366,6 @@ footer {
 .badge__float--danger[data-badge]:after {
   background-color: #ff4136;
   border-color: #ff291d;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4532,10 +4377,6 @@ footer {
 .badge__float--warning[data-badge]:after {
   background-color: #ff851b;
   border-color: #ff7701;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4547,10 +4388,6 @@ footer {
 .badge__float--success[data-badge]:after {
   background-color: #5ac51f;
   border-color: #50af1c;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4562,10 +4399,6 @@ footer {
 .badge__float--info[data-badge]:after {
   background-color: #158cba;
   border-color: #127ba3;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4577,10 +4410,6 @@ footer {
 .badge--normal {
   background-color: #e4e7e8;
   border-color: #d6dbdc;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #555555;
 }
@@ -4592,10 +4421,6 @@ footer {
 .badge--danger {
   background-color: #ff4136;
   border-color: #ff291d;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4607,10 +4432,6 @@ footer {
 .badge--warning {
   background-color: #ff851b;
   border-color: #ff7701;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4622,10 +4443,6 @@ footer {
 .badge--success {
   background-color: #5ac51f;
   border-color: #50af1c;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4637,10 +4454,6 @@ footer {
 .badge--info {
   background-color: #158cba;
   border-color: #127ba3;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4683,9 +4496,6 @@ footer {
 }
 
 .breadcrumb {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
   border-width: 0 1px 4px 1px;
@@ -4694,10 +4504,6 @@ footer {
 .breadcrumb--normal {
   background-color: #e4e7e8;
   border-color: #d6dbdc;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #555555;
 }
@@ -4715,10 +4521,6 @@ footer {
 .breadcrumb--danger {
   background-color: #ff4136;
   border-color: #ff291d;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4736,10 +4538,6 @@ footer {
 .breadcrumb--warning {
   background-color: #ff851b;
   border-color: #ff7701;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4757,10 +4555,6 @@ footer {
 .breadcrumb--success {
   background-color: #5ac51f;
   border-color: #50af1c;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4778,10 +4572,6 @@ footer {
 .breadcrumb--info {
   background-color: #158cba;
   border-color: #127ba3;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -4865,9 +4655,6 @@ footer {
 }
 .breadcrumb__arrow li:first-child a {
   padding-left: 15px;
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  -ms-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
   background-clip: padding-box;
 }
@@ -4876,9 +4663,6 @@ footer {
 }
 .breadcrumb__arrow li:last-child a {
   padding-right: 15px;
-  -webkit-border-radius: 0 4px 4px 0;
-  -moz-border-radius: 0 4px 4px 0;
-  -ms-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
   background-clip: padding-box;
 }
@@ -4906,10 +4690,6 @@ footer {
 .breadcrumb__arrow li a:hover {
   background-color: #d9dcdd;
   color: #454545;
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -ms-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 .breadcrumb__arrow li a:hover:before {
@@ -4966,17 +4746,10 @@ footer {
   border: 1px solid transparent;
   white-space: nowrap;
   text-decoration: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
   border: 1px solid transparent;
   border-width: 0 0.07143em 0.28571em 0.07143em;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .button:focus, .button:active, .form__input-group-button .button:active {
@@ -5005,23 +4778,14 @@ footer {
 .button__group > button, .button__group > input[type="reset"], .button__group > input[type="submit"], .button__group > input[type="button"], .button__group > a.button {
   display: table-cell;
   left: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
   border-radius: 0;
   background-clip: padding-box;
 }
 .button__group > button:first-child, .button__group > input[type="reset"]:first-child, .button__group > input[type="submit"]:first-child, .button__group > input[type="button"]:first-child, .button__group > a.button:first-child {
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  -ms-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
   background-clip: padding-box;
 }
 .button__group > button:last-child, .button__group > input[type="reset"]:last-child, .button__group > input[type="submit"]:last-child, .button__group > input[type="button"]:last-child, .button__group > a.button:last-child {
-  -webkit-border-radius: 0 4px 4px 0;
-  -moz-border-radius: 0 4px 4px 0;
-  -ms-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
   background-clip: padding-box;
 }
@@ -5043,10 +4807,6 @@ footer {
 .button--normal {
   background-color: #e4e7e8;
   border-color: #d6dbdc;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #555555;
 }
@@ -5064,10 +4824,6 @@ footer {
 .button--danger {
   background-color: #ff4136;
   border-color: #ff291d;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -5085,10 +4841,6 @@ footer {
 .button--warning {
   background-color: #ff851b;
   border-color: #ff7701;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -5106,10 +4858,6 @@ footer {
 .button--success {
   background-color: #5ac51f;
   border-color: #50af1c;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -5127,10 +4875,6 @@ footer {
 .button--info {
   background-color: #158cba;
   border-color: #127ba3;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -5150,25 +4894,13 @@ footer {
   background: #FFFFFF;
   color: #6d6d6d;
   border: 1px solid #e7e7e7;
-  -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in 0.2s, box-shadow ease-in 0.2s;
-  -moz-transition: border-color ease-in 0.2s, box-shadow ease-in 0.2s;
-  -ms-transition: border-color ease-in 0.2s, box-shadow ease-in 0.2s;
-  -o-transition: border-color ease-in 0.2s, box-shadow ease-in 0.2s;
   transition: border-color ease-in 0.2s, box-shadow ease-in 0.2s;
 }
 .form__input:focus, .form__textarea:focus, .form__select:focus, .form__input:active, .form__textarea:active, .form__select:active {
   outline: none;
   border: 1px solid #e4e7e8;
-  -webkit-box-shadow: inset 0 1px 1px #e4e7e8, 0 0 6px #e4e7e8;
-  -moz-box-shadow: inset 0 1px 1px #e4e7e8, 0 0 6px #e4e7e8;
   box-shadow: inset 0 1px 1px #e4e7e8, 0 0 6px #e4e7e8;
-  -webkit-transition: border-color ease-in 0.2s, box-shadow ease-in 0.2s;
-  -moz-transition: border-color ease-in 0.2s, box-shadow ease-in 0.2s;
-  -ms-transition: border-color ease-in 0.2s, box-shadow ease-in 0.2s;
-  -o-transition: border-color ease-in 0.2s, box-shadow ease-in 0.2s;
   transition: border-color ease-in 0.2s, box-shadow ease-in 0.2s;
 }
 .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder, .form__select::-webkit-input-placeholder {
@@ -5192,6 +4924,18 @@ footer {
 
 .form__group {
   margin-bottom: 4px;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.form__group:before, .form__group:after {
+  content: " ";
+  display: table;
+}
+.form__group:after {
+  clear: both;
 }
 
 .form__input-group {
@@ -5258,12 +5002,7 @@ footer {
 .form__fieldset {
   min-width: 0;
   border: 0;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
   background: #fcfcfc;
@@ -5276,7 +5015,6 @@ footer {
   width: 100%;
   margin: 0;
   padding: 0;
-  border: -1;
   border: 0;
   font-size: 21px;
   line-height: inherit;
@@ -5340,80 +5078,60 @@ footer {
 .form__input--normal,
 .form__select--normal {
   border-color: #e4e7e8;
-  -webkit-box-shadow: inset 0 2px 0 #e4e7e8;
-  -moz-box-shadow: inset 0 2px 0 #e4e7e8;
   box-shadow: inset 0 2px 0 #e4e7e8;
 }
 .form__input--normal:focus, .form__input--normal:active,
 .form__select--normal:focus,
 .form__select--normal:active {
   border: 1px solid #e4e7e8;
-  -webkit-box-shadow: inset 0 1px 1px #e4e7e8, 0 0 6px #e4e7e8;
-  -moz-box-shadow: inset 0 1px 1px #e4e7e8, 0 0 6px #e4e7e8;
   box-shadow: inset 0 1px 1px #e4e7e8, 0 0 6px #e4e7e8;
 }
 
 .form__input--danger,
 .form__select--danger {
   border-color: #ff4136;
-  -webkit-box-shadow: inset 0 2px 0 #ff4136;
-  -moz-box-shadow: inset 0 2px 0 #ff4136;
   box-shadow: inset 0 2px 0 #ff4136;
 }
 .form__input--danger:focus, .form__input--danger:active,
 .form__select--danger:focus,
 .form__select--danger:active {
   border: 1px solid #ff4136;
-  -webkit-box-shadow: inset 0 1px 1px #ff4136, 0 0 6px #ff4136;
-  -moz-box-shadow: inset 0 1px 1px #ff4136, 0 0 6px #ff4136;
   box-shadow: inset 0 1px 1px #ff4136, 0 0 6px #ff4136;
 }
 
 .form__input--warning,
 .form__select--warning {
   border-color: #ff851b;
-  -webkit-box-shadow: inset 0 2px 0 #ff851b;
-  -moz-box-shadow: inset 0 2px 0 #ff851b;
   box-shadow: inset 0 2px 0 #ff851b;
 }
 .form__input--warning:focus, .form__input--warning:active,
 .form__select--warning:focus,
 .form__select--warning:active {
   border: 1px solid #ff851b;
-  -webkit-box-shadow: inset 0 1px 1px #ff851b, 0 0 6px #ff851b;
-  -moz-box-shadow: inset 0 1px 1px #ff851b, 0 0 6px #ff851b;
   box-shadow: inset 0 1px 1px #ff851b, 0 0 6px #ff851b;
 }
 
 .form__input--success,
 .form__select--success {
   border-color: #5ac51f;
-  -webkit-box-shadow: inset 0 2px 0 #5ac51f;
-  -moz-box-shadow: inset 0 2px 0 #5ac51f;
   box-shadow: inset 0 2px 0 #5ac51f;
 }
 .form__input--success:focus, .form__input--success:active,
 .form__select--success:focus,
 .form__select--success:active {
   border: 1px solid #5ac51f;
-  -webkit-box-shadow: inset 0 1px 1px #5ac51f, 0 0 6px #5ac51f;
-  -moz-box-shadow: inset 0 1px 1px #5ac51f, 0 0 6px #5ac51f;
   box-shadow: inset 0 1px 1px #5ac51f, 0 0 6px #5ac51f;
 }
 
 .form__input--info,
 .form__select--info {
   border-color: #158cba;
-  -webkit-box-shadow: inset 0 2px 0 #158cba;
-  -moz-box-shadow: inset 0 2px 0 #158cba;
   box-shadow: inset 0 2px 0 #158cba;
 }
 .form__input--info:focus, .form__input--info:active,
 .form__select--info:focus,
 .form__select--info:active {
   border: 1px solid #158cba;
-  -webkit-box-shadow: inset 0 1px 1px #158cba, 0 0 6px #158cba;
-  -moz-box-shadow: inset 0 1px 1px #158cba, 0 0 6px #158cba;
   box-shadow: inset 0 1px 1px #158cba, 0 0 6px #158cba;
 }
 
@@ -5440,9 +5158,6 @@ footer {
 }
 
 .image__avatar--round {
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
   border-radius: 100%;
   background-clip: padding-box;
 }
@@ -5491,10 +5206,6 @@ footer {
 .label--normal {
   background-color: #e4e7e8;
   border-color: #d6dbdc;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #555555;
 }
@@ -5506,10 +5217,6 @@ footer {
 .label--danger {
   background-color: #ff4136;
   border-color: #ff291d;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -5521,10 +5228,6 @@ footer {
 .label--warning {
   background-color: #ff851b;
   border-color: #ff7701;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -5536,10 +5239,6 @@ footer {
 .label--success {
   background-color: #5ac51f;
   border-color: #50af1c;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -5551,10 +5250,6 @@ footer {
 .label--info {
   background-color: #158cba;
   border-color: #127ba3;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -5592,9 +5287,6 @@ footer {
 *:before {
   margin: 0;
   padding: 0;
-  border: -1;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -6005,6 +5697,18 @@ footer {
   padding: 10px;
   overflow-x: hidden;
   overflow-y: auto;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__sidebar:before, .layout__sidebar:after {
+  content: " ";
+  display: table;
+}
+.layout__sidebar:after {
+  clear: both;
 }
 
 .layout__sidebar--left {
@@ -6026,7 +5730,6 @@ footer {
     height: 36px;
     margin: 0;
     padding: 0;
-    border: -1;
   }
 }
 @media (max-width: 768px) and (min-width: 481px) {
@@ -6035,7 +5738,6 @@ footer {
     height: 36px;
     margin: 0;
     padding: 0;
-    border: -1;
   }
 }
 @media (max-width: 480px) {
@@ -6044,78 +5746,245 @@ footer {
     height: 36px;
     margin: 0;
     padding: 0;
-    border: -1;
   }
 }
 
 .layout__col-1 {
   float: left;
   width: 8.33333%;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__col-1:before, .layout__col-1:after {
+  content: " ";
+  display: table;
+}
+.layout__col-1:after {
+  clear: both;
 }
 
 .layout__col-2 {
   float: left;
   width: 16.66667%;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__col-2:before, .layout__col-2:after {
+  content: " ";
+  display: table;
+}
+.layout__col-2:after {
+  clear: both;
 }
 
 .layout__col-3 {
   float: left;
   width: 25%;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__col-3:before, .layout__col-3:after {
+  content: " ";
+  display: table;
+}
+.layout__col-3:after {
+  clear: both;
 }
 
 .layout__col-4 {
   float: left;
   width: 33.33333%;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__col-4:before, .layout__col-4:after {
+  content: " ";
+  display: table;
+}
+.layout__col-4:after {
+  clear: both;
 }
 
 .layout__col-5 {
   float: left;
   width: 41.66667%;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__col-5:before, .layout__col-5:after {
+  content: " ";
+  display: table;
+}
+.layout__col-5:after {
+  clear: both;
 }
 
 .layout__col-6 {
   float: left;
   width: 50%;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__col-6:before, .layout__col-6:after {
+  content: " ";
+  display: table;
+}
+.layout__col-6:after {
+  clear: both;
 }
 
 .layout__col-7 {
   float: left;
   width: 58.33333%;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__col-7:before, .layout__col-7:after {
+  content: " ";
+  display: table;
+}
+.layout__col-7:after {
+  clear: both;
 }
 
 .layout__col-8 {
   float: left;
   width: 66.66667%;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__col-8:before, .layout__col-8:after {
+  content: " ";
+  display: table;
+}
+.layout__col-8:after {
+  clear: both;
 }
 
 .layout__col-9 {
   float: left;
   width: 75%;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__col-9:before, .layout__col-9:after {
+  content: " ";
+  display: table;
+}
+.layout__col-9:after {
+  clear: both;
 }
 
 .layout__col-10 {
   float: left;
   width: 83.33333%;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__col-10:before, .layout__col-10:after {
+  content: " ";
+  display: table;
+}
+.layout__col-10:after {
+  clear: both;
 }
 
 .layout__col-11 {
   float: left;
   width: 91.66667%;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__col-11:before, .layout__col-11:after {
+  content: " ";
+  display: table;
+}
+.layout__col-11:after {
+  clear: both;
 }
 
 .layout__col-12 {
   float: left;
   width: 100%;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__col-12:before, .layout__col-12:after {
+  content: " ";
+  display: table;
+}
+.layout__col-12:after {
+  clear: both;
 }
 
 .layout__container {
   position: relative;
   margin-right: auto;
   margin-left: auto;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__container:before, .layout__container:after {
+  content: " ";
+  display: table;
+}
+.layout__container:after {
+  clear: both;
 }
 
 .layout__row, .layout__row--clear {
   position: relative;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.layout__row:before, .layout__row--clear:before, .layout__row:after, .layout__row--clear:after {
+  content: " ";
+  display: table;
+}
+.layout__row:after, .layout__row--clear:after {
+  clear: both;
 }
 
 .layout__row--clear {
@@ -6382,6 +6251,18 @@ footer {
   margin-bottom: 0.25em;
   list-style: none;
   display: block;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.nav:before, .nav:after {
+  content: " ";
+  display: table;
+}
+.nav:after {
+  clear: both;
 }
 
 .nav--horizontal .nav__item {
@@ -6390,9 +6271,6 @@ footer {
 }
 
 .nav--vertical .nav__item {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
   border-radius: 0;
   background-clip: padding-box;
   display: block;
@@ -6429,10 +6307,18 @@ footer {
   padding: 0 10px;
   border: 1px solid transparent;
   border-width: 0 0.07143em 0.28571em 0.07143em;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.nav__bar:before, .nav__bar:after {
+  content: " ";
+  display: table;
+}
+.nav__bar:after {
+  clear: both;
 }
 .nav__bar .nav {
   display: table-cell;
@@ -6440,39 +6326,36 @@ footer {
 .nav__bar .nav .nav__item {
   border: 0;
   border-width: 0 0.07143em 0.28571em 0.07143em;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
   border-radius: 0;
   background-clip: padding-box;
 }
 .nav__bar .nav .nav__item--xxl a {
-  padding: 30 4;
+  padding: 2.14286em 0.28571em;
   border: 0;
   border-width: 0 0.07143em 0.28571em 0.07143em;
 }
 .nav__bar .nav .nav__item--xl a {
-  padding: 20 4;
+  padding: 1.42857em 0.28571em;
   border: 0;
   border-width: 0 0.07143em 0.28571em 0.07143em;
 }
 .nav__bar .nav .nav__item--xs a {
-  padding: 4 4;
+  padding: 0.28571em 0.28571em;
   border: 0;
   border-width: 0 0.07143em 0.28571em 0.07143em;
 }
 .nav__bar .nav .nav__item--sm a {
-  padding: 7 4;
+  padding: 0.5em 0.28571em;
   border: 0;
   border-width: 0 0.07143em 0.28571em 0.07143em;
 }
 .nav__bar .nav .nav__item--md a {
-  padding: 10 4;
+  padding: 0.71429em 0.28571em;
   border: 0;
   border-width: 0 0.07143em 0.28571em 0.07143em;
 }
 .nav__bar .nav .nav__item--lg a {
-  padding: 15 4;
+  padding: 1.07143em 0.28571em;
   border: 0;
   border-width: 0 0.07143em 0.28571em 0.07143em;
 }
@@ -6492,9 +6375,6 @@ footer {
 }
 
 .nav--round {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
 }
@@ -6511,31 +6391,73 @@ footer {
 .nav__block {
   border: 1px solid transparent;
   border-width: 0 0.07143em 0.28571em 0.07143em;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.nav__block:before, .nav__block:after {
+  content: " ";
+  display: table;
+}
+.nav__block:after {
+  clear: both;
+}
+.nav__block .nav__block-header {
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.nav__block .nav__block-header:before, .nav__block .nav__block-header:after {
+  content: " ";
+  display: table;
+}
+.nav__block .nav__block-header:after {
+  clear: both;
+}
+.nav__block .nav__block-menu {
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.nav__block .nav__block-menu:before, .nav__block .nav__block-menu:after {
+  content: " ";
+  display: table;
+}
+.nav__block .nav__block-menu:after {
+  clear: both;
 }
 .nav__block .nav__block-menu li a {
   padding: 10px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
 }
 
 .nav__item {
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   border: 1px solid transparent;
   border-width: 0 0.07143em 0.28571em 0.07143em;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
   font-size: 0.9375em;
   border: 1px solid #e4e7e8;
+}
+.nav__item:before, .nav__item:after {
+  content: " ";
+  display: table;
+}
+.nav__item:after {
+  clear: both;
 }
 .nav__item:hover, .nav__item:focus {
   text-decoration: none;
@@ -6552,10 +6474,6 @@ footer {
 .nav__bar--normal {
   background-color: #e4e7e8;
   border-color: #d6dbdc;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #555555;
 }
@@ -6573,10 +6491,6 @@ footer {
 .nav__bar--danger {
   background-color: #ff4136;
   border-color: #ff291d;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -6594,10 +6508,6 @@ footer {
 .nav__bar--warning {
   background-color: #ff851b;
   border-color: #ff7701;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -6615,10 +6525,6 @@ footer {
 .nav__bar--success {
   background-color: #5ac51f;
   border-color: #50af1c;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -6636,10 +6542,6 @@ footer {
 .nav__bar--info {
   background-color: #158cba;
   border-color: #127ba3;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -6761,10 +6663,6 @@ footer {
 .nav__item--normal {
   background-color: #e4e7e8;
   border-color: #d6dbdc;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #555555;
 }
@@ -6782,10 +6680,6 @@ footer {
 .nav__item--danger {
   background-color: #ff4136;
   border-color: #ff291d;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -6803,10 +6697,6 @@ footer {
 .nav__item--warning {
   background-color: #ff851b;
   border-color: #ff7701;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -6824,10 +6714,6 @@ footer {
 .nav__item--success {
   background-color: #5ac51f;
   border-color: #50af1c;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -6845,10 +6731,6 @@ footer {
 .nav__item--info {
   background-color: #158cba;
   border-color: #127ba3;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   color: #ffffff;
 }
@@ -6989,6 +6871,18 @@ footer {
 }
 .panel .panel__body {
   padding: 8px;
+  /*
+  Removed hack internet explorer css zerw since it will not support IE6 yIE7,
+  annotation is done by touching adjust this issue for more recent versions of IE.
+  zoom: 1;
+  */
+}
+.panel .panel__body:before, .panel .panel__body:after {
+  content: " ";
+  display: table;
+}
+.panel .panel__body:after {
+  clear: both;
 }
 .panel .panel__footer {
   padding: 0.9375em;
@@ -6996,9 +6890,6 @@ footer {
 }
 
 .panel--round {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
 }
@@ -7123,7 +7014,6 @@ footer {
 .content__table {
   margin: 0;
   padding: 0;
-  border: -1;
 }
 
 .table {

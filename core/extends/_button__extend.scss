@@ -15,7 +15,6 @@
 
   @include __ui-round();
   @include __ui-border();
-  @include __ui-user-select();
 }
 
 %__button-extend--outline-in {

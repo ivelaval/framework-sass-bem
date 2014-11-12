@@ -25,12 +25,12 @@
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    @extend %__clearfix;
+    @include __clearfix();
   }
 
   .layout__row {
     position: relative;
-    @extend %__clearfix;
+    @include __clearfix();
   }
 
   .layout__row--clear {
@@ -62,7 +62,7 @@
     .layout__col-#{$i} {
       float: left;
       width: 100% * $i / __mapping($__map--base-layout,"columns");
-      @extend %__clearfix;
+      @include __clearfix();
     }
 
   }

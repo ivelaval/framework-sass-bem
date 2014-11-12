@@ -9,7 +9,7 @@
     text-align: center;
     border: none;
     background-color: __mapping($__map--ui-color-status, normal);
-    padding: __mapping($__map--base-padding-size, md);
+    padding: __em(__mapping($__map--base-padding-size, md),  __mapping($__map--base, size-base-em));
     @include __ui-round();
   }
 

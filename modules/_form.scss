@@ -10,7 +10,7 @@
 
   .form__group {
     margin-bottom: 4px;
-    @extend %__clearfix;
+    @include __clearfix();
   }
 
   //-------------------------------------------

@@ -10,7 +10,8 @@
 $__map--zerw: (
         debug: $__zerw-debug,
         all-modules: $__zerw-all-modules,
-        normalize: $__zerw-normalize
+        normalize: $__zerw-normalize,
+        support-prefix:  $__zerw-support-prefix
 );
 
 //---------------------------------------------

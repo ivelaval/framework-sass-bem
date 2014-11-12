@@ -21,8 +21,8 @@
     @extend %__icon-extend--font-default;
     speak: none;
     line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @include __icon-mixin--font-smooting();
+
   }
 
   [class^="icon__"]:before,
@@ -30,16 +30,14 @@
     font-family: "zerw_fostastic";
     @extend %__icon-extend--font-default;
     speak: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @include __icon-mixin--font-smooting();
   }
 
   .icon {
     display: inline-block;
     vertical-align: middle;
     line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @include __icon-mixin--font-smooting();
   }
 
   .icon__round {

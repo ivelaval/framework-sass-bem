@@ -49,7 +49,7 @@
       .nav__item--#{$key}{
 
         a {
-          padding: #{$size} #{__mapping($__map--base-padding-size, xs)};
+          padding: #{__em($size,  __mapping($__map--base, size-base-em))} #{__em(__mapping($__map--base-padding-size, xs),  __mapping($__map--base, size-base-em))};
           @include __ui-border(0);
         }
       }
