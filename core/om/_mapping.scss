@@ -11,7 +11,14 @@ $__map--zerw: (
         debug: $__zerw-debug,
         all-modules: $__zerw-all-modules,
         normalize: $__zerw-normalize,
-        support-prefix:  $__zerw-support-prefix
+        support-prefix:  $__zerw-support-prefix,
+        3d: $__zerw-3d,
+        shadow: $__zerw-shadow,
+        round: $__zerw-round,
+        border: $__zerw-border,
+        status: $__zerw-status,
+        padding-size: $__zerw-padding-size,
+        size: $__zerw-size
 );
 
 //---------------------------------------------

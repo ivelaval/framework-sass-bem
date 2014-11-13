@@ -9,6 +9,17 @@ $__zerw-normalize: true !default;
 $__zerw-support-prefix: false !default;
 
 //---------------------------------------------
+//  GENERAL BEHAVIOR
+//---------------------------------------------
+$__zerw-3d: true !default;
+$__zerw-shadow: true !default;
+$__zerw-round: true !default;
+$__zerw-border: true !default;
+$__zerw-status: true !default;
+$__zerw-padding-size: true !default;
+$__zerw-size: true !default;
+
+//---------------------------------------------
 //  USE MODULES CONFIG
 //---------------------------------------------
 $__module-breadcrumb: false !default;

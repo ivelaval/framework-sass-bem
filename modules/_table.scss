@@ -9,7 +9,7 @@
   //------------------------------------------------
 
   $table__header--font-weight:      400;
-  $table__header--font-color:       #757575;
+  $table__header--font-color:       __mapping($__map--base-font, color);
   $table__cell--padding:            __em(12, __mapping($__map--base, size-base-em));
   $table__condensed-cell--padding:  $table__cell--padding/2;
   $table__bg:                       #fff;
@@ -27,13 +27,12 @@
   }
 
   .table {
+
     width: 100%;
     max-width: 100%;
     margin-bottom: 2rem;
     background-color: $table__bg;
-
-    -webkit-box-shadow: 0px 0px 4px 0px #000000; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-    box-shadow: 0px 0px 4px 0px #000000; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+    @include __ui-shadow-o(0px 0px 4px 0px #000000);
 
     > thead,
     > tbody,
