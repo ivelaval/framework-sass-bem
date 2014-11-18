@@ -6,7 +6,5 @@
   cursor: pointer;
   background: transparent;
   border: 0;
-  @if __mapping($__map--zerw, support-prefix) {
-    -webkit-appearance: none;
-  }
+  -webkit-appearance: none;
 }

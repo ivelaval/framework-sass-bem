@@ -18,26 +18,28 @@
     @include __ui-transition-o(border-color ease-in .20s, box-shadow ease-in .20s);
   }
 
-  &::-webkit-input-placeholder {
-    // WebKit browsers
-    color: __mapping($__map--base-font, color-placeholder);
-  }
+  @if __mapping($__map--zerw, support-prefix) {
+    &::-webkit-input-placeholder {
+      // WebKit browsers
+      color: __mapping($__map--base-font, color-placeholder);
+    }
 
-  &:-moz-placeholder {
-    // Mozilla Firefox 4 to 18
-    color: __mapping($__map--base-font, color-placeholder);
-    opacity: 1;
-  }
+    &:-moz-placeholder {
+      // Mozilla Firefox 4 to 18
+      color: __mapping($__map--base-font, color-placeholder);
+      opacity: 1;
+    }
 
-  &::-moz-placeholder {
-    // Mozilla Firefox 19+
-    color: __mapping($__map--base-font, color-placeholder);
-    opacity: 1;
-  }
+    &::-moz-placeholder {
+      // Mozilla Firefox 19+
+      color: __mapping($__map--base-font, color-placeholder);
+      opacity: 1;
+    }
 
-  &:-ms-input-placeholder {
-    // Internet Explorer 10+
-    color: __mapping($__map--base-font, color-placeholder);
+    &:-ms-input-placeholder {
+      // Internet Explorer 10+
+      color: __mapping($__map--base-font, color-placeholder);
+    }
   }
 
 }

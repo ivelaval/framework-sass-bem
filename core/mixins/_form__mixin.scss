@@ -8,7 +8,7 @@
     .form__input--#{$key},
     .form__select--#{$key},
     {
-      @include __base-padding-change($size);
+      @include __behavior--padding-change($size);
     }
   }
 }

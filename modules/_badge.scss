@@ -4,13 +4,19 @@
 
 @if __use-module(badge) {
 
+  //-------------------------------------------
+  //  Variables module
+  //-------------------------------------------
+  $badge--round: 15;
+  $badge__float--top: -15px;
+  $badge__float--right: -20px;
+
+  //-------------------------------------------
+  //  Class definitions
+  //------------------------------------------
   .badge {
     @extend %__badge-extend--badge;
-    @include __ui-round(__em(15));
-  }
-
-  .badge--shadow-inside {
-    @extend %__shadow-inside;
+    @include __ui-round(__em($badge--round));
   }
 
   .badge__float {
@@ -20,10 +26,10 @@
   .badge__float[data-badge]:after {
     content: attr(data-badge);
     position: absolute;
-    top: -15px;
-    right: -20px;
+    top: $badge__float--top;
+    right: $badge__float--right;
     @extend %__badge-extend--badge;
-    @include __ui-round(__em(15));
+    @include __ui-round(__em($badge--round));
   }
 
   .badge__float--normal[data-badge]:after {
@@ -46,8 +52,15 @@
     @include __base-skin(__mapping($__map--ui-color-status, info));
   }
 
-  @include __base-status(badge);
-  @include __base-padding(badge, md);
+  //-------------------------------------------
+  //  Run Mixins Behaviors
+  //-------------------------------------------
+  @include __behavior--status(badge);
+  @include __behavior--padding(badge, md);
+  @include __behavior--shadow(badge);
+  @include __behavior--shadow-inside(badge);
+  @include __behavior--3d(badge);
+  @include __behavior--fluid(badge);
 
 }
 

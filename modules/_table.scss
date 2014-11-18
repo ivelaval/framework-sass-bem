@@ -4,10 +4,9 @@
 
 @if __use-module(table) {
 
-  //------------------------------------------------
-  //  Table variables
-  //------------------------------------------------
-
+  //-------------------------------------------
+  //  Variables module
+  //-------------------------------------------
   $table__header--font-weight:      400;
   $table__header--font-color:       __mapping($__map--base-font, color);
   $table__cell--padding:            __em(12, __mapping($__map--base, size-base-em));
@@ -18,10 +17,9 @@
   $table__bg--active:               $table__bg--hover;
   $table__border--color:            #e0e0e0;
 
-  //------------------------------------------------
-  //  Table definitions
-  //------------------------------------------------
-
+  //-------------------------------------------
+  //  Class definitions
+  //-------------------------------------------
   .content__table{
    @include __base-mpb();
   }
@@ -32,7 +30,6 @@
     max-width: 100%;
     margin-bottom: 2rem;
     background-color: $table__bg;
-    @include __ui-shadow-o(0px 0px 4px 0px #000000);
 
     > thead,
     > tbody,
@@ -232,9 +229,15 @@
   }
 
   //------------------------------------------------
-  //  Run mixins
+  //  Run mixins Behavior
   //------------------------------------------------
+  @include __behavior--status(table);
+  @include __behavior--padding(table);
 
+  @include __behavior--shadow(table);
+  @include __behavior--shadow-inside(table);
+  @include __behavior--3d(table);
+  @include __behavior--fluid(table);
 
 
 }

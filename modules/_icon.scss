@@ -4,30 +4,43 @@
 
 @if __use-module(icon) {
 
+  //-------------------------------------------
+  //  Variables module
+  //-------------------------------------------
+  $icon--font-face: "zerw_fostastic";
+  $icon--line-height: 1;
+  $icon__round--padding: 0;
+  $icon__round--width: 80px;
+  $icon__round--height: 80px;
+
+
+  //-------------------------------------------
+  //  Class definitions
+  //-------------------------------------------
   @font-face {
-    font-family: "zerw_fostastic";
-    src: url("../fonts/zerw_fostastic.eot");
-    src: url("../fonts/zerw_fostastic.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/zerw_fostastic.woff") format("woff"),
-    url("../fonts/zerw_fostastic.ttf") format("truetype"),
-    url("../fonts/zerw_fostastic.svg#untitled-font-1") format("svg");
+    font-family: #{$icon--font-face};
+    src: url("../fonts/#{$icon--font-face}.eot");
+    src: url("../fonts/#{$icon--font-face}.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/#{$icon--font-face}.woff") format("woff"),
+    url("../fonts/#{$icon--font-face}.ttf") format("truetype"),
+    url("../fonts/#{$icon--font-face}.svg#untitled-font-1") format("svg");
     font-weight: normal;
     font-style: normal;
   }
 
   [data-icon]:before {
-    font-family: "zerw_fostastic";
+    font-family: #{$icon--font-face};
     content: attr(data-icon);
     @extend %__icon-extend--font-default;
     speak: none;
-    line-height: 1;
+    line-height: $icon--line-height;
     @include __icon-mixin--font-smooting();
 
   }
 
   [class^="icon__"]:before,
   [class*=" icon__"]:before {
-    font-family: "zerw_fostastic";
+    font-family: #{$icon--font-face};
     @extend %__icon-extend--font-default;
     speak: none;
     @include __icon-mixin--font-smooting();
@@ -36,7 +49,7 @@
   .icon {
     display: inline-block;
     vertical-align: middle;
-    line-height: 1;
+    line-height: $icon--line-height;
     @include __icon-mixin--font-smooting();
   }
 
@@ -44,10 +57,11 @@
     display: table;
     vertical-align: middle;
     text-align: center;
-    padding: 0;
-    width: 80px;
-    height: 80px;
+    padding: $icon__round--padding;
+    width: $icon__round--width;
+    height: $icon__round--height;
     @include __ui-round(100%);
+    @include __ui-border(1,1,1,2,1);
 
     &:before {
       display: table-cell;
@@ -58,12 +72,12 @@
 
   .icon--shadow-dark,
   .icon__round--shadow-dark {
-    @extend %__shadow-dark;
+    @extend %__shadow-dark !optional;
   }
 
   .icon--shadow-light,
   .icon__round--shadow-light {
-    @extend %__shadow-light;
+    @extend %__shadow-light !optional;
   }
 
   .icon--xxl {
@@ -2578,10 +2592,19 @@
   }
 
   //-------------------------------------------
-  //  Run Mixins
+  //  Run Mixins Behaviors
   //-------------------------------------------
-  @include __base-status(icon, true);
-  @include __base-status(icon__round, true);
-  @include __base-size(icon__round);
+  @include __behavior--status(icon, true);
+  @include __behavior--status(icon__round, true);
+  @include __behavior--size(icon__round);
+
+  @include __behavior--shadow(icon);
+  @include __behavior--shadow-inside(icon);
+  @include __behavior--3d(icon);
+
+  @include __behavior--shadow(icon__round);
+  @include __behavior--shadow-inside(icon__round);
+  @include __behavior--3d(icon__round);
+
 
 }

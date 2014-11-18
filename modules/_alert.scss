@@ -4,41 +4,62 @@
 
 @if __use-module(alert) {
 
+  //-------------------------------------------
+  //  Variables module
+  //-------------------------------------------
+  $alert--margin: 10px 0;
+  $alert--padding: 8px;
+  $alert--closable-padding-right: 20;
+  $alert--padding-p: 0;
+  $alert__title--margin-top: 0;
+  $alert__button--opacity: 1;
+  $alert__button--top: 2;
+  $alert__button--right: 8;
+  $alert__button--font-weight: bold;
+  $alert__button--outline: 0;
+
+  //-------------------------------------------
+  //  Class definitions
+  //-------------------------------------------
   .alert {
     position: relative;
-    @include __base-mpb(10px 0, 8px);
-    @include __ui-border();
+    @include __base-mpb($alert--margin, $alert--padding);
     @include __ui-round();
+    @include __ui-border();
   }
 
   .alert > p {
-    padding: 0;
+    padding: $alert--padding-p;
   }
 
   .alert--closable {
-    padding-right: __em(20);
+    padding-right: __em($alert--closable-padding-right);
   }
 
   .alert__title {
-    margin-top: 0;
+    margin-top: $alert__title--margin-top;
     color: inherit;
   }
 
   .alert__button--close {
     @extend %__alert-extend--button;
     position: absolute;
-    opacity: 1;
-    top: __em(2, __mapping($__map--base, size-base-em));
-    right: __em(8, __mapping($__map--base, size-base-em));
+    opacity: $alert__button--opacity;
+    top: __em($alert__button--top, __mapping($__map--base, size-base-em));
+    right: __em($alert__button--right, __mapping($__map--base, size-base-em));
     color: inherit;
-    font-weight: bold;
-    outline: 0;
+    font-weight: $alert__button--font-weight;
+    outline: $alert__button--outline;
   }
 
   //-------------------------------------------
-  //  Run Mixins
+  //  Run Mixins Behaviors
   //-------------------------------------------
-  @include __base-status(alert, true, true);
+  @include __behavior--status(alert, true, true);
+  @include __behavior--shadow(alert);
+  @include __behavior--shadow-inside(alert);
+  @include __behavior--3d(alert);
+  @include __behavior--fluid(alert);
 
 }
 

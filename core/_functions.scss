@@ -1,5 +1,10 @@
 //Core/Functions ==========================================================================
 
+//------------------------------------------------
+// Validates if a module in the framework will be used zerw
+// @param {String} $module
+// @return {Boolean} if module is active
+//------------------------------------------------
 @function __use-module($module) {
   $response: false;
   @if __mapping($__map--modules, $module) == true or __mapping($__map--zerw, all-modules) == true {
@@ -8,6 +13,12 @@
   @return $response;
 }
 
+//------------------------------------------------
+// Returns a value from a map by key
+// @param {Map} $map
+// @param {String} $key
+// @return {String} new value
+//------------------------------------------------
 @function __mapping($map, $key) {
   @if map-has-key($map, $key) {
     @return map-get($map, $key);
@@ -17,23 +28,72 @@
   @return null;
 }
 
+//------------------------------------------------
+// Converts a numeric value
+// @param {Number} $n
+// @return {Number} new Int value
+//------------------------------------------------
+@function __parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+//------------------------------------------------
+// Converts a numeric value in pixel unit
+// @param {Number} $size
+// @return {Number} new px value
+//------------------------------------------------
+@function __px($px){
+  @return #{$px}px;
+}
+
+//------------------------------------------------
+// Em calculated as unit value given pixel
+// @param {Number} $size
+// @param {Number} $base
+// @return {Number} new em value
+//------------------------------------------------
 @function __em($px, $base: __mapping($__map--base-font, size-base-em)) {
   @return ($px / $base) * 1em;
 }
 
+//------------------------------------------------
+// Rem calculated as unit value given pixel
+// @param {Number} $size
+// @param {Number} $base
+// @return {Number} new rem value
+//------------------------------------------------
+@function __rem($size, $base: __mapping($__map--base-font, size-base-em)) {
+  $remSize: $size / $base;
+  @return $remSize * 1rem;
+}
+
+//------------------------------------------------
+// Line height calculated based on em Units
+// @param {Number} $px
+// @param {Number} $lg
+// @return {Number} new opacity
+//------------------------------------------------
 @function __line-height($px, $lg: __mapping($__map--base-font, line-height)) {
   @return ($lg / $px) * 1em;
 }
 
+//------------------------------------------------
+// opacity calculated based on 100 Units
+// @param {Number} $opacity
+// @return {Number} new opacity
+//------------------------------------------------
 @function __calculate-opacity($opacity: __mapping($__map--ui, opacity)) {
   @return ($opacity*100);
 }
 
-@function __rem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
-}
-
+//------------------------------------------------
+// transforms a given in another light color with new features
+// @param {Color} $color
+// @param {Number} $adjust
+// @param {Number} $lighten
+// @param {Number} $saturate
+// @return {Color} end new color
+//------------------------------------------------
 @function __transform-color-sl($color: #000000, $adjust: 0, $lighten: 0, $saturate: 0) {
   $new-color: $color;
   @if $lighten != 0 and $saturate != 0 {
@@ -46,6 +106,14 @@
   @return $new-color;
 }
 
+//------------------------------------------------
+// transforms a given in another dark color with new features
+// @param {Color} $color
+// @param {Number} $adjust
+// @param {Number} $darken
+// @param {Number} $desaturate
+// @return {Color} end new color
+//------------------------------------------------
 @function __transform-color-dd($color: #000000, $adjust: 0, $darken: 0, $desaturate: 0) {
   $new-color: $color;
   @if $darken != 0 and $desaturate != 0 {
@@ -58,6 +126,14 @@
   @return $new-color;
 }
 
+//------------------------------------------------
+// Returns the text color according to the background color
+// @param {Color} $color
+// @param {Number} $lightness
+// @param {Color} $setdark
+// @param {Color} $setlight
+// @return {Color} end color text
+//------------------------------------------------
 @function __dynamic-text-color($color, $lightness: 70, $setdark: #555555, $setlight: #ffffff) {
   @if (lightness($color) > $lightness) {
     @return $setdark; // Lighter backgorund, return dark color
@@ -66,10 +142,11 @@
   }
 }
 
-/// Compute the maximum depth of a map
-/// @param {Map} $map
-/// @return {Number} max depth of `$map`
-
+//------------------------------------------------
+// Compute the maximum depth of a map
+// @param {Map} $map
+// @return {Number} max depth of `$map`
+//------------------------------------------------
 @function depth($map) {
   $level: 1;
 

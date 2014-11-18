@@ -4,12 +4,23 @@
 
 @if __use-module(menu) {
 
-  //------------------------------------------------
-  // Nav
-  //------------------------------------------------
+  //-------------------------------------------
+  //  Variables module
+  //-------------------------------------------
+  $nav--vertical-nav-item-border-botttom: 0;
+  $nav__bar--margin: 0;
+  $nav__bar--padding: 0 10px;
+  $nav__bar--nav-margin-bottom: 0;
+  $nav__bar--nav-item-border: 0;
+  $nav__bar--ul-li-margin-right: -4px;
+  $nav--fixed-top: 0;
+  $nav--fixed-left: 0;
+
+  //-------------------------------------------
+  //  Class definitions
+  //-------------------------------------------
   .nav {
-    margin: 0;
-    padding: 0;
+    @include __base-mpb();
     margin-bottom: __em(__mapping($__map--base, margin-bottom));
     list-style: none;
     display: block;
@@ -30,7 +41,7 @@
       display: block;
 
       &:nth-child(n) {
-        border-bottom: 0;
+        border-bottom: $nav--vertical-nav-item-border-botttom;
       }
 
       &:first-child {
@@ -64,30 +75,29 @@
   //------------------------------------------------
   .nav__bar {
     position: relative;
-    margin: 0;
-    padding: 0 10px;
+    margin: $nav__bar--margin;
+    padding: $nav__bar--padding;
     @extend %__fluid;
     @include __ui-border();
     @include __clearfix();
     @include __nav-mixin--size-nav-bar();
 
     .nav {
-      margin-bottom: 0;
+      margin-bottom: $nav__bar--nav-margin-bottom;
     }
 
     .nav__item {
-      border: 0;
+      border: $nav__bar--nav-item-border;
     }
 
     p, h1, h2, h3, h4, h5, h6 {
       line-height: 1;
-      margin: 0;
-      padding: 0;
+      @include __base-mpb();
     }
 
     ul {
       li, a {
-        margin-right: -4px;
+        margin-right: $nav__bar--ul-li-margin-right;
       }
     }
 
@@ -99,13 +109,8 @@
 
   .nav--fixed {
     position: fixed;
-    top: 0;
-    left: 0;
-
-    body {
-      padding-top: 50px;
-    }
-
+    top: $nav--fixed-top;
+    left: $nav--fixed-left;
   }
 
   //------------------------------------------------
@@ -129,7 +134,6 @@
         @extend %__nav-extend--inline;
 
         a {
-          padding: 10px;
           @include __ui-round();
         }
 
@@ -157,7 +161,7 @@
 
     .nav__item--child-float-right {
       float: right;
-      margin-left: 4px;
+      margin-left: __em(__mapping($__map--base, margin-left));
     }
 
   }
@@ -171,15 +175,16 @@
   }
 
   //-------------------------------------------
-  //  Run Mixins
+  //  Run Mixins Behavior
   //-------------------------------------------
-  @include __base-status(nav__bar, true);
+  @include __behavior--status(nav__bar, true);
 
   @include __nav-mixin--status-nav-block();
-  @include __base-padding(nav__block);
+  @include __behavior--padding(nav__block);
 
-  @include __base-status(nav__item, true);
-  @include __base-padding(nav__item);
+  @include __behavior--status(nav__item, true);
+  @include __behavior--padding(nav__item);
+
   @include __nav-mixin--status(nav__status);
   @include __nav-mixin--padding(nav__size);
 

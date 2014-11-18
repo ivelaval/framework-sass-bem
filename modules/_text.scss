@@ -1,39 +1,54 @@
 // Module/Text ==========================================================================
+@import "../core/mixins/text__mixin";
+@import "../core/extends/text__extend";
 
 @if __use-module(text) {
 
+  //-------------------------------------------
+  //  Variables module
+  //-------------------------------------------
+  $text__blockquote--padding: 5px;
+
+  //-------------------------------------------
+  //  Class definitions
+  //-------------------------------------------
   .text{
-    margin: 0;
-    padding: 0;
+    @include __base-mpb();
   }
 
   .text__h1{
-    font-size: __em(__mapping($__map--base-font, size-txl));
+    font-size: __rem(__mapping($__map--base-font, size-txl));
   }
 
   .text__h2{
-    font-size: __em(__mapping($__map--base-font, size-gxl));
+    font-size: __rem(__mapping($__map--base-font, size-gxl));
   }
 
   .text__h3{
-    font-size: __em(__mapping($__map--base-font, size-mxl));
+    font-size: __rem(__mapping($__map--base-font, size-mxl));
   }
 
   .text__h4{
-    font-size: __em(__mapping($__map--base-font, size-xxl));
+    font-size: __rem(__mapping($__map--base-font, size-xxl));
   }
 
   .text__h5{
-    font-size: __em(__mapping($__map--base-font, size-xl));
+    font-size: __rem(__mapping($__map--base-font, size-xl));
   }
 
   .text__h6{
-    font-size: __em(__mapping($__map--base-font, size-lg));
+    font-size: __rem(__mapping($__map--base-font, size-lg));
   }
 
   .text__blockquote{
-    padding: 5px;
+    padding: $text__blockquote--padding;
   }
+
+
+  //------------------------------------------------
+  //  Run mixins Behavior
+  //------------------------------------------------
+
 
 }
 

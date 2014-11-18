@@ -1,27 +1,40 @@
 //module/Label ==========================================================================
+@import "../core/mixins/label__mixin";
+@import "../core/extends/label__extend";
 
 @if __use-module(label) {
 
+  //-------------------------------------------
+  //  Variables module
+  //-------------------------------------------
+  $label--font-size: 10;
+  $label--font-weight: normal;
+
+  //-------------------------------------------
+  //  Class definitions
+  //-------------------------------------------
+
   .label {
-    font-weight: normal;
+    font-weight: $label--font-weight;
     display: inline-block;
     vertical-align: middle;
     white-space: nowrap;
-    font-size: 70%;
-    line-height: 1;
+    font-size: __rem($label--font-size);
+    font-weight: bold;
     text-align: center;
-    border-radius: __mapping($__map--ui, border-radius);;
-  }
-
-  .label--shadow-inside {
-    @extend %__shadow-inside;
+    @include __ui-round();
   }
 
   //-------------------------------------------
-  //  Run Mixins
+  //  Run Mixins Behaviors
   //-------------------------------------------
-  @include __base-status(label);
-  @include __base-padding(label);
+  @include __behavior--status(label);
+  @include __behavior--padding(label);
+
+  @include __behavior--shadow(label);
+  @include __behavior--shadow-inside(label);
+  @include __behavior--3d(label);
+  @include __behavior--fluid(label);
 
 }
 

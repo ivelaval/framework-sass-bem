@@ -4,14 +4,23 @@
 
 @if __use-module(breadcrumb) {
 
+  //-------------------------------------------
+  //  Variables module
+  //------------------------------------------
+  $breadcrumb--border: -1;
+  $breadcrumb--color-acive-li: #999999;
+  $breadcrumb__arrow--color-text-normal: #d9dcdd;
+  $breadcrumb__arrow--color-text-hover: #777777;
+  $breadcrumb__arrow--color-text: #454545;
+
+  //-------------------------------------------
+  //  Class definitions
+  //------------------------------------------
   .breadcrumb {
     @extend %__breadcrumb-extend--global;
-    @include __ui-round(4px);
-    @include __ui-border(-1, 0 1px 4px 1px);
+    @include __ui-round();
+    @include __ui-border($breadcrumb--border);
   }
-
-  @include __base-status(breadcrumb, true);
-  @include __base-padding(breadcrumb);
 
   .breadcrumb > li {
     display: inline-block;
@@ -25,15 +34,27 @@
       content: " / ";
     }
     &.active {
-      color: #999999;
+      color: $breadcrumb--color-acive-li;
     }
   }
 
   .breadcrumb__arrow {
     list-style: none;
     display: inline-block;
-    @include __breadcrumb-mixin--type(__mapping($__map--ui-color-status, normal), #d9dcdd, #777777, #454545);
+    @include __breadcrumb-mixin--type(__mapping($__map--ui-color-status, normal), $breadcrumb__arrow--color-text-normal, $breadcrumb__arrow--color-text-hover, $breadcrumb__arrow--color-text);
   }
+
+
+  //-------------------------------------------
+  //  Run Mixins Behaviors
+  //-------------------------------------------
+  @include __behavior--status(breadcrumb, true);
+  @include __behavior--padding(breadcrumb);
+  @include __behavior--shadow(breadcrumb);
+  @include __behavior--shadow-inside(breadcrumb);
+  @include __behavior--3d(breadcrumb);
+  @include __behavior--fluid(breadcrumb);
+
 
 }
 

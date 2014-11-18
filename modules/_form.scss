@@ -4,12 +4,28 @@
 
 @if __use-module(form) {
 
+  //-------------------------------------------
+  //  Variables module
+  //-------------------------------------------
+  $form--padding: 2px;
+  $form__group--margin-bottom: 4px;
+  $form__input-group--form-input-width: 100%;
+  $form__input-group--form-input-margin-bottom: 0;
+  $form__legend--top: 30px;
+  $form__legend--width: 100%;
+  $form__legend--border: 0;
+  $form__legend--font-size: __rem(21);
+  $form__textarea--min-height: 120px;
+
+  //-------------------------------------------
+  //  Class definitions
+  //-------------------------------------------
   .form {
-    padding: 2px;
+    padding: $form--padding;
   }
 
   .form__group {
-    margin-bottom: 4px;
+    margin-bottom: $form__group--margin-bottom;
     @include __clearfix();
   }
 
@@ -24,16 +40,16 @@
     display: table;
 
     .form__input {
-      width: 100%;
-      margin-bottom: 0;
+      width: $form__input-group--form-input-width;
+      margin-bottom: $form__input-group--form-input-margin-bottom;
       float: left;
 
       &:first-child {
-        @include __ui-round--right(0);
+          @include __ui-round--right(0);
       }
 
       &:last-child {
-        @include __ui-round--left(0);
+          @include __ui-round--left(0);
       }
 
     }
@@ -41,11 +57,11 @@
     .addon {
 
       &:first-child {
-        @include __ui-round--right(0);
+          @include __ui-round--right(0);
       }
 
       &:last-child {
-        @include __ui-round--left(0);
+          @include __ui-round--left(0);
       }
 
     }
@@ -56,13 +72,13 @@
 
     &:first-child {
       .button {
-        @include __ui-round--right(0);
+          @include __ui-round--right(0);
       }
     }
 
     &:last-child {
       .button {
-        @include __ui-round--left(0);
+          @include __ui-round--left(0);
       }
     }
 
@@ -103,20 +119,20 @@
 
   .form__legend {
     position: relative;
-    top: 30px;
     display: block;
-    width: 100%;
-    @include __base-mpb();
-    border: 0;
-    font-size: 21px;
+    top: $form__legend--top;
+    width: $form__legend--width;
+    border: $form__legend--border;
+    font-size: $form__legend--font-size;
     line-height: inherit;
     border-bottom: none;
+    @include __base-mpb();
   }
 
   .form__label {
     color: __mapping($__map--base-font, color-label);
     vertical-align: middle;
-    margin-bottom: 4px;
+    margin-bottom: __em(__mapping($__map--base, margin-bottom));
     display: block;
   }
 
@@ -126,7 +142,7 @@
 
   .form__textarea {
     @extend %__form-extend--element;
-    min-height: 120px;
+    min-height: $form__textarea--min-height;
   }
 
   .form__select {
@@ -165,11 +181,13 @@
     @include __form-mixin--status-border(__mapping($__map--ui-color-status, info));
   }
 
-  .form__input--fluid,
-  .form__select--fluid,
-  .form__element--fluid {
-    @extend %__fluid;
-  }
+
+  //------------------------------------------------
+  //  Run mixins Behavior
+  //------------------------------------------------
+  @include __behavior--fluid(form__input);
+  @include __behavior--fluid(form__select);
+  @include __behavior--fluid(form__element);
 
 }
 

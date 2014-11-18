@@ -6,13 +6,7 @@
 //  Created: 13/10/2014
 //  Updated: 15/10/2014
 ********************************************************/
-.addon--shadow-inside, .badge--shadow-inside, .image--shadow-inside, .label--shadow-inside, .panel--shadow-inside {
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
-}
-
-.button--fluid, .form__input--fluid,
-.form__select--fluid,
-.form__element--fluid, .nav__bar {
+.nav__bar {
   width: 100%;
 }
 
@@ -35,10 +29,6 @@
 html {
   font-family: sans-serif;
   /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
 }
 
 /**
@@ -217,7 +207,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -294,8 +283,6 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
   cursor: pointer;
   /* 3 */
 }
@@ -311,12 +298,6 @@ html input[disabled] {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
@@ -345,22 +326,12 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
 input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
   box-sizing: content-box;
 }
 
@@ -369,11 +340,6 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
 /**
  * Define consistent border, margin, and padding.
  */
@@ -433,7 +399,7 @@ html, body {
   line-height: 1.4;
   font-family: "Open Sans", sans-serif;
   color: black;
-  font-size: 0.9375em;
+  font-size: 0.9375rem;
   text-align: left;
 }
 
@@ -441,7 +407,7 @@ button,
 input,
 select,
 textarea {
-  color: #2B2B2B;
+  color: #9faaad;
 }
 button:disabled,
 input:disabled,
@@ -495,14 +461,6 @@ input[type="submit"],
 a.button {
   display: inline-block;
   cursor: pointer;
-}
-button::-moz-focus-inner,
-html input[type="button"]::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner,
-a.button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
 }
 
 fieldset {
@@ -659,9 +617,7 @@ footer {
 .addon {
   display: inline-block;
   vertical-align: middle;
-  color: #555555;
   text-align: center;
-  border: none;
   background-color: #e4e7e8;
   padding: 0.71429em;
   border-radius: 4px;
@@ -685,11 +641,6 @@ footer {
 .addon__group .addon:last-child {
   border-radius: 0 4px 4px 0;
   background-clip: padding-box;
-}
-
-.addon--fluid {
-  display: block;
-  width: 100%;
 }
 
 .addon--normal {
@@ -771,6 +722,36 @@ footer {
   padding: 1.07143em 1.07143em;
 }
 
+.addon--shadow {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.addon--without-shadow {
+  box-shadow: none;
+}
+
+.addon--shadow-inside {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.addon--without-shadow-inside {
+  box-shadow: none;
+}
+
+.addon--3d {
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
+}
+
+.addon--without-3d {
+  border: nonepx solid transparent;
+  border-width: 0em 0em 0em 0em;
+}
+
+.addon--fluid {
+  display: block;
+  width: 100%;
+}
+
 [data-icon]:before, [class^="icon__"]:before,
 [class*=" icon__"]:before {
   font-style: normal;
@@ -780,14 +761,14 @@ footer {
 }
 
 @font-face {
-  font-family: "zerw_fostastic";
+  font-family: zerw_fostastic;
   src: url("../fonts/zerw_fostastic.eot");
   src: url("../fonts/zerw_fostastic.eot?#iefix") format("embedded-opentype"), url("../fonts/zerw_fostastic.woff") format("woff"), url("../fonts/zerw_fostastic.ttf") format("truetype"), url("../fonts/zerw_fostastic.svg#untitled-font-1") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 [data-icon]:before {
-  font-family: "zerw_fostastic";
+  font-family: zerw_fostastic;
   content: attr(data-icon);
   speak: none;
   line-height: 1;
@@ -795,7 +776,7 @@ footer {
 
 [class^="icon__"]:before,
 [class*=" icon__"]:before {
-  font-family: "zerw_fostastic";
+  font-family: zerw_fostastic;
   speak: none;
 }
 
@@ -814,6 +795,8 @@ footer {
   height: 80px;
   border-radius: 100%;
   background-clip: padding-box;
+  border: 1px solid transparent;
+  border-width: 0.07143em 0.07143em 0.14286em 0.07143em;
 }
 .icon__round:before {
   display: table-cell;
@@ -4190,22 +4173,71 @@ footer {
   height: 2.5em;
 }
 
+.icon--shadow {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.icon--without-shadow {
+  box-shadow: none;
+}
+
+.icon--shadow-inside {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.icon--without-shadow-inside {
+  box-shadow: none;
+}
+
+.icon--3d {
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
+}
+
+.icon--without-3d {
+  border: nonepx solid transparent;
+  border-width: 0em 0em 0em 0em;
+}
+
+.icon__round--shadow {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.icon__round--without-shadow {
+  box-shadow: none;
+}
+
+.icon__round--shadow-inside {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.icon__round--without-shadow-inside {
+  box-shadow: none;
+}
+
+.icon__round--3d {
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
+}
+
+.icon__round--without-3d {
+  border: nonepx solid transparent;
+  border-width: 0em 0em 0em 0em;
+}
+
 .alert__button--close {
   padding: 0;
   cursor: pointer;
   background: transparent;
   border: 0;
-  -webkit-appearance: none;
 }
 
 .alert {
   position: relative;
   margin: 10px 0;
   padding: 8px;
-  border: 1px solid transparent;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
   border-radius: 4px;
   background-clip: padding-box;
+  border: 1px solid transparent;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
 }
 
 .alert > p {
@@ -4319,6 +4351,36 @@ footer {
 }
 .alert--info li.active {
   color: #cccccc;
+}
+
+.alert--shadow {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.alert--without-shadow {
+  box-shadow: none;
+}
+
+.alert--shadow-inside {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.alert--without-shadow-inside {
+  box-shadow: none;
+}
+
+.alert--3d {
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
+}
+
+.alert--without-3d {
+  border: nonepx solid transparent;
+  border-width: 0em 0em 0em 0em;
+}
+
+.alert--fluid {
+  display: block;
+  width: 100%;
 }
 
 .badge, .badge__float[data-badge]:after {
@@ -4486,6 +4548,36 @@ footer {
   padding: 1.07143em 0.71429em;
 }
 
+.badge--shadow {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.badge--without-shadow {
+  box-shadow: none;
+}
+
+.badge--shadow-inside {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.badge--without-shadow-inside {
+  box-shadow: none;
+}
+
+.badge--3d {
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
+}
+
+.badge--without-3d {
+  border: nonepx solid transparent;
+  border-width: 0em 0em 0em 0em;
+}
+
+.badge--fluid {
+  display: block;
+  width: 100%;
+}
+
 .breadcrumb {
   padding: 8px 15px;
   margin-bottom: 0.25em;
@@ -4498,7 +4590,108 @@ footer {
 .breadcrumb {
   border-radius: 4px;
   background-clip: padding-box;
-  border-width: 0 1px 4px 1px;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
+}
+
+.breadcrumb > li {
+  display: inline-block;
+  vertical-align: top;
+}
+.breadcrumb > li:last-child:after {
+  content: " ";
+}
+.breadcrumb > li:after {
+  content: " / ";
+}
+.breadcrumb > li.active {
+  color: #999999;
+}
+
+.breadcrumb__arrow {
+  list-style: none;
+  display: inline-block;
+}
+.breadcrumb__arrow li {
+  float: left;
+}
+.breadcrumb__arrow li a {
+  color: #777777;
+  display: block;
+  background: #e4e7e8;
+  text-decoration: none;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px 0 5px;
+  text-align: center;
+  margin-right: 23px;
+}
+.breadcrumb__arrow li:nth-child(even) a {
+  background-color: #e4e7e8;
+}
+.breadcrumb__arrow li:nth-child(even) a:before {
+  border-color: #e4e7e8;
+  border-left-color: transparent;
+}
+.breadcrumb__arrow li:nth-child(even) a:after {
+  border-left-color: #e4e7e8;
+}
+.breadcrumb__arrow li:first-child a {
+  padding-left: 15px;
+  border-radius: 4px 0 0 4px;
+  background-clip: padding-box;
+}
+.breadcrumb__arrow li:first-child a:before {
+  border: none;
+}
+.breadcrumb__arrow li:last-child a {
+  padding-right: 15px;
+  border-radius: 0 4px 4px 0;
+  background-clip: padding-box;
+}
+.breadcrumb__arrow li:last-child a:after {
+  border: none;
+}
+.breadcrumb__arrow li a:before, .breadcrumb__arrow li a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 0 solid #e4e7e8;
+  border-width: 20px 10px;
+  width: 0;
+  height: 0;
+}
+.breadcrumb__arrow li a:before {
+  left: -20px;
+  border-left-color: transparent;
+}
+.breadcrumb__arrow li a:after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: #e4e7e8;
+}
+.breadcrumb__arrow li a:hover {
+  background-color: #d9dcdd;
+  color: #454545;
+  transition: color 0.3s ease;
+}
+.breadcrumb__arrow li a:hover:before {
+  border-color: #d9dcdd;
+  border-left-color: transparent;
+}
+.breadcrumb__arrow li a:hover:after {
+  border-left-color: #d9dcdd;
+}
+.breadcrumb__arrow li a:active {
+  background-color: #d9dcdd;
+  color: #454545;
+}
+.breadcrumb__arrow li a:active:before {
+  border-color: #d9dcdd;
+  border-left-color: transparent;
+}
+.breadcrumb__arrow li a:active:after {
+  border-left-color: #d9dcdd;
 }
 
 .breadcrumb--normal {
@@ -4610,152 +4803,57 @@ footer {
   padding: 1.07143em 1.07143em;
 }
 
-.breadcrumb > li {
-  display: inline-block;
-  vertical-align: top;
-}
-.breadcrumb > li:last-child:after {
-  content: " ";
-}
-.breadcrumb > li:after {
-  content: " / ";
-}
-.breadcrumb > li.active {
-  color: #999999;
+.breadcrumb--shadow {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
-.breadcrumb__arrow {
-  list-style: none;
-  display: inline-block;
+.breadcrumb--without-shadow {
+  box-shadow: none;
 }
-.breadcrumb__arrow li {
-  float: left;
+
+.breadcrumb--shadow-inside {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
 }
-.breadcrumb__arrow li a {
-  color: #777777;
+
+.breadcrumb--without-shadow-inside {
+  box-shadow: none;
+}
+
+.breadcrumb--3d {
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
+}
+
+.breadcrumb--without-3d {
+  border: nonepx solid transparent;
+  border-width: 0em 0em 0em 0em;
+}
+
+.breadcrumb--fluid {
   display: block;
-  background: #e4e7e8;
-  text-decoration: none;
-  position: relative;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 10px 0 5px;
-  text-align: center;
-  margin-right: 23px;
-}
-.breadcrumb__arrow li:nth-child(even) a {
-  background-color: #e4e7e8;
-}
-.breadcrumb__arrow li:nth-child(even) a:before {
-  border-color: #e4e7e8;
-  border-left-color: transparent;
-}
-.breadcrumb__arrow li:nth-child(even) a:after {
-  border-left-color: #e4e7e8;
-}
-.breadcrumb__arrow li:first-child a {
-  padding-left: 15px;
-  border-radius: 4px 0 0 4px;
-  background-clip: padding-box;
-}
-.breadcrumb__arrow li:first-child a:before {
-  border: none;
-}
-.breadcrumb__arrow li:last-child a {
-  padding-right: 15px;
-  border-radius: 0 4px 4px 0;
-  background-clip: padding-box;
-}
-.breadcrumb__arrow li:last-child a:after {
-  border: none;
-}
-.breadcrumb__arrow li a:before, .breadcrumb__arrow li a:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  border: 0 solid #e4e7e8;
-  border-width: 20px 10px;
-  width: 0;
-  height: 0;
-}
-.breadcrumb__arrow li a:before {
-  left: -20px;
-  border-left-color: transparent;
-}
-.breadcrumb__arrow li a:after {
-  left: 100%;
-  border-color: transparent;
-  border-left-color: #e4e7e8;
-}
-.breadcrumb__arrow li a:hover {
-  background-color: #d9dcdd;
-  color: #454545;
-  transition: color 0.3s ease;
-}
-.breadcrumb__arrow li a:hover:before {
-  border-color: #d9dcdd;
-  border-left-color: transparent;
-}
-.breadcrumb__arrow li a:hover:after {
-  border-left-color: #d9dcdd;
-}
-.breadcrumb__arrow li a:active {
-  background-color: #d9dcdd;
-  color: #454545;
-}
-.breadcrumb__arrow li a:active:before {
-  border-color: #d9dcdd;
-  border-left-color: transparent;
-}
-.breadcrumb__arrow li a:active:after {
-  border-left-color: #d9dcdd;
-}
-
-.button--xxl {
-  padding: 2.14286em 1.07143em;
-}
-
-.button--xl {
-  padding: 1.42857em 1.07143em;
-}
-
-.button--xs {
-  padding: 0.28571em 1.07143em;
-}
-
-.button--sm {
-  padding: 0.5em 1.07143em;
-}
-
-.button--md {
-  padding: 0.71429em 1.07143em;
-}
-
-.button--lg {
-  padding: 1.07143em 1.07143em;
+  width: 100%;
 }
 
 .button {
   text-align: center;
   display: inline-block;
-  margin-bottom: 4px;
   font-weight: normal;
   vertical-align: middle;
   cursor: pointer;
   background-image: none;
-  border: 1px solid transparent;
   white-space: nowrap;
   text-decoration: none;
-  border-radius: 4px;
-  background-clip: padding-box;
-  border: 1px solid transparent;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
 }
 
 .button:focus, .button:active, .form__input-group-button .button:active {
   outline: 0;
 }
 
+.button {
+  border-radius: 4px;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
+}
 .button:focus {
   text-decoration: none;
 }
@@ -4770,7 +4868,8 @@ footer {
 }
 
 .button__group {
-  margin-bottom: 4px;
+  margin-bottom: 0.25em;
+  margin-top: 0.25em;
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -4889,6 +4988,60 @@ footer {
   color: #cccccc;
 }
 
+.button--xxl {
+  padding: 2.14286em 1.07143em;
+}
+
+.button--xl {
+  padding: 1.42857em 1.07143em;
+}
+
+.button--xs {
+  padding: 0.28571em 1.07143em;
+}
+
+.button--sm {
+  padding: 0.5em 1.07143em;
+}
+
+.button--md {
+  padding: 0.71429em 1.07143em;
+}
+
+.button--lg {
+  padding: 1.07143em 1.07143em;
+}
+
+.button--shadow {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.button--without-shadow {
+  box-shadow: none;
+}
+
+.button--shadow-inside {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.button--without-shadow-inside {
+  box-shadow: none;
+}
+
+.button--3d {
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
+}
+
+.button--without-3d {
+  border: nonepx solid transparent;
+  border-width: 0em 0em 0em 0em;
+}
+
+.button--fluid {
+  display: block;
+  width: 100%;
+}
+
 .form__input, .form__textarea, .form__select {
   position: relative;
   background: #FFFFFF;
@@ -4902,20 +5055,6 @@ footer {
   border: 1px solid #e4e7e8;
   box-shadow: inset 0 1px 1px #e4e7e8, 0 0 6px #e4e7e8;
   transition: border-color ease-in 0.2s, box-shadow ease-in 0.2s;
-}
-.form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder, .form__select::-webkit-input-placeholder {
-  color: #979797;
-}
-.form__input:-moz-placeholder, .form__textarea:-moz-placeholder, .form__select:-moz-placeholder {
-  color: #979797;
-  opacity: 1;
-}
-.form__input::-moz-placeholder, .form__textarea::-moz-placeholder, .form__select::-moz-placeholder {
-  color: #979797;
-  opacity: 1;
-}
-.form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder, .form__select:-ms-input-placeholder {
-  color: #979797;
 }
 
 .form {
@@ -5010,21 +5149,21 @@ footer {
 
 .form__legend {
   position: relative;
-  top: 30px;
   display: block;
+  top: 30px;
   width: 100%;
-  margin: 0;
-  padding: 0;
   border: 0;
-  font-size: 21px;
+  font-size: 1.3125rem;
   line-height: inherit;
   border-bottom: none;
+  margin: 0;
+  padding: 0;
 }
 
 .form__label {
   color: #6d6d6d;
   vertical-align: middle;
-  margin-bottom: 4px;
+  margin-bottom: 0.25em;
   display: block;
 }
 
@@ -5135,6 +5274,21 @@ footer {
   box-shadow: inset 0 1px 1px #158cba, 0 0 6px #158cba;
 }
 
+.form__input--fluid {
+  display: block;
+  width: 100%;
+}
+
+.form__select--fluid {
+  display: block;
+  width: 100%;
+}
+
+.form__element--fluid {
+  display: block;
+  width: 100%;
+}
+
 .image {
   display: inline-block;
   vertical-align: middle;
@@ -5197,10 +5351,11 @@ footer {
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
-  font-size: 70%;
-  line-height: 1;
+  font-size: 0.625rem;
+  font-weight: bold;
   text-align: center;
   border-radius: 4px;
+  background-clip: padding-box;
 }
 
 .label--normal {
@@ -5280,6 +5435,36 @@ footer {
 
 .label--lg {
   padding: 1.07143em 1.07143em;
+}
+
+.label--shadow {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.label--without-shadow {
+  box-shadow: none;
+}
+
+.label--shadow-inside {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.label--without-shadow-inside {
+  box-shadow: none;
+}
+
+.label--3d {
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
+}
+
+.label--without-3d {
+  border: nonepx solid transparent;
+  border-width: 0em 0em 0em 0em;
+}
+
+.label--fluid {
+  display: block;
+  width: 100%;
 }
 
 *,
@@ -6306,7 +6491,7 @@ footer {
   margin: 0;
   padding: 0 10px;
   border: 1px solid transparent;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
   /*
   Removed hack internet explorer css zerw since it will not support IE6 yIE7,
   annotation is done by touching adjust this issue for more recent versions of IE.
@@ -6324,40 +6509,40 @@ footer {
   display: table-cell;
 }
 .nav__bar .nav .nav__item {
-  border: 0;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border: 0px solid transparent;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
   border-radius: 0;
   background-clip: padding-box;
 }
 .nav__bar .nav .nav__item--xxl a {
   padding: 2.14286em 0.28571em;
-  border: 0;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border: 0px solid transparent;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
 }
 .nav__bar .nav .nav__item--xl a {
   padding: 1.42857em 0.28571em;
-  border: 0;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border: 0px solid transparent;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
 }
 .nav__bar .nav .nav__item--xs a {
   padding: 0.28571em 0.28571em;
-  border: 0;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border: 0px solid transparent;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
 }
 .nav__bar .nav .nav__item--sm a {
   padding: 0.5em 0.28571em;
-  border: 0;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border: 0px solid transparent;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
 }
 .nav__bar .nav .nav__item--md a {
   padding: 0.71429em 0.28571em;
-  border: 0;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border: 0px solid transparent;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
 }
 .nav__bar .nav .nav__item--lg a {
   padding: 1.07143em 0.28571em;
-  border: 0;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border: 0px solid transparent;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
 }
 .nav__bar .nav {
   margin-bottom: 0;
@@ -6384,13 +6569,10 @@ footer {
   top: 0;
   left: 0;
 }
-.nav--fixed body {
-  padding-top: 50px;
-}
 
 .nav__block {
   border: 1px solid transparent;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
   /*
   Removed hack internet explorer css zerw since it will not support IE6 yIE7,
   annotation is done by touching adjust this issue for more recent versions of IE.
@@ -6433,7 +6615,6 @@ footer {
   clear: both;
 }
 .nav__block .nav__block-menu li a {
-  padding: 10px;
   border-radius: 4px;
   background-clip: padding-box;
 }
@@ -6441,7 +6622,7 @@ footer {
 .nav__item {
   transition: all 0.3s ease-out;
   border: 1px solid transparent;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
   border-radius: 4px;
   background-clip: padding-box;
   /*
@@ -6464,7 +6645,7 @@ footer {
 }
 .nav__item .nav__item--child-float-right {
   float: right;
-  margin-left: 4px;
+  margin-left: 0.25em;
 }
 
 .nav__item--without-border {
@@ -6558,7 +6739,7 @@ footer {
 
 .nav__block--normal {
   border: 1px solid transparent;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
   background-color: #e4e7e8;
   border-color: #d6dbdc;
 }
@@ -6574,7 +6755,7 @@ footer {
 
 .nav__block--danger {
   border: 1px solid transparent;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
   background-color: #ff4136;
   border-color: #ff291d;
 }
@@ -6590,7 +6771,7 @@ footer {
 
 .nav__block--warning {
   border: 1px solid transparent;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
   background-color: #ff851b;
   border-color: #ff7701;
 }
@@ -6606,7 +6787,7 @@ footer {
 
 .nav__block--success {
   border: 1px solid transparent;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
   background-color: #5ac51f;
   border-color: #50af1c;
 }
@@ -6622,7 +6803,7 @@ footer {
 
 .nav__block--info {
   border: 1px solid transparent;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
   background-color: #158cba;
   border-color: #127ba3;
 }
@@ -6853,10 +7034,11 @@ footer {
 }
 
 .panel {
-  margin-bottom: 4px;
-  border: 1px solid transparent;
-  border-width: 0 0.07143em 0.28571em 0.07143em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
   border-color: #e4e7e8;
+  border: 1px solid transparent;
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
 }
 .panel .panel__header {
   margin-top: 0;
@@ -7011,6 +7193,22 @@ footer {
   padding: 1.07143em 0.71429em;
 }
 
+.panel--shadow-inside {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.panel--without-shadow-inside {
+  box-shadow: none;
+}
+
+.panel--shadow {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.panel--without-shadow {
+  box-shadow: none;
+}
+
 .content__table {
   margin: 0;
   padding: 0;
@@ -7021,7 +7219,6 @@ footer {
   max-width: 100%;
   margin-bottom: 2rem;
   background-color: white;
-  box-shadow: 0px 0px 4px 0px black;
 }
 .table > thead > tr > th,
 .table > thead > tr > td,
@@ -7151,33 +7348,142 @@ footer {
   }
 }
 
+.table--normal {
+  background-color: #e4e7e8;
+  border-color: #d6dbdc;
+  transition: background-color 0.3s ease;
+  color: #555555;
+}
+.table--normal:hover {
+  color: #555555;
+  background-color: #eaeced;
+}
+
+.table--danger {
+  background-color: #ff4136;
+  border-color: #ff291d;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+.table--danger:hover {
+  color: white;
+  background-color: #ff4b40;
+}
+
+.table--warning {
+  background-color: #ff851b;
+  border-color: #ff7701;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+.table--warning:hover {
+  color: white;
+  background-color: #ff8a25;
+}
+
+.table--success {
+  background-color: #5ac51f;
+  border-color: #50af1c;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+.table--success:hover {
+  color: white;
+  background-color: #5ece20;
+}
+
+.table--info {
+  background-color: #158cba;
+  border-color: #127ba3;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+.table--info:hover {
+  color: white;
+  background-color: #1693c3;
+}
+
+.table--xxl {
+  padding: 2.14286em 1.07143em;
+}
+
+.table--xl {
+  padding: 1.42857em 1.07143em;
+}
+
+.table--xs {
+  padding: 0.28571em 1.07143em;
+}
+
+.table--sm {
+  padding: 0.5em 1.07143em;
+}
+
+.table--md {
+  padding: 0.71429em 1.07143em;
+}
+
+.table--lg {
+  padding: 1.07143em 1.07143em;
+}
+
+.table--shadow {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.table--without-shadow {
+  box-shadow: none;
+}
+
+.table--shadow-inside {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.table--without-shadow-inside {
+  box-shadow: none;
+}
+
+.table--3d {
+  border-width: 0em 0.07143em 0.28571em 0.07143em;
+}
+
+.table--without-3d {
+  border: nonepx solid transparent;
+  border-width: 0em 0em 0em 0em;
+}
+
+.table--fluid {
+  display: block;
+  width: 100%;
+}
+
 .text {
   margin: 0;
   padding: 0;
 }
 
 .text__h1 {
-  font-size: 4.5em;
+  font-size: 4.5rem;
 }
 
 .text__h2 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 .text__h3 {
-  font-size: 2.25em;
+  font-size: 2.25rem;
 }
 
 .text__h4 {
-  font-size: 1.875em;
+  font-size: 1.875rem;
 }
 
 .text__h5 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .text__h6 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 .text__blockquote {

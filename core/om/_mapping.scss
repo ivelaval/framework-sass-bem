@@ -12,13 +12,18 @@ $__map--zerw: (
         all-modules: $__zerw-all-modules,
         normalize: $__zerw-normalize,
         support-prefix:  $__zerw-support-prefix,
-        3d: $__zerw-3d,
+        3d: $__zerw-3d, //border width
         shadow: $__zerw-shadow,
         round: $__zerw-round,
-        border: $__zerw-border,
         status: $__zerw-status,
         padding-size: $__zerw-padding-size,
-        size: $__zerw-size
+        size: $__zerw-size,
+        default-3d: $__zerw-default-3d, //border width
+        default-shadow: $__zerw-default-shadow,
+        default-round: $__zerw-default-round,
+        default-status: $__zerw-default-status,
+        default-padding-size: $__zerw-default-padding-size,
+        default-size: $__zerw-default-size,
 );
 
 //---------------------------------------------
@@ -60,7 +65,8 @@ $__map--base: (
         margin-top: $__margin-top,
         margin-bottom: $__margin-bottom,
         margin-left: $__margin-left,
-        margin-right: $__margin-right
+        margin-right: $__margin-right,
+        border-size: $__border-size
 );
 
 //---------------------------------------------

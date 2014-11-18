@@ -2,22 +2,27 @@
 
 @if __use-module(image) {
 
+  //-------------------------------------------
+  //  Variables module
+  //-------------------------------------------
+  $image__fluid--max-width: 100%;
+  $image__avatar--padding: 0;
+
+  //-------------------------------------------
+  //  Class definitions
+  //-------------------------------------------
   .image {
     display: inline-block;
     vertical-align: middle;
   }
 
   .image__fluid {
-    max-width: 100%;
+    max-width: $image__fluid--max-width;
     height: auto;
   }
 
-  .image--shadow-inside {
-    @extend %__shadow-inside;
-  }
-
   .image__avatar {
-    padding: 0;
+    padding: $image__avatar--padding;
     display: table;
     vertical-align: middle;
     text-align: center;
@@ -35,9 +40,9 @@
   }
 
   //-------------------------------------------
-  //  Run Mixins
+  //  Run Mixins Behaviors
   //-------------------------------------------
-  @include __base-size(image__avatar, 5, 2);
+  @include __behavior--size(image__avatar, 5, 2);
 
 }
 

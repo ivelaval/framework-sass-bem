@@ -4,17 +4,29 @@
 
 @if __use-module(panel) {
 
+  //-------------------------------------------
+  //  Variables module
+  //-------------------------------------------
+  $panel--panel-header-margin-top: 0;
+  $panel--panel-header-margin-bottom: 0;
+  $panel--panel-body-padding: 8px;
+
+  //-------------------------------------------
+  //  Class definitions
+  //-------------------------------------------
   .panel {
-    margin-bottom: 4px;
-    @include __ui-border();
+
+    margin-top: __em(__mapping($__map--base, margin-top));
+    margin-bottom: __em(__mapping($__map--base, margin-bottom));
     border-color: __mapping($__map--ui-color-status, normal);
+    @include __ui-border();
 
     .panel__header {
-      margin-top: 0;
-      margin-bottom: 0;
+      margin-top: $panel--panel-header-margin-top;
+      margin-bottom: $panel--panel-header-margin-bottom;
       padding: __em(__mapping($__map--base-padding-size, lg));
       border-bottom: 1px transparent;
-      @include __ui-round--top(4px);
+      @include __ui-round--top(__mapping($__map--ui, border-radius));
 
       > a {
         color: inherit;
@@ -22,7 +34,7 @@
     }
 
     .panel__body {
-      padding: 8px;
+      padding: $panel--panel-body-padding;
       @include __clearfix();
     }
 
@@ -37,12 +49,16 @@
     @include __ui-round();
   }
 
-  .panel--shadow-inside {
-    @extend %__shadow-inside;
-  }
 
+  //-------------------------------------------
+  //  Run Mixins Behaviors
+  //-------------------------------------------
   @include __panel-mixin--status(panel);
   @include __panel-mixin--padding(panel);
   @include __panel-mixin--padding-child();
+
+  @include __behavior--shadow-inside(panel);
+  @include __behavior--shadow(panel);
+
 
 }

@@ -4,6 +4,19 @@
 
 @if __use-module(layout) {
 
+  //-------------------------------------------
+  //  Variables module
+  //-------------------------------------------
+  $layout__sidebar--bottom: 0;
+  $layout__sidebar--z-index: 1000;
+  $layout__sidebar--padding: 10px;
+  $layout__sidebar-fixed-left: 0;
+  $layout__sidebar-fixed-top: 0;
+  $layout__sidebar-fixed-height: 36px;
+
+  //-------------------------------------------
+  //  Class definitions
+  //-------------------------------------------
   *,
   *:after,
   *:before {
@@ -62,9 +75,9 @@
   @include __layout-mixin--create-blocks();
 
   .layout__sidebar {
-    bottom: 0;
-    z-index: 1000;
-    padding: 10px;
+    bottom: $layout__sidebar--bottom;
+    z-index: $layout__sidebar--z-index;
+    padding: $layout__sidebar--padding;
     overflow-x: hidden;
     overflow-y: auto;
     @include __clearfix();
@@ -80,23 +93,23 @@
 
   .layout__sidebar--fixed {
     position: fixed;
-    left: 0;
-    top: 0;
+    left: $layout__sidebar-fixed-left;
+    top: $layout__sidebar-fixed-top;
     @include __layout-mixin--grid-render-universal("md") {
       position: relative;
-      height: 36px;
+      height: $layout__sidebar-fixed-height;
       @include __base-mpb();
     }
 
     @include __layout-mixin--grid-render-universal("sm") {
       position: relative;
-      height: 36px;
+      height: $layout__sidebar-fixed-height;
       @include __base-mpb();
     }
 
     @include __layout-mixin--grid-render-universal("xs") {
       position: relative;
-      height: 36px;
+      height: $layout__sidebar-fixed-height;
       @include __base-mpb();
     }
 
@@ -107,6 +120,12 @@
   // ----------------------------------------------------
   @include __layout-mixin--grid-generic();
   @include __layout-mixin--grid-render-styles($__map--base-layout);
+
+
+  //------------------------------------------------
+  //  Run mixins Behavior
+  //------------------------------------------------
+
 
 }
 

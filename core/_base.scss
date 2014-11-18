@@ -3,7 +3,7 @@
 * {
   @include __base-bs();
   @include __debug(){
-    border: 1px solid #00a10b;
+    border: 1px solid __mapping($__map--ui-color-status, danger);
   };
 }
 
@@ -11,7 +11,7 @@ html, body {
   @include __font-s();
   font-family: __mapping($__map--base-font, family);
   color: __mapping($__map--base-font, color);
-  font-size: __em(__mapping($__map--base-font, size));
+  font-size: __rem(__mapping($__map--base-font, size));
   text-align: __mapping($__map--base-font, align);
 }
 
@@ -19,8 +19,8 @@ button,
 input,
 select,
 textarea {
-  color: #2B2B2B;
-
+  $color-dark: __transform-color-dd(__mapping($__map--ui-color-status, normal), $darken: (__mapping($__map--ui, percent-color-dark) + 20));
+  color: $color-dark;
   &:disabled{
     background-color: __mapping($__map--ui-color-status, normal);
   }
@@ -101,9 +101,11 @@ input[type="submit"],
 a.button {
   display: inline-block;
   cursor: pointer;
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+  @if __mapping($__map--zerw, support-prefix) {
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
   }
 
 }

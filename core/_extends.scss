@@ -1,26 +1,30 @@
 //Core/helpers ==========================================================================
 
 //------------------------------------------------
-// Helper image replacement
+// Behaviors extends global
 //------------------------------------------------
 
-%__ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  /* IE 6/7 fallback */
-  *text-indent: -9999px;
+%__behavior--shadow-inside {
+  @if __mapping($__map--zerw, shadow) {
+    @include __ui-shadow-o(inset 0 2px 2px rgba(0, 0, 0, 0.3));
+  }
 }
 
-%__ir:before {
-  content: "";
+%__behavior--shadow {
+  @if __mapping($__map--zerw, shadow) {
+    @include __ui-shadow-o(0px 0px 4px 0px rgba(0, 0, 0, .5));
+  }
+}
+
+%__behavior--3d {
+  @if __mapping($__map--zerw, 3d) {
+    @include __ui-border(-1, 0, 1, 4, 1);
+  }
+}
+
+%__behavior--fluid {
   display: block;
-  width: 0;
-  height: 150%;
-}
-
-%__shadow-inside {
-  @include __ui-shadow-o(inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2));
+  width: 100%;
 }
 
 //------------------------------------------------
@@ -85,9 +89,25 @@
 }
 
 %__shadow-dark{
-  @include __ui-shadow-o(0px 0px 4px 0px #000000);
+  @if __mapping($__map--zerw, shadow) {
+    @include __ui-shadow-o(0px 0px 4px 0px #000000);
+  }
 }
 
 %__shadow-light{
-  @include __ui-shadow-o(0px 0px 4px 0px #ffffff);
+  @if __mapping($__map--zerw, shadow) {
+    @include __ui-shadow-o(0px 0px 4px 0px #ffffff);
+  }
+}
+
+// Extend this class to save bytes
+%__transparent-background {
+  background-color: transparent;
+  zoom: 1;
+}
+
+%__hide-text {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
 }

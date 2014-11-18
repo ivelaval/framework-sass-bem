@@ -4,8 +4,24 @@
 
 @if __use-module(button) {
 
+  //-------------------------------------------
+  //  Variables module
+  //-------------------------------------------
+  $button--active-margin-top: 2;
+  $button__round--padding: 6px;
+  $button__round--border-radius: 50%;
+  $button__group--margin-botttom: 4px;
+  $button__group--a-button-border-bottom-width: 1px;
+  $button__group--fluid-width: 100%;
+
+  //-------------------------------------------
+  //  Class definitions
+  //-------------------------------------------
   .button {
-    @extend %__button-extend--default;
+
+    @extend %__button-extend--default !optional;
+    @include __ui-round();
+    @include __ui-border();
 
     &:hover {
 
@@ -15,20 +31,21 @@
       @extend %__button-extend--outline-off;
     }
     &:active {
-      margin-top: __em(2, __mapping($__map--base, size-base-em));
+      margin-top: __em($button--active-margin-top, __mapping($__map--base, size-base-em));
       border-bottom-width: __em(2, __mapping($__map--base, size-base-em));
       @extend %__button-extend--outline-off;
     }
   }
 
   .button__round {
-    padding: 6px;
-    border-radius: 50%;
+    padding: $button__round--padding;
+    border-radius: $button__round--border-radius;
   }
 
   .button__group {
 
-    margin-bottom: 4px;
+    margin-bottom: __em(__mapping($__map--base, margin-bottom));
+    margin-top: __em(__mapping($__map--base, margin-top));
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -48,14 +65,14 @@
         @include __ui-round(0 __mapping($__map--ui, border-radius) __mapping($__map--ui, border-radius) 0);
       }
       &:active {
-        border-bottom-width: 1px;
+        border-bottom-width: $button__group--a-button-border-bottom-width;
       }
     }
   }
 
   .button__group--fluid {
     display: table;
-    width: 100%;
+    width: $button__group--fluid-width;
     table-layout: fixed;
     border-collapse: separate;
   }
@@ -64,14 +81,16 @@
     @include __button-mixin--skin();
   }
 
-  .button--fluid {
-    @extend %__fluid;
-  }
 
   //-------------------------------------------
-  //  Run Mixins
+  //  Run Mixins Behaviors
   //-------------------------------------------
-  @include __base-status(button, true);
+  @include __behavior--status(button, true);
+  @include __behavior--padding(button);
+  @include __behavior--shadow(button);
+  @include __behavior--shadow-inside(button);
+  @include __behavior--3d(button);
+  @include __behavior--fluid(button);
 
 }
 

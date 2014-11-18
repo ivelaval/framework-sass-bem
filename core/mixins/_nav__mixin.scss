@@ -25,11 +25,11 @@
       .nav__item{
         a {
           display: block;
-          @include __base-padding-change($size);
+          @include __behavior--padding-change($size);
         }
       }
       a.nav__item{
-        @include __base-padding-change($size);
+        @include __behavior--padding-change($size);
       }
     }
 

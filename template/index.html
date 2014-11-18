@@ -65,7 +65,6 @@
             <hr/>
             <article class="layout__row">
                 <h2>Buttons</h2>
-
                 <input type="button" value="aceptar" />
                 <input type="button" value="Normal xxl" class="button button--normal button--xxl"/>
                 <input type="button" value="Normal xl" class="button button--danger button--xl"/>
@@ -75,8 +74,10 @@
                 <input type="button" value="Success xs" class="button button--info button--xs"/>
 
                 <a href="javascript:;" class="button button--danger button--lg">Link</a>
+                <div class="layout__block--m10">
                 <a href="javascript:;" class="button button--danger button--lg button--fluid">Link</a>
-
+                </div>
+                <hr/>
                 <div class="button__group button__group--fluid">
                     <a href="javascript:;" class="button button--info button--lg">Link</a>
                     <a href="javascript:;" class="button button--warning button--lg">Link</a>
@@ -84,7 +85,7 @@
                     <a href="javascript:;" class="button button--success button--lg">Link</a>
                     <a href="javascript:;" class="button button--normal button--lg">Link</a>
                 </div>
-
+                <hr/>
                 <div class="button__group">
                     <a href="javascript:;" class="button button--success button--lg">8</a>
                     <a href="javascript:;" class="button button--success button--lg" >Dropdown</a>
@@ -95,13 +96,13 @@
             <article class="layout__row">
                 <h2>Badges</h2>
                 <p>
-                    <span class="badge badge--normal badge--shadow-inside">+999</span>
-                    <span class="badge badge--normal badge--shadow-inside badge--xxl">+88888</span>
-                    <span class="badge badge--danger badge--shadow-inside badge--xl">+999</span>
-                    <span class="badge badge--warning badge--shadow-inside badge--lg">+999</span>
-                    <span class="badge badge--success badge--shadow-inside badge--md">+999</span>
-                    <span class="badge badge--info badge--shadow-inside badge--sm">+999</span>
-                    <span class="badge badge--normal badge--shadow-inside badge--xs">+999</span>
+                    <span class="badge badge--normal ">+999</span>
+                    <span class="badge badge--normal badge--xxl badge--3d">+88888</span>
+                    <span class="badge badge--danger badge--xl">+999</span>
+                    <span class="badge badge--warning badge--lg">+999</span>
+                    <span class="badge badge--success badge--md">+999</span>
+                    <span class="badge badge--info badge--sm">+999</span>
+                    <span class="badge badge--normal badge--xs">+999</span>
                     <span class="badge__float badge__float--warning" data-badge="60">Badge Notification Example</span>
                 </p>
             </article>
@@ -370,12 +371,12 @@
             <article class="layout__row">
                 <h2>Addon</h2>
                     <span class="addon">Addon</span>
-                <span class="addon addon--normal addon--xxl">Addon danger xxl</span>
+                    <span class="addon addon--normal addon--xxl">Addon danger xxl</span>
                     <span class="addon addon--normal addon--xl">Addon danger xl</span>
-                    <span class="addon addon--danger addon--lg">Addon danger lg</span>
-                    <span class="addon addon--warning addon--md addon--shadow-inside">Addon warning md, shadow inside</span>
+                    <span class="addon addon--danger addon--lg addon--shadow-inside">Addon danger lg, shadow inside</span>
+                    <span class="addon addon--warning addon--md addon--3d">Addon warning md,  3d</span>
                     <span class="addon addon--success addon--sm">Addon success sm</span>
-                    <span class="addon addon--info addon--xs">Addon info xs</span>
+                    <span class="addon addon--info addon--xs addon--fluid">Addon info xs fluid</span>
                     <hr/>
                     <span class="addon addon--lg addon--danger"><span class="icon icon--lg icon__battery-4"></span></span>
                     <span class="addon addon--md addon--warning"><span class="icon icon--lg icon__battery-4"></span></span>
@@ -385,7 +386,7 @@
                     <span class="addon addon--md"><span class="icon icon--sm icon__battery-4"></span></span>
                     <span class="addon addon--lg"><span class="icon icon--xs icon__battery-4"></span></span>
                     <hr/>
-                    <div class="addon__group">
+                    <div class="addon__group addon__group--3d">
                     <span class="addon addon--danger addon--xl"><span class="icon icon--lg icon__angle-double-up"></span></span>
                     <span class="addon addon--warning addon--xl"><span class="icon icon--lg icon__baidu"></span></span>
                     <span class="addon addon--normal addon--xl"><span class="icon icon--lg icon__behance"></span></span>
@@ -395,25 +396,25 @@
             </article>
             <hr/>
             <article class="layout__row">
-                <h2>Icons</h2>
+                <h2>Icons round / style button</h2>
                 <hr/>
                 <div class="layout__block--inline">
-                    <a href="javascript:;"  class="icon icon__round icon__round--normal icon__round--xxl icon__add icon--xxl icon__round--shadow-dark"></a>
+                    <a href="javascript:;"  class="icon icon__round icon__round--normal icon__round--xxl icon--xxl icon__add"></a>
                 </div>
                 <div class="layout__block--inline">
-                    <a href="javascript:;"  class="icon icon__round icon__round--danger icon__round--xl icon__remove icon--xl "></a>
+                    <a href="javascript:;"  class="icon icon__round icon__round--danger icon__round--xl icon--xl icon__remove"></a>
                 </div>
                 <div class="layout__block--inline">
-                    <a href="javascript:;"  class="icon icon__round icon__round--warning icon__round--lg icon__upload icon--lg"></a>
+                    <a href="javascript:;"  class="icon icon__round icon__round--warning icon__round--lg icon--lg icon__upload"></a>
                 </div>
                 <div class="layout__block--inline">
-                    <a href="javascript:;"  class="icon icon__round icon__round--success icon__round--md icon__close-delete icon--md"></a>
+                    <a href="javascript:;"  class="icon icon__round icon__round--success icon__round--md icon--md icon__close-delete"></a>
                 </div>
                 <div class="layout__block--inline">
-                <a href="javascript:;"  class="icon icon__round icon__round--info icon__round--sm icon__apple icon--sm"></a>
+                <a href="javascript:;"  class="icon icon__round icon__round--info icon__round--sm icon--sm icon__apple"></a>
                 </div>
                 <div class="layout__block--inline">
-                    <a href="javascript:;"  class="icon icon__round icon__round--info icon__round--xs icon__archive icon--xs"></a>
+                    <a href="javascript:;"  class="icon icon__round icon__round--info icon__round--xs icon--xs icon__archive"></a>
                 </div>
 
             </article>
@@ -450,7 +451,7 @@
                 <span class="label label--warning label--lg">Warning</span>
                 <span class="label label--success label--md">Success</span>
                 <span class="label label--info label--sm">Info</span>
-                <span class="label label--danger label--shadow-inside label--xs">Shadow inside</span>
+                <span class="label label--danger label--xs">Approved</span>
             </article>
 
             <hr/>
@@ -459,7 +460,7 @@
                 <h2>Navs</h2>
                 <hr/>
                 <h3>Nav bar with nav__item</h3>
-                <div class="nav__bar nav__bar--normal nav--round">
+                <div class="nav__bar nav__bar--normal nav--round nav">
 
                     <ul class="nav nav--right nav__size--xl">
                         <li class="nav__item"><a href="javascript:;">Configuration</a></li>

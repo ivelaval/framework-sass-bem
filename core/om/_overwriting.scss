@@ -9,15 +9,24 @@ $__zerw-normalize: true !default;
 $__zerw-support-prefix: false !default;
 
 //---------------------------------------------
-//  GENERAL BEHAVIOR
+//  GENERAL BEHAVIOR GENERIC
 //---------------------------------------------
 $__zerw-3d: true !default;
 $__zerw-shadow: true !default;
 $__zerw-round: true !default;
-$__zerw-border: true !default;
 $__zerw-status: true !default;
 $__zerw-padding-size: true !default;
 $__zerw-size: true !default;
+
+//---------------------------------------------
+//  GENERAL BEHAVIOR INHERITED DEFAULT
+//---------------------------------------------
+$__zerw-default-3d: false !default;
+$__zerw-default-shadow: false !default;
+$__zerw-default-round: false !default;
+$__zerw-default-status: false !default;
+$__zerw-default-padding-size: false !default;
+$__zerw-default-size: false !default;
 
 //---------------------------------------------
 //  USE MODULES CONFIG
@@ -56,6 +65,7 @@ $__margin-left: 4 !default;
 $__margin-right: 4 !default;
 $__margin-top: 4 !default;
 $__margin-bottom: 4 !default;
+$__border-size: 1 !default;
 
 //---------------------------------------------
 //  BASE LAYOUT GENERIC
