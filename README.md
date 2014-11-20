@@ -1,6 +1,6 @@
 # [ZERW css framework](http://zerwcss.ivanavila.com.co)
 
-ZERW css framework  is a professional front-end framework css for building fast application based in BEM filosofy.
+ZERW css framework  is a professional front-end framework css for building fast application based in BEM philosophy.
 
 ## Contributing
 
