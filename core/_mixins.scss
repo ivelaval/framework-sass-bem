@@ -212,6 +212,10 @@
     display: block;
     width: 100%;
   }
+  .#{$selector}--without-fluid{
+    display: inline-block;
+    width: inherit;
+  }
 }
 
 
@@ -310,8 +314,12 @@
     $bw__right: __em($bw__right, __mapping($__map--base, size-base-em));
     $b__properties: solid transparent;
 
-    @if ($b != -1) {
+    @if $b != -1 or $b != none {
       border: #{$b__px} #{$b__properties};
+    }@else{
+      @if $b == none{
+        border: none;
+      }
     }
     @if ($bw__top != -1 and $bw__left != -1 and $bw__bottom != -1 and $bw__right != -1) {
         border-width: #{$bw__top} #{$bw__left} #{$bw__bottom} #{$bw__right};

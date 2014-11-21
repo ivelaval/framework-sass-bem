@@ -2,3 +2,20 @@
 //  Table Mixins
 //-------------------------------------------
 
+@mixin __table-mixin--status($prefix) {
+  $colorstatus: $__map--ui-color-status;
+  @each $key, $color in $colorstatus {
+
+    $color-text: __dynamic-text-color($color);
+    $color-dark: __transform-color-dd($color, $darken: __mapping($__map--ui, percent-color-dark));
+
+    .#{$prefix}--#{$key}{
+      border-color: $color-dark;
+      .#{$prefix}__header,
+      .#{$prefix}__footer{
+        background-color: $color;
+        color: $color-text;
+      }
+    }
+  }
+}
